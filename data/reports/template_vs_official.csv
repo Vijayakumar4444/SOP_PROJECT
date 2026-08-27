@@ -1,0 +1,5 @@
+dimension,category,template_proportion,official_proportion,absolute_difference,notes
+gender,Male,0.49025,0.5008934532717424,0.010643453271742376,Template is PLFS 2024; official marginal is Census/DES 2011.
+gender,Female,0.5095833333333334,0.49910654672825755,0.010476786605075838,Template is PLFS 2024; official marginal is Census/DES 2011.
+urban_rural,Urban,0.5210833333333333,0.48397612486612407,0.037107208467209274,Template is PLFS 2024; official marginal is Census/DES 2011.
+urban_rural,Rural,0.47891666666666666,0.5160238751338759,0.037107208467209274,Template is PLFS 2024; official marginal is Census/DES 2011.

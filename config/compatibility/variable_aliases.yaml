@@ -1,0 +1,24 @@
+age:
+  - age_years
+  - person_age
+gender:
+  - sex
+employment_status:
+  - unemployment_status
+  - work_status
+  - labour_status
+household_income:
+  - annual_household_income
+  - household_annual_income
+  - hh_income
+individual_income:
+  - wage_income
+  - earnings
+district:
+  - district_name
+urban_rural:
+  - residence_type
+state:
+  - residence_state
+health_insurance:
+  - insurance_coverage

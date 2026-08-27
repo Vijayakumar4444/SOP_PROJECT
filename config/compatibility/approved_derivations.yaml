@@ -1,0 +1,16 @@
+is_youth:
+  source: age
+  transformation: "18 <= age <= 29"
+  compatibility: DERIVABLE
+is_elderly:
+  source: age
+  transformation: "age >= 60"
+  compatibility: DERIVABLE
+is_unemployed:
+  source: employment_status
+  transformation: "employment_status == 'Unemployed'"
+  compatibility: DERIVABLE
+annual_individual_income:
+  source: individual_income
+  transformation: "Already treated as reported source earning measure; period definition must be confirmed in PLFS layout."
+  compatibility: PARTIALLY_AVAILABLE

@@ -1,0 +1,9 @@
+canonical_values:
+  Male:
+    aliases: [male, M, "1"]
+  Female:
+    aliases: [female, F, "2"]
+  Other:
+    aliases: [other, third gender, transgender]
+  Not stated:
+    aliases: [not stated, unknown, missing]

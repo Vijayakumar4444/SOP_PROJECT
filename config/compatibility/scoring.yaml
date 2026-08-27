@@ -1,0 +1,20 @@
+weights:
+  domain: 0.15
+  variable: 0.25
+  availability: 0.20
+  joint_availability: 0.15
+  temporal: 0.10
+  geographic: 0.10
+  source_quality: 0.05
+status_scores:
+  EXACT_AVAILABLE: 1.00
+  DERIVABLE: 0.85
+  PARTIALLY_AVAILABLE: 0.65
+  PROXY_AVAILABLE: 0.45
+  AGGREGATE_ONLY: 0.30
+  MISSING: 0.00
+readiness:
+  READY: "score >= 85 and no blocking issues"
+  READY_WITH_WARNINGS: "score >= 65 and no missing critical variables"
+  LIMITED: "score >= 45 or only important variables missing"
+  NOT_READY: "missing critical variable or score < 45"

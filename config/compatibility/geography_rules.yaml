@@ -1,0 +1,9 @@
+scope:
+  state: Tamil Nadu
+supported_levels:
+  - STATE
+  - DISTRICT
+  - URBAN_RURAL
+warnings:
+  - "District code 33 conflict exists in downloaded PLFS code table and must be reconciled before exact district-boundary calibration."
+  - "Census 2011 and current district structures differ; do not silently map old and new boundaries."

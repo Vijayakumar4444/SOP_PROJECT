@@ -1,0 +1,21 @@
+age_groups:
+  - label: 0-14
+    minimum: 0
+    maximum: 14
+  - label: 15-24
+    minimum: 15
+    maximum: 24
+  - label: 25-44
+    minimum: 25
+    maximum: 44
+  - label: 45-59
+    minimum: 45
+    maximum: 59
+  - label: 60+
+    minimum: 60
+    maximum: 120
+derived_flags:
+  is_child: age < 18
+  is_youth: 18 <= age <= 29
+  is_working_age: 15 <= age <= 59
+  is_elderly: age >= 60

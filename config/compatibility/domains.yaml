@@ -1,0 +1,79 @@
+EMPLOYMENT:
+  core_variables:
+    - employment_status
+    - labour_force_status
+  supporting_variables:
+    - age
+    - gender
+    - education_level
+    - occupation_group
+    - industry_group
+    - district
+    - urban_rural
+  preferred_sources:
+    - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
+INCOME:
+  core_variables:
+    - household_income
+    - individual_income
+  supporting_variables:
+    - consumption_expenditure
+    - social_group
+    - district
+    - urban_rural
+  preferred_sources:
+    - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
+DEMOGRAPHICS:
+  core_variables:
+    - age
+    - gender
+    - state
+  supporting_variables:
+    - district
+    - urban_rural
+    - household_size
+  preferred_sources:
+    - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
+    - SRC_CENSUS_PCA_SD_2011
+EDUCATION:
+  core_variables:
+    - age
+    - education_level
+  supporting_variables:
+    - gender
+    - district
+    - urban_rural
+  preferred_sources:
+    - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
+    - SRC_TN_DES_EDUCATION_2022_23
+SOCIAL_WELFARE:
+  core_variables:
+    - social_group
+    - state
+  supporting_variables:
+    - age
+    - gender
+    - district
+    - household_size
+  preferred_sources:
+    - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
+    - SRC_TN_DES_GLANCE_2023_24
+HOUSING:
+  core_variables:
+    - house_ownership
+    - dwelling_type
+  supporting_variables:
+    - household_size
+    - district
+  preferred_sources:
+    - SRC_TN_DES_HOUSING_2022_23
+HEALTH:
+  core_variables:
+    - health_insurance
+    - disability_status
+  supporting_variables:
+    - age
+    - gender
+    - district
+  preferred_sources:
+    - SRC_NFHS5_IIPS_2019_21

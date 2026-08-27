@@ -1,0 +1,136 @@
+template:
+  name: Tamil Nadu Population Reference Template
+  scope: Tamil Nadu, India
+  record_type: REFERENCE_OR_TRAINING_TEMPLATE
+  warning: >
+    The reference template is a harmonized statistical/data-model foundation.
+    It must not be interpreted as the actual complete population of Tamil Nadu.
+variables:
+  - canonical_variable: reference_person_id
+    display_name: Reference person ID
+    data_type: string
+    level: PERSON
+    sensitivity_class: NON_SENSITIVE
+  - canonical_variable: reference_household_id
+    display_name: Reference household ID
+    data_type: string
+    level: HOUSEHOLD
+    sensitivity_class: NON_SENSITIVE
+  - canonical_variable: source_record_id
+    display_name: Source record ID
+    data_type: string
+    level: PERSON
+    sensitivity_class: NON_SENSITIVE
+  - canonical_variable: primary_source_id
+    display_name: Primary source ID
+    data_type: string
+    level: PERSON
+    sensitivity_class: NON_SENSITIVE
+  - canonical_variable: state
+    display_name: State
+    data_type: categorical
+    level: PERSON
+    allowed_values: [Tamil Nadu]
+    sensitivity_class: LOW
+  - canonical_variable: state_code
+    display_name: Census state code
+    data_type: string
+    level: PERSON
+    allowed_values: ["33"]
+    sensitivity_class: LOW
+  - canonical_variable: district
+    display_name: District
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: district_code
+    display_name: District code
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: urban_rural
+    display_name: Urban/rural residence
+    data_type: categorical
+    level: PERSON
+    allowed_values: [Urban, Rural]
+    sensitivity_class: LOW
+  - canonical_variable: age
+    display_name: Age
+    data_type: integer
+    level: PERSON
+    minimum: 0
+    maximum: 120
+    sensitivity_class: LOW
+  - canonical_variable: age_group
+    display_name: Age group
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: gender
+    display_name: Gender
+    data_type: categorical
+    level: PERSON
+    allowed_values: [Male, Female, Other, Not stated]
+    sensitivity_class: LOW
+  - canonical_variable: household_size
+    display_name: Household size
+    data_type: integer
+    level: HOUSEHOLD
+    minimum: 1
+    sensitivity_class: LOW
+  - canonical_variable: literacy_status
+    display_name: Literacy status
+    data_type: categorical
+    level: PERSON
+    allowed_values: [Literate, Illiterate, Not stated]
+    sensitivity_class: LOW
+  - canonical_variable: education_level
+    display_name: Education level
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: employment_status
+    display_name: Employment status
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: occupation_group
+    display_name: Occupation group
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: household_income
+    display_name: Household income
+    data_type: number
+    level: HOUSEHOLD
+    minimum: 0
+    sensitivity_class: MODERATE
+  - canonical_variable: consumption_expenditure
+    display_name: Consumption expenditure
+    data_type: number
+    level: HOUSEHOLD
+    minimum: 0
+    sensitivity_class: MODERATE
+  - canonical_variable: survey_weight
+    display_name: Survey weight
+    data_type: number
+    level: PERSON
+    minimum: 0
+    sensitivity_class: LOW
+  - canonical_variable: normalized_reference_weight
+    display_name: Normalized reference weight
+    data_type: number
+    level: PERSON
+    minimum: 0
+    sensitivity_class: LOW
+  - canonical_variable: reference_year
+    display_name: Reference year
+    data_type: integer
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: record_quality_flag
+    display_name: Record quality flag
+    data_type: categorical
+    level: PERSON
+    allowed_values: [A, B, C, D, E]
+    sensitivity_class: LOW

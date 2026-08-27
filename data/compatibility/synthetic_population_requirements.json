@@ -1,0 +1,94 @@
+{
+  "TN_YOUTH_EMPLOYMENT_ASSISTANCE": {
+    "policy_id": "TN_YOUTH_EMPLOYMENT_ASSISTANCE",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "age",
+        "employment_status",
+        "household_income",
+        "state",
+        "district"
+      ],
+      "critical_variables": [
+        "age",
+        "employment_status",
+        "household_income",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [
+        "household_income"
+      ],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": []
+    }
+  },
+  "TN_EDUCATION_SKILLING": {
+    "policy_id": "TN_EDUCATION_SKILLING",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "age",
+        "education_level",
+        "district",
+        "state"
+      ],
+      "critical_variables": [
+        "age",
+        "education_level",
+        "district",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": []
+    }
+  },
+  "TN_HEALTH_INSURANCE_TOPUP": {
+    "policy_id": "TN_HEALTH_INSURANCE_TOPUP",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "health_insurance",
+        "disability_status",
+        "household_income",
+        "state",
+        "district"
+      ],
+      "critical_variables": [
+        "health_insurance",
+        "disability_status",
+        "household_income",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [
+        "household_income"
+      ],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": [
+        "disability_status: AGING"
+      ]
+    }
+  }
+}

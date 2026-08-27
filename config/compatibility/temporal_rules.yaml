@@ -1,0 +1,27 @@
+LOW_CHANGE:
+  current: 2
+  recent: 5
+  aging: 10
+MODERATE_CHANGE:
+  current: 1
+  recent: 3
+  aging: 6
+HIGH_CHANGE:
+  current: 1
+  recent: 2
+  aging: 4
+variable_sensitivity:
+  age: MODERATE_CHANGE
+  age_group: MODERATE_CHANGE
+  gender: LOW_CHANGE
+  state: LOW_CHANGE
+  district: MODERATE_CHANGE
+  urban_rural: MODERATE_CHANGE
+  household_size: MODERATE_CHANGE
+  employment_status: HIGH_CHANGE
+  labour_force_status: HIGH_CHANGE
+  individual_income: HIGH_CHANGE
+  household_income: HIGH_CHANGE
+  consumption_expenditure: HIGH_CHANGE
+  education_level: MODERATE_CHANGE
+  social_group: LOW_CHANGE

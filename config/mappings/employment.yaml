@@ -1,0 +1,11 @@
+canonical_values:
+  Employed:
+    aliases: [worker, main worker, marginal worker, employed]
+  Unemployed:
+    aliases: [unemployed, seeking work, available for work]
+  Not in labour force:
+    aliases: [non-worker, not in labour force]
+  Not stated:
+    aliases: [not stated, unknown]
+notes: >
+  PLFS/NSS mappings must preserve source concepts such as usual status and current weekly status.

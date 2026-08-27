@@ -1,0 +1,311 @@
+{
+  "report_id": "COMPAT-TN_YOUTH_EMPLOYMENT_ASSISTANCE-20260827193347",
+  "policy_id": "TN_YOUTH_EMPLOYMENT_ASSISTANCE",
+  "policy_name": "Tamil Nadu Youth Employment Assistance",
+  "data_foundation_version": "0.3.0-modular",
+  "compatibility_engine_version": "TN_COMPATIBILITY_ENGINE_V0.1",
+  "scoring_config_version": "compatibility_scoring_v0.1",
+  "domains": [
+    {
+      "domain": "EMPLOYMENT",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 61.0,
+      "matched_variables": [
+        "age",
+        "district",
+        "employment_status"
+      ]
+    },
+    {
+      "domain": "INCOME",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 55.0,
+      "matched_variables": [
+        "district",
+        "household_income"
+      ]
+    },
+    {
+      "domain": "DEMOGRAPHICS",
+      "status": "SUPPORTED",
+      "score": 69.0,
+      "matched_variables": [
+        "age",
+        "district",
+        "state"
+      ]
+    },
+    {
+      "domain": "EDUCATION",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 55.0,
+      "matched_variables": [
+        "age",
+        "district"
+      ]
+    },
+    {
+      "domain": "SOCIAL_WELFARE",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 61.0,
+      "matched_variables": [
+        "age",
+        "district",
+        "state"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": {
+        "variable": "age",
+        "canonical_variable": "age",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.85,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "age",
+          "processed_variable": "age",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "employment_status",
+        "canonical_variable": "employment_status",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.85,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "employment_status",
+          "processed_variable": "employment_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "household_income",
+        "canonical_variable": "household_income",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "HOUSEHOLD",
+        "required_unit": "INR/year",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "PROXY_AVAILABLE",
+      "score": 0.2869,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income",
+      "warnings": [
+        "Household consumption expenditure is present, but it is not annual household income.",
+        "UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "consumption_expenditure",
+          "processed_variable": "consumption_expenditure",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "state",
+        "canonical_variable": "state",
+        "requirement_type": "jurisdiction",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 1.0,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "CURRENT",
+      "temporal_score": 1.0,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "state",
+          "processed_variable": "state",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "district",
+        "canonical_variable": "district",
+        "requirement_type": "group_analysis",
+        "importance": "IMPORTANT",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.68,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 98.7083,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [
+        "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "district",
+          "processed_variable": "district",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    }
+  ],
+  "joint_availability": {
+    "required_critical_variables": [
+      "age",
+      "employment_status",
+      "household_income",
+      "state"
+    ],
+    "datasets": {
+      "reference_template": {
+        "source_id": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+        "row_count": 12000,
+        "matrix": [
+          {
+            "variable": "age",
+            "available": "YES"
+          },
+          {
+            "variable": "employment_status",
+            "available": "YES"
+          },
+          {
+            "variable": "household_income",
+            "available": "YES"
+          },
+          {
+            "variable": "state",
+            "available": "YES"
+          }
+        ],
+        "score": 1.0
+      }
+    },
+    "score": 100.0
+  },
+  "score_breakdown": {
+    "domain": 60.2,
+    "variable": 73.34,
+    "availability": 88.74,
+    "joint_availability": 100.0,
+    "temporal": 88.0,
+    "geographic": 95.0,
+    "source_quality": 85.0
+  },
+  "reliability_score": 82.66,
+  "simulation_readiness": "READY_WITH_WARNINGS",
+  "blocking_issues": [],
+  "warnings": [
+    "household_income: Household consumption expenditure is present, but it is not annual household income.",
+    "household_income: UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income",
+    "district: GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict"
+  ],
+  "recommendations": [
+    "Treat household_income as a proxy-backed limitation; collect direct source data if eligibility depends on it.",
+    "Simulation can proceed only with limitations explicitly shown in outputs."
+  ],
+  "synthetic_population_requirements": {
+    "policy_id": "TN_YOUTH_EMPLOYMENT_ASSISTANCE",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "age",
+        "employment_status",
+        "household_income",
+        "state",
+        "district"
+      ],
+      "critical_variables": [
+        "age",
+        "employment_status",
+        "household_income",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [
+        "household_income"
+      ],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": []
+    }
+  }
+}

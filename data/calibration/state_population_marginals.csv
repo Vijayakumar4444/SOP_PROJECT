@@ -1,0 +1,2 @@
+reference_year,state_code,state,population_total,male_population,female_population,urban_population,rural_population,source_id,quality_flag,notes
+2011,33,Tamil Nadu,72147030,36137975,36009055,34917440,37229590,SRC_CENSUS_PCA_SD_2011,B,Official Census 2011 aggregate. Do not treat as 2026 population.

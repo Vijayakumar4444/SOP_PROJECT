@@ -1,0 +1,3 @@
+reference_year,state,social_group,population,proportion,source_id,quality_flag
+2011,Tamil Nadu,Scheduled Caste,14438445,0.2001252858225765,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,B
+2011,Tamil Nadu,Scheduled Tribe,794697,0.01101496485718123,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,B

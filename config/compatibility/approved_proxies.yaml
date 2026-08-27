@@ -1,0 +1,9 @@
+household_income:
+  possible_proxy:
+    - consumption_expenditure
+  warning: "PLFS reference rows include household consumption expenditure, not annual household income. Consumption must not be treated as income without an explicit modelling method."
+  compatibility: PROXY_AVAILABLE
+health_insurance:
+  possible_proxy: []
+  warning: "NFHS is a preferred source but raw NFHS microdata is not imported; do not infer health insurance from PLFS."
+  compatibility: MISSING

@@ -1,0 +1,7 @@
+state:
+  canonical_name: Tamil Nadu
+  census_state_code: "33"
+rules:
+  - Older Census 2011 district codes represent the 2011 district boundaries.
+  - Current administrative districts must not be silently back-cast onto 2011 Census districts.
+  - Newer districts split from older districts require an explicit reconciliation table before district-level calibration.

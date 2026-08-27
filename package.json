@@ -1,0 +1,15 @@
+{
+  "name": "sop-tamil-nadu-data-foundation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 1 Tamil Nadu data source collection and data foundation pipeline for the SOP policy simulation project.",
+  "type": "module",
+  "scripts": {
+    "phase1:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase1_python.ps1",
+    "phase2:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase2_python.ps1",
+    "test": "node tests/phase1.test.js && node tests/phase2.test.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

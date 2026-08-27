@@ -1,0 +1,43 @@
+{
+  "name": "Tamil Nadu Population Reference Template",
+  "version": "0.3.0-modular",
+  "state": "Tamil Nadu",
+  "target_records": 12000,
+  "actual_records": 12000,
+  "available_plfs_tamil_nadu_source_rows": 22584,
+  "sources": [
+    "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+    "SRC_TN_DES_GLANCE_2023_24",
+    "SRC_CENSUS_PCA_SD_2011",
+    "SRC_TN_DES_EDUCATION_2022_23",
+    "SRC_TN_DES_AREA_POP_2022_23",
+    "SRC_TN_DES_EMPLOYMENT_2022_23",
+    "SRC_TN_DES_HOUSING_2022_23",
+    "SRC_DATA_GOV_TN_GLANCE_2019",
+    "SRC_NFHS5_IIPS_2019_21",
+    "SRC_NSS_MOSPI_CATALOG"
+  ],
+  "raw_source_files": [
+    "data\\raw\\README.md",
+    "data\\raw\\census\\census_2011_pca_catalog_6191.html",
+    "data\\raw\\data_gov_in\\tn_glance_2019_catalog.html",
+    "data\\raw\\plfs\\opencity_plfs_2024_page.html",
+    "data\\raw\\plfs\\plfs_2024_data_layout.xlsx",
+    "data\\raw\\plfs\\plfs_2024_household_data.csv",
+    "data\\raw\\plfs\\plfs_2024_personal_data.zip",
+    "data\\raw\\plfs\\plfs_2024_state_district_codes.csv",
+    "data\\raw\\tn_des\\statistical_handbook_2022_23_area_population.pdf",
+    "data\\raw\\tn_des\\statistical_handbook_2022_23_education.pdf",
+    "data\\raw\\tn_des\\statistical_handbook_2022_23_employment.pdf",
+    "data\\raw\\tn_des\\statistical_handbook_2022_23_housing_building.pdf",
+    "data\\raw\\tn_des\\tamil_nadu_at_a_glance_2023_24.pdf"
+  ],
+  "weight_columns": [
+    "survey_weight",
+    "normalized_reference_weight",
+    "calibrated_reference_weight_gender_ur"
+  ],
+  "limitations": [
+    "PLFS-only row template; DES/Census/data.gov.in are aggregate/provenance sources; NFHS/NSS manual access pending."
+  ]
+}

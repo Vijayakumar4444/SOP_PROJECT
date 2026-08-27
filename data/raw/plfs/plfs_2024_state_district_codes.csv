@@ -1,0 +1,745 @@
+state_name,state_code,district_name,district_code
+Andhra Pradesh,28,Y.S.R. (Cuddapah),10
+Andhra Pradesh,28,Chittoor,13
+Andhra Pradesh,28,Annamayya,17
+Andhra Pradesh,28,Tirupathi,16
+Andhra Pradesh,28,Ananthapuramu,12
+Andhra Pradesh,28,Sri Satya Sai,19
+Andhra Pradesh,28,Guntur,07
+Andhra Pradesh,28,Palnadu,14
+Andhra Pradesh,28,Bapatla,15
+Andhra Pradesh,28,Kurnool,11
+Andhra Pradesh,28,Nandyal,18
+Andhra Pradesh,28,Prakasam,08
+Andhra Pradesh,28,Sri Potti Sriramulu Nellore,09
+Andhra Pradesh,28,West Godavari,05
+Andhra Pradesh,28,Krishna,06
+Andhra Pradesh,28,Eluru,23
+Andhra Pradesh,28,Ntr,26
+Andhra Pradesh,28,East Godavari,04
+Andhra Pradesh,28,Dr. Br Ambedkar Konaseema,22
+Andhra Pradesh,28,Kakinada,24
+Puducherry,34,Yanam,01
+Andhra Pradesh,28,Srikakulam,01
+Andhra Pradesh,28,Vizianagaram,02
+Andhra Pradesh,28,Visakhapatnam,03
+Andhra Pradesh,28,Alluri Sitharama Raju,20
+Andhra Pradesh,28,Anakapalli,21
+Andhra Pradesh,28,Parvathipuram Manyam,25
+Assam,18,Kokrajhar,01
+Assam,18,Dhubri,02
+Assam,18,Goalpara,03
+Assam,18,Barpeta,04
+Assam,18,Bongaigaon,20
+Assam,18,Chirang,21
+Assam,18,Kamrup,22
+Assam,18,Kamrup Metropolitan,23
+Assam,18,Nalbari,24
+Assam,18,Baksa,25
+Assam,18,South Salma Mankachar,31
+Assam,18,Karbi Anglong,15
+Assam,18,Dima Hasao,16
+Assam,18,Cachar,17
+Assam,18,Karimganj,18
+Assam,18,Hailakandi,19
+Assam,18,West Karbi angling,29
+Assam,18,Tinsukia,10
+Assam,18,Dibrugarh,11
+Assam,18,Morigaon,05
+Assam,18,Nagaon,06
+Assam,18,Sivasagar,12
+Assam,18,Jorhat,13
+Assam,18,Golaghat,14
+Assam,18,Hojai,28
+Assam,18,Charaideo,30
+Assam,18,Majuli,33
+Assam,18,Sonitpur,07
+Assam,18,Lakhimpur,08
+Assam,18,Dhemaji,09
+Assam,18,Darrang,26
+Assam,18,Udalguri,27
+Assam,18,Biswanath,32
+Bihar,10,Sheohar,03
+Bihar,10,Sitamarhi,04
+Bihar,10,Muzaffarpur,14
+Bihar,10,Saran,17
+Bihar,10,Vaishali,18
+Bihar,10,Madhubani,05
+Bihar,10,Darbhanga,13
+Bihar,10,Samastipur,19
+Bihar,10,Begusarai,20
+Bihar,10,Pashchim Champaran,01
+Bihar,10,Purba Champaran,02
+Bihar,10,Gopalganj,15
+Bihar,10,Siwan,16
+Bihar,10,Supaul,06
+Bihar,10,Araria,07
+Bihar,10,Kishanganj,08
+Bihar,10,Purnia,09
+Bihar,10,Katihar,10
+Bihar,10,Madhepura,11
+Bihar,10,Saharsa,12
+Bihar,10,Khagaria,21
+Bihar,10,Nalanda,27
+Bihar,10,Patna,28
+Bihar,10,Bhojpur,29
+Bihar,10,Buxar,30
+Bihar,10,Kaimur (Bhabua),31
+Bihar,10,Rohtas,32
+Bihar,10,Bhagalpur,22
+Bihar,10,Banka,23
+Bihar,10,Munger,24
+Bihar,10,Lakhisarai,25
+Bihar,10,Sheikhpura,26
+Bihar,10,Jamui,36
+Bihar,10,Aurangabad,33
+Bihar,10,Gaya,34
+Bihar,10,Nawada,35
+Bihar,10,Jehanabad,37
+Bihar,10,Arwal,38
+Chhattisgarh,22,Raipur,11
+Chhattisgarh,22,Mahasamund,12
+Chhattisgarh,22,Dhamtari,13
+Chhattisgarh,22,Uttar Bastar Kanker,14
+Chhattisgarh,22,Bastar,15
+Chhattisgarh,22,Narayanpur,16
+Chhattisgarh,22,Dakshin Bastar Dantewada,17
+Chhattisgarh,22,Bijapur,18
+Chhattisgarh,22,Balodabazar-Bhatapara,19
+Chhattisgarh,22,Gariyaband,20
+Chhattisgarh,22,Kondagaon,21
+Chhattisgarh,22,Sukma,22
+Chhattisgarh,22,Korea,01
+Chhattisgarh,22,Surguja,02
+Chhattisgarh,22,Jashpur,03
+Chhattisgarh,22,Surajpur,26
+Chhattisgarh,22,Balrampur-Ramanujganj,27
+Chhattisgarh,22,Raigarh,04
+Chhattisgarh,22,Korba,05
+Chhattisgarh,22,Janjgir-Champa,06
+Chhattisgarh,22,Bilaspur,07
+Chhattisgarh,22,Mungeli,25
+Chhattisgarh,22,Kabeerdham,08
+Chhattisgarh,22,Rajnandgaon,09
+Chhattisgarh,22,Durg,10
+Chhattisgarh,22,Bemetara,23
+Chhattisgarh,22,Balod,24
+Gujarat,24,Gandhinagar,06
+Gujarat,24,Ahmadabad,07
+Gujarat,24,Amreli,13
+Gujarat,24,Bhavnagar,14
+Gujarat,24,Botad,28
+D & N Haveli and Daman & Diu,25,Diu,01
+Gujarat,24,Jamnagar,10
+Gujarat,24,Porbandar,11
+Gujarat,24,Devbhumi Dwarka,30
+Gujarat,24,Rajkot,09
+Gujarat,24,Junagadh,12
+Gujarat,24,Gir Somnath,31
+Gujarat,24,Morbi,33
+Gujarat,24,Kachchh,01
+Gujarat,24,Surendranagar,08
+Gujarat,24,Panch Mahals,17
+Gujarat,24,Dohad,18
+Gujarat,24,Vadodara,19
+Gujarat,24,Narmada,20
+Gujarat,24,Bharuch,21
+Gujarat,24,Chhota Udepur,29
+Gujarat,24,Mahisagar,32
+Gujarat,24,Banas Kantha,02
+Gujarat,24,Patan,03
+Gujarat,24,Mahesana,04
+Gujarat,24,Sabar Kantha,05
+Gujarat,24,Anand,15
+Gujarat,24,Kheda,16
+Gujarat,24,Arvalli,27
+Gujarat,24,Dang,22
+Gujarat,24,Surat,25
+Gujarat,24,Tapi,26
+Gujarat,24,Navsari,23
+Gujarat,24,Valsad,24
+D & N Haveli and Daman & Diu,25,Daman,02
+D & N Haveli and Daman & Diu,25,Dadra & Nagar  Haveli,03
+Goa,30,North Goa,01
+Goa,30,South Goa,02
+Chandigarh,4,Chandigarh,01
+Haryana,6,Panchkula,01
+Haryana,6,Ambala,02
+Haryana,6,Yamunanagar,03
+Haryana,6,Kurukshetra,04
+Haryana,6,Kaithal,05
+Haryana,6,Fatehabad,10
+Haryana,6,Sirsa,11
+Haryana,6,Hisar,12
+Haryana,6,Bhiwani,13
+Haryana,6,Charkhi Dadri,22
+Haryana,6,Karnal,06
+Haryana,6,Panipat,07
+Haryana,6,Sonipat,08
+Haryana,6,Jind,09
+Haryana,6,Rohtak,14
+Haryana,6,Jhajjar,15
+Haryana,6,Mahendragarh,16
+Haryana,6,Rewari,17
+Haryana,6,Gurugram,18
+Haryana,6,Nuh (Mewat),19
+Haryana,6,Faridabad,20
+Haryana,6,Palwal,21
+Himachal Pradesh,2,Solan,09
+Himachal Pradesh,2,Sirmaur,10
+Himachal Pradesh,2,Shimla,11
+Himachal Pradesh,2,Kinnaur,12
+Himachal Pradesh,2,Hamirpur,06
+Himachal Pradesh,2,Una,07
+Himachal Pradesh,2,Bilaspur,08
+Himachal Pradesh,2,Chamba,01
+Himachal Pradesh,2,Kangra,02
+Himachal Pradesh,2,Lahul & Spiti,03
+Himachal Pradesh,2,Kullu,04
+Himachal Pradesh,2,Mandi,05
+Jammu  & Kashmir,1,Poonch,05
+Jammu  & Kashmir,1,Rajouri,06
+Jammu  & Kashmir,1,Kathua,07
+Jammu  & Kashmir,1,Jammu,21
+Jammu  & Kashmir,1,Samba,22
+Jammu  & Kashmir,1,Doda,16
+Jammu  & Kashmir,1,Ramban,17
+Jammu  & Kashmir,1,Kishtwar,18
+Jammu  & Kashmir,1,Udhampur,19
+Jammu  & Kashmir,1,Reasi,20
+Jammu  & Kashmir,1,Budgam,02
+Jammu  & Kashmir,1,Srinagar,10
+Jammu  & Kashmir,1,Ganderbal,11
+Ladakh,37,Leh,01
+Ladakh,37,Kargil,02
+Jammu  & Kashmir,1,Pulwama,12
+Jammu  & Kashmir,1,Shopian,13
+Jammu  & Kashmir,1,Anantnag,14
+Jammu  & Kashmir,1,Kulgam,15
+Jammu  & Kashmir,1,Kupwara,01
+Jammu  & Kashmir,1,Baramulla,08
+Jammu  & Kashmir,1,Bandipore,09
+Jharkhand,20,Lohardaga,11
+Jharkhand,20,Ranchi,19
+Jharkhand,20,Khunti,20
+Jharkhand,20,Gumla,21
+Jharkhand,20,Simdega,22
+Jharkhand,20,Deoghar,05
+Jharkhand,20,Godda,06
+Jharkhand,20,Sahibganj,07
+Jharkhand,20,Pakur,08
+Jharkhand,20,Dumka,17
+Jharkhand,20,Chatra,02
+Jharkhand,20,Koderma,03
+Jharkhand,20,Hazaribagh,15
+Jharkhand,20,Ramgarh,16
+Jharkhand,20,Purbi Singhbhum,12
+Jharkhand,20,Pashchimi Singhbhum,23
+Jharkhand,20,Saraikela-Kharsawan,24
+Jharkhand,20,Garhwa,01
+Jharkhand,20,Palamu,13
+Jharkhand,20,Latehar,14
+Jharkhand,20,Giridih,04
+Jharkhand,20,Dhanbad,09
+Jharkhand,20,Bokaro,10
+Jharkhand,20,Jamtara,18
+Karnataka,29,Tumakuru,17
+Karnataka,29,Bengaluru (Urban),18
+Karnataka,29,Kolar,27
+Karnataka,29,Chikkaballapura,28
+Karnataka,29,Bengaluru (Rural),29
+Karnataka,29,Ramanagara,30
+Karnataka,29,Udupi,15
+Karnataka,29,Hassan,20
+Karnataka,29,Dakshina Kannada,21
+Karnataka,29,Kodagu,22
+Karnataka,29,Mandya,19
+Karnataka,29,Mysuru,23
+Karnataka,29,Chamarajanagar,24
+Karnataka,29,Shivamogga,14
+Karnataka,29,Chikkamagaluru,16
+Karnataka,29,Gadag,07
+Karnataka,29,Dharwad,08
+Karnataka,29,Uttara Kannada,09
+Karnataka,29,Haveri,10
+Karnataka,29,Davanagere,13
+Karnataka,29,Belagavi,01
+Karnataka,29,Bagalkote,02
+Karnataka,29,Bijapur,03
+Karnataka,29,Raichur,05
+Karnataka,29,Koppal,06
+Karnataka,29,Ballari,11
+Karnataka,29,Chitradurga,12
+Karnataka,29,Vijayanagara,31
+Karnataka,29,Bidar,04
+Karnataka,29,Kalaburagi,25
+Karnataka,29,Yadgir,26
+Kerala,32,Wayanad,03
+Kerala,32,Kozhikode,04
+Kerala,32,Malappuram,05
+Puducherry,34,Mahe,03
+Kerala,32,Kasaragod,01
+Kerala,32,Kannur,02
+Kerala,32,Palakkad,06
+Kerala,32,Thrissur,07
+Kerala,32,Thiruvananthapuram,14
+Kerala,32,Ernakulam,08
+Lakshadweep,31,Lakshadweep,01
+Kerala,32,Alappuzha,11
+Kerala,32,Pathanamthitta,12
+Kerala,32,Kollam,13
+Kerala,32,Idukki,09
+Kerala,32,Kottayam,10
+Madhya Pradesh,23,Vidisha,26
+Madhya Pradesh,23,Bhopal,27
+Madhya Pradesh,23,Sehore,28
+Madhya Pradesh,23,Raisen,29
+Madhya Pradesh,23,Narmadapuram,32
+Madhya Pradesh,23,Betul,30
+Madhya Pradesh,23,Harda,31
+Madhya Pradesh,23,Chhindwara,38
+Madhya Pradesh,23,Balaghat,40
+Madhya Pradesh,23,Dhar,21
+Madhya Pradesh,23,Indore,22
+Madhya Pradesh,23,Khargone (West Nimar),23
+Madhya Pradesh,23,Barwani,24
+Madhya Pradesh,23,Khandwa (East Nimar),49
+Madhya Pradesh,23,Burhanpur,50
+Madhya Pradesh,23,Sheopur,01
+Madhya Pradesh,23,Morena,02
+Madhya Pradesh,23,Bhind,03
+Madhya Pradesh,23,Gwalior,04
+Madhya Pradesh,23,Datia,05
+Madhya Pradesh,23,Neemuch,15
+Madhya Pradesh,23,Mandsaur,16
+Madhya Pradesh,23,Ratlam,17
+Madhya Pradesh,23,Jhabua,47
+Madhya Pradesh,23,Alirajpur,48
+Madhya Pradesh,23,Shivpuri,06
+Madhya Pradesh,23,Tikamgarh,07
+Madhya Pradesh,23,Chhatarpur,08
+Madhya Pradesh,23,Guna,41
+Madhya Pradesh,23,Ashoknagar,42
+Madhya Pradesh,23,Niwari,51
+Madhya Pradesh,23,Ujjain,18
+Madhya Pradesh,23,Shajapur,19
+Madhya Pradesh,23,Dewas,20
+Madhya Pradesh,23,Rajgarh,25
+Madhya Pradesh,23,Agar Malwa,52
+Madhya Pradesh,23,Katni,33
+Madhya Pradesh,23,Jabalpur,34
+Madhya Pradesh,23,Dindori,36
+Madhya Pradesh,23,Mandla,37
+Madhya Pradesh,23,Panna,09
+Madhya Pradesh,23,Satna,12
+Madhya Pradesh,23,Rewa,13
+Madhya Pradesh,23,Umaria,14
+Madhya Pradesh,23,Shahdol,43
+Madhya Pradesh,23,Anuppur,44
+Madhya Pradesh,23,Sidhi,45
+Madhya Pradesh,23,Singrauli,46
+Madhya Pradesh,23,Sagar,10
+Madhya Pradesh,23,Damoh,11
+Madhya Pradesh,23,Narsimhapur,35
+Madhya Pradesh,23,Seoni,39
+Maharashtra,27,Jalna,18
+Maharashtra,27,Chhatrapati Sambhajinagar,19
+Maharashtra,27,Beed,27
+Maharashtra,27,Nandurbar,01
+Maharashtra,27,Dhule,02
+Maharashtra,27,Jalgaon,03
+Maharashtra,27,Nanded,15
+Maharashtra,27,Hingoli,16
+Maharashtra,27,Parbhani,17
+Maharashtra,27,Latur,28
+Maharashtra,27,Nashik,20
+Maharashtra,27,Mumbai Suburban,22
+Maharashtra,27,Mumbai,23
+Maharashtra,27,Thane,21
+Maharashtra,27,Raigad,24
+Maharashtra,27,Palghar,36
+Maharashtra,27,Wardha,08
+Maharashtra,27,Nagpur,09
+Maharashtra,27,Bhandara,10
+Maharashtra,27,Gondia,11
+Maharashtra,27,Gadchiroli,12
+Maharashtra,27,Chandrapur,13
+Maharashtra,27,Buldhana,04
+Maharashtra,27,Akola,05
+Maharashtra,27,Washim,06
+Maharashtra,27,Amravati,07
+Maharashtra,27,Yavatmal,14
+Maharashtra,27,Pune,25
+Maharashtra,27,Ahmednagar,26
+Maharashtra,27,Satara,31
+Maharashtra,27,Ratnagiri,32
+Maharashtra,27,Sindhudurg,33
+Maharashtra,27,Kolhapur,34
+Maharashtra,27,Sangli,35
+Maharashtra,27,Dharashiv,29
+Maharashtra,27,Solapur,30
+Meghalaya,17,West Khasi Hills,04
+Meghalaya,17,Ribhoi,05
+Meghalaya,17,East Khasi Hills,06
+Meghalaya,17,South West Khasi Hills,10
+Meghalaya,17,West Jaintia Hills,11
+Meghalaya,17,East Jaintia Hills,12
+Meghalaya,17,Eastern West Khasi Hills,13
+Meghalaya,17,West Garo Hills,01
+Meghalaya,17,East Garo Hills,02
+Meghalaya,17,South Garo Hills,03
+Meghalaya,17,North Garo Hills,08
+Meghalaya,17,South West Garo Hills,09
+Mizoram,15,Mamit,01
+Mizoram,15,Kolasib,02
+Mizoram,15,Aizwal,03
+Mizoram,15,Champhai,04
+Mizoram,15,Serchhip,05
+Mizoram,15,Lunglei,06
+Mizoram,15,Lawnglai,07
+Mizoram,15,saiha,08
+Tripura,16,West Tripura,01
+Tripura,16,South Tripura,02
+Tripura,16,Dhalai,03
+Tripura,16,North Tripura,04
+Tripura,16,Unakoti,05
+Tripura,16,Khowai,06
+Tripura,16,Sephijala,07
+Tripura,16,Gomati,08
+Nagaland,13,Mon,01
+Nagaland,13,Mokokchung,02
+Nagaland,13,Zunheboto,03
+Nagaland,13,Wokha,04
+Nagaland,13,Dimapur,05
+Nagaland,13,Phek,06
+Nagaland,13,Tuensang,07
+Nagaland,13,Longleng,08
+Nagaland,13,Kiphire,09
+Nagaland,13,Kohima,10
+Nagaland,13,Peren,11
+Nagaland,13,Niuland,12
+Nagaland,13,Chumukedima,13
+Odisha,21,Nayagarh,16
+Odisha,21,Khordha,17
+Odisha,21,Puri,18
+Odisha,21,Kendujhar,06
+Odisha,21,Mayurbhanj,07
+Odisha,21,Baleshwar,08
+Odisha,21,Ganjam,19
+Odisha,21,Gajapati,20
+Odisha,21,Kandhamal,21
+Odisha,21,Baudh,22
+Odisha,21,Bhadrak,09
+Odisha,21,Kendrapara,10
+Odisha,21,Jagatsinghapur,11
+Odisha,21,Cuttack,12
+Odisha,21,Jajapur,13
+Odisha,21,Dhenkanal,14
+Odisha,21,Anugul,15
+Odisha,21,Bargarh,01
+Odisha,21,Jharsuguda,02
+Odisha,21,Sambalpur,03
+Odisha,21,Deogarh,04
+Odisha,21,Sundargarh,05
+Odisha,21,Subarnapur,23
+Odisha,21,Balangir,24
+Odisha,21,Nuapada,25
+Odisha,21,Kalahandi,26
+Odisha,21,Rayagada,27
+Odisha,21,Nabarangapur,28
+Odisha,21,Koraput,29
+Odisha,21,Malkangiri,30
+Punjab,03,Kapurthala,02
+Punjab,03,Jalandhar,03
+Punjab,03,Shahid Bhagat Singh Nagar,05
+Punjab,03,Pathankot,21
+Punjab,03,Gurdaspur,01
+Punjab,03,Amritsar,15
+Punjab,03,Hoshiarpur,04
+Punjab,03,Tarn Taran,16
+Punjab,03,Fatehgarh Sahib,06
+Punjab,03,Patiala,14
+Punjab,03,Rupnagar,17
+Punjab,03,Sahibzada Ajit Singh Nagar,18
+Punjab,03,Ludhiana,07
+Punjab,03,Sangrur,19
+Punjab,03,Barnala,20
+Punjab,03,Sri Muktsar Sahib,10
+Punjab,03,Bathinda,12
+Punjab,03,Mansa,13
+Punjab,03,Moga,08
+Punjab,03,Ferozepur,09
+Punjab,03,Faridkot,11
+Punjab,03,Fazilka,22
+Rajasthan,08,Nagaur,14
+Rajasthan,08,Ajmer,21
+Rajasthan,08,Bhilwara,24
+Rajasthan,08,Jodhpur,15
+Rajasthan,08,Jaisalmer,16
+Rajasthan,08,Barmer,17
+Rajasthan,08,Jalore,18
+Rajasthan,08,Pali,20
+Rajasthan,08,Sirohi,19
+Rajasthan,08,Rajsamand,25
+Rajasthan,08,Dungarpur,26
+Rajasthan,08,Banswara,27
+Rajasthan,08,Chittorgarh,28
+Rajasthan,08,Udaipur,32
+Rajasthan,08,Pratapgarh,33
+Rajasthan,08,Churu,04
+Rajasthan,08,Jhunjhunu,05
+Rajasthan,08,Dausa,11
+Rajasthan,08,Jaipur,12
+Rajasthan,08,Sikar,13
+Rajasthan,08,Tonk,22
+Rajasthan,08,Alwar,06
+Rajasthan,08,Bharatpur,07
+Rajasthan,08,Dholpur,08
+Rajasthan,08,Sri Ganganagar,01
+Rajasthan,08,Hanumangarh,02
+Rajasthan,08,Bikaner,03
+Rajasthan,08,Karauli,09
+Rajasthan,08,Sawai Madhopur,10
+Rajasthan,08,Bundi,23
+Rajasthan,08,Kota,29
+Rajasthan,08,Baran,30
+Rajasthan,08,Jhalawar,31
+,,Mangan,01
+Sikkim,11,Gyalshing,06
+Sikkim,11,Soreng,02
+Sikkim,11,Namchi,03
+Sikkim,11,Gangtok,04
+Sikkim,11,Pakyong,05
+Tamil Nadu,33,Erode,09
+Tamil Nadu,33,The Nilgiris,10
+Tamil Nadu,33,Coimbatore,31
+Tamil Nadu,33,Tiruppur,32
+Tamil Nadu,33,Dharmapuri,29
+Tamil Nadu,33,Krishnagiri,30
+Tamil Nadu,33,Salem,07
+Tamil Nadu,33,Namakkal,08
+Tamil Nadu,33,Karur,12
+Tamil Nadu,33,Tiruchirappalli,13
+Tamil Nadu,33,Perambalur,14
+Tamil Nadu,33,Ariyalur,15
+Tamil Nadu,33,Pudukkottai,20
+Tamil Nadu,33,Thiruvallur,01
+Tamil Nadu,33,Chennai,02
+Tamil Nadu,33,Kancheepuram,03
+Tamil Nadu,33,Chengalpattu,33
+Tamil Nadu,33,Viluppuram,06
+Tamil Nadu,33,Cuddalore,16
+Tamil Nadu,33,Kallakurichi,34
+Tamil Nadu,33,Vellore,04
+Tamil Nadu,33,Tiruvannamalai,05
+Tamil Nadu,33,Ranipet,35
+Tamil Nadu,33,Tirupathur,36
+Puducherry,34,Puducherry,02
+Puducherry,34,Karaikal,04
+Tamil Nadu,33,Dindigul,11
+Tamil Nadu,33,Madurai,22
+Tamil Nadu,33,Theni,23
+Tamil Nadu,33,Nagapattinam,17
+Tamil Nadu,33,Thiruvarur,18
+Tamil Nadu,33,Thanjavur,19
+Tamil Nadu,33,Mayiladuthurai,38
+Tamil Nadu,33,Thoothukudi,26
+Tamil Nadu,33,Tirunelveli,27
+Tamil Nadu,33,Kanniyakumari,28
+Tamil Nadu,33,Tenkasi,33
+Tamil Nadu,33,Sivaganga,21
+Tamil Nadu,33,Virudhunagar,24
+Tamil Nadu,33,Ramanathapuram,25
+Telangana,36,Yadadri Bhuvanagiri,20
+Telangana,36,Medchal-Malkajgiri,21
+Telangana,36,Hyderabad,22
+Telangana,36,Rangareddy,23
+Telangana,36,Vikarabad,24
+Telangana,36,Mahbubnagar,25
+Telangana,36,Jogulamba Gadwal,26
+Telangana,36,Wanaparthy,27
+Telangana,36,Nagarkurnool,28
+Telangana,36,Nalgonda,29
+Telangana,36,Suryapet,30
+Telangana,36,Narayanpet,33
+Telangana,36,Jagtial,06
+Telangana,36,Peddapalli,07
+Telangana,36,Karimnagar,13
+Telangana,36,Rajanna Sircilla,14
+Telangana,36,Sangareddy,16
+Telangana,36,Medak,17
+Telangana,36,Siddipet,18
+Telangana,36,Adilabad,01
+Telangana,36,Kumuram Bheem Asifabad,02
+Telangana,36,Mancherial,03
+Telangana,36,Nirmal,04
+Telangana,36,Nizamabad,05
+Telangana,36,Kamareddy,15
+Telangana,36,Jayashankar Bhupalpally,08
+Telangana,36,Bhadradri Kothagudem,09
+Telangana,36,Mahabubabad,10
+Telangana,36,Warangal,11
+Telangana,36,Hanamkonda,12
+Telangana,36,Jangaon,19
+Telangana,36,Khammam,31
+Telangana,36,Mulugu,32
+Uttarakhand,05,Uttarkashi,01
+Uttarakhand,05,Chamoli,02
+Uttarakhand,05,Rudraprayag,03
+Uttarakhand,05,Tehri Garhwal,04
+Uttarakhand,05,Dehradun,05
+Uttarakhand,05,Pauri Garhwal,06
+Uttarakhand,05,Haridwar,13
+Uttarakhand,05,Pithoragarh,07
+Uttarakhand,05,Bageshwar,08
+Uttarakhand,05,Almora,09
+Uttarakhand,05,Champawat,10
+Uttarakhand,05,Nainital,11
+Uttarakhand,05,Udham Singh Nagar,12
+Uttar Pradesh,09,Mathura,14
+Uttar Pradesh,09,Agra,15
+Uttar Pradesh,09,Firozabad,16
+Uttar Pradesh,09,Mainpuri,17
+Uttar Pradesh,09,Farrukhabad,28
+Uttar Pradesh,09,Kannauj,29
+Uttar Pradesh,09,Etawah,30
+Uttar Pradesh,09,Auraiya,31
+Uttar Pradesh,09,Bulandshahr,11
+Uttar Pradesh,09,Aligarh,12
+Uttar Pradesh,09,Hathras,13
+Uttar Pradesh,09,Etah,70
+Uttar Pradesh,09,Kasganj,71
+Uttar Pradesh,09,Meerut,07
+Uttar Pradesh,09,Baghpat,08
+Uttar Pradesh,09,Ghaziabad,09
+Uttar Pradesh,09,Gautam Buddha Nagar,10
+Uttar Pradesh,09,Hapur,73
+Uttar Pradesh,09,Pratapgarh,42
+Uttar Pradesh,09,Kaushambi,43
+Uttar Pradesh,09,Prayagraj,44
+Uttar Pradesh,09,Azamgarh,60
+Uttar Pradesh,09,Mau,61
+Uttar Pradesh,09,Ballia,62
+Uttar Pradesh,09,Jaunpur,63
+Uttar Pradesh,09,Ayodhya,46
+Uttar Pradesh,09,Ambedkar Nagar,47
+Uttar Pradesh,09,Sultanpur,48
+Uttar Pradesh,09,Siddharthnagar,53
+Uttar Pradesh,09,Basti,54
+Uttar Pradesh,09,Amethi,75
+Uttar Pradesh,09,Sant Kabir Nagar,55
+Uttar Pradesh,09,Mahrajganj,56
+Uttar Pradesh,09,Gorakhpur,57
+Uttar Pradesh,09,Kushinagar,58
+Uttar Pradesh,09,Deoria,59
+Uttar Pradesh,09,Ghazipur,64
+Uttar Pradesh,09,Chandauli,65
+Uttar Pradesh,09,Varanasi,66
+Uttar Pradesh,09,Sant Ravidas Nagar (Bhadohi),67
+Uttar Pradesh,09,Mirzapur,68
+Uttar Pradesh,09,Sonbhadra,69
+Uttar Pradesh,09,Budaun,18
+Uttar Pradesh,09,Bareilly,19
+Uttar Pradesh,09,Pilibhit,20
+Uttar Pradesh,09,Shahjahanpur,21
+Uttar Pradesh,09,Bijnor,03
+Uttar Pradesh,09,Moradabad,04
+Uttar Pradesh,09,Rampur,05
+Uttar Pradesh,09,Amroha,06
+Uttar Pradesh,09,Sambhal,74
+Uttar Pradesh,09,Saharanpur,01
+Uttar Pradesh,09,Muzaffarnagar,02
+Uttar Pradesh,09,Shamli,72
+Uttar Pradesh,09,Kheri,22
+Uttar Pradesh,09,Sitapur,23
+Uttar Pradesh,09,Hardoi,24
+Uttar Pradesh,09,Unnao,25
+Uttar Pradesh,09,Lucknow,26
+Uttar Pradesh,09,Bara Banki,45
+Uttar Pradesh,09,Rae Bareli,27
+Uttar Pradesh,09,Banda,39
+Uttar Pradesh,09,Chitrakoot,40
+Uttar Pradesh,09,Fatehpur,41
+Uttar Pradesh,09,Bahraich,49
+Uttar Pradesh,09,Shrawasti,50
+Uttar Pradesh,09,Balrampur,51
+Uttar Pradesh,09,Gonda,52
+Uttar Pradesh,09,Jalaun,34
+Uttar Pradesh,09,Jhansi,35
+Uttar Pradesh,09,Lalitpur,36
+Uttar Pradesh,09,Hamirpur,37
+Uttar Pradesh,09,Mahoba,38
+Uttar Pradesh,09,Kanpur Dehat,32
+Uttar Pradesh,09,Kanpur Nagar,33
+West Bengal,19,Purba Bardhaman,09
+West Bengal,19,Paschim Bardhaman,23
+West Bengal,19,Bankura,13
+West Bengal,19,Purulia,14
+West Bengal,19,Nadia,10
+West Bengal,19,Hooghly,12
+West Bengal,19,Paschim Medinipur,18
+West Bengal,19,Purba Medinipur,19
+West Bengal,19,Jhargram,22
+West Bengal,19,North Twenty Four Parganas,11
+West Bengal,19,Kolkata,16
+West Bengal,19,South Twenty Four Parganas,17
+West Bengal,19,Howrah,15
+West Bengal,19,Uttar Dinajpur,04
+West Bengal,19,Dakshin Dinajpur,05
+West Bengal,19,Malda,06
+West Bengal,19,Murshidabad,07
+West Bengal,19,Birbhum,08
+West Bengal,19,Darjeeling,01
+West Bengal,19,Jalpaiguri,02
+West Bengal,19,Cooch Behar,03
+West Bengal,19,Alipurduar,20
+West Bengal,19,Kalimpong,21
+A & N Islands,35,Nicobar,01
+A & N Islands,35,North & Middle Andaman,02
+A & N Islands,35,South Andaman,03
+Delhi,07,North West,01
+Delhi,07,North,02
+Delhi,07,North East,03
+Delhi,07,East,04
+Delhi,07,New Delhi,05
+Delhi,07,Central,06
+Delhi,07,West,07
+Delhi,07,South West,08
+Delhi,07,South,09
+Delhi,07,Shahdara,10
+Delhi,07,South East,11
+Arunachal Pradesh,12,Tawang,01
+Arunachal Pradesh,12,West Kameng,02
+Arunachal Pradesh,12,East Kameng,03
+Arunachal Pradesh,12,Papum Pare,04
+Arunachal Pradesh,12,Upper Subansiri,05
+Arunachal Pradesh,12,West Siang,06
+Arunachal Pradesh,12,East Siang,07
+Arunachal Pradesh,12,Upper Siang,08
+Arunachal Pradesh,12,Changlang,09
+Arunachal Pradesh,12,Tirap,10
+Arunachal Pradesh,12,Lower Subansiri,11
+Arunachal Pradesh,12,Kurung Kumey,12
+Arunachal Pradesh,12,Dibang Valley,13
+Arunachal Pradesh,12,Lower Dibang Valley,14
+Arunachal Pradesh,12,Lohit,15
+Arunachal Pradesh,12,Anjaw,16
+Arunachal Pradesh,12,Lepa Rada,17
+Arunachal Pradesh,12,Namsai,18
+Arunachal Pradesh,12,Longding,19
+Arunachal Pradesh,12,Siang,20
+Arunachal Pradesh,12,Lower Siang,21
+Arunachal Pradesh,12,Shi Yomi,22
+Manipur,14,Senapati,01
+Manipur,14,Tamenglong,02
+Manipur,14,Churachandpur,03
+Manipur,14,Bishnupur,04
+Manipur,14,Thoubal,05
+Manipur,14,Imphal West,06
+Manipur,14,Imphal East,07
+Manipur,14,Ukhrul,08
+Manipur,14,Chandel,09
+Manipur,14,Jiribam,10
+Manipur,14,Kangpokpi,11
+Manipur,14,Tengnoupal,12
+Manipur,14,Kakching,13

@@ -1,0 +1,13 @@
+canonical_values:
+  No formal education: []
+  Primary: []
+  Upper Primary: []
+  Secondary: []
+  Higher Secondary: []
+  Diploma: []
+  Undergraduate: []
+  Postgraduate: []
+  Other: []
+notes: >
+  Source-specific mappings must be added only after reading each source codebook.
+  Do not force a source category into these values without documentation.
