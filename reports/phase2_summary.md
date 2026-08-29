@@ -1,8 +1,8 @@
 # Phase 2 Summary
 
 1. **What was implemented?** A Python Policy-Data Compatibility Engine over the Tamil Nadu Phase 1 Data Foundation.
-2. **Canonical variables evaluated:** 44.
-3. **Supported domains:** DEMOGRAPHICS, EDUCATION, EMPLOYMENT, HEALTH, INCOME, SOCIAL_WELFARE.
+2. **Canonical variables evaluated:** 137.
+3. **Supported domains:** DEMOGRAPHICS, EDUCATION, EMPLOYMENT, HEALTH, INCOME.
 4. **Weakly supported domains:** health, housing, direct household income, disability until NFHS/NSS/detail sources are imported.
 5. **Major Tamil Nadu data gaps:** direct annual household income, NFHS health/amenity microdata, NSS consumption/health rounds, precise district-boundary reconciliation.
 6. **Variable compatibility:** exact canonical match first, approved derivation second, approved proxy third, aggregate-only and missing kept separate.

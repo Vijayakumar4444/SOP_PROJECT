@@ -1,3 +1,0 @@
-reference_year,state,urban_rural,population,proportion,source_id,quality_flag
-2011,Tamil Nadu,Urban,34917440,0.48397612486612407,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,B
-2011,Tamil Nadu,Rural,37229590,0.5160238751338759,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,B

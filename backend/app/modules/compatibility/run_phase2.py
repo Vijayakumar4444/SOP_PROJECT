@@ -3,8 +3,10 @@ from __future__ import annotations
 from pathlib import Path
 import csv
 import json
-import zipfile
+import os
 import sys
+import time
+import zipfile
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -64,10 +66,28 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     if not rows:
         path.write_text("", encoding="utf-8")
         return
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()), extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+    for attempt in range(3):
+        try:
+            if path.exists():
+                try:
+                    os.chmod(path, 0o666)
+                except Exception:
+                    pass
+            with path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()), extrasaction="ignore")
+                writer.writeheader()
+                writer.writerows(rows)
+            return
+        except PermissionError:
+            if attempt < 2:
+                time.sleep(0.5)
+            else:
+                alt_path = path.with_name(path.stem + "_updated" + path.suffix)
+                with alt_path.open("w", encoding="utf-8", newline="") as handle:
+                    writer = csv.DictWriter(handle, fieldnames=list(rows[0].keys()), extrasaction="ignore")
+                    writer.writeheader()
+                    writer.writerows(rows)
+                return
 
 
 def write_md(path: Path, text: str) -> None:

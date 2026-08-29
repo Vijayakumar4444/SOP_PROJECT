@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
-from datetime import datetime
+from datetime import UTC, datetime
 import json
 import re
 
@@ -19,8 +19,9 @@ ROOT = Path(__file__).resolve().parents[4]
 
 
 class PolicyDataCompatibilityService:
-    def __init__(self, root: Path = ROOT):
+    def __init__(self, root: Path = ROOT, persist_reports: bool = True):
         self.root = root
+        self.persist_reports = persist_reports
         registry_path = root / "data/metadata/data_capability_registry.json"
         self.registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.exists() else DataCapabilityRegistryBuilder(root).build()
         self.requirements = PolicyRequirementExtractor()
@@ -39,7 +40,7 @@ class PolicyDataCompatibilityService:
         readiness = self.readiness_evaluator.readiness(reliability, blocking, requirement_results)
         warnings = self.readiness_evaluator.warnings(requirement_results, joint)
         report = CompatibilityReport(
-            report_id=f"COMPAT-{policy_definition.get('policy_id', 'POLICY')}-{datetime.utcnow().strftime('%Y%m%d%H%M%S')}",
+            report_id=f"COMPAT-{policy_definition.get('policy_id', 'POLICY')}-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}",
             policy_id=policy_definition.get("policy_id", ""),
             policy_name=policy_definition.get("name", ""),
             data_foundation_version=self.registry.get("data_foundation_version", "UNKNOWN"),
@@ -56,7 +57,8 @@ class PolicyDataCompatibilityService:
             recommendations=self.readiness_evaluator.recommendations(requirement_results, readiness),
             synthetic_population_requirements=self._phase3_requirements(requirement_results, policy_definition),
         )
-        self._persist_report(report)
+        if self.persist_reports:
+            self._persist_report(report)
         return report
 
     def _evaluate_requirement(self, req: PolicyRequirement) -> RequirementResult:

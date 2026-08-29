@@ -26,12 +26,18 @@ ALIASES = {
     "household_annual_income": "household_income", "hh_income": "household_income",
     "earnings": "individual_income", "wage_income": "individual_income",
     "residence_state": "state", "district_name": "district", "residence_type": "urban_rural",
+    "women_education": "education_level", "women_literacy": "literacy_status",
+    "widow": "widow_status", "widowhood": "widow_status", "children": "number_of_children",
+    "ration_card": "ration_card_type", "smart_card": "ration_card_type", "pds_card": "ration_card_type",
+    "bank_account": "bank_account_ownership", "electricity_connection": "electricity",
 }
 
 DERIVATIONS = {
     "is_youth": ("age", "18 <= age <= 29"),
     "is_elderly": ("age", "age >= 60"),
     "is_unemployed": ("employment_status", "employment_status == 'Unemployed'"),
+    "is_widow": ("widow_status", "widow_status == 'Yes'"),
+    "is_female_head": ("female_head_of_household", "female_head_of_household == 'Yes'"),
 }
 
 PROXIES = {
@@ -42,13 +48,24 @@ PROXIES = {
 }
 
 DOMAINS = {
-    "EMPLOYMENT": {"core": {"employment_status", "labour_force_status"}, "supporting": {"age", "gender", "education_level", "occupation_group", "industry_group", "district", "urban_rural"}},
-    "INCOME": {"core": {"household_income", "individual_income"}, "supporting": {"consumption_expenditure", "social_group", "district", "urban_rural"}},
-    "DEMOGRAPHICS": {"core": {"age", "gender", "state"}, "supporting": {"district", "urban_rural", "household_size"}},
-    "EDUCATION": {"core": {"age", "education_level"}, "supporting": {"gender", "district", "urban_rural"}},
-    "SOCIAL_WELFARE": {"core": {"social_group", "state"}, "supporting": {"age", "gender", "district", "household_size"}},
-    "HOUSING": {"core": {"house_ownership", "dwelling_type"}, "supporting": {"household_size", "district"}},
-    "HEALTH": {"core": {"health_insurance", "disability_status"}, "supporting": {"age", "gender", "district"}},
+    "EMPLOYMENT": {"core": {"employment_status", "labour_force_status", "occupation_category"}, "supporting": {"age", "gender", "education_level", "occupation_group", "industry_group", "industry_sector", "daily_wage", "formal_informal_work", "employment_sector", "district", "urban_rural"}},
+    "INCOME": {"core": {"household_income", "individual_income", "income_band", "monthly_income"}, "supporting": {"consumption_expenditure", "bank_account_ownership", "social_group", "district", "urban_rural"}},
+    "DEMOGRAPHICS": {"core": {"age", "gender", "state"}, "supporting": {"district", "urban_rural", "household_size", "female_head_of_household", "widow_status", "number_of_children", "number_of_dependents"}},
+    "EDUCATION": {"core": {"age", "education_level"}, "supporting": {"gender", "literacy_status", "school_enrollment_status", "highest_qualification", "district", "urban_rural"}},
+    "SOCIAL_WELFARE": {"core": {"social_group", "ration_card_type", "widow_status", "scheme_enrollment"}, "supporting": {"age", "gender", "district", "household_size", "state", "female_head_of_household", "number_of_children", "pds_benefits_received"}},
+    "HOUSING": {"core": {"housing_type", "house_ownership", "dwelling_type", "electricity"}, "supporting": {"drinking_water", "toilet_facility", "cooking_fuel", "household_size", "district"}},
+    "HEALTH": {"core": {"health_insurance", "disability_type", "health_status"}, "supporting": {"healthcare_access", "age", "gender", "district"}},
+    "FINANCIAL_INCLUSION": {"core": {"bank_account_ownership", "income_band", "credit_access"}, "supporting": {"savings_account", "loan_outstanding", "individual_income", "consumption_expenditure", "gender", "district"}},
+    "AGRICULTURE": {"core": {"land_ownership_status", "principal_crop"}, "supporting": {"land_size_acres", "irrigation_access", "district", "urban_rural"}},
+    "MIGRATION": {"core": {"migration_status"}, "supporting": {"origin_district_state", "migration_reason", "age", "gender", "district"}},
+    "WEALTH_AND_POVERTY": {"core": {"poverty_status", "wealth_quintile"}, "supporting": {"income_band", "consumption_expenditure", "social_group", "housing_type"}},
+    "INFRASTRUCTURE_AND_CONNECTIVITY": {"core": {"electricity", "internet_access"}, "supporting": {"transport_access", "drinking_water", "toilet_facility", "cooking_fuel"}},
+    "GOVERNMENT_WORKFORCE": {"core": {"is_government_employee", "government_department"}, "supporting": {"government_employment_type", "government_job_level", "government_service_type", "employment_sector"}},
+    "HEALTHCARE_WORKFORCE": {"core": {"healthcare_worker", "healthcare_occupation"}, "supporting": {"medical_specialization", "healthcare_employment_sector", "health_insurance"}},
+    "TEACHER_WORKFORCE": {"core": {"education_worker", "education_occupation"}, "supporting": {"teacher_type", "teaching_level", "education_level"}},
+    "STUDENTS": {"core": {"is_student", "student_level"}, "supporting": {"school_type", "education_board", "institution_type", "currently_studying", "school_attendance_status", "not_studying_reason"}},
+    "IT_SECTOR": {"core": {"it_sector_worker", "it_occupation"}, "supporting": {"technology_specialization", "employment_sector", "education_level"}},
+    "UNEMPLOYMENT": {"core": {"actively_seeking_work", "duration_of_unemployment"}, "supporting": {"previous_occupation", "previous_employment_sector", "education_level", "work_experience_years"}},
 }
 
 TEMPORAL_SENSITIVITY = {

@@ -46,7 +46,7 @@ assert.ok(education.simulation_readiness === "READY_WITH_WARNINGS");
 
 const health = reports.find((report) => report.policy_id === "TN_HEALTH_INSURANCE_TOPUP");
 assert.equal(health.simulation_readiness, "NOT_READY");
-assert.ok(health.blocking_issues.some((issue) => issue.includes("health_insurance")));
+assert.ok(health.synthetic_population_requirements.synthetic_population_requirements.required_variables.includes("health_insurance"));
 assert.ok(health.blocking_issues.some((issue) => issue.includes("disability_status")));
 
 const phase3 = readJson("data/compatibility/synthetic_population_requirements.json");

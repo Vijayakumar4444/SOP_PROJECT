@@ -1,0 +1,26 @@
+dimension,category,proportion,source_id,reference_year,notes
+poverty_status,BPL,0.1130,SRC_NFHS5_WEALTH_INDEX,2021,NITI Aayog Multidimensional Poverty Index Tamil Nadu
+poverty_status,APL,0.8870,SRC_NFHS5_WEALTH_INDEX,2021,Above Poverty Line estimate
+wealth_quintile,Lowest,0.0820,SRC_NFHS5_WEALTH_INDEX,2021,NFHS-5 Tamil Nadu Table 3 Wealth Quintile distribution
+wealth_quintile,Second,0.1640,SRC_NFHS5_WEALTH_INDEX,2021,Second wealth quintile
+wealth_quintile,Middle,0.2460,SRC_NFHS5_WEALTH_INDEX,2021,Middle wealth quintile
+wealth_quintile,Fourth,0.2850,SRC_NFHS5_WEALTH_INDEX,2021,Fourth wealth quintile
+wealth_quintile,Highest,0.2230,SRC_NFHS5_WEALTH_INDEX,2021,Highest wealth quintile
+housing_type,Pucca,0.7640,SRC_CENSUS_2011_HOUSELISTING,2011,Census 2011 Tamil Nadu Housing & Construction distribution
+housing_type,Semi_Pucca,0.1820,SRC_CENSUS_2011_HOUSELISTING,2011,Semi-Pucca housing
+housing_type,Kutcha,0.0540,SRC_CENSUS_2011_HOUSELISTING,2011,Kutcha housing
+land_ownership,Landless,0.5820,SRC_NSS_77_LAND_HOLDINGS,2019,NSS 77th Round Land and Livestock Holdings Survey Tamil Nadu
+land_ownership,Marginal,0.2840,SRC_NSS_77_LAND_HOLDINGS,2019,Marginal landholder (< 2.5 acres)
+land_ownership,Small,0.0980,SRC_NSS_77_LAND_HOLDINGS,2019,Small landholder (2.5 to 5 acres)
+land_ownership,Medium_Large,0.0360,SRC_NSS_77_LAND_HOLDINGS,2019,Medium/Large landholder (> 5 acres)
+internet_access,Mobile_Broadband,0.6450,SRC_NFHS5_WEALTH_INDEX,2021,TRAI & NFHS-5 Tamil Nadu Internet & Mobile Access benchmark
+internet_access,Fiber_Wifi,0.1280,SRC_NFHS5_WEALTH_INDEX,2021,Home Broadband/Fiber connection
+internet_access,None,0.2270,SRC_NFHS5_WEALTH_INDEX,2021,No regular internet access
+migration_status,Non_Migrant,0.7140,SRC_NSS_78_MIGRATION,2021,NSS 78th Round Domestic Migration Survey Tamil Nadu
+migration_status,Intra_District,0.1580,SRC_NSS_78_MIGRATION,2021,Migration within same district
+migration_status,Inter_District,0.0940,SRC_NSS_78_MIGRATION,2021,Migration between districts within Tamil Nadu
+migration_status,Inter_State,0.0340,SRC_NSS_78_MIGRATION,2021,Migration from other Indian states
+loan_outstanding,Formal_Bank,0.2840,SRC_NSS_77_DEBT_INVESTMENT,2019,NSS 77th Round All India Debt & Investment Survey Tamil Nadu
+loan_outstanding,SHG_Microfinance,0.1960,SRC_NSS_77_DEBT_INVESTMENT,2019,Self-Help Group / Microfinance borrowing
+loan_outstanding,Informal_Moneylender,0.0820,SRC_NSS_77_DEBT_INVESTMENT,2019,Informal moneylender borrowing
+loan_outstanding,None,0.4380,SRC_NSS_77_DEBT_INVESTMENT,2019,No outstanding institutional debt

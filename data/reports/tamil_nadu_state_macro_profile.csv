@@ -1,0 +1,42 @@
+domain,indicator,value,benchmark_source
+Demographics,Male Population Share (%),49.1,PLFS 2024 / Census 2011
+Demographics,Female Population Share (%),50.89,PLFS 2024 / Census 2011
+Demographics,Urban Residence Share (%),52.09,Census 2011 / DES Handbook
+Demographics,Rural Residence Share (%),47.91,Census 2011 / DES Handbook
+Demographics,Senior Citizens (Age 60+) (%),14.31,Census 2011 / PLFS 2024
+Education,Overall Literacy Rate (%),81.98,Census 2011 / NFHS-5 TN
+Education,Female Literacy Rate (%),79.72,NFHS-5 Tamil Nadu Report
+Education,Students in Government Schools (%),36.8,UDISE+ 2024-25 Tamil Nadu Official Data (36.03%)
+Education,Students in Private Schools (%),47.67,UDISE+ 2024-25 Tamil Nadu Official Data (48.14%)
+Education,Students in Govt-Aided Schools (%),15.42,UDISE+ 2024-25 Tamil Nadu Official Data (15.65%)
+Education,Students in Other Management Schools (%),0.11,UDISE+ 2024-25 Tamil Nadu Official Data (0.18%)
+Education,Students on State Board (%),96.99,Tamil Nadu School Education Dept
+Education,Students on CBSE Board (%),3.01,CBSE Tamil Nadu Region Data
+Education,Students on ICSE/International Boards (%),0.0,CISCE Tamil Nadu Data
+Employment,Labour Force Participation Rate (%),51.52,PLFS 2024 Tamil Nadu
+Employment,Worker Population Ratio (%),43.89,PLFS 2024 Tamil Nadu
+Employment,Unemployment Rate (%),7.63,PLFS 2024 Tamil Nadu
+Employment,Government Employees Share (% of Workforce),2.77,TN DES Employment Chapter
+Employment,Private Sector Workforce (% of Workforce),54.78,PLFS 2024 Tamil Nadu
+Employment,Self-Employed / Business Owners (% of Workforce),18.82,PLFS 2024 Tamil Nadu
+Employment,Agriculture Sector Workforce (% of Workforce),27.0,PLFS 2024 / NSS 77th Round
+Employment,Manufacturing & Construction (% of Workforce),49.33,PLFS 2024 Tamil Nadu
+Employment,Services & Trade Workforce (% of Workforce),23.94,PLFS 2024 Tamil Nadu
+Employment,Informal Work Share (% of Workforce),86.48,PLFS 2024 / MoSPI NSO
+Occupations,Farmers & Agricultural Labourers (% of Population),10.37,PLFS 2024 / NSS 77th Round
+Occupations,Teachers & Education Workers (% of Population),0.43,UDISE+ / DES Handbook
+Occupations,"Doctors, Nurses & Healthcare Workers (% of Population)",0.29,NFHS-5 / CMCHIS Registry
+Occupations,IT & Technology Professionals (% of Population),0.4,PLFS 2024 Urban TN
+Occupations,Police & Public Safety Personnel (% of Population),0.14,TN Police / DES Handbook
+Occupations,Lawyers & Legal Professionals (% of Population),0.38,Bar Council of TN Benchmark
+Occupations,Construction & Factory Workers (% of Population),6.18,PLFS 2024 Tamil Nadu
+Occupations,Homemakers / Domestic Work (% of Population),12.82,PLFS 2024 Tamil Nadu
+Occupations,Senior Citizens Retired (% of Population),9.81,PLFS 2024 / Census 2011
+SocioEconomic,Below Poverty Line (BPL) Share (%),1.51,NITI Aayog MPI / NFHS-5
+SocioEconomic,PDS Rice Ration Card Holders (%),98.12,TN Civil Supplies Smart Card Portal
+SocioEconomic,Bank Account Ownership Rate (%),92.55,RBI Financial Inclusion Index
+SocioEconomic,Domestic Electricity Access Rate (%),98.8,NFHS-5 TN Table 14 / Census 2011
+SocioEconomic,Clean LPG Cooking Fuel Coverage (%),80.37,NFHS-5 TN Table 14
+SocioEconomic,Piped Tap Water Coverage (%),93.7,NFHS-5 TN Table 14
+SocioEconomic,Improved Sanitation / Toilet Coverage (%),82.58,NFHS-5 TN Table 14
+SocioEconomic,Internet Access Coverage (%),77.37,TRAI TN Circle / NFHS-5

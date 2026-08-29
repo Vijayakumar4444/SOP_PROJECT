@@ -1,0 +1,303 @@
+{
+  "report_id": "COMPAT-TN_HEALTH_INSURANCE_TOPUP-20260829154525",
+  "policy_id": "TN_HEALTH_INSURANCE_TOPUP",
+  "policy_name": "Tamil Nadu Health Insurance Top-up",
+  "data_foundation_version": "0.3.0-modular",
+  "compatibility_engine_version": "TN_COMPATIBILITY_ENGINE_V0.1",
+  "scoring_config_version": "compatibility_scoring_v0.1",
+  "domains": [
+    {
+      "domain": "INCOME",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 55.0,
+      "matched_variables": [
+        "district",
+        "household_income"
+      ]
+    },
+    {
+      "domain": "DEMOGRAPHICS",
+      "status": "PARTIALLY_SUPPORTED",
+      "score": 55.0,
+      "matched_variables": [
+        "district",
+        "state"
+      ]
+    },
+    {
+      "domain": "HEALTH",
+      "status": "SUPPORTED",
+      "score": 69.0,
+      "matched_variables": [
+        "disability_status",
+        "district",
+        "health_insurance"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": {
+        "variable": "health_insurance",
+        "canonical_variable": "health_insurance",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "MISSING",
+      "score": 0.0,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 0.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "health_insurance",
+          "processed_variable": "health_insurance",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "disability_status",
+        "canonical_variable": "disability_status",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "AGGREGATE_ONLY",
+      "score": 0.1365,
+      "preferred_source": "SRC_NFHS5_IIPS_2019_21",
+      "alternative_sources": [],
+      "non_null_percentage": 0.0,
+      "temporal_status": "AGING",
+      "temporal_score": 0.65,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "AGGREGATE_ONLY_LEVEL: requires PERSON, available STATE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [
+        "disability_status is available only as aggregate data and cannot directly evaluate person-level eligibility.",
+        "AGGREGATE_ONLY_LEVEL: requires PERSON, available STATE"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "disability_status",
+          "processed_variable": "aggregate calibration/provenance table",
+          "source_variable": "disability_status",
+          "source_dataset": "NFHS-5 household and household member data",
+          "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "household_income",
+        "canonical_variable": "household_income",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "HOUSEHOLD",
+        "required_unit": "INR/year",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "PROXY_AVAILABLE",
+      "score": 0.2869,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income",
+      "warnings": [
+        "Household consumption expenditure is present, but it is not annual household income.",
+        "UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "consumption_expenditure",
+          "processed_variable": "consumption_expenditure",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "state",
+        "canonical_variable": "state",
+        "requirement_type": "jurisdiction",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 1.0,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "CURRENT",
+      "temporal_score": 1.0,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "state",
+          "processed_variable": "state",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "district",
+        "canonical_variable": "district",
+        "requirement_type": "group_analysis",
+        "importance": "IMPORTANT",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.68,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 98.7083,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [
+        "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "district",
+          "processed_variable": "district",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    }
+  ],
+  "joint_availability": {
+    "required_critical_variables": [
+      "health_insurance",
+      "disability_status",
+      "household_income",
+      "state"
+    ],
+    "datasets": {
+      "reference_template": {
+        "source_id": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+        "row_count": 12000,
+        "matrix": [
+          {
+            "variable": "health_insurance",
+            "available": "YES"
+          },
+          {
+            "variable": "disability_status",
+            "available": "NO"
+          },
+          {
+            "variable": "household_income",
+            "available": "YES"
+          },
+          {
+            "variable": "state",
+            "available": "YES"
+          }
+        ],
+        "score": 0.75
+      }
+    },
+    "score": 75.0
+  },
+  "score_breakdown": {
+    "domain": 59.67,
+    "variable": 42.07,
+    "availability": 48.74,
+    "joint_availability": 75.0,
+    "temporal": 84.0,
+    "geographic": 95.0,
+    "source_quality": 88.0
+  },
+  "reliability_score": 62.77,
+  "simulation_readiness": "NOT_READY",
+  "blocking_issues": [
+    "Critical variable health_insurance is MISSING.",
+    "Critical variable disability_status is AGGREGATE_ONLY."
+  ],
+  "warnings": [
+    "disability_status: disability_status is available only as aggregate data and cannot directly evaluate person-level eligibility.",
+    "disability_status: AGGREGATE_ONLY_LEVEL: requires PERSON, available STATE",
+    "household_income: Household consumption expenditure is present, but it is not annual household income.",
+    "household_income: UNIT_SEMANTIC_MISMATCH: consumption expenditure is not INR/year household income",
+    "district: GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict",
+    "Not all critical variables are jointly available in the same row-level dataset."
+  ],
+  "recommendations": [
+    "Acquire row-level health_insurance data before simulation.",
+    "Acquire row-level disability_status data before simulation.",
+    "Treat household_income as a proxy-backed limitation; collect direct source data if eligibility depends on it."
+  ],
+  "synthetic_population_requirements": {
+    "policy_id": "TN_HEALTH_INSURANCE_TOPUP",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "health_insurance",
+        "disability_status",
+        "household_income",
+        "state",
+        "district"
+      ],
+      "critical_variables": [
+        "health_insurance",
+        "disability_status",
+        "household_income",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [
+        "household_income"
+      ],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": [
+        "disability_status: AGING"
+      ]
+    }
+  }
+}

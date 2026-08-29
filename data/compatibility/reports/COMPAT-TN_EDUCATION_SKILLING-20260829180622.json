@@ -1,8 +1,8 @@
 {
-  "report_id": "COMPAT-TN_EDUCATION_SKILLING-20260827191304",
+  "report_id": "COMPAT-TN_EDUCATION_SKILLING-20260829180622",
   "policy_id": "TN_EDUCATION_SKILLING",
   "policy_name": "Tamil Nadu Education-linked Skilling Support",
-  "data_foundation_version": "0.2.0-python",
+  "data_foundation_version": "0.3.0-modular",
   "compatibility_engine_version": "TN_COMPATIBILITY_ENGINE_V0.1",
   "scoring_config_version": "compatibility_scoring_v0.1",
   "domains": [
@@ -24,16 +24,6 @@
         "age",
         "district",
         "education_level"
-      ]
-    },
-    {
-      "domain": "SOCIAL_WELFARE",
-      "status": "SUPPORTED",
-      "score": 67.5,
-      "matched_variables": [
-        "age",
-        "district",
-        "state"
       ]
     }
   ],
@@ -204,7 +194,7 @@
     "score": 100.0
   },
   "score_breakdown": {
-    "domain": 74.17,
+    "domain": 77.5,
     "variable": 84.5,
     "availability": 99.68,
     "joint_availability": 100.0,
@@ -212,7 +202,7 @@
     "geographic": 93.75,
     "source_quality": 85.0
   },
-  "reliability_score": 89.69,
+  "reliability_score": 90.19,
   "simulation_readiness": "READY_WITH_WARNINGS",
   "blocking_issues": [],
   "warnings": [

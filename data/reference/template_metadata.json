@@ -2,8 +2,8 @@
   "name": "Tamil Nadu Population Reference Template",
   "version": "0.3.0-modular",
   "state": "Tamil Nadu",
-  "target_records": 12000,
-  "actual_records": 12000,
+  "target_records": 25000,
+  "actual_records": 22584,
   "available_plfs_tamil_nadu_source_rows": 22584,
   "sources": [
     "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
@@ -15,10 +15,18 @@
     "SRC_TN_DES_HOUSING_2022_23",
     "SRC_DATA_GOV_TN_GLANCE_2019",
     "SRC_NFHS5_IIPS_2019_21",
+    "SRC_NFHS5_TN_HEALTH",
+    "SRC_TN_CMCHIS_2023_24",
+    "SRC_TN_PDS_CIVIL_SUPPLIES",
+    "SRC_NFHS5_WOMEN_DEMOGRAPHICS",
+    "SRC_RBI_FINANCIAL_INCLUSION",
+    "SRC_CENSUS_2011_HOUSELISTING",
+    "SRC_NSS_77_LAND_HOLDINGS",
+    "SRC_NSS_78_MIGRATION",
+    "SRC_NFHS5_WEALTH_INDEX",
     "SRC_NSS_MOSPI_CATALOG"
   ],
   "raw_source_files": [
-    "data\\raw\\README.md",
     "data\\raw\\census\\census_2011_pca_catalog_6191.html",
     "data\\raw\\data_gov_in\\tn_glance_2019_catalog.html",
     "data\\raw\\plfs\\opencity_plfs_2024_page.html",
@@ -37,6 +45,10 @@
     "normalized_reference_weight",
     "calibrated_reference_weight_gender_ur"
   ],
+  "quality_checks": {
+    "total": 23,
+    "failed": 0
+  },
   "limitations": [
     "PLFS-only row template; DES/Census/data.gov.in are aggregate/provenance sources; NFHS/NSS manual access pending."
   ]

@@ -49,12 +49,12 @@ EDUCATION:
 SOCIAL_WELFARE:
   core_variables:
     - social_group
-    - state
   supporting_variables:
     - age
     - gender
     - district
     - household_size
+    - state
   preferred_sources:
     - SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR
     - SRC_TN_DES_GLANCE_2023_24

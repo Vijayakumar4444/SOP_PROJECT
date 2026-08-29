@@ -1,0 +1,6 @@
+dimension,category,proportion,source_id,reference_year,notes
+urban_rural,Urban_Covered,0.3850,SRC_NFHS5_TN_HEALTH,2021,NFHS-5 Tamil Nadu State Report Table 15: Urban households with at least one member covered by health scheme
+urban_rural,Rural_Covered,0.4420,SRC_NFHS5_TN_HEALTH,2021,NFHS-5 Tamil Nadu State Report Table 15: Rural households with at least one member covered by health scheme
+overall,Total_Covered,0.4130,SRC_NFHS5_TN_HEALTH,2021,NFHS-5 Tamil Nadu overall household scheme coverage (primarily CMCHIS/PMJAY)
+overall,Private_Insurance,0.0450,SRC_NFHS5_TN_HEALTH,2021,NFHS-5 Tamil Nadu commercial/private health insurance coverage
+overall,Uncovered,0.5420,SRC_NFHS5_TN_HEALTH,2021,Uncovered households estimate

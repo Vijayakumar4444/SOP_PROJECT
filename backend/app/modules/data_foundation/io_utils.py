@@ -14,14 +14,21 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = fieldnames or (list(rows[0].keys()) if rows else [])
-    try:
-        handle = path.open("w", encoding="utf-8", newline="")
-    except PermissionError:
-        handle = path.with_suffix(path.suffix + ".new").open("w", encoding="utf-8", newline="")
-    with handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+    import os, time
+    for attempt in range(5):
+        try:
+            if path.exists():
+                try:
+                    os.chmod(path, 0o666)
+                except Exception:
+                    pass
+            with path.open("w", encoding="utf-8", newline="") as handle:
+                writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
+                writer.writeheader()
+                writer.writerows(rows)
+            return
+        except PermissionError:
+            time.sleep(0.5)
 
 
 def write_json(path: Path, value: Any) -> None:

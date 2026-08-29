@@ -1,8 +1,8 @@
 {
-  "report_id": "COMPAT-TN_HEALTH_INSURANCE_TOPUP-20260827191230",
+  "report_id": "COMPAT-TN_HEALTH_INSURANCE_TOPUP-20260829183155",
   "policy_id": "TN_HEALTH_INSURANCE_TOPUP",
   "policy_name": "Tamil Nadu Health Insurance Top-up",
-  "data_foundation_version": "0.2.0-python",
+  "data_foundation_version": "0.3.0-modular",
   "compatibility_engine_version": "TN_COMPATIBILITY_ENGINE_V0.1",
   "scoring_config_version": "compatibility_scoring_v0.1",
   "domains": [
@@ -25,20 +25,10 @@
       ]
     },
     {
-      "domain": "SOCIAL_WELFARE",
+      "domain": "HEALTH",
       "status": "PARTIALLY_SUPPORTED",
       "score": 55.0,
       "matched_variables": [
-        "district",
-        "state"
-      ]
-    },
-    {
-      "domain": "HEALTH",
-      "status": "SUPPORTED",
-      "score": 69.0,
-      "matched_variables": [
-        "disability_status",
         "district",
         "health_insurance"
       ]
@@ -56,11 +46,11 @@
         "required_geography": "Tamil Nadu",
         "policy_reference_year": 2026
       },
-      "status": "MISSING",
-      "score": 0.0,
+      "status": "EXACT_AVAILABLE",
+      "score": 0.85,
       "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
       "alternative_sources": [],
-      "non_null_percentage": 0.0,
+      "non_null_percentage": 100.0,
       "temporal_status": "RECENT",
       "temporal_score": 0.85,
       "geographic_status": "COMPATIBLE",
@@ -90,9 +80,9 @@
       },
       "status": "AGGREGATE_ONLY",
       "score": 0.1365,
-      "preferred_source": "SRC_NFHS5_IIPS_2019_21",
+      "preferred_source": "SRC_NFHS5_TN_HEALTH",
       "alternative_sources": [],
-      "non_null_percentage": 0.0,
+      "non_null_percentage": 100.0,
       "temporal_status": "AGING",
       "temporal_score": 0.65,
       "geographic_status": "COMPATIBLE",
@@ -107,7 +97,7 @@
           "canonical_variable": "disability_status",
           "processed_variable": "aggregate calibration/provenance table",
           "source_variable": "disability_status",
-          "source_dataset": "NFHS-5 household and household member data",
+          "source_dataset": "NFHS-5 Tamil Nadu Factsheet & Health Scheme Indicators",
           "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India"
         }
       ]
@@ -194,7 +184,7 @@
       "score": 0.68,
       "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
       "alternative_sources": [],
-      "non_null_percentage": 98.7083,
+      "non_null_percentage": 98.6982,
       "temporal_status": "RECENT",
       "temporal_score": 0.85,
       "geographic_status": "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict",
@@ -224,7 +214,7 @@
     "datasets": {
       "reference_template": {
         "source_id": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
-        "row_count": 12000,
+        "row_count": 22584,
         "matrix": [
           {
             "variable": "health_insurance",
@@ -249,18 +239,17 @@
     "score": 75.0
   },
   "score_breakdown": {
-    "domain": 58.5,
-    "variable": 42.07,
-    "availability": 48.74,
+    "domain": 55.0,
+    "variable": 59.07,
+    "availability": 74.74,
     "joint_availability": 75.0,
     "temporal": 84.0,
     "geographic": 95.0,
     "source_quality": 88.0
   },
-  "reliability_score": 62.59,
+  "reliability_score": 71.51,
   "simulation_readiness": "NOT_READY",
   "blocking_issues": [
-    "Critical variable health_insurance is MISSING.",
     "Critical variable disability_status is AGGREGATE_ONLY."
   ],
   "warnings": [
@@ -272,7 +261,6 @@
     "Not all critical variables are jointly available in the same row-level dataset."
   ],
   "recommendations": [
-    "Acquire row-level health_insurance data before simulation.",
     "Acquire row-level disability_status data before simulation.",
     "Treat household_income as a proxy-backed limitation; collect direct source data if eligibility depends on it."
   ],

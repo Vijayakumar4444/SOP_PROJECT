@@ -146,8 +146,17 @@ class DataCapabilityRegistryBuilder:
             "scheduled_tribe_indicator": ("SRC_TN_DES_GLANCE_2023_24", 2011, "STATE"),
             "worker_category": ("SRC_TN_DES_GLANCE_2023_24", 2011, "STATE"),
             "literacy_rate": ("SRC_TN_DES_GLANCE_2023_24", 2011, "STATE"),
-            "health_insurance": ("SRC_NFHS5_IIPS_2019_21", 2021, "STATE"),
-            "disability_status": ("SRC_NFHS5_IIPS_2019_21", 2021, "STATE"),
+            "health_insurance": ("SRC_NFHS5_TN_HEALTH", 2021, "STATE"),
+            "disability_status": ("SRC_NFHS5_TN_HEALTH", 2021, "STATE"),
+            "female_literacy_rate": ("SRC_NFHS5_WOMEN_DEMOGRAPHICS", 2021, "STATE"),
+            "ration_card_type": ("SRC_TN_PDS_CIVIL_SUPPLIES", 2024, "STATE"),
+            "bank_account_ownership": ("SRC_RBI_FINANCIAL_INCLUSION", 2024, "STATE"),
+            "electricity": ("SRC_NFHS5_WOMEN_DEMOGRAPHICS", 2021, "STATE"),
+            "wealth_quintile": ("SRC_NFHS5_WEALTH_INDEX", 2021, "STATE"),
+            "poverty_status": ("SRC_NFHS5_WEALTH_INDEX", 2021, "STATE"),
+            "land_ownership_status": ("SRC_NSS_77_LAND_HOLDINGS", 2019, "STATE"),
+            "migration_status": ("SRC_NSS_78_MIGRATION", 2021, "STATE"),
+            "housing_type": ("SRC_CENSUS_2011_HOUSELISTING", 2011, "STATE"),
         }
         for name, (source_id, year, geo) in aggregate_defs.items():
             if name in capabilities and not capabilities[name].get("sources"):

@@ -7,7 +7,8 @@
   "scripts": {
     "phase1:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase1_python.ps1",
     "phase2:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase2_python.ps1",
-    "test": "node tests/phase1.test.js && node tests/phase2.test.js"
+    "test:python": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
+    "test": "node tests/phase1.test.js && node tests/phase2.test.js && powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1"
   },
   "dependencies": {
     "xlsx": "^0.18.5"

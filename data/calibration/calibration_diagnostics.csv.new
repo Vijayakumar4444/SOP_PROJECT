@@ -1,5 +1,0 @@
-calibration_dimension,category,official_share,sample_weighted_share_before,sample_weighted_share_after,source_id,method
-gender_x_urban_rural,Male|Rural,0.26152056432537835,0.2606274131634407,0.26145749126280776,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,post-stratification factor on normalized_reference_weight; original source rows unchanged
-gender_x_urban_rural,Female|Rural,0.2545033108084976,0.2750512010168623,0.2544419301545976,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,post-stratification factor on normalized_reference_weight; original source rows unchanged
-gender_x_urban_rural,Male|Urban,0.2393728889463641,0.2273726943739925,0.23931515742058254,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,post-stratification factor on normalized_reference_weight; original source rows unchanged
-gender_x_urban_rural,Female|Urban,0.24460323591975996,0.23670751323193046,0.244544242948238,SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011,post-stratification factor on normalized_reference_weight; original source rows unchanged

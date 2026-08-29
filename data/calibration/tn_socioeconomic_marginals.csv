@@ -1,0 +1,23 @@
+dimension,category,proportion,source_id,reference_year,notes
+electricity,Electricity_Yes,0.9890,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Households with electricity
+electricity,Electricity_No,0.0110,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Households without electricity
+drinking_water,Piped_Tap,0.9360,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Improved source of drinking water
+drinking_water,Borewell_Tanker_Other,0.0640,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Unimproved drinking water source
+toilet_facility,Flush_Improved,0.8250,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Improved sanitation facility
+toilet_facility,Open_Shared,0.1750,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Shared or open sanitation
+cooking_fuel,LPG_Clean,0.8020,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Clean fuel for cooking
+cooking_fuel,Firewood_Biomass,0.1980,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Traditional solid cooking fuels
+bank_account,Bank_Account_Yes,0.9240,SRC_RBI_FINANCIAL_INCLUSION,2023,NFHS-5 / RBI Financial Inclusion index for Tamil Nadu
+bank_account,Bank_Account_No,0.0760,SRC_RBI_FINANCIAL_INCLUSION,2023,Unbanked population estimate
+ration_card,PHH_Rice,0.6230,SRC_TN_PDS_CIVIL_SUPPLIES,2024,Tamil Nadu Civil Supplies PDS Priority Household Rice Card
+ration_card,NPHH_Rice,0.2850,SRC_TN_PDS_CIVIL_SUPPLIES,2024,Non-Priority Household Rice Card
+ration_card,AAY,0.0740,SRC_TN_PDS_CIVIL_SUPPLIES,2024,Antyodaya Anna Yojana poorest household card
+ration_card,NPHH_NoRice,0.0180,SRC_TN_PDS_CIVIL_SUPPLIES,2024,Non-rice / sugar/kerosene only card
+female_head,Female_Head_Yes,0.1520,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,NFHS-5 Tamil Nadu Table 14: Female-headed households
+female_head,Female_Head_No,0.8480,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Male-headed households
+widow_status,Widowed_Yes,0.1040,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Census 2011 & NFHS-5 Tamil Nadu adult female widowhood ratio
+widow_status,Widowed_No,0.8960,SRC_NFHS5_WOMEN_DEMOGRAPHICS,2021,Married/single adult females
+income_band,Under_1Lakh,0.3120,SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR,2024,Annual household income band under Rs 1,00,000
+income_band,1Lakh_to_2.5Lakh,0.4280,SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR,2024,Annual household income band Rs 1,00,000 to Rs 2,50,000
+income_band,2.5Lakh_to_5Lakh,0.1940,SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR,2024,Annual household income band Rs 2,50,000 to Rs 5,00,000
+income_band,Above_5Lakh,0.0660,SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR,2024,Annual household income band above Rs 5,00,000

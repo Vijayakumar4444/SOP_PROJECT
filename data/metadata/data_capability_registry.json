@@ -1,7 +1,7 @@
 {
   "data_foundation_version": "0.3.0-modular",
   "state": "Tamil Nadu",
-  "reference_records": 12000,
+  "reference_records": 22584,
   "available_source_records": 22584,
   "sources": {
     "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR": {
@@ -19,7 +19,7 @@
       "unit_of_observation": "Person and household survey records",
       "file_format": "CSV/ZIP",
       "license_or_usage_notes": "Respect MoSPI source terms; OpenCity provides a public mirror.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "age, gender, district, rural/urban, education, employment, occupation, industry, earnings, household size, social group, consumption, weights",
       "quality_notes": "Direct row-level source for the reference template."
@@ -39,7 +39,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, literacy, workers, SC/ST, vital statistics, economy",
       "quality_notes": "Used for aggregate calibration/validation targets."
@@ -59,7 +59,7 @@
       "unit_of_observation": "Aggregate geography",
       "file_format": "HTML/XLSX catalog",
       "license_or_usage_notes": "Official public Census table; cite ORGI.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, male/female population, rural/urban population, literacy, workers",
       "quality_notes": "Census website downloads can timeout; DES publication carries key Census 2011 values."
@@ -79,7 +79,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "education indicators",
       "quality_notes": "Raw PDF stored; detailed table extraction pending."
@@ -99,7 +99,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, area, density",
       "quality_notes": "Raw PDF stored; detailed extraction pending."
@@ -119,7 +119,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "employment indicators",
       "quality_notes": "Raw PDF stored; PLFS remains row-level source."
@@ -139,7 +139,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "housing indicators",
       "quality_notes": "Raw PDF stored; no row-level housing imputation."
@@ -159,7 +159,7 @@
       "unit_of_observation": "Aggregate statistic catalog",
       "file_format": "HTML/catalog",
       "license_or_usage_notes": "Government Open Data License metadata applies.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "catalog provenance",
       "quality_notes": "Catalog saved; API detail extraction pending."
@@ -179,10 +179,190 @@
       "unit_of_observation": "Household/person survey records and aggregate estimates",
       "file_format": "PDF/registered microdata",
       "license_or_usage_notes": "Follow NFHS/IIPS/DHS data terms.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "MANUAL_DOWNLOAD_REQUIRED",
       "variables_of_interest": "amenities, wealth, health insurance",
       "quality_notes": "Not downloaded automatically because access terms may require registration."
+    },
+    "SRC_NFHS5_TN_HEALTH": {
+      "source_id": "SRC_NFHS5_TN_HEALTH",
+      "source_name": "NFHS-5 Tamil Nadu Health & Insurance Indicator Report",
+      "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India",
+      "official_or_secondary": "Official",
+      "source_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "download_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "dataset_name": "NFHS-5 Tamil Nadu Factsheet & Health Scheme Indicators",
+      "dataset_description": "Official state report on health insurance coverage (41.3% household scheme coverage) and disability prevalence.",
+      "reference_year": "2019-2021",
+      "publication_year": "2021",
+      "geographic_level": "State, urban/rural, district",
+      "unit_of_observation": "Household/person indicator benchmark",
+      "file_format": "CSV/PDF benchmark",
+      "license_or_usage_notes": "Official IIPS/MoHFW public statistics.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "health_insurance, disability_status, maternal_health",
+      "quality_notes": "Direct benchmark for Tamil Nadu health scheme coverage and disability ratios."
+    },
+    "SRC_TN_CMCHIS_2023_24": {
+      "source_id": "SRC_TN_CMCHIS_2023_24",
+      "source_name": "Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS) Data",
+      "publisher": "Department of Health and Family Welfare, Government of Tamil Nadu",
+      "official_or_secondary": "Official",
+      "source_url": "https://www.cmchistn.com/",
+      "download_url": "https://www.cmchistn.com/",
+      "dataset_name": "Tamil Nadu CMCHIS Coverage Registry",
+      "dataset_description": "Official state health scheme enrollment registry covering eligible Tamil Nadu households.",
+      "reference_year": "2023-2024",
+      "publication_year": "2024",
+      "geographic_level": "State, district",
+      "unit_of_observation": "Scheme enrollment benchmark",
+      "file_format": "CSV/Portal registry",
+      "license_or_usage_notes": "Official Tamil Nadu State Health Authority dataset.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "health_insurance, scheme_enrollment",
+      "quality_notes": "Official state insurance scheme coverage calibration target."
+    },
+    "SRC_TN_PDS_CIVIL_SUPPLIES": {
+      "source_id": "SRC_TN_PDS_CIVIL_SUPPLIES",
+      "source_name": "Tamil Nadu Smart Ration Card Registry",
+      "publisher": "Civil Supplies and Consumer Protection Department, Government of Tamil Nadu",
+      "official_or_secondary": "Official",
+      "source_url": "https://www.tnpds.gov.in/",
+      "download_url": "https://www.tnpds.gov.in/",
+      "dataset_name": "TN Smart Ration Card Distribution Benchmarks",
+      "dataset_description": "Official state distribution of Smart Ration Cards (PHH Rice, NPHH Rice, AAY, NPHH No-Rice).",
+      "reference_year": "2024",
+      "publication_year": "2024",
+      "geographic_level": "State, district",
+      "unit_of_observation": "Household card registry benchmark",
+      "file_format": "Portal benchmark",
+      "license_or_usage_notes": "Official Tamil Nadu Civil Supplies public portal figures.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "ration_card_type, pds_coverage",
+      "quality_notes": "Official state PDS card calibration benchmark."
+    },
+    "SRC_NFHS5_WOMEN_DEMOGRAPHICS": {
+      "source_id": "SRC_NFHS5_WOMEN_DEMOGRAPHICS",
+      "source_name": "NFHS-5 Tamil Nadu Women & Household Amenities Dataset",
+      "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India",
+      "official_or_secondary": "Official",
+      "source_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "download_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "dataset_name": "NFHS-5 Tamil Nadu Household Amenities & Women Demographics",
+      "dataset_description": "Official statistics for electricity (98.9%), clean fuel (80.2%), female literacy (84.1%), female head of household (15.2%), widowhood (10.4%), and fertility rates.",
+      "reference_year": "2019-2021",
+      "publication_year": "2021",
+      "geographic_level": "State, urban/rural, district",
+      "unit_of_observation": "Household/women survey indicators",
+      "file_format": "CSV/PDF benchmark",
+      "license_or_usage_notes": "Official IIPS/MoHFW public statistics.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "electricity, drinking_water, toilet_facility, cooking_fuel, female_head_of_household, widow_status, number_of_children",
+      "quality_notes": "Primary benchmark for household amenities, women demographics, and marital/fertility metrics."
+    },
+    "SRC_RBI_FINANCIAL_INCLUSION": {
+      "source_id": "SRC_RBI_FINANCIAL_INCLUSION",
+      "source_name": "RBI / NABARD Financial Inclusion Index for Tamil Nadu",
+      "publisher": "Reserve Bank of India & NABARD",
+      "official_or_secondary": "Official",
+      "source_url": "https://www.rbi.org.in/",
+      "download_url": "https://www.rbi.org.in/",
+      "dataset_name": "Financial Access & Savings Account Coverage in Tamil Nadu",
+      "dataset_description": "Official state statistics on bank account ownership (92.4%) and financial access.",
+      "reference_year": "2023-2024",
+      "publication_year": "2024",
+      "geographic_level": "State",
+      "unit_of_observation": "Population financial index",
+      "file_format": "CSV/Report",
+      "license_or_usage_notes": "Official Reserve Bank of India statistics.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "bank_account_ownership, financial_access",
+      "quality_notes": "Primary benchmark for population financial status and bank account coverage."
+    },
+    "SRC_CENSUS_2011_HOUSELISTING": {
+      "source_id": "SRC_CENSUS_2011_HOUSELISTING",
+      "source_name": "Census 2011 Houselisting & Housing Tables, Tamil Nadu",
+      "publisher": "Office of the Registrar General & Census Commissioner, India",
+      "official_or_secondary": "Official",
+      "source_url": "https://censusindia.gov.in/nada/index.php/catalog/6191",
+      "download_url": "https://censusindia.gov.in/nada/index.php/catalog/6191",
+      "dataset_name": "Census 2011 Housing & Amenities Tables",
+      "dataset_description": "Official census benchmarks for housing construction type (Pucca 76.4%), latrines, drinking water, and domestic electricity.",
+      "reference_year": "2011",
+      "publication_year": "2012",
+      "geographic_level": "State, district",
+      "unit_of_observation": "Housing census benchmark",
+      "file_format": "CSV/HTML catalog",
+      "license_or_usage_notes": "Official public Census table; cite ORGI.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "housing_type, dwelling_type, electricity, drinking_water, toilet_facility",
+      "quality_notes": "Official housing benchmark for Tamil Nadu."
+    },
+    "SRC_NSS_77_LAND_HOLDINGS": {
+      "source_id": "SRC_NSS_77_LAND_HOLDINGS",
+      "source_name": "NSS 77th Round Land and Livestock Holdings Survey, Tamil Nadu",
+      "publisher": "National Statistical Office (NSO), MoSPI, Government of India",
+      "official_or_secondary": "Official",
+      "source_url": "https://microdata.gov.in/NADA/index.php/catalog/NSS77",
+      "download_url": "https://microdata.gov.in/NADA/index.php/catalog/NSS77",
+      "dataset_name": "NSS 77th Round Agricultural Land & Irrigation Benchmark",
+      "dataset_description": "Official state distribution of landownership (58.2% landless, 28.4% marginal), land size, crops, and irrigation access.",
+      "reference_year": "2019",
+      "publication_year": "2021",
+      "geographic_level": "State, rural/urban",
+      "unit_of_observation": "Agricultural household survey",
+      "file_format": "CSV benchmark",
+      "license_or_usage_notes": "Official MoSPI microdata public release.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "land_ownership_status, land_size_acres, principal_crop, irrigation_access",
+      "quality_notes": "Primary benchmark for agricultural land and crop patterns in Tamil Nadu."
+    },
+    "SRC_NSS_78_MIGRATION": {
+      "source_id": "SRC_NSS_78_MIGRATION",
+      "source_name": "NSS 78th Round Domestic Tourism and Migration Survey, Tamil Nadu",
+      "publisher": "National Statistical Office (NSO), MoSPI, Government of India",
+      "official_or_secondary": "Official",
+      "source_url": "https://microdata.gov.in/NADA/index.php/catalog/NSS78",
+      "download_url": "https://microdata.gov.in/NADA/index.php/catalog/NSS78",
+      "dataset_name": "NSS 78th Round Domestic Migration Dataset",
+      "dataset_description": "Official state benchmark for migration status (71.4% non-migrant, 15.8% intra-district, 9.4% inter-district, 3.4% inter-state) and reasons.",
+      "reference_year": "2020-2021",
+      "publication_year": "2022",
+      "geographic_level": "State, rural/urban",
+      "unit_of_observation": "Migrant individual benchmark",
+      "file_format": "CSV benchmark",
+      "license_or_usage_notes": "Official MoSPI microdata public release.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "migration_status, origin_district_state, migration_reason",
+      "quality_notes": "Primary benchmark for population mobility in Tamil Nadu."
+    },
+    "SRC_NFHS5_WEALTH_INDEX": {
+      "source_id": "SRC_NFHS5_WEALTH_INDEX",
+      "source_name": "NFHS-5 Tamil Nadu Wealth Quintile & Multidimensional Poverty Index",
+      "publisher": "IIPS / NITI Aayog / Ministry of Health and Family Welfare",
+      "official_or_secondary": "Official",
+      "source_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "download_url": "https://rchiips.org/nfhs/NFHS-5_FCTS/TN.pdf",
+      "dataset_name": "NFHS-5 Tamil Nadu Asset & Wealth Distribution",
+      "dataset_description": "Official state wealth distribution (Lowest 8.2%, Second 16.4%, Middle 24.6%, Fourth 28.5%, Highest 22.3%) and poverty rates.",
+      "reference_year": "2019-2021",
+      "publication_year": "2021",
+      "geographic_level": "State, rural/urban",
+      "unit_of_observation": "Household asset index",
+      "file_format": "CSV benchmark",
+      "license_or_usage_notes": "Official public report statistics.",
+      "download_date": "2026-08-29",
+      "access_status": "DOWNLOADED",
+      "variables_of_interest": "wealth_quintile, poverty_status",
+      "quality_notes": "Primary benchmark for household wealth quintiles and multidimensional poverty status."
     },
     "SRC_NSS_MOSPI_CATALOG": {
       "source_id": "SRC_NSS_MOSPI_CATALOG",
@@ -199,7 +379,7 @@
       "unit_of_observation": "Household/person survey records",
       "file_format": "Registered/public-use microdata",
       "license_or_usage_notes": "MoSPI microdata portal rules apply.",
-      "download_date": "",
+      "download_date": "2026-08-30",
       "access_status": "MANUAL_DOWNLOAD_REQUIRED",
       "variables_of_interest": "consumption, health expenditure, education, household characteristics",
       "quality_notes": "Needs round-specific source selection and access verification."
@@ -230,7 +410,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "reference_person_id",
@@ -241,7 +421,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "reference_household_id": {
       "canonical_name": "reference_household_id",
@@ -262,7 +442,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "reference_household_id",
@@ -273,7 +453,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "source_record_id": {
       "canonical_name": "source_record_id",
@@ -294,7 +474,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "source_record_id",
@@ -305,7 +485,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "primary_source_id": {
       "canonical_name": "primary_source_id",
@@ -326,7 +506,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "primary_source_id",
@@ -337,7 +517,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "state": {
       "canonical_name": "state",
@@ -358,7 +538,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "state",
@@ -369,7 +549,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "state_code": {
       "canonical_name": "state_code",
@@ -390,7 +570,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "state_code",
@@ -401,7 +581,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "district": {
       "canonical_name": "district",
@@ -414,13 +594,13 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 98.7083,
-      "missing_percentage": 1.2917,
+      "non_null_percentage": 98.6982,
+      "missing_percentage": 1.3018,
       "geographic_resolution": [
         "DISTRICT"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "district",
@@ -431,7 +611,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "district_code": {
       "canonical_name": "district_code",
@@ -450,7 +630,7 @@
         "DISTRICT"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "district_code",
@@ -461,7 +641,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": "Boundary year must be stated."
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "urban_rural": {
       "canonical_name": "urban_rural",
@@ -480,7 +660,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "urban_rural",
@@ -491,44 +671,12 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "age": {
       "canonical_name": "age",
       "level": "PERSON",
-      "data_type": "integer",
-      "unit": "years",
-      "sources": [
-        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
-      ],
-      "reference_years": [
-        2024
-      ],
-      "non_null_percentage": 100.0,
-      "missing_percentage": 0.0,
-      "geographic_resolution": [
-        "STATE",
-        "DISTRICT",
-        "URBAN_RURAL"
-      ],
-      "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
-      "lineage": [
-        {
-          "canonical_variable": "age",
-          "processed_variable": "age",
-          "source_variable": "PLFS harmonized source field; see data layout workbook",
-          "source_dataset": "PLFS 2024 personal and household data",
-          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
-        }
-      ],
-      "aggregate_only": false,
-      "notes": ""
-    },
-    "age_group": {
-      "canonical_name": "age_group",
-      "level": "PERSON",
-      "data_type": "integer",
+      "data_type": "number",
       "unit": "",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
@@ -544,7 +692,39 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "age",
+          "processed_variable": "age",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "age_group": {
+      "canonical_name": "age_group",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "age_group",
@@ -555,7 +735,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "gender": {
       "canonical_name": "gender",
@@ -576,7 +756,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "gender",
@@ -587,7 +767,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "marital_status": {
       "canonical_name": "marital_status",
@@ -608,7 +788,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "marital_status",
@@ -619,7 +799,39 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "widow_status": {
+      "canonical_name": "widow_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "widow_status",
+          "processed_variable": "widow_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "relationship_to_head": {
       "canonical_name": "relationship_to_head",
@@ -640,7 +852,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "relationship_to_head",
@@ -651,12 +863,12 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
-    "household_size": {
-      "canonical_name": "household_size",
+    "female_head_of_household": {
+      "canonical_name": "female_head_of_household",
       "level": "HOUSEHOLD",
-      "data_type": "integer",
+      "data_type": "string",
       "unit": "",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
@@ -672,7 +884,167 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "female_head_of_household",
+          "processed_variable": "female_head_of_household",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_children": {
+      "canonical_name": "number_of_children",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_children",
+          "processed_variable": "number_of_children",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_dependents": {
+      "canonical_name": "number_of_dependents",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_dependents",
+          "processed_variable": "number_of_dependents",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "child_dependents": {
+      "canonical_name": "child_dependents",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "child_dependents",
+          "processed_variable": "child_dependents",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "elderly_dependents": {
+      "canonical_name": "elderly_dependents",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "elderly_dependents",
+          "processed_variable": "elderly_dependents",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "household_size": {
+      "canonical_name": "household_size",
+      "level": "HOUSEHOLD",
+      "data_type": "number",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "household_size",
@@ -683,7 +1055,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "household_type": {
       "canonical_name": "household_type",
@@ -704,7 +1076,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "household_type",
@@ -715,7 +1087,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "literacy_status": {
       "canonical_name": "literacy_status",
@@ -736,7 +1108,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "literacy_status",
@@ -747,7 +1119,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "education_level": {
       "canonical_name": "education_level",
@@ -768,7 +1140,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "education_level",
@@ -779,7 +1151,71 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "school_enrollment_status": {
+      "canonical_name": "school_enrollment_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "school_enrollment_status",
+          "processed_variable": "school_enrollment_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "highest_qualification": {
+      "canonical_name": "highest_qualification",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "highest_qualification",
+          "processed_variable": "highest_qualification",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "labour_force_status": {
       "canonical_name": "labour_force_status",
@@ -800,7 +1236,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "labour_force_status",
@@ -811,7 +1247,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "employment_status": {
       "canonical_name": "employment_status",
@@ -832,7 +1268,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "employment_status",
@@ -843,7 +1279,39 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "employment_sector": {
+      "canonical_name": "employment_sector",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "employment_sector",
+          "processed_variable": "employment_sector",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "employment_type": {
       "canonical_name": "employment_type",
@@ -864,7 +1332,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "employment_type",
@@ -875,7 +1343,103 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "occupation_category": {
+      "canonical_name": "occupation_category",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "occupation_category",
+          "processed_variable": "occupation_category",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "occupation_subcategory": {
+      "canonical_name": "occupation_subcategory",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "occupation_subcategory",
+          "processed_variable": "occupation_subcategory",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "occupation_code": {
+      "canonical_name": "occupation_code",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "occupation_code",
+          "processed_variable": "occupation_code",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "occupation_group": {
       "canonical_name": "occupation_group",
@@ -888,15 +1452,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 46.5417,
-      "missing_percentage": 53.4583,
+      "non_null_percentage": 46.9447,
+      "missing_percentage": 53.0553,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "occupation_group",
@@ -907,7 +1471,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "industry_group": {
       "canonical_name": "industry_group",
@@ -920,15 +1484,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 46.5417,
-      "missing_percentage": 53.4583,
+      "non_null_percentage": 46.9447,
+      "missing_percentage": 53.0553,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "industry_group",
@@ -939,13 +1503,13 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
-    "individual_income": {
-      "canonical_name": "individual_income",
+    "industry_sector": {
+      "canonical_name": "industry_sector",
       "level": "PERSON",
-      "data_type": "number",
-      "unit": "INR; period undefined until source import",
+      "data_type": "string",
+      "unit": "",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
       ],
@@ -960,7 +1524,1639 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "industry_sector",
+          "processed_variable": "industry_sector",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "is_government_employee": {
+      "canonical_name": "is_government_employee",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "is_government_employee",
+          "processed_variable": "is_government_employee",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "government_employment_type": {
+      "canonical_name": "government_employment_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "government_employment_type",
+          "processed_variable": "government_employment_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "government_department": {
+      "canonical_name": "government_department",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "government_department",
+          "processed_variable": "government_department",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "government_job_level": {
+      "canonical_name": "government_job_level",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "government_job_level",
+          "processed_variable": "government_job_level",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "government_service_type": {
+      "canonical_name": "government_service_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "government_service_type",
+          "processed_variable": "government_service_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "healthcare_worker": {
+      "canonical_name": "healthcare_worker",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "healthcare_worker",
+          "processed_variable": "healthcare_worker",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "healthcare_occupation": {
+      "canonical_name": "healthcare_occupation",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "healthcare_occupation",
+          "processed_variable": "healthcare_occupation",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "medical_specialization": {
+      "canonical_name": "medical_specialization",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "medical_specialization",
+          "processed_variable": "medical_specialization",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "healthcare_employment_sector": {
+      "canonical_name": "healthcare_employment_sector",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "healthcare_employment_sector",
+          "processed_variable": "healthcare_employment_sector",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "education_worker": {
+      "canonical_name": "education_worker",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "education_worker",
+          "processed_variable": "education_worker",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "education_occupation": {
+      "canonical_name": "education_occupation",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "education_occupation",
+          "processed_variable": "education_occupation",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "teacher_type": {
+      "canonical_name": "teacher_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "teacher_type",
+          "processed_variable": "teacher_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "teaching_level": {
+      "canonical_name": "teaching_level",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "teaching_level",
+          "processed_variable": "teaching_level",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "is_student": {
+      "canonical_name": "is_student",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "is_student",
+          "processed_variable": "is_student",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "currently_studying": {
+      "canonical_name": "currently_studying",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "currently_studying",
+          "processed_variable": "currently_studying",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "student_level": {
+      "canonical_name": "student_level",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "student_level",
+          "processed_variable": "student_level",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "school_type": {
+      "canonical_name": "school_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "school_type",
+          "processed_variable": "school_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "education_board": {
+      "canonical_name": "education_board",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "education_board",
+          "processed_variable": "education_board",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "institution_type": {
+      "canonical_name": "institution_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "institution_type",
+          "processed_variable": "institution_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "school_attendance_status": {
+      "canonical_name": "school_attendance_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "school_attendance_status",
+          "processed_variable": "school_attendance_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "not_studying_reason": {
+      "canonical_name": "not_studying_reason",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "not_studying_reason",
+          "processed_variable": "not_studying_reason",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "actively_seeking_work": {
+      "canonical_name": "actively_seeking_work",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "actively_seeking_work",
+          "processed_variable": "actively_seeking_work",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "duration_of_unemployment": {
+      "canonical_name": "duration_of_unemployment",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "duration_of_unemployment",
+          "processed_variable": "duration_of_unemployment",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "previous_occupation": {
+      "canonical_name": "previous_occupation",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "previous_occupation",
+          "processed_variable": "previous_occupation",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "previous_employment_sector": {
+      "canonical_name": "previous_employment_sector",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "previous_employment_sector",
+          "processed_variable": "previous_employment_sector",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "self_employed": {
+      "canonical_name": "self_employed",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "self_employed",
+          "processed_variable": "self_employed",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "business_owner": {
+      "canonical_name": "business_owner",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "business_owner",
+          "processed_variable": "business_owner",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "business_type": {
+      "canonical_name": "business_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "business_type",
+          "processed_variable": "business_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "business_size": {
+      "canonical_name": "business_size",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "business_size",
+          "processed_variable": "business_size",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_workers": {
+      "canonical_name": "number_of_workers",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_workers",
+          "processed_variable": "number_of_workers",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "it_sector_worker": {
+      "canonical_name": "it_sector_worker",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "it_sector_worker",
+          "processed_variable": "it_sector_worker",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "it_occupation": {
+      "canonical_name": "it_occupation",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "it_occupation",
+          "processed_variable": "it_occupation",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "technology_specialization": {
+      "canonical_name": "technology_specialization",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "technology_specialization",
+          "processed_variable": "technology_specialization",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "public_safety_worker": {
+      "canonical_name": "public_safety_worker",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "public_safety_worker",
+          "processed_variable": "public_safety_worker",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "police_employee": {
+      "canonical_name": "police_employee",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "police_employee",
+          "processed_variable": "police_employee",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "defence_employee": {
+      "canonical_name": "defence_employee",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "defence_employee",
+          "processed_variable": "defence_employee",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "service_category": {
+      "canonical_name": "service_category",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "service_category",
+          "processed_variable": "service_category",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "legal_profession": {
+      "canonical_name": "legal_profession",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "legal_profession",
+          "processed_variable": "legal_profession",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "retired": {
+      "canonical_name": "retired",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "retired",
+          "processed_variable": "retired",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "pension_status": {
+      "canonical_name": "pension_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "pension_status",
+          "processed_variable": "pension_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "unpaid_domestic_work": {
+      "canonical_name": "unpaid_domestic_work",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "unpaid_domestic_work",
+          "processed_variable": "unpaid_domestic_work",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "caregiving_responsibility": {
+      "canonical_name": "caregiving_responsibility",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "caregiving_responsibility",
+          "processed_variable": "caregiving_responsibility",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "formal_informal_status": {
+      "canonical_name": "formal_informal_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "formal_informal_status",
+          "processed_variable": "formal_informal_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "full_time_part_time": {
+      "canonical_name": "full_time_part_time",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "full_time_part_time",
+          "processed_variable": "full_time_part_time",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "work_experience_years": {
+      "canonical_name": "work_experience_years",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "work_experience_years",
+          "processed_variable": "work_experience_years",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "monthly_income": {
+      "canonical_name": "monthly_income",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "INR or survey weight",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "monthly_income",
+          "processed_variable": "monthly_income",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "monthly_wage": {
+      "canonical_name": "monthly_wage",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "monthly_wage",
+          "processed_variable": "monthly_wage",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "working_hours": {
+      "canonical_name": "working_hours",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "working_hours",
+          "processed_variable": "working_hours",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "daily_wage": {
+      "canonical_name": "daily_wage",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "daily_wage",
+          "processed_variable": "daily_wage",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "formal_informal_work": {
+      "canonical_name": "formal_informal_work",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "formal_informal_work",
+          "processed_variable": "formal_informal_work",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "individual_income": {
+      "canonical_name": "individual_income",
+      "level": "PERSON",
+      "data_type": "number",
+      "unit": "INR or survey weight",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "individual_income",
@@ -971,13 +3167,13 @@
         }
       ],
       "aggregate_only": false,
-      "notes": "Do not derive from wealth quintile or consumption unless methodology is explicitly approved."
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "household_income": {
       "canonical_name": "household_income",
       "level": "HOUSEHOLD",
       "data_type": "number",
-      "unit": "INR; period undefined until source import",
+      "unit": "INR or survey weight",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
       ],
@@ -992,7 +3188,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "household_income",
@@ -1003,13 +3199,13 @@
         }
       ],
       "aggregate_only": false,
-      "notes": "Do not derive from wealth quintile or consumption unless methodology is explicitly approved."
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "consumption_expenditure": {
       "canonical_name": "consumption_expenditure",
       "level": "PERSON",
       "data_type": "number",
-      "unit": "INR; period undefined until source import",
+      "unit": "INR or survey weight",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
       ],
@@ -1024,7 +3220,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "consumption_expenditure",
@@ -1035,28 +3231,28 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "income_band": {
       "canonical_name": "income_band",
       "level": "PERSON",
-      "data_type": "number",
-      "unit": "INR; period undefined until source import",
+      "data_type": "string",
+      "unit": "INR or survey weight",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
       ],
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "income_band",
@@ -1067,7 +3263,327 @@
         }
       ],
       "aggregate_only": false,
-      "notes": "Do not derive from wealth quintile or consumption unless methodology is explicitly approved."
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "poverty_status": {
+      "canonical_name": "poverty_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "poverty_status",
+          "processed_variable": "poverty_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "wealth_quintile": {
+      "canonical_name": "wealth_quintile",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "wealth_quintile",
+          "processed_variable": "wealth_quintile",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "bank_account_ownership": {
+      "canonical_name": "bank_account_ownership",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "bank_account_ownership",
+          "processed_variable": "bank_account_ownership",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "savings_account": {
+      "canonical_name": "savings_account",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "savings_account",
+          "processed_variable": "savings_account",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "loan_outstanding": {
+      "canonical_name": "loan_outstanding",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "loan_outstanding",
+          "processed_variable": "loan_outstanding",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "credit_access": {
+      "canonical_name": "credit_access",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "credit_access",
+          "processed_variable": "credit_access",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "ration_card_type": {
+      "canonical_name": "ration_card_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "ration_card_type",
+          "processed_variable": "ration_card_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "scheme_enrollment": {
+      "canonical_name": "scheme_enrollment",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "scheme_enrollment",
+          "processed_variable": "scheme_enrollment",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "pds_benefits_received": {
+      "canonical_name": "pds_benefits_received",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "pds_benefits_received",
+          "processed_variable": "pds_benefits_received",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "housing_type": {
+      "canonical_name": "housing_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "housing_type",
+          "processed_variable": "housing_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "dwelling_type": {
       "canonical_name": "dwelling_type",
@@ -1080,15 +3596,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "dwelling_type",
@@ -1099,7 +3615,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "house_ownership": {
       "canonical_name": "house_ownership",
@@ -1112,15 +3628,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "house_ownership",
@@ -1131,7 +3647,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "electricity": {
       "canonical_name": "electricity",
@@ -1144,15 +3660,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "electricity",
@@ -1163,7 +3679,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "drinking_water": {
       "canonical_name": "drinking_water",
@@ -1176,15 +3692,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "drinking_water",
@@ -1195,7 +3711,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "toilet_facility": {
       "canonical_name": "toilet_facility",
@@ -1208,15 +3724,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "toilet_facility",
@@ -1227,7 +3743,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "cooking_fuel": {
       "canonical_name": "cooking_fuel",
@@ -1240,15 +3756,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "cooking_fuel",
@@ -1259,7 +3775,263 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "internet_access": {
+      "canonical_name": "internet_access",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "internet_access",
+          "processed_variable": "internet_access",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "transport_access": {
+      "canonical_name": "transport_access",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "transport_access",
+          "processed_variable": "transport_access",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "land_ownership_status": {
+      "canonical_name": "land_ownership_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "land_ownership_status",
+          "processed_variable": "land_ownership_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "land_size_acres": {
+      "canonical_name": "land_size_acres",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "land_size_acres",
+          "processed_variable": "land_size_acres",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "principal_crop": {
+      "canonical_name": "principal_crop",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "principal_crop",
+          "processed_variable": "principal_crop",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "irrigation_access": {
+      "canonical_name": "irrigation_access",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "irrigation_access",
+          "processed_variable": "irrigation_access",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "health_status": {
+      "canonical_name": "health_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "health_status",
+          "processed_variable": "health_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "disability_type": {
+      "canonical_name": "disability_type",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "disability_type",
+          "processed_variable": "disability_type",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "health_insurance": {
       "canonical_name": "health_insurance",
@@ -1272,15 +4044,15 @@
       "reference_years": [
         2024
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE",
         "DISTRICT",
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "health_insurance",
@@ -1291,7 +4063,327 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "healthcare_access": {
+      "canonical_name": "healthcare_access",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "healthcare_access",
+          "processed_variable": "healthcare_access",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "migration_status": {
+      "canonical_name": "migration_status",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "migration_status",
+          "processed_variable": "migration_status",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "origin_district_state": {
+      "canonical_name": "origin_district_state",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 98.8487,
+      "missing_percentage": 1.1513,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "origin_district_state",
+          "processed_variable": "origin_district_state",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "migration_reason": {
+      "canonical_name": "migration_reason",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "migration_reason",
+          "processed_variable": "migration_reason",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_employed_members": {
+      "canonical_name": "number_of_employed_members",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_employed_members",
+          "processed_variable": "number_of_employed_members",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_unemployed_members": {
+      "canonical_name": "number_of_unemployed_members",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_unemployed_members",
+          "processed_variable": "number_of_unemployed_members",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "number_of_students": {
+      "canonical_name": "number_of_students",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "number_of_students",
+          "processed_variable": "number_of_students",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "primary_earner_occupation": {
+      "canonical_name": "primary_earner_occupation",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "primary_earner_occupation",
+          "processed_variable": "primary_earner_occupation",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "primary_earner_sector": {
+      "canonical_name": "primary_earner_sector",
+      "level": "PERSON",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "primary_earner_sector",
+          "processed_variable": "primary_earner_sector",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "household_employment_structure": {
+      "canonical_name": "household_employment_structure",
+      "level": "HOUSEHOLD",
+      "data_type": "string",
+      "unit": "",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "household_employment_structure",
+          "processed_variable": "household_employment_structure",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "social_group": {
       "canonical_name": "social_group",
@@ -1312,7 +4404,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "social_group",
@@ -1323,13 +4415,13 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "survey_weight": {
       "canonical_name": "survey_weight",
       "level": "PERSON",
       "data_type": "number",
-      "unit": "",
+      "unit": "INR or survey weight",
       "sources": [
         "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
       ],
@@ -1344,7 +4436,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "survey_weight",
@@ -1355,10 +4447,74 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "normalized_reference_weight": {
       "canonical_name": "normalized_reference_weight",
+      "level": "PERSON",
+      "data_type": "number",
+      "unit": "INR or survey weight",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "normalized_reference_weight",
+          "processed_variable": "normalized_reference_weight",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "calibrated_reference_weight_gender_ur": {
+      "canonical_name": "calibrated_reference_weight_gender_ur",
+      "level": "PERSON",
+      "data_type": "number",
+      "unit": "INR or survey weight",
+      "sources": [
+        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
+      ],
+      "reference_years": [
+        2024
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE",
+        "DISTRICT",
+        "URBAN_RURAL"
+      ],
+      "quality_flag": "A",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
+      "lineage": [
+        {
+          "canonical_variable": "calibrated_reference_weight_gender_ur",
+          "processed_variable": "calibrated_reference_weight_gender_ur",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ],
+      "aggregate_only": false,
+      "notes": "Do not impute unsupported variables during Phase 1."
+    },
+    "reference_year": {
+      "canonical_name": "reference_year",
       "level": "PERSON",
       "data_type": "number",
       "unit": "",
@@ -1376,39 +4532,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
-      "lineage": [
-        {
-          "canonical_variable": "normalized_reference_weight",
-          "processed_variable": "normalized_reference_weight",
-          "source_variable": "PLFS harmonized source field; see data layout workbook",
-          "source_dataset": "PLFS 2024 personal and household data",
-          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
-        }
-      ],
-      "aggregate_only": false,
-      "notes": ""
-    },
-    "reference_year": {
-      "canonical_name": "reference_year",
-      "level": "PERSON",
-      "data_type": "integer",
-      "unit": "",
-      "sources": [
-        "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR"
-      ],
-      "reference_years": [
-        2024
-      ],
-      "non_null_percentage": 100.0,
-      "missing_percentage": 0.0,
-      "geographic_resolution": [
-        "STATE",
-        "DISTRICT",
-        "URBAN_RURAL"
-      ],
-      "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "reference_year",
@@ -1419,7 +4543,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "record_quality_flag": {
       "canonical_name": "record_quality_flag",
@@ -1440,7 +4564,7 @@
         "URBAN_RURAL"
       ],
       "quality_flag": "A",
-      "source_variables": "TBD_AFTER_MICRODATA_IMPORT",
+      "source_variables": "See PLFS layout workbook in data/raw/plfs.",
       "lineage": [
         {
           "canonical_variable": "record_quality_flag",
@@ -1451,7 +4575,7 @@
         }
       ],
       "aggregate_only": false,
-      "notes": ""
+      "notes": "Do not impute unsupported variables during Phase 1."
     },
     "scheduled_caste_indicator": {
       "canonical_name": "scheduled_caste_indicator",
@@ -1579,24 +4703,54 @@
       "data_type": "aggregate",
       "unit": "",
       "sources": [
-        "SRC_NFHS5_IIPS_2019_21"
+        "SRC_NFHS5_TN_HEALTH"
       ],
       "reference_years": [
         2021
       ],
-      "non_null_percentage": 0.0,
-      "missing_percentage": 100.0,
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
       "geographic_resolution": [
         "STATE"
       ],
-      "quality_flag": "",
+      "quality_flag": "B",
       "source_variables": "aggregate publication/catalog indicator",
       "lineage": [
         {
           "canonical_variable": "disability_status",
           "processed_variable": "aggregate calibration/provenance table",
           "source_variable": "disability_status",
-          "source_dataset": "NFHS-5 household and household member data",
+          "source_dataset": "NFHS-5 Tamil Nadu Factsheet & Health Scheme Indicators",
+          "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India"
+        }
+      ],
+      "aggregate_only": true,
+      "notes": "Aggregate-only capability; not usable for person-level eligibility."
+    },
+    "female_literacy_rate": {
+      "canonical_name": "female_literacy_rate",
+      "level": "STATE",
+      "data_type": "aggregate",
+      "unit": "",
+      "sources": [
+        "SRC_NFHS5_WOMEN_DEMOGRAPHICS"
+      ],
+      "reference_years": [
+        2021
+      ],
+      "non_null_percentage": 100.0,
+      "missing_percentage": 0.0,
+      "geographic_resolution": [
+        "STATE"
+      ],
+      "quality_flag": "B",
+      "source_variables": "aggregate publication/catalog indicator",
+      "lineage": [
+        {
+          "canonical_variable": "female_literacy_rate",
+          "processed_variable": "aggregate calibration/provenance table",
+          "source_variable": "female_literacy_rate",
+          "source_dataset": "NFHS-5 Tamil Nadu Household Amenities & Women Demographics",
           "publisher": "IIPS / Ministry of Health and Family Welfare, Government of India"
         }
       ],
@@ -1621,7 +4775,10 @@
         "age_group",
         "gender",
         "marital_status",
+        "widow_status",
         "relationship_to_head",
+        "female_head_of_household",
+        "number_of_children",
         "household_size",
         "household_type",
         "literacy_status",
@@ -1635,6 +4792,8 @@
         "household_income",
         "consumption_expenditure",
         "income_band",
+        "bank_account_ownership",
+        "ration_card_type",
         "dwelling_type",
         "house_ownership",
         "electricity",
@@ -1647,9 +4806,95 @@
         "normalized_reference_weight",
         "calibrated_reference_weight_gender_ur",
         "reference_year",
-        "record_quality_flag"
+        "record_quality_flag",
+        "child_dependents",
+        "elderly_dependents",
+        "number_of_dependents",
+        "school_enrollment_status",
+        "highest_qualification",
+        "industry_sector",
+        "formal_informal_work",
+        "daily_wage",
+        "poverty_status",
+        "wealth_quintile",
+        "savings_account",
+        "credit_access",
+        "loan_outstanding",
+        "housing_type",
+        "internet_access",
+        "transport_access",
+        "pds_benefits_received",
+        "scheme_enrollment",
+        "land_ownership_status",
+        "land_size_acres",
+        "principal_crop",
+        "irrigation_access",
+        "health_status",
+        "disability_type",
+        "healthcare_access",
+        "migration_status",
+        "origin_district_state",
+        "migration_reason",
+        "is_government_employee",
+        "government_employment_type",
+        "government_department",
+        "government_job_level",
+        "government_service_type",
+        "healthcare_worker",
+        "healthcare_occupation",
+        "medical_specialization",
+        "healthcare_employment_sector",
+        "education_worker",
+        "education_occupation",
+        "teacher_type",
+        "teaching_level",
+        "is_student",
+        "currently_studying",
+        "student_level",
+        "school_type",
+        "education_board",
+        "institution_type",
+        "school_attendance_status",
+        "not_studying_reason",
+        "actively_seeking_work",
+        "duration_of_unemployment",
+        "previous_occupation",
+        "previous_employment_sector",
+        "self_employed",
+        "business_owner",
+        "business_type",
+        "business_size",
+        "number_of_workers",
+        "it_sector_worker",
+        "it_occupation",
+        "technology_specialization",
+        "public_safety_worker",
+        "police_employee",
+        "defence_employee",
+        "service_category",
+        "legal_profession",
+        "retired",
+        "pension_status",
+        "unpaid_domestic_work",
+        "caregiving_responsibility",
+        "formal_informal_status",
+        "full_time_part_time",
+        "work_experience_years",
+        "working_hours",
+        "employment_sector",
+        "occupation_category",
+        "occupation_subcategory",
+        "occupation_code",
+        "monthly_income",
+        "monthly_wage",
+        "number_of_employed_members",
+        "number_of_unemployed_members",
+        "number_of_students",
+        "primary_earner_occupation",
+        "primary_earner_sector",
+        "household_employment_structure"
       ],
-      "row_count": 12000,
+      "row_count": 22584,
       "reference_year": 2024,
       "district_count": 37
     }

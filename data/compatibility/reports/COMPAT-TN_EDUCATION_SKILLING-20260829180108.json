@@ -1,0 +1,242 @@
+{
+  "report_id": "COMPAT-TN_EDUCATION_SKILLING-20260829180108",
+  "policy_id": "TN_EDUCATION_SKILLING",
+  "policy_name": "Tamil Nadu Education-linked Skilling Support",
+  "data_foundation_version": "0.3.0-modular",
+  "compatibility_engine_version": "TN_COMPATIBILITY_ENGINE_V0.1",
+  "scoring_config_version": "compatibility_scoring_v0.1",
+  "domains": [
+    {
+      "domain": "DEMOGRAPHICS",
+      "status": "SUPPORTED",
+      "score": 77.5,
+      "matched_variables": [
+        "age",
+        "district",
+        "state"
+      ]
+    },
+    {
+      "domain": "EDUCATION",
+      "status": "SUPPORTED",
+      "score": 77.5,
+      "matched_variables": [
+        "age",
+        "district",
+        "education_level"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": {
+        "variable": "age",
+        "canonical_variable": "age",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.85,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "age",
+          "processed_variable": "age",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "education_level",
+        "canonical_variable": "education_level",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.85,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "education_level",
+          "processed_variable": "education_level",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "district",
+        "canonical_variable": "district",
+        "requirement_type": "eligibility",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 0.68,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 98.7083,
+      "temporal_status": "RECENT",
+      "temporal_score": 0.85,
+      "geographic_status": "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [
+        "GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict"
+      ],
+      "lineage": [
+        {
+          "canonical_variable": "district",
+          "processed_variable": "district",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    },
+    {
+      "requirement": {
+        "variable": "state",
+        "canonical_variable": "state",
+        "requirement_type": "jurisdiction",
+        "importance": "CRITICAL",
+        "required_level": "PERSON",
+        "required_unit": "",
+        "required_geography": "Tamil Nadu",
+        "policy_reference_year": 2026
+      },
+      "status": "EXACT_AVAILABLE",
+      "score": 1.0,
+      "preferred_source": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+      "alternative_sources": [],
+      "non_null_percentage": 100.0,
+      "temporal_status": "CURRENT",
+      "temporal_score": 1.0,
+      "geographic_status": "COMPATIBLE",
+      "level_status": "COMPATIBLE",
+      "unit_status": "COMPATIBLE",
+      "warnings": [],
+      "lineage": [
+        {
+          "canonical_variable": "state",
+          "processed_variable": "state",
+          "source_variable": "PLFS harmonized source field; see data layout workbook",
+          "source_dataset": "PLFS 2024 personal and household data",
+          "publisher": "OpenCity mirror of MoSPI / NSO public-use PLFS data"
+        }
+      ]
+    }
+  ],
+  "joint_availability": {
+    "required_critical_variables": [
+      "age",
+      "education_level",
+      "district",
+      "state"
+    ],
+    "datasets": {
+      "reference_template": {
+        "source_id": "SRC_PLFS_2024_OPENCITY_PUBLIC_MIRROR",
+        "row_count": 12000,
+        "matrix": [
+          {
+            "variable": "age",
+            "available": "YES"
+          },
+          {
+            "variable": "education_level",
+            "available": "YES"
+          },
+          {
+            "variable": "district",
+            "available": "YES"
+          },
+          {
+            "variable": "state",
+            "available": "YES"
+          }
+        ],
+        "score": 1.0
+      }
+    },
+    "score": 100.0
+  },
+  "score_breakdown": {
+    "domain": 77.5,
+    "variable": 84.5,
+    "availability": 99.68,
+    "joint_availability": 100.0,
+    "temporal": 88.75,
+    "geographic": 93.75,
+    "source_quality": 85.0
+  },
+  "reliability_score": 90.19,
+  "simulation_readiness": "READY_WITH_WARNINGS",
+  "blocking_issues": [],
+  "warnings": [
+    "district: GEOGRAPHIC_VERSION_WARNING: district codes include known boundary/code conflict"
+  ],
+  "recommendations": [
+    "Simulation can proceed only with limitations explicitly shown in outputs."
+  ],
+  "synthetic_population_requirements": {
+    "policy_id": "TN_EDUCATION_SKILLING",
+    "synthetic_population_requirements": {
+      "required_variables": [
+        "age",
+        "education_level",
+        "district",
+        "state"
+      ],
+      "critical_variables": [
+        "age",
+        "education_level",
+        "district",
+        "state"
+      ],
+      "optional_variables": [],
+      "approved_derivations": [],
+      "approved_proxies": [],
+      "calibration_variables": [
+        "gender",
+        "urban_rural",
+        "social_group",
+        "worker_category"
+      ],
+      "geographic_level": "DISTRICT",
+      "temporal_warnings": []
+    }
+  }
+}

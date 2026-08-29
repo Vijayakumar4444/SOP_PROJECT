@@ -1,0 +1,24 @@
+check,value,status,notes
+row_count,22584,PASS,Reference template must contain rows.
+duplicate_reference_person_id_count,0,PASS,Reference person IDs must be unique.
+duplicate_source_record_id_count,0,PASS,Duplicate source IDs indicate source reuse or sampling collisions.
+invalid_age_count,0,PASS,Age must be numeric from 0 to 120.
+invalid_household_size_count,0,PASS,Household size must be at least 1.
+invalid_survey_weight_count,0,PASS,Survey weight must be positive.
+non_tamil_nadu_row_count,0,PASS,Rows must be filtered to Tamil Nadu.
+invalid_child_occupation_count,0,PASS,Children under 18 must not hold professional adult occupations.
+invalid_unemployed_income_count,0,PASS,Unemployed individuals must have 0 current monthly income.
+invalid_govt_sector_count,0,PASS,Government employees must belong to GOVERNMENT or PUBLIC_SECTOR employment sector.
+missing_required_reference_person_id_count,0,PASS,reference_person_id is required for downstream compatibility.
+missing_required_reference_household_id_count,0,PASS,reference_household_id is required for downstream compatibility.
+missing_required_source_record_id_count,0,PASS,source_record_id is required for downstream compatibility.
+missing_required_primary_source_id_count,0,PASS,primary_source_id is required for downstream compatibility.
+missing_required_state_count,0,PASS,state is required for downstream compatibility.
+missing_required_state_code_count,0,PASS,state_code is required for downstream compatibility.
+missing_required_age_count,0,PASS,age is required for downstream compatibility.
+missing_required_gender_count,0,PASS,gender is required for downstream compatibility.
+missing_required_survey_weight_count,0,PASS,survey_weight is required for downstream compatibility.
+missing_required_normalized_reference_weight_count,0,PASS,normalized_reference_weight is required for downstream compatibility.
+missing_required_calibrated_reference_weight_gender_ur_count,0,PASS,calibrated_reference_weight_gender_ur is required for downstream compatibility.
+unknown_column_count,0,PASS,
+missing_required_total_count,0,PASS,Total missing cells across required columns.

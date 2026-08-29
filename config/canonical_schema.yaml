@@ -134,3 +134,304 @@ variables:
     level: PERSON
     allowed_values: [A, B, C, D, E]
     sensitivity_class: LOW
+  - canonical_variable: employment_sector
+    display_name: Employment sector
+    data_type: categorical
+    level: PERSON
+    allowed_values: [GOVERNMENT, PRIVATE, PUBLIC_SECTOR, SELF_EMPLOYED, AGRICULTURE, INFORMAL, NON_PROFIT, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: occupation_category
+    display_name: Occupation category
+    data_type: categorical
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: occupation_subcategory
+    display_name: Occupation subcategory
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: occupation_code
+    display_name: NCO occupation code
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: is_government_employee
+    display_name: Is government employee
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: government_employment_type
+    display_name: Government employment type
+    data_type: categorical
+    level: PERSON
+    allowed_values: [CENTRAL_GOVERNMENT, STATE_GOVERNMENT, LOCAL_GOVERNMENT, PUBLIC_SECTOR, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: government_department
+    display_name: Government department
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: government_job_level
+    display_name: Government job level
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: government_service_type
+    display_name: Government service type
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: healthcare_worker
+    display_name: Healthcare worker
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: healthcare_occupation
+    display_name: Healthcare occupation
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: medical_specialization
+    display_name: Medical specialization
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: healthcare_employment_sector
+    display_name: Healthcare employment sector
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: education_worker
+    display_name: Education worker
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: education_occupation
+    display_name: Education occupation
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: teacher_type
+    display_name: Teacher type
+    data_type: categorical
+    level: PERSON
+    allowed_values: [GOVERNMENT_TEACHER, PRIVATE_TEACHER, COLLEGE_FACULTY, UNIVERSITY_FACULTY, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: teaching_level
+    display_name: Teaching level
+    data_type: categorical
+    level: PERSON
+    allowed_values: [PRIMARY, SECONDARY, HIGHER_SECONDARY, COLLEGE, UNIVERSITY, VOCATIONAL, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: is_student
+    display_name: Is student
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: currently_studying
+    display_name: Currently studying
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: student_level
+    display_name: Student level
+    data_type: categorical
+    level: PERSON
+    allowed_values: [PRE_PRIMARY, PRIMARY, MIDDLE, SECONDARY, HIGHER_SECONDARY, UNDERGRADUATE, POSTGRADUATE, VOCATIONAL, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: school_type
+    display_name: School type
+    data_type: categorical
+    level: PERSON
+    allowed_values: [GOVERNMENT, PRIVATE, GOVERNMENT_AIDED, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: education_board
+    display_name: Education board
+    data_type: categorical
+    level: PERSON
+    allowed_values: [STATE_BOARD, CBSE, ICSE, INTERNATIONAL, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: institution_type
+    display_name: Institution type
+    data_type: categorical
+    level: PERSON
+    allowed_values: [SCHOOL, COLLEGE, UNIVERSITY, ITI, POLYTECHNIC, VOCATIONAL, OTHER, NONE]
+    sensitivity_class: LOW
+  - canonical_variable: school_attendance_status
+    display_name: School attendance status
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: not_studying_reason
+    display_name: Not studying reason
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: actively_seeking_work
+    display_name: Actively seeking work
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: duration_of_unemployment
+    display_name: Duration of unemployment
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: previous_occupation
+    display_name: Previous occupation
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: previous_employment_sector
+    display_name: Previous employment sector
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: self_employed
+    display_name: Self employed
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: business_owner
+    display_name: Business owner
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: business_type
+    display_name: Business type
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: business_size
+    display_name: Business size
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: number_of_workers
+    display_name: Number of workers
+    data_type: integer
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: it_sector_worker
+    display_name: IT sector worker
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: it_occupation
+    display_name: IT occupation
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: technology_specialization
+    display_name: Technology specialization
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: public_safety_worker
+    display_name: Public safety worker
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: police_employee
+    display_name: Police employee
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: defence_employee
+    display_name: Defence employee
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: service_category
+    display_name: Public safety service category
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: legal_profession
+    display_name: Legal profession
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: retired
+    display_name: Retired
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: pension_status
+    display_name: Pension status
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: unpaid_domestic_work
+    display_name: Unpaid domestic work
+    data_type: boolean
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: caregiving_responsibility
+    display_name: Caregiving responsibility
+    data_type: string
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: formal_informal_status
+    display_name: Formal informal status
+    data_type: categorical
+    level: PERSON
+    allowed_values: [FORMAL, INFORMAL, NOT_APPLICABLE]
+    sensitivity_class: LOW
+  - canonical_variable: full_time_part_time
+    display_name: Full time part time
+    data_type: categorical
+    level: PERSON
+    allowed_values: [FULL_TIME, PART_TIME, NOT_APPLICABLE]
+    sensitivity_class: LOW
+  - canonical_variable: work_experience_years
+    display_name: Work experience years
+    data_type: integer
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: monthly_income
+    display_name: Monthly income
+    data_type: number
+    level: PERSON
+    sensitivity_class: MODERATE
+  - canonical_variable: monthly_wage
+    display_name: Monthly wage
+    data_type: number
+    level: PERSON
+    sensitivity_class: MODERATE
+  - canonical_variable: working_hours
+    display_name: Working hours
+    data_type: integer
+    level: PERSON
+    sensitivity_class: LOW
+  - canonical_variable: number_of_employed_members
+    display_name: Number of employed members
+    data_type: integer
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+  - canonical_variable: number_of_unemployed_members
+    display_name: Number of unemployed members
+    data_type: integer
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+  - canonical_variable: number_of_students
+    display_name: Number of students
+    data_type: integer
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+  - canonical_variable: primary_earner_occupation
+    display_name: Primary earner occupation
+    data_type: string
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+  - canonical_variable: primary_earner_sector
+    display_name: Primary earner sector
+    data_type: string
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+  - canonical_variable: household_employment_structure
+    display_name: Household employment structure
+    data_type: string
+    level: HOUSEHOLD
+    sensitivity_class: LOW
+
