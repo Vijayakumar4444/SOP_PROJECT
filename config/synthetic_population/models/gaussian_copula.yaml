@@ -1,0 +1,7 @@
+profile: development
+generator: gaussian_copula
+version: gaussian_copula_pure_python_v1
+seed: 42
+jitter: 0.000001
+label: SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+notes: Pure-Python fallback because SDV/numpy/scipy/pandas are not installed in this environment.

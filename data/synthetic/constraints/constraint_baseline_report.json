@@ -1,0 +1,14 @@
+{
+  "constraint_version": "phase3_constraints_v1",
+  "total_records": 12000,
+  "hard_violation_count": 0,
+  "soft_anomaly_count": 0,
+  "records_repaired": 0,
+  "records_rejected": 0,
+  "hard_violation_rate": 0.0,
+  "soft_anomaly_rate": 0.0,
+  "hard_violations_by_type": {},
+  "soft_anomalies_by_type": {},
+  "sample_hard_violations": [],
+  "sample_soft_anomalies": []
+}

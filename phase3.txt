@@ -1,0 +1,3958 @@
+# CODEX IMPLEMENTATION PROMPT
+
+# PHASE 3 — SYNTHETIC POPULATION GENERATION & DYNAMIC SAMPLING
+
+You are implementing the next phase of the **Tamil Nadu Policy Simulation System**.
+
+The overall system currently contains:
+
+```text
+PHASE 1
+DATA SOURCE COLLECTION & DATA FOUNDATION
+
+Trusted Tamil Nadu / Government Sources
+        ↓
+Harmonized Reference Data
+        ↓
+Canonical Variables
+        ↓
+Official Marginal Statistics
+        ↓
+Reference Population Template
+```
+
+followed by:
+
+```text
+PHASE 2
+POLICY–DATA COMPATIBILITY ENGINE
+
+Policy Requirements
+        ↓
+Domain Check
+        ↓
+Variable Check
+        ↓
+Data Availability
+        ↓
+Temporal / Geographic / Quality Checks
+        ↓
+Reliability Score
+        ↓
+Synthetic Population Requirements
+```
+
+You are now implementing:
+
+# PHASE 3 — SYNTHETIC POPULATION GENERATION
+
+The architecture represented by this phase is:
+
+```text
+              PHASE 2 OUTPUT
+                    |
+                    v
+       +----------------------------+
+       | SYNTHETIC POPULATION       |
+       | GENERATION                 |
+       |                            |
+       |   CTGAN                    |
+       |   TVAE                     |
+       |   Gaussian Copula          |
+       |                            |
+       | Synthetic Population       |
+       | & Dynamic Sampling         |
+       +-------------+--------------+
+                     |
+                     v
+              FUTURE PHASE
+         POPULATION VALIDATION
+```
+
+The objective of Phase 3 is:
+
+> Use the trusted Tamil Nadu reference template and Phase 2 policy-data requirements to train statistical generative models and create artificial Tamil Nadu populations that preserve important demographic, socioeconomic and policy-relevant relationships while remaining reproducible, configurable, traceable, and explicitly labelled as synthetic.
+
+Do NOT implement downstream policy simulation in this phase.
+
+---
+
+# 1. FIRST PRINCIPLE
+
+Do not start by simply training CTGAN.
+
+Before implementation:
+
+1. Inspect the repository.
+2. Inspect Phase 1 outputs.
+3. Inspect Phase 2 outputs.
+4. Determine the actual canonical schema.
+5. Determine which variables are approved for synthesis.
+6. Determine which variables are required for the current policy context.
+7. Determine whether household relationships exist.
+8. Determine whether survey weights exist.
+9. Determine which official marginals are available.
+10. Determine data quality and missingness constraints.
+
+Only after these checks should model training begin.
+
+---
+
+# 2. PHASE 3 INPUTS
+
+Phase 3 must consume real outputs from the previous phases.
+
+Potential Phase 1 artifacts may include:
+
+```text
+data/processed/reference_template.parquet
+data/processed/reference_template.csv
+
+data/exports/
+tamil_nadu_population_reference_template.xlsx
+
+data/reference/template_metadata.json
+
+data/calibration/
+
+config/canonical_schema.yaml
+config/mappings/
+
+data/source_registry.csv
+```
+
+Potential Phase 2 artifacts may include:
+
+```text
+data/metadata/data_capability_registry.json
+
+compatibility reports
+
+synthetic_population_requirements.json
+
+policy requirement definitions
+
+approved_derivations
+
+approved_proxies
+
+temporal warnings
+
+geographic requirements
+```
+
+Do NOT assume these exact paths exist.
+
+Inspect the project and use the actual artifacts.
+
+---
+
+# 3. CREATE PHASE 3 INPUT ASSESSMENT
+
+Before training any model, generate:
+
+```text
+reports/phase3_input_assessment.md
+```
+
+Document:
+
+```text
+Reference template path
+Reference row count
+Reference household count
+Canonical variables
+Person-level variables
+Household-level variables
+Identifier variables
+Metadata variables
+Continuous variables
+Integer variables
+Categorical variables
+Ordinal variables
+Boolean variables
+Derived variables
+Policy-required variables
+Optional analysis variables
+Survey-weight fields
+Missingness
+High-cardinality variables
+Rare categories
+Geographic coverage
+Reference years
+Official marginals
+Known limitations
+```
+
+Also state whether the project will perform:
+
+```text
+PERSON-LEVEL SYNTHESIS
+```
+
+or:
+
+```text
+HOUSEHOLD + PERSON RELATIONAL SYNTHESIS
+```
+
+for this implementation.
+
+---
+
+# 4. CRITICAL DATA INTEGRITY RULE
+
+Never confuse:
+
+```text
+REFERENCE DATA
+```
+
+with:
+
+```text
+SYNTHETIC DATA
+```
+
+All generated records must be clearly artificial.
+
+Never claim generated records represent actual identifiable residents of Tamil Nadu.
+
+The synthetic population exists for:
+
+```text
+policy simulation
+statistical experimentation
+scenario analysis
+population modelling
+```
+
+not for representing real individuals.
+
+---
+
+# 5. PURPOSE OF THE SYNTHETIC POPULATION
+
+The future Policy Engine will need artificial individuals that behave statistically like the reference Tamil Nadu population.
+
+Example:
+
+```text
+Synthetic Person
+
+Age                 27
+Gender              Female
+District            Madurai
+Urban/Rural         Urban
+Education           Undergraduate
+Employment          Unemployed
+Household Size      4
+Household Income    ₹240,000
+...
+```
+
+This person is:
+
+```text
+ARTIFICIAL
+```
+
+but the overall generated population should reproduce plausible statistical patterns derived from trusted reference data.
+
+---
+
+# 6. SYNTHETIC POPULATION IS NOT RANDOM FAKE DATA
+
+Do NOT create fake people using independent random generators.
+
+Incorrect:
+
+```python
+age = random.choice(age_values)
+
+gender = random.choice(genders)
+
+education = random.choice(education_levels)
+
+employment = random.choice(employment_statuses)
+```
+
+This destroys dependencies.
+
+For example, it could produce:
+
+```text
+Age = 8
+Education = Postgraduate
+Employment = Salaried Employee
+Marital Status = Married
+```
+
+The system must learn multivariate statistical relationships.
+
+---
+
+# 7. TARGET STATISTICAL RELATIONSHIPS
+
+Where supported by Phase 1 reference data, preserve relationships such as:
+
+```text
+age ↔ education
+
+age ↔ marital status
+
+age ↔ employment
+
+gender ↔ employment
+
+education ↔ employment
+
+education ↔ income
+
+employment ↔ income
+
+occupation ↔ industry
+
+district ↔ urban/rural
+
+district ↔ employment
+
+urban/rural ↔ income
+
+household size ↔ household type
+
+household size ↔ consumption
+
+household income ↔ household characteristics
+```
+
+Do not hard-code relationships that the reference data does not contain.
+
+---
+
+# 8. POLICY-AWARE VARIABLE SELECTION
+
+Phase 2 should have produced something conceptually similar to:
+
+```json
+{
+  "required_variables": [],
+  "critical_variables": [],
+  "optional_variables": [],
+  "approved_derivations": [],
+  "approved_proxies": [],
+  "calibration_variables": []
+}
+```
+
+Phase 3 must use this.
+
+Do NOT automatically include every column from Phase 1 in every synthetic model.
+
+Create:
+
+```text
+Core Variables
+Policy Variables
+Structural Variables
+Calibration Variables
+Optional Analysis Variables
+```
+
+---
+
+# 9. CORE STRUCTURAL VARIABLES
+
+Some variables may be important even if a specific policy does not directly reference them because they help preserve population structure.
+
+Possible examples:
+
+```text
+age
+gender
+district
+urban_rural
+household_size
+education_level
+employment_status
+```
+
+Determine these from actual Phase 1 data.
+
+Document why every synthesis variable is included.
+
+---
+
+# 10. VARIABLE SELECTION REPORT
+
+Generate:
+
+```text
+reports/synthetic_variable_selection.md
+```
+
+For every variable state:
+
+```text
+Variable
+Include / Exclude
+Reason
+Type
+Policy Requirement
+Structural Importance
+Missingness
+Source Quality
+Training Suitability
+```
+
+Example:
+
+```text
+reference_person_id
+EXCLUDE
+Identifier
+
+survey_weight
+EXCLUDE_FROM_FEATURES
+Use for weighted sampling
+
+source_id
+EXCLUDE
+Provenance metadata
+
+age
+INCLUDE
+Core demographic variable
+```
+
+---
+
+# 11. IDENTIFIERS MUST NOT BE LEARNED
+
+Never train generative models using:
+
+```text
+reference_person_id
+reference_household_id
+source_record_id
+Aadhaar-like fields
+source_id
+```
+
+Generate new synthetic IDs after population generation.
+
+Example:
+
+```text
+SYN-P-00000001
+
+SYN-P-00000002
+```
+
+Households:
+
+```text
+SYN-H-00000001
+```
+
+---
+
+# 12. PROVENANCE VARIABLES
+
+Do not use provenance metadata as behavioural features.
+
+Examples:
+
+```text
+source_id
+source_dataset
+reference_year
+record_quality_flag
+download_date
+```
+
+Keep these in model metadata rather than synthetic person records unless explicitly needed for analysis.
+
+---
+
+# 13. SYNTHETIC GENERATOR INTERFACE
+
+Implement a common abstraction.
+
+Conceptually:
+
+```python
+class SyntheticPopulationGenerator:
+
+    def fit(
+        self,
+        data,
+        metadata,
+        config
+    ):
+        ...
+
+    def sample(
+        self,
+        size,
+        seed=None,
+        conditions=None
+    ):
+        ...
+
+    def save(self, destination):
+        ...
+
+    def load(self, source):
+        ...
+
+    def get_model_metadata(self):
+        ...
+
+    def get_training_summary(self):
+        ...
+```
+
+All generator implementations must follow the same contract.
+
+---
+
+# 14. GENERATORS TO IMPLEMENT
+
+Implement support for:
+
+```text
+Gaussian Copula
+CTGAN
+TVAE
+```
+
+Also implement a baseline model.
+
+Recommended:
+
+```text
+Weighted / Stratified Bootstrap
+```
+
+The baseline is essential for comparison.
+
+Final generator set:
+
+```text
+BootstrapBaselineGenerator
+
+GaussianCopulaGenerator
+
+CTGANGenerator
+
+TVAEGenerator
+```
+
+---
+
+# 15. WHY THE BASELINE IS REQUIRED
+
+Do not assume complex neural generators are superior.
+
+The baseline tells us whether models such as CTGAN actually improve:
+
+```text
+distribution similarity
+joint relationships
+rare categories
+logical validity
+```
+
+If CTGAN performs worse than simpler methods, the system should be able to detect that in the next validation phase.
+
+---
+
+# 16. BOOTSTRAP BASELINE
+
+Implement:
+
+# Weighted / Stratified Bootstrap
+
+Possible stratification dimensions:
+
+```text
+district
+urban_rural
+gender
+age_group
+```
+
+only when statistically appropriate.
+
+Where Phase 1 contains survey weights:
+
+```text
+sampling probability ∝ survey_weight
+```
+
+Clearly label generated data:
+
+```text
+RESAMPLED BASELINE
+```
+
+because bootstrap records may duplicate actual reference observations.
+
+Do NOT describe this method as privacy-preserving synthesis.
+
+---
+
+# 17. GAUSSIAN COPULA
+
+Implement Gaussian Copula as the first primary statistical generator.
+
+Reasons:
+
+```text
+lower complexity
+fast training
+good baseline generative model
+interpretable comparison point
+mixed data support through suitable libraries
+```
+
+Use an established maintained library where appropriate.
+
+Potentially SDV if compatible with the project.
+
+Do not reimplement copula mathematics unnecessarily.
+
+---
+
+# 18. CTGAN
+
+Implement CTGAN as an advanced synthetic tabular model.
+
+It should support:
+
+```text
+mixed categorical / numerical variables
+non-Gaussian distributions
+imbalanced categorical values
+nonlinear relationships
+```
+
+Configuration should be external.
+
+Example:
+
+```yaml
+ctgan:
+
+    epochs: ...
+    batch_size: ...
+    generator_dim: ...
+    discriminator_dim: ...
+    generator_lr: ...
+    discriminator_lr: ...
+```
+
+Do not blindly use extremely high epoch counts.
+
+Use sensible development configurations.
+
+---
+
+# 19. TVAE
+
+Implement TVAE using the same generator abstraction.
+
+Configuration should support parameters such as:
+
+```text
+epochs
+batch_size
+embedding dimensions
+compression dimensions
+learning parameters
+```
+
+where supported by the selected library.
+
+Do not expose unsupported parameters.
+
+---
+
+# 20. SYNTHETIC DATA LIBRARY
+
+Evaluate current project dependencies.
+
+If suitable, use:
+
+```text
+SDV
+```
+
+or another maintained synthetic tabular-data library.
+
+Before adding the dependency:
+
+```text
+check current Python version
+check library compatibility
+check license
+check maintenance status
+check model APIs
+pin an appropriate version
+```
+
+Do not silently install arbitrary packages.
+
+Update dependency files properly.
+
+---
+
+# 21. MODEL REGISTRY
+
+Create a registry.
+
+Conceptually:
+
+```python
+GENERATOR_REGISTRY = {
+    "bootstrap": BootstrapBaselineGenerator,
+    "gaussian_copula": GaussianCopulaGenerator,
+    "ctgan": CTGANGenerator,
+    "tvae": TVAEGenerator,
+}
+```
+
+The rest of the application should not need generator-specific branching everywhere.
+
+---
+
+# 22. VARIABLE METADATA
+
+Create synthetic-generation metadata.
+
+Potential:
+
+```text
+config/synthetic_population/variables.yaml
+```
+
+Example:
+
+```yaml
+age:
+    type: integer
+    min: 0
+    max: 110
+
+gender:
+    type: categorical
+
+district:
+    type: categorical
+
+household_size:
+    type: integer
+    min: 1
+```
+
+Use values derived from the canonical schema and source documentation.
+
+Do not invent ranges where Phase 1 already defines them.
+
+---
+
+# 23. DATA TYPE HANDLING
+
+Correctly classify:
+
+```text
+continuous
+
+integer
+
+categorical
+
+ordinal
+
+boolean
+
+identifier
+
+metadata
+
+weight
+```
+
+Do not automatically treat integer codes as continuous.
+
+Example:
+
+```text
+education_code = 1,2,3,4
+```
+
+may be categorical/ordinal rather than numerical.
+
+---
+
+# 24. HIGH CARDINALITY VARIABLES
+
+Identify variables such as:
+
+```text
+occupation detailed code
+industry detailed code
+subdistrict
+```
+
+with potentially high cardinality.
+
+Decide whether to:
+
+```text
+retain
+group
+exclude
+```
+
+based on:
+
+```text
+sample size
+rare-category risk
+policy relevance
+model stability
+```
+
+Document the decision.
+
+Do not silently collapse categories.
+
+---
+
+# 25. RARE CATEGORIES
+
+Analyse categories with very small counts.
+
+For each categorical variable calculate:
+
+```text
+count
+percentage
+```
+
+Identify rare values.
+
+Do not automatically delete them.
+
+Possible strategies:
+
+```text
+retain
+group into Other
+exclude variable
+model conditionally
+```
+
+Any grouping must be documented and reproducible.
+
+---
+
+# 26. MISSINGNESS
+
+Before training, inspect missing values.
+
+Classify missingness reasons if available:
+
+```text
+NOT_COLLECTED
+NOT_APPLICABLE
+MISSING_RESPONSE
+SOURCE_UNAVAILABLE
+UNKNOWN
+```
+
+Do not blindly use mean/mode imputation.
+
+---
+
+# 27. MISSING DATA STRATEGY
+
+Potential strategies:
+
+```text
+Explicit "Unknown" category
+
+Model missingness directly
+
+Statistical imputation
+
+Exclude variable
+
+Exclude severely incomplete records
+```
+
+Select per variable.
+
+Create:
+
+```text
+reports/phase3_missing_data_strategy.md
+```
+
+Document every choice.
+
+---
+
+# 28. TRAINING DATA PREPARATION
+
+Create a dedicated pipeline.
+
+Conceptually:
+
+```text
+Reference Template
+        ↓
+Variable Selection
+        ↓
+Data Type Normalization
+        ↓
+Missingness Handling
+        ↓
+Constraint Metadata
+        ↓
+Weight Handling
+        ↓
+Training Dataset
+```
+
+Never modify the Phase 1 reference template in place.
+
+Create a separate prepared training dataset.
+
+Example:
+
+```text
+data/synthetic/training/
+reference_training_v1.parquet
+```
+
+---
+
+# 29. TRAIN / VALIDATION / HOLDOUT SPLIT
+
+Where dataset size allows, create reproducible partitions.
+
+Potential structure:
+
+```text
+TRAIN
+VALIDATION
+HOLDOUT
+```
+
+Example concept:
+
+```text
+70 / 15 / 15
+```
+
+or:
+
+```text
+80 / 20
+```
+
+depending on dataset size and model needs.
+
+Do not use an arbitrary ratio just because it is common.
+
+Explain the selected split.
+
+---
+
+# 30. STRATIFIED SPLITTING
+
+Where practical, preserve important categories in partitions.
+
+Potential stratification:
+
+```text
+urban_rural
+gender
+age_group
+district
+```
+
+Avoid creating validation/test sets without rare categories.
+
+---
+
+# 31. SURVEY WEIGHTS
+
+Survey weights are critical.
+
+Determine exactly how Phase 1 weights should influence model training.
+
+Different generators may not support weighted fitting directly.
+
+Possible methods:
+
+```text
+weighted resampling before training
+
+stratified weighted sampling
+
+training on harmonized sample
++
+later official calibration
+```
+
+Document the actual methodology.
+
+Never silently discard survey weights.
+
+---
+
+# 32. TRAINING POPULATION VS OFFICIAL POPULATION
+
+Understand this distinction:
+
+```text
+Reference Template
+```
+
+teaches the model:
+
+```text
+JOINT RELATIONSHIPS
+```
+
+while:
+
+```text
+Official Marginals
+```
+
+will later help:
+
+```text
+VALIDATION
+CALIBRATION
+```
+
+Do NOT force all official marginals directly into the generator unless the model explicitly supports conditional constraints and the method is documented.
+
+Population calibration belongs mainly to the next phase.
+
+---
+
+# 33. HOUSEHOLD STRUCTURE
+
+Determine whether Phase 1 contains legitimate household linkage.
+
+If yes, strongly prefer preserving:
+
+```text
+household ID
+relationship to household head
+household size
+household-level attributes
+person attributes within household
+```
+
+---
+
+# 34. RELATIONAL SYNTHESIS
+
+If the data and chosen library reliably support relational generation, consider:
+
+```text
+Household Table
+        |
+        +---- Person Table
+```
+
+Example:
+
+```text
+HOUSEHOLD
+
+synthetic_household_id
+district
+urban_rural
+household_size
+household_income
+dwelling_type
+
+PERSON
+
+synthetic_person_id
+synthetic_household_id
+age
+gender
+education
+employment
+relationship_to_head
+```
+
+Use a proper relational model if implemented.
+
+Do not manually assign random people to random households.
+
+---
+
+# 35. PERSON-LEVEL MVP
+
+If Phase 1 household relationships are incomplete or unreliable:
+
+Implement the MVP as:
+
+```text
+PERSON-LEVEL SYNTHETIC POPULATION
+```
+
+first.
+
+Include household characteristics only as person-linked attributes when legitimate.
+
+Document that household membership is not explicitly synthesized.
+
+Do not invent household relationships.
+
+---
+
+# 36. LOGICAL CONSTRAINT ENGINE
+
+Generated populations must pass structural checks.
+
+Create configurable constraints.
+
+Example:
+
+```text
+config/synthetic_population/constraints.yaml
+```
+
+Types:
+
+```text
+range constraints
+categorical constraints
+relationship constraints
+conditional constraints
+```
+
+---
+
+# 37. RANGE CONSTRAINTS
+
+Examples:
+
+```text
+age >= 0
+
+household_size >= 1
+
+income >= 0
+
+consumption >= 0
+```
+
+Maximum age should come from an approved project setting/reference evidence.
+
+---
+
+# 38. CATEGORY CONSTRAINTS
+
+Synthetic values must belong to canonical categories.
+
+Example:
+
+```text
+gender ∈ configured categories
+
+urban_rural ∈ {Urban, Rural}
+
+employment_status ∈ approved employment categories
+```
+
+Models must not generate arbitrary category strings.
+
+---
+
+# 39. CROSS-VARIABLE CONSTRAINTS
+
+Use carefully.
+
+Examples may include:
+
+```text
+if age is below working-age threshold,
+some employment categories may be invalid
+
+relationship_to_head must be compatible
+with household structure
+
+household_size must equal or be consistent
+with household membership where relational
+generation exists
+```
+
+Do not over-constrain rare but legitimate cases.
+
+---
+
+# 40. HARD VS SOFT RULES
+
+Separate:
+
+```text
+HARD CONSTRAINT
+```
+
+from:
+
+```text
+STATISTICAL ANOMALY
+```
+
+Examples:
+
+```text
+age = -1
+```
+
+Hard invalid.
+
+But:
+
+```text
+age = 19
+education = Undergraduate Graduate-equivalent
+```
+
+may be rare but plausible depending on category definitions.
+
+Soft anomalies should be flagged, not automatically deleted.
+
+---
+
+# 41. CONSTRAINT VIOLATION REPORT
+
+After each generation calculate:
+
+```text
+total generated
+records violating hard constraints
+records with soft anomalies
+records repaired
+records rejected
+violation rates
+violation types
+```
+
+Store with model metadata.
+
+---
+
+# 42. POST-GENERATION REPAIR
+
+Avoid excessive post-processing.
+
+If a generator creates too many invalid combinations, that should lower its quality rather than being hidden by thousands of repairs.
+
+Use repair only for:
+
+```text
+clear deterministic inconsistencies
+```
+
+Log every repair rule.
+
+---
+
+# 43. DYNAMIC SAMPLING
+
+The diagram explicitly includes:
+
+# SYNTHETIC POPULATION & DYNAMIC SAMPLING
+
+Implement a flexible population sampling service.
+
+Users/future simulation modules should be able to request:
+
+```text
+population size
+generator
+seed
+conditions
+geographic subset
+demographic subset
+```
+
+---
+
+# 44. BASIC SAMPLING
+
+Example interface:
+
+```python
+population = service.generate_population(
+    model="ctgan",
+    size=12000,
+    seed=42
+)
+```
+
+---
+
+# 45. CONDITIONAL SAMPLING
+
+Where supported, allow requests such as:
+
+```text
+district = Chennai
+
+urban_rural = Rural
+
+gender = Female
+
+age_group = 18–35
+```
+
+Example concept:
+
+```python
+population = service.generate_population(
+    model="ctgan",
+    size=5000,
+    conditions={
+        "district": "Chennai"
+    }
+)
+```
+
+Use model-native conditional sampling when supported.
+
+---
+
+# 46. DO NOT FAKE CONDITIONAL SAMPLING
+
+If a model cannot directly generate a requested condition:
+
+Possible fallback:
+
+```text
+oversample
+filter
+repeat
+```
+
+but this must have safety limits.
+
+Do not create infinite loops attempting to satisfy very rare conditions.
+
+Report:
+
+```text
+requested_count
+generated_count
+accepted_count
+acceptance_rate
+```
+
+---
+
+# 47. DYNAMIC POPULATION SIZE
+
+Support at least:
+
+```text
+1,000
+5,000
+10,000
+12,000
+50,000
+100,000
+```
+
+through configuration.
+
+Do not generate all these automatically.
+
+These are supported sizes.
+
+---
+
+# 48. FUTURE LARGE-SCALE SUPPORT
+
+Design generation so later versions can support:
+
+```text
+500,000
+1,000,000+
+```
+
+using:
+
+```text
+batch/chunk generation
+Parquet output
+streaming writes
+background jobs
+```
+
+Do not hold unnecessarily huge populations entirely in memory.
+
+---
+
+# 49. CHUNKED GENERATION
+
+Implement configurable batching where useful.
+
+Example:
+
+```text
+requested size:
+1,000,000
+
+batch size:
+50,000
+```
+
+Generate:
+
+```text
+20 batches
+```
+
+then append to output storage.
+
+Preserve deterministic seed strategy.
+
+---
+
+# 50. UNIQUE SYNTHETIC IDENTIFIERS
+
+After generation assign unique IDs.
+
+Example:
+
+```text
+synthetic_person_id
+```
+
+Format could be:
+
+```text
+TN-SYN-P-000000001
+```
+
+Households:
+
+```text
+TN-SYN-H-000000001
+```
+
+The exact format is less important than:
+
+```text
+uniqueness
+stability within exported dataset
+no link to real IDs
+```
+
+---
+
+# 51. SYNTHETIC RECORD METADATA
+
+Every generated population should have population-level metadata such as:
+
+```text
+population_id
+generation_experiment_id
+generator_type
+generator_version
+model_id
+reference_template_version
+phase2_requirement_version
+generated_at
+size
+seed
+condition
+constraint_version
+```
+
+Do not add all of these as person-level columns if unnecessary.
+
+Keep most in population metadata.
+
+---
+
+# 52. EXPERIMENT MODEL
+
+Every training/generation run should be represented as an experiment.
+
+Conceptual schema:
+
+```json
+{
+  "experiment_id": "SYNEXP-0001",
+
+  "generator": "ctgan",
+
+  "reference_template_version": "TN_REF_V1",
+
+  "phase2_requirements_version": "REQ_V1",
+
+  "training_config": {},
+
+  "generation_config": {
+    "size": 12000,
+    "seed": 42
+  },
+
+  "variables": [],
+
+  "constraints_version": "1.0",
+
+  "created_at": "..."
+}
+```
+
+---
+
+# 53. MODEL VERSIONING
+
+Models must be versioned.
+
+Example:
+
+```text
+TN_GAUSSIAN_COPULA_V1
+
+TN_CTGAN_V1
+
+TN_TVAE_V1
+```
+
+Do not overwrite old trained models silently.
+
+---
+
+# 54. MODEL REGISTRY METADATA
+
+Create something such as:
+
+```text
+artifacts/synthetic_models/model_registry.json
+```
+
+Containing:
+
+```text
+model_id
+generator_type
+model_version
+training_dataset_version
+variables
+created_at
+training_rows
+config
+artifact_path
+status
+```
+
+---
+
+# 55. ARTIFACT STORAGE
+
+Suggested:
+
+```text
+artifacts/
+    synthetic_models/
+
+        bootstrap/
+        gaussian_copula/
+        ctgan/
+        tvae/
+
+    populations/
+
+        SYNPOP-0001/
+            population.parquet
+            metadata.json
+            generation_report.json
+```
+
+Adapt to existing project conventions.
+
+---
+
+# 56. DATABASE INTEGRATION
+
+If the project already has persistent database infrastructure, create or extend entities such as:
+
+```text
+SyntheticModel
+
+SyntheticModelVersion
+
+SyntheticGenerationExperiment
+
+SyntheticPopulation
+
+SyntheticPopulationArtifact
+```
+
+Potential fields:
+
+```text
+id
+generator_type
+model_version
+reference_dataset_version
+policy_requirement_version
+configuration
+seed
+size
+status
+artifact_location
+created_at
+```
+
+Do not create duplicate database infrastructure if Phase 1/2 already provides it.
+
+---
+
+# 57. BACKGROUND JOBS
+
+Training:
+
+```text
+CTGAN
+TVAE
+```
+
+may take substantial time.
+
+Generation of large populations can also be expensive.
+
+If the project already contains a job system, integrate with it.
+
+Long-running operations should support:
+
+```text
+PENDING
+RUNNING
+COMPLETED
+FAILED
+CANCELLED
+```
+
+Optional:
+
+```text
+progress_percentage
+current_stage
+```
+
+---
+
+# 58. JOB TYPES
+
+Potential Phase 3 jobs:
+
+```text
+PREPARE_SYNTHETIC_TRAINING_DATA
+
+TRAIN_SYNTHETIC_MODEL
+
+GENERATE_SYNTHETIC_POPULATION
+
+GENERATE_CONDITIONAL_POPULATION
+```
+
+Do not block HTTP requests during expensive model training.
+
+---
+
+# 59. MODEL TRAINING CONFIGURATION
+
+Create configs such as:
+
+```text
+config/synthetic_population/models/
+
+bootstrap.yaml
+
+gaussian_copula.yaml
+
+ctgan.yaml
+
+tvae.yaml
+```
+
+Do not put experimental hyperparameters throughout code.
+
+---
+
+# 60. DEVELOPMENT VS FULL TRAINING
+
+Support profiles.
+
+Example:
+
+```text
+development
+```
+
+for:
+
+```text
+small training sample
+few epochs
+fast testing
+```
+
+and:
+
+```text
+full
+```
+
+for:
+
+```text
+full reference template
+higher training configuration
+```
+
+Do not run expensive CTGAN/TVAE training as part of normal unit tests.
+
+---
+
+# 61. MODEL TRAINING SERVICE
+
+Conceptual API:
+
+```python
+model = synthetic_service.train_model(
+    generator="ctgan",
+    variables=approved_variables,
+    config=config,
+    seed=42
+)
+```
+
+Return:
+
+```text
+model_id
+training metadata
+training duration
+training rows
+warnings
+artifact location
+```
+
+---
+
+# 62. GENERATION SERVICE
+
+Conceptual:
+
+```python
+population = synthetic_service.generate(
+    model_id=model_id,
+    size=12000,
+    seed=42
+)
+```
+
+Return:
+
+```text
+population_id
+row count
+artifact path
+metadata
+constraint summary
+```
+
+---
+
+# 63. MODEL COMPARISON PREPARATION
+
+The actual full statistical validation belongs to the next phase.
+
+However Phase 3 must generate enough metadata to allow later comparison of:
+
+```text
+Bootstrap
+Gaussian Copula
+CTGAN
+TVAE
+```
+
+For each generator produce equivalent outputs using the same:
+
+```text
+training variables
+population size
+reference version
+seed policy
+```
+
+where possible.
+
+---
+
+# 64. GENERATE STANDARD EVALUATION POPULATIONS
+
+After successful training, generate an evaluation population for each applicable model.
+
+Recommended initial size:
+
+```text
+12,000
+```
+
+or the reference template size if more appropriate.
+
+Example outputs:
+
+```text
+synthetic_bootstrap_12000.parquet
+
+synthetic_gaussian_copula_12000.parquet
+
+synthetic_ctgan_12000.parquet
+
+synthetic_tvae_12000.parquet
+```
+
+Do not assume all models will successfully train.
+
+If one fails:
+
+```text
+record failure
+continue other models
+```
+
+unless failure indicates a systemic data issue.
+
+---
+
+# 65. SYNTHETIC OUTPUT SCHEMA
+
+Every generator must output the same canonical schema.
+
+Example:
+
+```text
+synthetic_person_id
+
+state
+district
+urban_rural
+
+age
+age_group
+gender
+
+marital_status
+
+household_size
+
+education_level
+
+employment_status
+employment_type
+occupation_group
+industry_group
+
+household_income
+consumption_expenditure
+
+...
+```
+
+Actual columns must depend on Phase 2-approved variables.
+
+---
+
+# 66. DERIVED VARIABLES
+
+Avoid asking models to learn variables that can be deterministically derived.
+
+Example:
+
+```text
+age
+```
+
+can generate:
+
+```text
+age_group
+```
+
+after synthesis.
+
+Do not necessarily train on both:
+
+```text
+age
+age_group
+```
+
+unless there is a strong reason.
+
+Prefer:
+
+```text
+generate base variable
+derive deterministic field afterward
+```
+
+This prevents inconsistencies.
+
+---
+
+# 67. APPROVED DERIVATIONS
+
+Use Phase 2-approved derivations.
+
+Example:
+
+```text
+is_elderly = age >= 60
+
+is_youth = configured age rule
+
+annual_income =
+monthly_income × 12
+```
+
+Only derive variables using registered deterministic transformations.
+
+---
+
+# 68. PROXY VARIABLES
+
+If Phase 2 indicates:
+
+```text
+PROXY_AVAILABLE
+```
+
+do not hide that fact in Phase 3.
+
+Example:
+
+Policy requires:
+
+```text
+household_income
+```
+
+but only:
+
+```text
+wealth_quintile
+```
+
+exists.
+
+The synthetic population should contain:
+
+```text
+wealth_quintile
+```
+
+not fabricated precise household income, unless a separate approved statistical model has been explicitly designed for that transformation.
+
+---
+
+# 69. STATE VALUE
+
+Since this project is Tamil Nadu only:
+
+```text
+state = Tamil Nadu
+```
+
+may be deterministic rather than model-generated.
+
+Do not waste model capacity generating a constant field.
+
+Generate or attach it after synthesis.
+
+---
+
+# 70. GEOGRAPHY
+
+District may be modelled only if Phase 1/2 established sufficient and legitimate district-level information.
+
+Do not generate district-level detail merely because the project is Tamil Nadu-based.
+
+If data supports only state-level inference:
+
+```text
+district = NULL
+```
+
+or exclude the field.
+
+Document the limitation.
+
+---
+
+# 71. TEMPORAL METADATA
+
+Do not pretend the synthetic population represents an exact contemporary Tamil Nadu population unless Phase 1 data supports that.
+
+Store:
+
+```text
+reference_data_years
+synthetic_reference_period
+```
+
+Potential wording:
+
+```text
+Synthetic population generated from a multi-source Tamil Nadu reference template using data from years X–Y.
+```
+
+---
+
+# 72. MODEL TRAINING LOGGING
+
+Log:
+
+```text
+experiment_id
+model_id
+generator
+training rows
+variable count
+seed
+training start
+training end
+duration
+status
+failure reason
+```
+
+Do not log sensitive source rows.
+
+---
+
+# 73. TRAINING FAILURES
+
+Handle errors such as:
+
+```text
+constant columns
+unsupported data types
+all-null variables
+too many categories
+invalid model metadata
+insufficient records
+library training failure
+memory error
+```
+
+Do not silently drop variables when training fails.
+
+Report exactly what changed.
+
+---
+
+# 74. PRE-TRAINING VALIDATION
+
+Before model training ensure:
+
+```text
+dataset has rows
+
+required variables exist
+
+no identifier columns in features
+
+data types valid
+
+categorical levels valid
+
+no unexpected infinite values
+
+continuous variables valid
+
+constraints valid
+```
+
+Fail early with clear errors.
+
+---
+
+# 75. TRAINING DATA REPORT
+
+Generate:
+
+```text
+reports/synthetic_training_data_report.md
+```
+
+Include:
+
+```text
+Training rows
+Holdout rows
+Variables
+Variable types
+Missingness handling
+Rare categories
+Weights
+Excluded variables
+Derived variables
+Constraints
+Reference versions
+```
+
+---
+
+# 76. SYNTHETIC POPULATION METADATA
+
+For every output generate:
+
+```text
+metadata.json
+```
+
+Example:
+
+```json
+{
+  "population_id": "SYNPOP-0001",
+
+  "synthetic": true,
+
+  "jurisdiction": "Tamil Nadu",
+
+  "generator": "ctgan",
+
+  "model_id": "TN_CTGAN_V1",
+
+  "rows": 12000,
+
+  "seed": 42,
+
+  "reference_template_version": "TN_REF_V1",
+
+  "variables": [],
+
+  "generated_at": "...",
+
+  "constraints_version": "...",
+
+  "warnings": []
+}
+```
+
+Use actual values.
+
+---
+
+# 77. SYNTHETIC DATA LABEL
+
+Every exported synthetic dataset should contain documentation stating:
+
+> This file contains artificially generated synthetic records. These rows are not actual residents or survey respondents. They were generated from statistical relationships learned from the Tamil Nadu reference data foundation.
+
+This statement is mandatory.
+
+---
+
+# 78. EXPORT FORMATS
+
+Primary machine-readable format:
+
+```text
+Parquet
+```
+
+Also optionally:
+
+```text
+CSV
+```
+
+For SOP inspection, create an Excel preview/export.
+
+Example:
+
+```text
+data/exports/
+tamil_nadu_synthetic_population_preview.xlsx
+```
+
+Do not make Excel the primary format for very large populations.
+
+---
+
+# 79. EXCEL SYNTHETIC PREVIEW
+
+Create a workbook with manageable size.
+
+Potential sheets:
+
+```text
+00_README
+
+01_POPULATION_METADATA
+
+02_SYNTHETIC_SAMPLE
+
+03_VARIABLE_DICTIONARY
+
+04_GENERATION_CONFIG
+
+05_CONSTRAINT_SUMMARY
+
+06_MODEL_METADATA
+
+07_WARNINGS
+```
+
+Do not attempt to place million-row datasets into Excel.
+
+---
+
+# 80. API CONTRACT
+
+If a backend API exists, implement endpoints consistent with project architecture.
+
+Potential:
+
+```text
+POST /synthetic-models/train
+
+GET /synthetic-models
+
+GET /synthetic-models/{id}
+
+POST /synthetic-populations/generate
+
+POST /synthetic-populations/generate-conditional
+
+GET /synthetic-populations/{id}
+
+GET /synthetic-populations/{id}/status
+
+GET /synthetic-populations/{id}/metadata
+```
+
+Keep training/generation asynchronous when appropriate.
+
+---
+
+# 81. TRAIN REQUEST EXAMPLE
+
+Conceptual:
+
+```json
+{
+  "generator": "ctgan",
+
+  "policy_compatibility_report_id": "...",
+
+  "profile": "development",
+
+  "seed": 42
+}
+```
+
+The backend should resolve approved variables from Phase 2 rather than trusting arbitrary client-supplied training columns.
+
+---
+
+# 82. POPULATION GENERATION REQUEST
+
+Conceptual:
+
+```json
+{
+  "model_id": "TN_CTGAN_V1",
+
+  "population_size": 12000,
+
+  "seed": 42
+}
+```
+
+---
+
+# 83. CONDITIONAL REQUEST
+
+Conceptual:
+
+```json
+{
+  "model_id": "TN_CTGAN_V1",
+
+  "population_size": 5000,
+
+  "seed": 42,
+
+  "conditions": {
+    "urban_rural": "Rural"
+  }
+}
+```
+
+Validate all conditions against the canonical schema.
+
+---
+
+# 84. POLICY-DRIVEN DYNAMIC SAMPLING
+
+This is a major architectural requirement.
+
+The future Policy Engine may request a population appropriate for a specific experiment.
+
+Example:
+
+```text
+Policy:
+Rural Employment Assistance
+```
+
+Phase 2 says required:
+
+```text
+age
+employment_status
+income proxy
+urban_rural
+```
+
+Phase 3 should be able to produce a synthetic population that includes these dimensions.
+
+---
+
+# 85. DYNAMIC SAMPLING DOES NOT MEAN BIASING THE POPULATION
+
+Be careful.
+
+If the policy targets rural residents, the default population should still represent Tamil Nadu unless the simulation explicitly requests a rural-only population.
+
+Separate:
+
+```text
+REPRESENTATIVE POPULATION GENERATION
+```
+
+from:
+
+```text
+CONDITIONAL SUBPOPULATION GENERATION
+```
+
+Do not accidentally generate only eligible people when the simulation requires the whole population.
+
+---
+
+# 86. GENERATION MODES
+
+Implement explicit modes:
+
+```text
+REPRESENTATIVE
+
+CONDITIONAL
+
+SUBPOPULATION
+```
+
+### REPRESENTATIVE
+
+Generate a general Tamil Nadu synthetic sample.
+
+### CONDITIONAL
+
+Generate records satisfying one or more supported conditions.
+
+### SUBPOPULATION
+
+Generate from a specific predefined population scope.
+
+Make semantics clear.
+
+---
+
+# 87. REPRODUCIBILITY TEST
+
+Given:
+
+```text
+same model
+same population size
+same seed
+same library/environment
+```
+
+generation should be reproducible where supported.
+
+Create a test.
+
+Do not require byte-for-byte equality if the underlying library cannot guarantee it.
+
+Document reproducibility limitations.
+
+---
+
+# 88. RANDOMNESS
+
+Use centralized random-seed utilities.
+
+Potential:
+
+```text
+src/core/randomness.py
+```
+
+Seed:
+
+```text
+Python random
+NumPy
+supported ML framework
+synthetic library
+```
+
+where appropriate.
+
+---
+
+# 89. GPU
+
+Do not assume GPU availability.
+
+CTGAN and TVAE should work in the project's expected environment.
+
+If GPU acceleration is supported:
+
+```text
+detect/configure optionally
+```
+
+but CPU compatibility is required unless current project requirements explicitly say otherwise.
+
+---
+
+# 90. PERFORMANCE MEASUREMENT
+
+Measure and store:
+
+```text
+training duration
+generation duration
+rows per second
+artifact size
+peak memory where practical
+```
+
+These metrics will help compare models operationally.
+
+---
+
+# 91. PRIVACY WARNING
+
+Synthetic data is NOT automatically anonymous.
+
+Do not claim:
+
+```text
+privacy guaranteed
+```
+
+or:
+
+```text
+no disclosure risk
+```
+
+Phase 3 should only generate synthetic data.
+
+Formal privacy evaluation may be a later enhancement.
+
+---
+
+# 92. MEMORIZATION RISK PRECHECK
+
+Even though full privacy evaluation is later, implement simple diagnostic warnings where practical.
+
+For example:
+
+```text
+exact duplicate percentage
+```
+
+between synthetic and reference rows.
+
+This is especially useful for:
+
+```text
+bootstrap
+```
+
+and may be useful for neural models.
+
+Do not call this a complete privacy test.
+
+---
+
+# 93. EXACT DUPLICATE ANALYSIS
+
+For compatible sets of columns calculate:
+
+```text
+synthetic rows that exactly match reference rows
+```
+
+Record:
+
+```text
+count
+percentage
+```
+
+Do not compare identifiers.
+
+This should be metadata for future validation.
+
+---
+
+# 94. MODEL ARTIFACT SAFETY
+
+Do not expose or serialize arbitrary executable objects insecurely to untrusted clients.
+
+Model files remain backend artifacts.
+
+Users should refer to:
+
+```text
+model_id
+```
+
+rather than arbitrary filesystem paths.
+
+---
+
+# 95. TESTING STRATEGY
+
+Testing is mandatory.
+
+Create:
+
+```text
+tests/synthetic_population/
+```
+
+with unit and integration tests.
+
+---
+
+# 96. UNIT TESTS — GENERATOR INTERFACE
+
+Test:
+
+```text
+fit
+
+sample
+
+save
+
+load
+
+metadata
+
+invalid model config
+
+unsupported generator
+```
+
+---
+
+# 97. UNIT TESTS — DATA PREPARATION
+
+Test:
+
+```text
+identifier exclusion
+
+metadata exclusion
+
+variable selection
+
+data typing
+
+missingness handling
+
+categorical handling
+
+derived-variable handling
+
+weight preservation
+```
+
+---
+
+# 98. UNIT TESTS — CONSTRAINTS
+
+Using controlled data test:
+
+```text
+age never negative
+
+household_size >= 1
+
+categorical values valid
+
+derived variables consistent
+```
+
+---
+
+# 99. UNIT TESTS — POPULATION SIZE
+
+Request:
+
+```text
+100
+```
+
+verify:
+
+```text
+100 rows
+```
+
+Request:
+
+```text
+1000
+```
+
+verify:
+
+```text
+1000 rows
+```
+
+unless a clearly documented conditional-generation shortfall occurs.
+
+---
+
+# 100. CONDITIONAL SAMPLING TESTS
+
+Request:
+
+```text
+urban_rural = Rural
+```
+
+All returned rows must satisfy the condition.
+
+Test impossible conditions.
+
+Example:
+
+```text
+age = -100
+```
+
+must fail validation before generation.
+
+---
+
+# 101. SYNTHETIC ID TEST
+
+Verify:
+
+```text
+synthetic_person_id
+```
+
+is:
+
+```text
+not null
+unique
+not equal to source IDs
+```
+
+---
+
+# 102. MODEL SERIALIZATION TESTS
+
+Train a small development model.
+
+Save it.
+
+Reload it.
+
+Generate population.
+
+Verify schema correctness.
+
+---
+
+# 103. INTEGRATION TEST
+
+Create a complete test:
+
+```text
+Phase 1 Reference Data
+        ↓
+Phase 2 Requirements
+        ↓
+Training Data Preparation
+        ↓
+Train Gaussian Copula
+        ↓
+Generate 1,000 Synthetic Persons
+        ↓
+Assign Synthetic IDs
+        ↓
+Constraint Check
+        ↓
+Save Population
+        ↓
+Reload Population
+```
+
+This must pass before Phase 3 is considered complete.
+
+---
+
+# 104. NEURAL MODEL TESTING
+
+Do NOT make unit tests train expensive production CTGAN/TVAE models.
+
+Use:
+
+```text
+very small fixture
+minimal epochs
+```
+
+or mock expensive components where appropriate.
+
+Have a separate optional integration test profile.
+
+---
+
+# 105. DEMO REFERENCE FIXTURE
+
+Create a small artificial test dataset.
+
+Example columns:
+
+```text
+age
+gender
+district
+urban_rural
+education_level
+employment_status
+household_size
+household_income
+```
+
+Construct known relationships.
+
+For example:
+
+```text
+older people have different employment patterns
+
+higher education correlates with different occupations
+```
+
+Use this to verify model pipeline behaviour.
+
+Clearly label it:
+
+```text
+TEST FIXTURE
+```
+
+not Tamil Nadu official data.
+
+---
+
+# 106. COMMAND-LINE INTERFACE
+
+If appropriate for the repository, provide convenient development commands.
+
+Conceptual:
+
+```bash
+python -m app.synthetic train \
+    --generator gaussian_copula
+
+python -m app.synthetic generate \
+    --model-id TN_GC_V1 \
+    --size 12000 \
+    --seed 42
+```
+
+Follow existing CLI style if one exists.
+
+---
+
+# 107. MODEL TRAINING REPORT
+
+For every training run generate/report:
+
+```text
+Model ID
+Generator
+Training data
+Variables
+Rows
+Config
+Seed
+Training duration
+Warnings
+Artifact
+```
+
+---
+
+# 108. POPULATION GENERATION REPORT
+
+Generate:
+
+```text
+reports/synthetic_populations/{population_id}.md
+```
+
+Include:
+
+```text
+Population ID
+Model ID
+Generator
+Size
+Seed
+Generation mode
+Conditions
+Variables
+Generation duration
+Constraint violations
+Repairs
+Rejected rows
+Exact reference duplicate diagnostic
+Output path
+Warnings
+```
+
+---
+
+# 109. MODEL COMPARISON MANIFEST
+
+Create:
+
+```text
+data/synthetic/model_comparison_manifest.json
+```
+
+Example structure:
+
+```json
+{
+  "reference_version": "...",
+
+  "population_size": 12000,
+
+  "models": [
+    {
+      "generator": "bootstrap",
+      "model_id": "...",
+      "population_id": "..."
+    },
+    {
+      "generator": "gaussian_copula",
+      "model_id": "...",
+      "population_id": "..."
+    },
+    {
+      "generator": "ctgan",
+      "model_id": "...",
+      "population_id": "..."
+    },
+    {
+      "generator": "tvae",
+      "model_id": "...",
+      "population_id": "..."
+    }
+  ]
+}
+```
+
+The next validation phase should consume this.
+
+---
+
+# 110. IMPORTANT — DO NOT SELECT "BEST MODEL" YET
+
+Phase 3 may record technical training/generation success, but do NOT declare:
+
+```text
+CTGAN is best
+```
+
+or:
+
+```text
+Gaussian Copula is most accurate
+```
+
+The next **Population Validation Phase** must determine this statistically.
+
+Phase 3 produces candidate populations.
+
+Phase 4 evaluates them.
+
+---
+
+# 111. PHASE 3 TO PHASE 4 CONTRACT
+
+Create a machine-readable manifest containing:
+
+```text
+Reference population artifact
+
+Holdout reference artifact
+
+Synthetic population artifacts
+
+Model IDs
+
+Generator types
+
+Variable schema
+
+Generation configs
+
+Seeds
+
+Constraint results
+
+Population sizes
+```
+
+This becomes input to:
+
+```text
+POPULATION VALIDATION
+```
+
+---
+
+# 112. FUTURE VALIDATION EXPECTATIONS
+
+Although Phase 4 will implement them, design outputs so they can later be compared using:
+
+```text
+marginal distributions
+
+joint distributions
+
+correlations
+
+KS statistics
+
+Jensen-Shannon divergence
+
+Wasserstein distance
+
+categorical association
+
+logical validity
+
+official marginal comparison
+```
+
+Do not calculate the complete validation suite in Phase 3.
+
+---
+
+# 113. DOCUMENTATION
+
+Create:
+
+```text
+docs/synthetic_population_generation.md
+```
+
+Explain:
+
+```text
+Purpose
+
+Architecture
+
+Input data
+
+Variable selection
+
+Generators
+
+Bootstrap baseline
+
+Gaussian Copula
+
+CTGAN
+
+TVAE
+
+Training pipeline
+
+Missing data strategy
+
+Survey-weight strategy
+
+Constraints
+
+Dynamic sampling
+
+Conditional sampling
+
+Model persistence
+
+Population persistence
+
+Reproducibility
+
+Privacy limitations
+
+Known limitations
+```
+
+---
+
+# 114. MODEL-SPECIFIC DOCUMENTATION
+
+Document each model.
+
+For example:
+
+```text
+docs/synthetic_models/gaussian_copula.md
+
+docs/synthetic_models/ctgan.md
+
+docs/synthetic_models/tvae.md
+```
+
+Explain in plain language:
+
+```text
+what the model does
+why it is included
+strengths
+weaknesses
+expected data types
+important parameters
+known limitations
+```
+
+---
+
+# 115. RESEARCH TRANSPARENCY
+
+For SOP purposes, document why multiple methods are used.
+
+Suggested explanation:
+
+> Multiple synthetic-data generators are implemented because no single model is guaranteed to reproduce every type of tabular distribution or dependency. Gaussian Copula provides a relatively simple statistical benchmark, CTGAN targets complex mixed tabular distributions, and TVAE provides a variational generative alternative. Their outputs are evaluated in the subsequent Population Validation phase before one is selected for policy simulation.
+
+---
+
+# 116. PHASE 3 SUMMARY REPORT
+
+Create:
+
+```text
+reports/phase3_summary.md
+```
+
+Answer:
+
+```text
+1. Which Phase 1 dataset was used?
+
+2. Which Phase 2 requirements were used?
+
+3. Which variables were included?
+
+4. Which variables were excluded and why?
+
+5. How were missing values handled?
+
+6. How were survey weights handled?
+
+7. Which generators were implemented?
+
+8. Which generators trained successfully?
+
+9. How many synthetic populations were generated?
+
+10. What population sizes were generated?
+
+11. Were hard constraints violated?
+
+12. How is dynamic sampling implemented?
+
+13. How is conditional sampling implemented?
+
+14. What artifacts were created?
+
+15. What limitations remain?
+
+16. What exactly should Phase 4 validate?
+```
+
+---
+
+# 117. RECOMMENDED DIRECTORY STRUCTURE
+
+Adapt to the repository, but conceptually:
+
+```text
+src/
+    synthetic_population/
+
+        generators/
+            base.py
+            bootstrap.py
+            gaussian_copula.py
+            ctgan.py
+            tvae.py
+
+        preparation/
+            variable_selector.py
+            type_resolver.py
+            missingness.py
+            weights.py
+            splitter.py
+
+        constraints/
+            engine.py
+            rules.py
+
+        sampling/
+            sampler.py
+            conditional.py
+            batching.py
+
+        models/
+            registry.py
+            persistence.py
+
+        populations/
+            service.py
+            persistence.py
+            identifiers.py
+
+        jobs/
+            training.py
+            generation.py
+
+        reporting/
+            training_report.py
+            generation_report.py
+
+        service.py
+```
+
+Potential configs:
+
+```text
+config/
+    synthetic_population/
+
+        variables.yaml
+        constraints.yaml
+
+        models/
+            bootstrap.yaml
+            gaussian_copula.yaml
+            ctgan.yaml
+            tvae.yaml
+```
+
+Tests:
+
+```text
+tests/
+    synthetic_population/
+```
+
+Artifacts:
+
+```text
+artifacts/
+    synthetic_models/
+    synthetic_populations/
+```
+
+---
+
+# 118. ERROR TYPES
+
+Implement meaningful domain errors.
+
+Examples:
+
+```text
+SyntheticPopulationError
+
+UnsupportedGeneratorError
+
+SyntheticModelTrainingError
+
+SyntheticGenerationError
+
+InvalidSyntheticVariableError
+
+SyntheticConstraintError
+
+ConditionalSamplingError
+
+ModelArtifactNotFoundError
+
+InsufficientTrainingDataError
+```
+
+---
+
+# 119. ERROR EXAMPLE
+
+Example:
+
+```json
+{
+  "error": {
+    "code": "INSUFFICIENT_TRAINING_DATA",
+    "message":
+      "CTGAN training cannot proceed because the selected Phase 2 variable set leaves only 312 complete/usable reference observations.",
+    "details": {
+      "required_minimum": "...",
+      "available": 312
+    }
+  }
+}
+```
+
+Do not hide errors behind generic:
+
+```text
+Something went wrong
+```
+
+---
+
+# 120. DATA QUALITY GATING
+
+Phase 3 must respect Phase 2 compatibility.
+
+If Phase 2 says:
+
+```text
+NOT_READY
+```
+
+because a critical variable is unavailable, do NOT pretend Phase 3 can solve the problem by inventing that variable.
+
+The generator may only synthesize variables supported by the Data Foundation and approved compatibility logic.
+
+---
+
+# 121. PROXY GATING
+
+If Phase 2 marks a critical requirement:
+
+```text
+PROXY_AVAILABLE
+```
+
+Phase 3 should require explicit configuration acknowledging the proxy.
+
+Example:
+
+```text
+policy asks for household_income
+available variable = wealth_quintile
+```
+
+Do not rename:
+
+```text
+wealth_quintile
+```
+
+to:
+
+```text
+household_income
+```
+
+Preserve semantic truth.
+
+---
+
+# 122. AGGREGATE-ONLY VARIABLES
+
+If Phase 2 reports:
+
+```text
+AGGREGATE_ONLY
+```
+
+do not automatically create person-level synthetic values from the aggregate during this phase.
+
+Example:
+
+```text
+district disability percentage = 4.2%
+```
+
+does not automatically justify assigning binary disability status to 4.2% of people independently.
+
+That would destroy joint relationships and create unsupported microdata.
+
+Any future aggregate-to-micro synthesis must be implemented as an explicit statistical methodology.
+
+---
+
+# 123. TEMPORAL WARNINGS
+
+Carry Phase 2 temporal warnings into synthetic population metadata.
+
+Example:
+
+```text
+Employment variables:
+2024 reference
+
+Demographic variables:
+2011 reference
+```
+
+Synthetic metadata should state this.
+
+Never call the population:
+
+```text
+Tamil Nadu 2026 population
+```
+
+unless a later temporal projection method actually creates a 2026 population.
+
+---
+
+# 124. POLICY INDEPENDENCE
+
+Although Phase 2 can supply policy requirements, design models so reusable general-purpose Tamil Nadu synthetic populations are possible.
+
+Support two strategies:
+
+```text
+GENERAL MODEL
+```
+
+trained on core reliable variables.
+
+and:
+
+```text
+POLICY-SPECIFIC MODEL
+```
+
+trained using the selected policy-required variable set.
+
+Do not force one strategy globally.
+
+---
+
+# 125. GENERAL MODEL
+
+A general Tamil Nadu model might contain:
+
+```text
+age
+gender
+district
+urban_rural
+education
+employment
+household_size
+economic indicator
+```
+
+depending on Phase 1 quality.
+
+Useful for repeated simulations.
+
+---
+
+# 126. POLICY-SPECIFIC MODEL
+
+Example:
+
+```text
+Youth employment policy
+```
+
+may prioritize:
+
+```text
+age
+gender
+education
+employment
+income/economic status
+urban_rural
+district
+```
+
+Policy-specific models should still include enough structural variables to preserve meaningful relationships.
+
+---
+
+# 127. MODEL FINGERPRINT
+
+Create a stable fingerprint/hash for training configuration.
+
+Potential inputs:
+
+```text
+reference dataset version
+variable list
+generator
+model config
+constraints version
+```
+
+This helps identify duplicate experiments.
+
+Do not expose sensitive data in hashes.
+
+---
+
+# 128. CACHING / REUSE
+
+Before training an expensive model, check whether an equivalent successfully trained model already exists.
+
+If:
+
+```text
+same dataset version
+same variables
+same generator
+same config
+same preprocessing
+```
+
+then reuse may be possible.
+
+Do not retrain CTGAN unnecessarily.
+
+Provide a:
+
+```text
+force_retrain
+```
+
+option where appropriate.
+
+---
+
+# 129. SAFE FILE NAMES
+
+Do not build artifact paths directly from arbitrary user strings.
+
+Use:
+
+```text
+validated IDs
+UUIDs
+generated model IDs
+```
+
+to prevent path issues.
+
+---
+
+# 130. NO FRONTEND REQUIRED
+
+Do not implement the full frontend in this phase.
+
+If a frontend already exists, optionally expose minimal status integration.
+
+The primary deliverable is the backend/data science generation system.
+
+---
+
+# 131. NO POLICY EXECUTION
+
+Do NOT implement:
+
+```text
+eligibility calculation
+
+policy benefits
+
+government cost
+
+Monte Carlo simulation
+
+fairness analysis
+
+recommendations
+```
+
+Those occur later.
+
+---
+
+# 132. NO CALIBRATION YET
+
+Do not implement full population calibration in this phase.
+
+For example, do not yet force:
+
+```text
+synthetic district shares
+=
+official district shares
+```
+
+using raking/IPF.
+
+That belongs in the later Calibration/Reweighting phase.
+
+Phase 3 should generate raw synthetic populations.
+
+---
+
+# 133. NO FINAL VALIDATION YET
+
+Do not perform full Phase 4 validation or declare model winners.
+
+Only perform generation-level checks necessary to ensure:
+
+```text
+correct schema
+
+valid data types
+
+valid categories
+
+hard constraints
+
+generation success
+```
+
+Full fidelity analysis comes next.
+
+---
+
+# 134. PHASE 3 ACCEPTANCE WORKFLOW
+
+The complete development workflow should be:
+
+```text
+PHASE 1 DATA FOUNDATION
+        +
+PHASE 2 SYNTHETIC REQUIREMENTS
+                |
+                v
+      INPUT ASSESSMENT
+                |
+                v
+       VARIABLE SELECTION
+                |
+                v
+      TRAINING PREPARATION
+                |
+        +-------+-------+-------+-------+
+        |               |       |       |
+        v               v       v       v
+    Bootstrap       Gaussian   CTGAN   TVAE
+                     Copula
+        |               |       |       |
+        +-------+-------+-------+-------+
+                |
+                v
+        TRAINED MODEL REGISTRY
+                |
+                v
+         DYNAMIC SAMPLING
+                |
+                v
+       SYNTHETIC POPULATIONS
+                |
+                v
+      CONSTRAINT VALIDATION
+                |
+                v
+       ARTIFACTS + METADATA
+                |
+                v
+            PHASE 4
+      POPULATION VALIDATION
+```
+
+---
+
+# 135. ACCEPTANCE DEMONSTRATION
+
+At the end of Phase 3 perform one complete demonstration using actual Phase 1/Phase 2 artifacts.
+
+Train at least:
+
+```text
+Weighted Bootstrap
+Gaussian Copula
+```
+
+Then attempt, if dependencies and data permit:
+
+```text
+CTGAN
+TVAE
+```
+
+Generate approximately:
+
+```text
+12,000 synthetic/reference candidate rows
+```
+
+per successful model.
+
+Do not fabricate successful results if training fails.
+
+---
+
+# 136. DEMONSTRATION OUTPUT
+
+Report:
+
+```text
+Reference Template:
+X rows
+
+Selected Variables:
+Y
+
+Bootstrap:
+TRAINED/AVAILABLE
+Population generated: 12,000
+
+Gaussian Copula:
+TRAINED
+Population generated: 12,000
+
+CTGAN:
+TRAINED / FAILED / SKIPPED
+Reason: ...
+
+TVAE:
+TRAINED / FAILED / SKIPPED
+Reason: ...
+```
+
+Also report:
+
+```text
+generation duration
+constraint violations
+artifact paths
+population IDs
+```
+
+---
+
+# 137. DEFINITION OF DONE
+
+Phase 3 is complete only when:
+
+```text
+[ ] Phase 1 outputs inspected
+
+[ ] Phase 2 outputs inspected
+
+[ ] Phase 3 input assessment created
+
+[ ] Policy-aware variable selection implemented
+
+[ ] Identifier exclusion implemented
+
+[ ] Data type resolver implemented
+
+[ ] Missingness strategy implemented
+
+[ ] Weight strategy documented
+
+[ ] Training data pipeline implemented
+
+[ ] Generator abstraction implemented
+
+[ ] Bootstrap baseline implemented
+
+[ ] Gaussian Copula implemented
+
+[ ] CTGAN implemented or clearly documented as blocked
+
+[ ] TVAE implemented or clearly documented as blocked
+
+[ ] Model registry implemented
+
+[ ] Model persistence implemented
+
+[ ] Reproducible configurations implemented
+
+[ ] Synthetic IDs implemented
+
+[ ] Representative sampling implemented
+
+[ ] Conditional sampling implemented where supported
+
+[ ] Dynamic population sizing implemented
+
+[ ] Chunked generation designed/implemented where appropriate
+
+[ ] Constraint engine implemented
+
+[ ] Constraint reports generated
+
+[ ] Population persistence implemented
+
+[ ] Metadata generated
+
+[ ] Phase 4 manifest produced
+
+[ ] Unit tests passing
+
+[ ] Integration test passing
+
+[ ] Documentation written
+
+[ ] Phase 3 summary generated
+```
+
+---
+
+# 138. FINAL PHASE 3 DELIVERABLES
+
+At minimum produce equivalent artifacts to:
+
+```text
+config/synthetic_population/
+
+src/synthetic_population/
+
+tests/synthetic_population/
+
+artifacts/synthetic_models/
+
+artifacts/synthetic_populations/
+
+data/synthetic/model_comparison_manifest.json
+
+reports/phase3_input_assessment.md
+
+reports/synthetic_variable_selection.md
+
+reports/phase3_missing_data_strategy.md
+
+reports/synthetic_training_data_report.md
+
+reports/phase3_summary.md
+
+docs/synthetic_population_generation.md
+```
+
+plus generated synthetic populations from successful models.
+
+---
+
+# 139. IMPORTANT RESEARCH RULES
+
+Never claim:
+
+```text
+Synthetic = Real
+
+Synthetic = Anonymous
+
+CTGAN = Best
+
+More rows = More accurate
+
+Newest model = Best model
+
+Matching one histogram = Valid population
+```
+
+Those statements are scientifically incorrect.
+
+The next validation phase exists specifically to determine how well each model preserves the relevant statistical properties.
+
+---
+
+# 140. PROJECT-SPECIFIC NORTH STAR
+
+For this Tamil Nadu policy simulation project, prioritize:
+
+```text
+1. Preservation of meaningful statistical relationships
+
+2. Correct representation of Phase 1 variables
+
+3. Respect for Phase 2 compatibility decisions
+
+4. Logical consistency
+
+5. Reproducibility
+
+6. Model interchangeability
+
+7. Dynamic sampling
+
+8. Provenance
+
+9. Scalability
+
+10. Ease of future validation
+```
+
+---
+
+# 141. CRITICAL STOP CONDITION
+
+After implementing Phase 3:
+
+Do NOT continue into:
+
+```text
+Population Validation
+Calibration
+Policy Engine
+Monte Carlo Simulation
+Recommendation Engine
+```
+
+Stop after:
+
+```text
+candidate synthetic populations
++
+model artifacts
++
+generation metadata
++
+constraint reports
++
+Phase 4 validation manifest
+```
+
+The candidate populations must be evaluated in the next phase before any model is approved for actual policy simulation.
+
+---
+
+# 142. FINAL INSTRUCTION TO CODEX
+
+Start by inspecting the existing repository and understanding exactly what Phase 1 and Phase 2 have produced.
+
+Then implement Phase 3 as a modular, reproducible synthetic-population subsystem supporting:
+
+```text
+Bootstrap Baseline
+Gaussian Copula
+CTGAN
+TVAE
+```
+
+with a common generator interface.
+
+Use Phase 1 to obtain the statistical reference population.
+
+Use Phase 2 to determine which variables are sufficiently supported and needed.
+
+Generate artificial Tamil Nadu populations with configurable:
+
+```text
+model
+population size
+random seed
+sampling mode
+conditions
+```
+
+Support:
+
+```text
+Representative Synthetic Population
+Dynamic Population Sampling
+Conditional Population Sampling
+```
+
+Preserve multivariate structure as much as each model permits.
+
+Enforce explicit hard constraints.
+
+Keep provenance and experiment metadata.
+
+Generate synthetic IDs unrelated to real source identifiers.
+
+Never fabricate unsupported variables.
+
+Never treat aggregate-only variables as person-level values without an explicit statistical model.
+
+Never claim that a generated population is valid merely because generation succeeded.
+
+Generate candidate populations for all successfully trained models and produce a manifest that allows the next phase to compare:
+
+```text
+REFERENCE
+vs
+BOOTSTRAP
+vs
+GAUSSIAN COPULA
+vs
+CTGAN
+vs
+TVAE
+```
+
+When the implementation, tests, artifacts, documentation and Phase 3 summary are complete, **STOP**.
+
+The next phase will be:
+
+# POPULATION VALIDATION
+
+which will determine which synthetic-generation method is sufficiently faithful for downstream Tamil Nadu policy simulation.

@@ -1,0 +1,32 @@
+{
+  "generator": "bootstrap",
+  "training_rows": 12000,
+  "variables": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "age",
+    "gender",
+    "marital_status",
+    "relationship_to_head",
+    "household_size",
+    "household_type",
+    "literacy_status",
+    "education_level",
+    "labour_force_status",
+    "employment_status",
+    "individual_income",
+    "consumption_expenditure",
+    "social_group"
+  ],
+  "weight_column": "calibrated_reference_weight_gender_ur",
+  "weighted_sampling": true,
+  "stratification_columns": [
+    "district",
+    "urban_rural",
+    "gender"
+  ],
+  "stratified_sampling": true,
+  "label": "RESAMPLED_BASELINE",
+  "warning": "Bootstrap records are resampled from reference rows and may duplicate source observations; do not call this privacy-preserving synthesis."
+}

@@ -1,0 +1,42 @@
+{
+  "training_dataset_version": "phase3_training_v1",
+  "reference_template_path": "data/processed/reference_template.csv",
+  "training_dataset_path": "data/synthetic/training/reference_training_v1.csv",
+  "rows": 12000,
+  "features": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "age",
+    "gender",
+    "marital_status",
+    "relationship_to_head",
+    "household_size",
+    "household_type",
+    "literacy_status",
+    "education_level",
+    "labour_force_status",
+    "employment_status",
+    "individual_income",
+    "consumption_expenditure",
+    "social_group"
+  ],
+  "feature_count": 16,
+  "weight_columns": [
+    "survey_weight",
+    "normalized_reference_weight",
+    "calibrated_reference_weight_gender_ur"
+  ],
+  "split_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "holdout": 0.15
+  },
+  "split_counts": {
+    "train": 8426,
+    "validation": 1790,
+    "holdout": 1784
+  },
+  "seed": 42,
+  "missing_token": "Unknown"
+}

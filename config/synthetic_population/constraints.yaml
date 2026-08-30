@@ -1,0 +1,32 @@
+﻿version: phase3_constraints_v1
+mode: person_level
+hard_range_constraints:
+  age:
+    min: 0
+    max: 120
+  household_size:
+    min: 1
+  individual_income:
+    min: 0
+  consumption_expenditure:
+    min: 0
+hard_category_constraints:
+  gender:
+    values: [Male, Female, Other, Not stated]
+  urban_rural:
+    values: [Rural, Urban]
+  literacy_status:
+    values: [Literate, Illiterate]
+  employment_status:
+    values: [Employed, Unemployed, Not in labour force, Other/Not stated]
+  labour_force_status:
+    values: [Employed, Unemployed, Not in labour force, Other/Not stated]
+  social_group:
+    values: [Scheduled Tribe, Scheduled Caste, Other Backward Class, Others]
+soft_relationship_constraints:
+  child_employment_status:
+    description: Flag records below age 15 with Employed or Unemployed employment status.
+    severity: soft
+post_generation_repair:
+  enabled: false
+  reason: Phase 3 should expose invalid generation rather than hide it through broad repair.
