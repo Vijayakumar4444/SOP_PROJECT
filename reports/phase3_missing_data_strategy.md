@@ -1,0 +1,43 @@
+# Phase 3 Missing Data Strategy
+
+- reference_person_id: EXCLUDE_FROM_TRAINING (0.0%). Identifier must not be learned by a generator.
+- reference_household_id: EXCLUDE_FROM_TRAINING (0.0%). Identifier must not be learned by a generator.
+- source_record_id: EXCLUDE_FROM_TRAINING (0.0%). Identifier must not be learned by a generator.
+- primary_source_id: EXCLUDE_FROM_TRAINING (0.0%). Provenance metadata must not be used as behavioural features.
+- state: ATTACH_AFTER_GENERATION (0.0%). Deterministic Tamil Nadu-only metadata/value.
+- state_code: ATTACH_AFTER_GENERATION (0.0%). Deterministic Tamil Nadu-only metadata/value.
+- district: EXPLICIT_UNKNOWN_CATEGORY (1.2917%). Preserve missingness as an explicit category instead of mode imputation.
+- district_code: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- urban_rural: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- age: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- age_group: DERIVE_AFTER_GENERATION (0.0%). Avoid learned inconsistency with base variables.
+- gender: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- marital_status: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- relationship_to_head: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- household_size: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- household_type: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- literacy_status: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- education_level: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- labour_force_status: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- employment_status: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- employment_type: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- occupation_group: EXCLUDE_FROM_TRAINING (53.4583%). High missingness and no current policy need; defer.
+- industry_group: EXCLUDE_FROM_TRAINING (53.4583%). High missingness and no current policy need; defer.
+- individual_income: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- household_income: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- consumption_expenditure: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- income_band: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- dwelling_type: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- house_ownership: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- electricity: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- drinking_water: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- toilet_facility: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- cooking_fuel: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- health_insurance: EXCLUDE_FROM_TRAINING (100.0%). Field is fully missing in the reference template.
+- social_group: NONE_REQUIRED (0.0%). No missing values in selected reference feature.
+- survey_weight: PRESERVE_AS_WEIGHT_METADATA (0.0%). Available for weighted bootstrap/training strategy, not as a model feature.
+- normalized_reference_weight: PRESERVE_AS_WEIGHT_METADATA (0.0%). Available for weighted bootstrap/training strategy, not as a model feature.
+- calibrated_reference_weight_gender_ur: PRESERVE_AS_WEIGHT_METADATA (0.0%). Available for weighted bootstrap/training strategy, not as a model feature.
+- reference_year: EXCLUDE_FROM_TRAINING (0.0%). Provenance metadata must not be used as behavioural features.
+- record_quality_flag: EXCLUDE_FROM_TRAINING (0.0%). Provenance metadata must not be used as behavioural features.
+- disability_status: EXCLUDE_FROM_TRAINING (100.0%). Required by Phase 2 but unavailable as a usable reference-template field.

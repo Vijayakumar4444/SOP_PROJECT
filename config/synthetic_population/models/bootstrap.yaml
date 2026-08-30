@@ -1,0 +1,8 @@
+﻿profile: development
+generator: bootstrap
+version: bootstrap_baseline_v1
+seed: 42
+weight_column: calibrated_reference_weight_gender_ur
+stratification_columns: [district, urban_rural, gender]
+allow_duplicate_reference_rows: true
+label: RESAMPLED_BASELINE

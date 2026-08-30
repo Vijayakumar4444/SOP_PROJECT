@@ -1,0 +1,26 @@
+district,district_code,urban_rural,age,gender,marital_status,relationship_to_head,household_size,household_type,literacy_status,education_level,labour_force_status,employment_status,individual_income,consumption_expenditure,social_group,synthetic_data_label
+Namakkal,16,Rural,51,Female,1,5,4,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,9378.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Sivaganga,33,Urban,31,Male,1,3,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16833.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Ariyalur,05,Rural,55,Male,1,4,2,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,13947.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Kancheepuram,06,Rural,46,Female,3,1,2,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,5955.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tiruchirappalli,02,Rural,41,Female,2,4,8,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,21693.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Erode,11,Rural,10,Female,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16859.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tiruppur,21,Urban,26,Male,2,2,3,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,28600.0,16708.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Kancheepuram,18,Urban,12,Male,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,18000.0,42748.0,Scheduled Caste,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tiruvannamalai,03,Rural,42,Male,1,5,5,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,16750.0,Scheduled Caste,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Kancheepuram,22,Rural,24,Female,1,5,4,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,12303.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tiruvannamalai,29,Urban,76,Male,3,1,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,16158.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Thoothukudi,29,Rural,45,Female,1,4,4,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,8388.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Ranipet,38,Rural,49,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,10543.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Chennai,36,Urban,71,Female,3,7,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,4855.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tiruppur,27,Rural,31,Female,2,1,4,Casual labour in agriculture,Illiterate,Middle,Employed,Employed,0.0,5632.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Cuddalore,26,Rural,25,Female,1,1,5,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,53048.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Thiruvallur,24,Rural,80,Male,2,1,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,13132.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Coimbatore,01,Urban,45,Male,2,1,6,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,22013.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Erode,23,Urban,37,Male,2,5,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,15330.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tenkasi,25,Rural,75,Female,2,2,3,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,15760.0,Scheduled Caste,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Viluppuram,01,Urban,2,Male,1,2,8,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,48045.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Tenkasi,36,Rural,38,Female,1,5,4,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,16405.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Thanjavur,17,Urban,32,Male,2,5,5,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,10405.0,17183.0,Scheduled Caste,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Virudhunagar,22,Rural,23,Female,1,2,4,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8783.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
+Kallakurichi,24,Urban,53,Male,2,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,8000.0,10325.0,Other Backward Class,SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE
