@@ -1,0 +1,17 @@
+{
+  "module": "phase3_finalization",
+  "created_at": "2026-09-11T16:33:43.626140+00:00",
+  "acceptance_manifest": "data/synthetic/phase3_acceptance_manifest.json",
+  "phase4_manifest": "data/synthetic/phase4_validation_manifest.json",
+  "model_comparison_manifest": "data/synthetic/model_comparison_manifest.json",
+  "summary_report": "reports/phase3_summary.md",
+  "definition_of_done_report": "reports/phase3_definition_of_done.md",
+  "documentation": [
+    "docs/synthetic_population_generation.md",
+    "docs/synthetic_models/bootstrap.md",
+    "docs/synthetic_models/gaussian_copula.md",
+    "docs/synthetic_models/ctgan.md",
+    "docs/synthetic_models/tvae.md"
+  ],
+  "stop_condition": "Phase 3 does not select a best model. Candidate populations must be evaluated in Phase 4 population validation before policy simulation use."
+}

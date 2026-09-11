@@ -1,0 +1,1001 @@
+district,district_code,urban_rural,age,gender,marital_status,relationship_to_head,household_size,household_type,literacy_status,education_level,labour_force_status,employment_status,individual_income,consumption_expenditure,social_group,synthetic_data_label
+Sivaganga,21,Rural,11,Male,1,6,6,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,21180.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,41,Male,2,1,5,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,13108.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,3,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8766.0,Other Backward Class,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,16,Female,1,6,6,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,16843.0,Scheduled Tribe,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,11,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,18967.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,70,Female,2,2,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8685.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,60,Female,2,2,3,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3900.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,60,Female,2,7,4,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12975.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,9,Female,1,5,7,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,18595.0,Scheduled Caste,RESAMPLED_BASELINE
+Coimbatore,31,Rural,20,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,20000.0,21413.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,14,Female,1,5,5,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,19267.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,23,Female,1,5,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,15753.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,43,Female,2,2,3,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,9600.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,25,Female,2,4,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12247.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,29,Female,2,4,6,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12817.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,40,Female,2,2,5,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,8392.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,16,Female,1,5,2,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,4715.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,47,Female,2,2,2,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,7933.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,21,Male,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10325.0,Scheduled Caste,RESAMPLED_BASELINE
+Coimbatore,31,Rural,17,Female,1,5,4,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14559.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruppur,32,Rural,45,Male,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8534.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,39,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,18500.0,12700.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,18,Male,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,12467.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,10,Female,1,5,7,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,14286.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,70,Female,3,7,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,22592.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,71,Female,3,1,1,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3042.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,40,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,15183.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,40,Female,2,2,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11142.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,34,Male,3,1,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,8303.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,17,Male,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,19503.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,16,Male,1,5,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10143.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,14,Female,1,5,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10767.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,38,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,16500.0,12271.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,47,Female,2,2,2,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,7933.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,60,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11767.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,0,Male,1,6,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9207.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,30,Female,2,4,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,19321.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,49,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13210.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,69,Female,3,7,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,14,Male,1,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,25,Male,2,3,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,12783.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,1,Male,1,5,5,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8375.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,71,Male,2,1,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,7228.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,50,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4253.0,Scheduled Caste,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,13,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10332.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,38,Male,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,10867.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,29,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,11871.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,68,Female,3,7,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,17660.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,22,Male,1,5,3,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,9263.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,53,Male,2,1,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,12009.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,32,Male,1,5,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9008.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,41,Male,2,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,25000.0,6580.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,3,Male,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11155.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,56,Female,2,2,6,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,13910.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,58,Male,2,1,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,75,Female,3,8,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8005.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,25,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10000.0,9644.0,Scheduled Caste,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,11,Female,1,5,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,25775.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,45,Female,2,2,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,13983.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,13,Female,1,5,3,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,7487.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,32,Female,2,2,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10533.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,18,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15980.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,40,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14087.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,47,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,14542.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,15,Female,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9467.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,55,Male,2,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,18706.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Female,2,2,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,15142.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,70,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,6203.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,25,Female,2,4,4,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7842.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,35,Female,2,2,6,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16859.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,29,Male,2,3,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,11500.0,8481.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,62,Male,2,1,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,5435.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,3,Male,1,6,6,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15943.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,17,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,16083.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,43,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,17437.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,22,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,8317.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,64,Female,2,7,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,8831.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,0,Male,1,6,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12247.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,75,Female,3,8,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8005.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,45,Female,2,2,2,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,4583.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,68,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,2216.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,6,Male,1,5,3,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5950.0,Scheduled Caste,RESAMPLED_BASELINE
+Perambalur,14,Rural,46,Female,2,2,6,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,14418.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,61,Female,3,7,5,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,12700.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,20,Female,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11625.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,34,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,17192.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,20,Male,1,5,3,Others,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,16500.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,74,Female,2,2,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,25680.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,19,Male,1,5,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,11368.0,Scheduled Tribe,RESAMPLED_BASELINE
+Coimbatore,31,Rural,63,Male,2,1,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,11567.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,72,Male,2,1,2,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,8534.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,9,Male,1,5,4,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12388.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,78,Female,3,1,1,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,2480.0,Scheduled Caste,RESAMPLED_BASELINE
+Perambalur,14,Rural,27,Female,2,4,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,15583.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,35,Male,1,5,5,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,9008.0,Scheduled Caste,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,46,Female,2,2,6,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,19417.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,4,Male,1,5,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9000.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,2,Male,1,6,9,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,21540.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,2,Female,1,6,12,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,36,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,22600.0,15755.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,36,Female,2,4,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11021.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,47,Female,3,1,3,Casual labour in agriculture,Literate,Middle,Unemployed,Unemployed,0.0,8770.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,32,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,28000.0,22717.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,58,Female,3,1,2,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,4271.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,4,Female,1,5,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17516.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,74,Female,3,1,1,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,3275.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,34,Female,3,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,5500.0,8486.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,25,Female,1,5,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10610.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,2,Male,1,6,9,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,21540.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,13,Female,1,5,6,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10342.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,3,Female,1,5,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,13027.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,69,Female,3,7,5,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8392.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,38,Male,2,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,12500.0,12137.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,32,Male,2,3,5,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10421.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,73,Male,3,1,2,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9283.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,58,Female,2,2,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,7383.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,65,Female,3,7,5,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,14623.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,11,Female,1,5,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,25775.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,52,Female,3,1,2,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9438.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,3,Male,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17480.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,40,Male,2,1,2,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,7500.0,7285.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,50,Female,2,2,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,18706.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,38,Male,2,3,6,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9275.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,32,Female,2,4,5,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,9971.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,22,Male,1,5,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,11483.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,2,Female,1,6,6,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15369.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,55,Male,2,1,3,Casual labour in agriculture,Literate,Below Primary,Employed,Employed,0.0,8432.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,35,Female,2,2,3,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9150.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Male,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10575.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,66,Female,3,7,3,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8717.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,27,Male,1,5,8,Regular wage/salary earning,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,25,Male,2,3,6,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,24910.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,82,Female,3,7,8,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17738.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,60,Male,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,4644.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,3,1,1,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,4831.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,25,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,59,Female,2,7,7,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,16613.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,38,Male,2,1,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10767.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,63,Female,2,2,4,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6258.0,Scheduled Tribe,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,49,Male,2,1,3,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,10640.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,55,Male,2,1,5,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,10421.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9642.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,1,Male,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15702.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,4,Female,1,6,8,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,23,Female,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10350.0,16695.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,39,Male,2,3,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,17242.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8800.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10042.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,24,Female,2,4,6,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13358.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,54,Male,2,1,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5296.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,10,Male,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,9409.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,66,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3267.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,27,Male,2,3,4,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,15000.0,9067.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,1,Female,1,6,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,7842.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,53,Female,2,2,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,14967.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,76,Female,3,7,5,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,25775.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,32,Female,2,2,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10473.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,39,Male,1,8,6,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12988.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,63,Male,2,1,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12897.0,Scheduled Caste,RESAMPLED_BASELINE
+Karur,12,Rural,57,Female,2,2,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,19321.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,21,Female,1,5,3,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,7000.0,6550.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,58,Female,2,2,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,29560.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,6,Male,1,6,8,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,54,Male,2,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,13500.0,7158.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,38,Female,2,2,5,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,13108.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,85,Male,2,1,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,3390.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,4,Female,1,5,4,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9037.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,5,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11443.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,27,Female,2,4,10,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13658.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,9,Male,1,5,2,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10440.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,48,Female,2,2,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,9578.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,58,Male,2,3,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,13500.0,7313.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,14,Female,1,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17835.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,45,Female,2,2,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,13588.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,61,Female,3,1,2,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8048.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,34,Male,2,3,5,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,11174.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,27,Female,2,4,10,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13658.0,Scheduled Caste,RESAMPLED_BASELINE
+Karur,12,Rural,33,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,12000.0,11432.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,32,Male,2,3,12,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,17325.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,19,Female,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11417.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,59,Female,2,2,2,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12370.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,70,Male,2,1,3,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3900.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,70,Male,2,1,6,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8458.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,9,Female,1,5,5,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11683.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,12,Male,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,10042.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,20,Female,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11625.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,7,Male,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8353.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,60,Male,2,1,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,8558.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,50,Male,2,1,3,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,10290.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,44,Female,3,1,2,Regular wage/salary earning,Literate,Middle,Employed,Employed,12800.0,5973.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,56,Male,2,1,7,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,16838.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,58,Male,2,3,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,13500.0,7313.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,49,Female,2,2,3,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,8001.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,23,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,12435.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,75,Female,3,7,3,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9648.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,17,Male,1,5,4,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11471.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,18,Male,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10125.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,7,Female,1,6,7,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,16501.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,38,Female,2,2,6,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,9727.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,16,Male,1,5,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10143.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,72,Female,2,7,6,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11622.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,0,Female,1,5,4,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10788.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,42,Female,2,2,3,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,17625.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,55,Female,2,2,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,5162.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,23,Female,1,5,3,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,5855.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,13,Female,1,6,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17400.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,22,Male,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,13800.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,24,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,25500.0,10508.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,70,Male,2,7,5,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,8831.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,12,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,17506.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,35,Female,2,2,3,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9150.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,6,Male,1,5,3,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12577.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,50,Male,2,1,6,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,12500.0,13530.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,1,Male,1,6,8,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,25227.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,41,Female,2,2,5,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,45,Female,2,2,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,22458.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,74,Female,2,2,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,25680.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,23,Male,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,17400.0,11086.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,53,Male,2,1,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,13588.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,11,Male,1,5,4,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11738.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,80,Female,4,1,2,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,7313.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,39,Male,2,1,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,14019.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,12,Male,1,5,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9010.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,45,Female,2,2,4,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,14430.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,69,Female,3,7,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,30,Female,2,2,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,11177.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,4,Female,1,5,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11871.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,49,Male,2,1,6,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,15823.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,55,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11086.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,52,Female,2,2,2,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,7625.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,39,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,18500.0,12700.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,5,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,4,Male,1,6,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15369.0,Scheduled Caste,RESAMPLED_BASELINE
+Theni,23,Rural,53,Male,2,1,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,12000.0,15369.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,13,Male,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,25633.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,24,Female,2,2,3,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10875.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,29,Female,2,1,5,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,6755.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15755.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,71,Female,3,7,7,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,13148.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,55,Female,2,2,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8481.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,90,Male,3,7,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,16383.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,21,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10000.0,15502.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,27,Male,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,25000.0,10667.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,54,Female,2,7,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9950.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,64,Female,3,1,1,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,4191.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,2,Female,1,6,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11578.0,Scheduled Caste,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,16,Male,1,6,6,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,16843.0,Scheduled Tribe,RESAMPLED_BASELINE
+Namakkal,08,Rural,32,Male,2,3,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,24000.0,11133.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,48,Male,2,1,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,11625.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,42,Male,2,1,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,15142.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,18,Male,1,5,4,Casual labour in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7972.0,Scheduled Caste,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,92,Male,2,1,2,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,11644.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,41,Male,2,3,7,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,10888.0,Scheduled Tribe,RESAMPLED_BASELINE
+Coimbatore,31,Rural,10,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,14477.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,47,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,10610.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,75,Male,2,1,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3475.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,58,Female,3,1,1,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3133.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,13,Male,1,5,3,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,15257.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,60,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,17506.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,6,Female,1,6,4,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9850.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,39,Female,2,1,2,Regular wage/salary earning,Literate,Middle,Employed,Employed,4500.0,9123.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,26,Male,1,5,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10451.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,45,Female,2,2,5,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,12000.0,7513.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,17,Female,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13417.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Female,2,2,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,15142.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,47,Male,2,1,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,18250.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,60,Male,2,1,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,11247.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,45,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,15690.0,12578.0,Scheduled Caste,RESAMPLED_BASELINE
+Unknown,37,Rural,31,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11042.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,19,Female,1,5,2,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,8260.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,35,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,12160.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,3,Female,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,18967.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,29,Male,1,5,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,14844.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,58,Female,2,2,6,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,16809.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,7,Female,1,5,5,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11583.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,10,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,14898.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,17,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,8850.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,58,Female,3,7,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,16,Female,1,5,6,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10342.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,17,Male,1,5,3,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,5528.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,69,Female,3,7,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15308.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,58,Female,3,1,1,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,4988.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,32,Female,2,4,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,2000.0,10493.0,Scheduled Caste,RESAMPLED_BASELINE
+Coimbatore,31,Rural,58,Male,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8278.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,32,Male,2,1,3,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,15702.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,1,Male,1,5,3,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8608.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,49,Male,2,1,1,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,7917.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,16,Male,1,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,18762.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,25,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,7854.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,16,Male,1,5,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,7208.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,57,Male,4,3,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,10125.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,3,Male,1,5,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8005.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirupathur,36,Rural,27,Male,1,5,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10000.0,9878.0,Other Backward Class,RESAMPLED_BASELINE
+Tirupathur,36,Rural,32,Male,1,5,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,9878.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,1,Male,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6408.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,21,Female,2,4,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11578.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,40,Female,2,2,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11142.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,0,Female,1,6,7,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,18158.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,3,1,1,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3404.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,62,Male,2,1,7,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,18158.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,48,Female,2,2,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,10,Male,1,6,6,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,10952.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,43,Female,2,2,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,14117.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,22,Male,1,5,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9403.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,54,Male,2,1,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,15753.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,16,Female,1,5,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,15753.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,40,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11888.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,20,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,8717.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,16,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,11133.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,40,Male,2,1,4,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,7675.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,15,Male,1,5,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,12700.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,49,Female,3,1,1,Regular wage/salary earning,Literate,Primary,Employed,Employed,7600.0,3728.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,14,Male,1,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,16458.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,6,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10050.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,42,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,18500.0,12239.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,9,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5772.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,69,Male,2,1,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,8472.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,76,Female,2,2,6,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,15350.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,30,Male,1,5,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9295.0,Other Backward Class,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,55,Female,3,1,5,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16267.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,58,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,13910.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,7,Female,1,5,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,16725.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,30,Female,1,5,3,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,8450.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,28,Male,1,6,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10333.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,8,Female,1,5,3,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7494.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,26,Female,1,5,6,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,15823.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,27,Female,2,4,6,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11609.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,25,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,20,Male,1,5,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,8329.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,26,Female,2,2,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,14568.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,36,Male,2,3,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,19321.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,46,Female,2,2,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,12038.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,26,Male,1,5,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10451.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,0,Female,1,5,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9728.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,62,Female,2,1,1,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3133.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,29,Male,1,5,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,7348.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,41,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,7873.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,27,Male,1,6,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,18500.0,9283.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,23,Female,1,6,2,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,5673.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,58,Male,2,1,1,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,4200.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,13,Male,1,5,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13417.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,54,Female,2,2,3,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9232.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,45,Female,2,2,3,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,7521.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,29,Male,2,1,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,9558.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,7,Male,1,5,5,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9893.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,8,Male,1,5,6,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10861.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,48,Female,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,9660.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,25,Male,1,5,5,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,11733.0,Scheduled Caste,RESAMPLED_BASELINE
+Ariyalur,15,Rural,28,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10638.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,28,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11155.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,34,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,17192.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,40,Female,2,1,3,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,23237.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,35,Female,2,2,6,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9458.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,63,Female,2,2,6,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,20942.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,41,Male,2,1,5,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,13417.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,39,Female,2,2,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,13500.0,21413.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,34,Male,2,1,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,12000.0,6919.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,61,Female,3,1,1,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4107.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,27,Male,1,5,8,Regular wage/salary earning,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,6,Female,1,6,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10493.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,33,Male,1,5,2,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,4088.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,60,Female,2,7,6,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,10158.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,65,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9850.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,42,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,18500.0,12239.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,32,Male,2,3,5,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10421.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,63,Male,2,1,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,9242.0,Scheduled Caste,RESAMPLED_BASELINE
+Unknown,37,Rural,20,Male,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13783.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,45,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,15690.0,12578.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,38,Female,2,2,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,9648.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,34,Female,2,2,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,9728.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,54,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11784.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,23,Female,1,5,3,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,5946.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,0,Female,1,6,7,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,26048.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,33,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,7620.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,33,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,7620.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,28,Female,1,5,3,Others,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,16500.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,41,Male,2,1,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,17280.0,18465.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,46,Male,2,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,24000.0,13208.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,6,Male,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,19388.0,Others,RESAMPLED_BASELINE
+Tenkasi,33,Rural,72,Female,2,2,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,5370.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,40,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11175.0,Other Backward Class,RESAMPLED_BASELINE
+Tirupathur,36,Rural,36,Female,2,2,5,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,10778.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,59,Male,2,7,6,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,16428.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,40,Male,2,2,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,14559.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,39,Female,3,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8992.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,38,Male,2,1,6,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,10861.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,36,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13301.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,3,Male,1,5,7,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16613.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,8,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8579.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,45,Female,2,2,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,7037.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,37,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,18967.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,41,Female,2,2,5,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,16097.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,19,Female,1,6,5,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15537.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,57,Female,2,2,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,19321.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,71,Female,3,7,3,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,63,Male,2,7,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,12975.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,78,Male,2,1,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,4120.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,16,Male,1,5,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10587.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,19,Female,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10083.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,19,Male,1,6,6,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12933.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,49,Male,2,1,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9781.0,Scheduled Caste,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,29,Female,2,2,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,12772.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,39,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,22350.0,12973.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,29,Female,2,2,3,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,5894.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,15,Female,1,5,4,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,13627.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,19,Male,1,5,6,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15753.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,62,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8475.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,0,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,12,Female,1,5,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10975.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,53,Male,2,1,3,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,14675.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,41,Female,2,2,5,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,15034.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,55,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,13183.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,23,Male,1,5,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,16400.0,11579.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,29,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,9158.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruppur,32,Rural,50,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4253.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruppur,32,Rural,45,Female,2,2,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,23322.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,56,Male,2,1,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10641.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,34,Female,2,2,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,4000.0,15150.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,16,Male,1,6,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,10117.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,80,Male,2,1,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,5360.0,Scheduled Caste,RESAMPLED_BASELINE
+Madurai,22,Rural,65,Female,2,2,2,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,4247.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,70,Female,3,7,7,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16838.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,56,Female,2,2,2,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,11795.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,20,Female,1,6,5,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14870.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,23,Female,1,5,7,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,16838.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,58,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,7933.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,50,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4253.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,55,Male,2,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9668.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10042.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,75,Female,3,7,3,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9648.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,29,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,9158.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,58,Female,2,2,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,29560.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,21,Male,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,6200.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,48,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,15000.0,14087.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,43,Male,2,1,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,32500.0,15417.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,65,Male,2,1,2,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,7975.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,34,Female,2,4,4,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,8708.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,71,Female,3,8,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,10021.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,26,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9733.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,7,Female,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13425.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,58,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,6725.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirupathur,36,Rural,35,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7960.0,Scheduled Caste,RESAMPLED_BASELINE
+Perambalur,14,Rural,11,Male,1,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9251.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,20,Male,1,5,5,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,25,Female,1,5,5,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11033.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,23,Female,2,4,3,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9178.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,38,Female,2,2,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,9648.0,Scheduled Caste,RESAMPLED_BASELINE
+Perambalur,14,Rural,46,Female,2,2,6,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,14418.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,18,Male,1,6,4,Casual labour in agriculture,Literate,Secondary,Employed,Employed,13100.0,5792.0,Scheduled Caste,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,16,Male,1,6,6,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,16843.0,Scheduled Tribe,RESAMPLED_BASELINE
+Viluppuram,06,Rural,80,Male,2,1,2,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3050.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,14,Female,1,6,12,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,12,Male,1,6,6,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9275.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,49,Male,2,1,3,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,6983.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,1,Male,1,5,6,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9942.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,27,Male,2,3,8,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,8000.0,25227.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,45,Male,2,1,4,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,9108.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,41,Male,2,1,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,13500.0,7389.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,28,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,4,Female,1,6,6,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,19321.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,43,Female,2,2,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,12502.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,39,Male,2,1,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11823.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,48,Female,2,2,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,14,Male,1,6,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,3475.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,17,Male,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17130.0,Scheduled Caste,RESAMPLED_BASELINE
+Theni,23,Rural,69,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17737.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,28,Male,1,5,8,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,12550.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,11,Male,1,6,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10000.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,39,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,16458.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,40,Male,2,1,4,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,7675.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,40,Male,2,1,4,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,11368.0,Scheduled Tribe,RESAMPLED_BASELINE
+Dindigul,11,Rural,4,Male,1,6,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11609.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,2,Female,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9725.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,12,Male,1,5,5,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10843.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,27,Female,1,5,3,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10828.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,32,Male,2,8,8,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,15000.0,17738.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,30,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9562.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,59,Female,3,1,2,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,4088.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,43,Female,2,4,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,15537.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,40,Male,2,1,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,11042.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,3,1,1,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3404.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,57,Female,2,2,2,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,13315.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,48,Female,2,2,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,17,Male,1,5,4,Self-employed in agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,13192.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,29,Female,2,2,2,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6092.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,45,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,15690.0,12578.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,8,Male,1,5,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7544.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,49,Female,3,1,1,Regular wage/salary earning,Literate,Primary,Employed,Employed,7600.0,3728.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,2,Female,1,5,3,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9627.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,20,Male,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7550.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,4,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,25633.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,50,Female,2,2,5,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10421.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,33,Male,2,3,9,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,21540.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,17,Male,1,5,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,12180.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,35,Female,2,2,4,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,9885.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,35,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,10181.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,51,Male,2,1,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,14950.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,16,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15980.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,42,Female,2,2,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,8717.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,19,Female,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12180.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,50,Female,2,2,5,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,21543.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,30,Female,2,2,3,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12577.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,45,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,9668.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,42,Male,2,1,6,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15500.0,10158.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,18,Female,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,21413.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,29,Female,2,2,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,11622.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,92,Male,2,1,2,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,11644.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,53,Female,2,2,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8992.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,10,Male,1,5,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,17647.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,67,Male,2,1,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,5371.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,69,Female,3,7,5,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8392.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,38,Female,2,2,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17117.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,16,Male,1,5,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,7208.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,58,Male,2,1,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirupathur,36,Rural,21,Female,2,4,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,11478.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,48,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,15300.0,14844.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,57,Female,2,2,2,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,13315.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,28,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,14,Female,1,6,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,14375.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,70,Female,2,2,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6295.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,50,Female,2,2,3,Casual labour in agriculture,Literate,Below Primary,Employed,Employed,0.0,6613.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,51,Female,3,7,2,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,6090.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Female,2,2,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,15142.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,2,2,3,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5330.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,34,Female,2,2,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,23389.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,45,Male,2,1,3,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,15000.0,8717.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,3,Male,1,5,4,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,19238.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,45,Male,2,3,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,10117.0,Scheduled Caste,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,61,Female,2,2,2,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,18601.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,59,Male,2,1,2,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,6095.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,39,Female,2,2,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,13500.0,21413.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,20,Female,1,5,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,17625.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,72,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,4004.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,17,Female,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10437.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,29,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,5000.0,9663.0,Other Backward Class,RESAMPLED_BASELINE
+Tirupathur,36,Rural,32,Male,1,5,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,9878.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,55,Male,2,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,12167.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,85,Male,2,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6815.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15755.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,3,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,25,Female,2,2,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,6015.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,6,Female,1,6,6,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12817.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,22,Female,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,18250.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,17,Female,1,5,6,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9727.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,61,Female,3,7,4,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9383.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,37,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,18000.0,13500.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,68,Female,3,1,6,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,19033.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,31,Male,1,6,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,10125.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,4,Male,1,6,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11609.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,17,Female,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,18837.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,18,Male,1,5,5,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7513.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruppur,32,Rural,22,Female,1,5,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,5533.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,55,Female,2,7,8,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,18563.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,69,Male,2,1,3,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11426.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,45,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,9668.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,10,Male,1,6,5,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,12219.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,30,Female,2,2,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,19388.0,Others,RESAMPLED_BASELINE
+Viluppuram,06,Rural,37,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,7208.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,30,Male,2,3,8,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,38500.0,29312.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,50,Female,2,2,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,10892.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,3,Male,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,13753.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,49,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13210.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,65,Female,3,1,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10620.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,79,Male,2,1,2,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,25680.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,63,Male,3,1,12,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,58,Female,3,7,6,Regular wage/salary earning,Literate,Middle,Employed,Employed,42300.0,16725.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,51,Male,2,1,3,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,7163.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,32,Male,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10575.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,12,Female,1,5,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7458.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,13,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,11270.0,Scheduled Caste,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,1,Male,1,5,5,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15747.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,38,Male,2,3,10,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,13658.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,65,Male,2,1,2,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,4354.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,62,Male,2,1,5,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,22717.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,47,Male,2,1,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,9536.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,13,Male,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,13425.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,10,Female,1,5,3,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8900.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,9,Male,1,6,5,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13405.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,9,Female,1,5,5,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,27190.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,40,Female,2,1,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,19503.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,40,Male,2,2,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,25000.0,7487.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,59,Female,2,2,2,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,5383.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,65,Female,3,7,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10167.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,10,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,14477.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,39,Female,2,2,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,8903.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,13,Female,1,5,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10267.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,24,Male,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,18000.0,16212.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,16,Male,1,5,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9345.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,4,Male,1,5,5,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10628.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,10,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9146.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,39,Female,2,2,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,16782.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,44,Male,2,2,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,28000.0,19503.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,50,Female,2,2,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5296.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,72,Female,3,7,5,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,22458.0,Scheduled Caste,RESAMPLED_BASELINE
+Coimbatore,31,Rural,40,Male,2,2,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,14559.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,37,Male,2,3,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,20000.0,12698.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,65,Male,2,1,2,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,4354.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,36,Female,2,2,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,13200.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,36,Female,2,2,5,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17437.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,21,Male,1,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,13742.0,Scheduled Caste,RESAMPLED_BASELINE
+Theni,23,Rural,37,Female,2,2,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10843.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,21,Female,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,18706.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,21,Male,1,5,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,9668.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,42,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,10473.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,40,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14087.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,43,Female,2,2,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,14797.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,18,Male,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11397.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15755.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,17,Female,1,5,4,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14559.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,52,Male,4,3,2,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,4135.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,52,Male,2,1,2,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,10600.0,Others,RESAMPLED_BASELINE
+Madurai,22,Rural,32,Female,2,2,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10000.0,6919.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,58,Male,2,1,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,18,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15980.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,48,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,15300.0,14844.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,24,Male,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,19600.0,14797.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,45,Male,2,3,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,9750.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,37,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,38500.0,14463.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,4,Female,1,6,12,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,36,Female,1,5,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11300.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,30,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,13680.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,32,Male,1,5,3,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,15877.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,60,Female,2,1,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,16897.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,2,Male,1,6,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11800.0,Scheduled Caste,RESAMPLED_BASELINE
+Karur,12,Rural,46,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,6742.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,43,Male,2,1,5,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,13200.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,13,Male,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,25633.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,30,Male,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,35000.0,8457.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,22,Male,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,13800.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,37,Female,2,2,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,10587.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,38,Male,2,1,4,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,11317.0,Scheduled Caste,RESAMPLED_BASELINE
+Madurai,22,Rural,32,Female,2,2,2,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,10000.0,6919.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,45,Female,2,2,6,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17333.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,34,Female,2,2,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,9133.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,19,Female,1,5,5,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15308.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,6,Male,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,13,Male,1,5,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9964.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,22,Male,1,5,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,12167.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,10,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,22075.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,21,Male,1,5,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9033.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,52,Male,2,2,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,9660.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,16,Female,1,5,6,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10342.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,33,Male,1,5,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,22680.0,8278.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,38,Male,2,3,12,Regular wage/salary earning,Literate,Middle,Employed,Employed,15320.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,45,Male,2,1,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,5528.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,55,Male,2,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,12167.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,15,Male,1,5,3,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,14575.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,1,Female,1,6,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9796.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,16,Female,1,6,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,11075.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,24,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,28000.0,23567.0,Others,RESAMPLED_BASELINE
+Cuddalore,16,Rural,43,Female,2,2,4,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,10975.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,60,Female,2,7,4,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12975.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,24,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,23500.0,9565.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,62,Male,2,1,5,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,22717.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,35,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,9019.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,14,Female,1,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,28563.0,Others,RESAMPLED_BASELINE
+Erode,09,Rural,5,Female,1,5,3,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,14568.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,40,Female,2,2,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11471.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,54,Male,2,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,13500.0,7158.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,38,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17083.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,62,Female,3,1,5,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12483.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,50,Male,2,1,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,16695.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,17,Female,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12487.0,Other Backward Class,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,79,Male,2,1,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,13558.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,45,Female,2,2,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10667.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,13,Male,1,5,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,23389.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,26,Female,2,4,8,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,26500.0,17230.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,40,Female,2,2,5,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,19600.0,15308.0,Scheduled Caste,RESAMPLED_BASELINE
+Perambalur,14,Rural,18,Male,1,5,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11397.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,66,Male,2,7,3,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9633.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,75,Female,3,1,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,9180.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,67,Female,2,2,2,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5667.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,36,Female,2,2,5,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,9559.0,Scheduled Caste,RESAMPLED_BASELINE
+Unknown,37,Rural,31,Female,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11042.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,17,Male,1,6,7,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9945.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,17,Male,1,5,3,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,5528.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,7,Female,1,5,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,16725.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,11,Female,1,5,3,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11283.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,14,Female,1,5,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,15180.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,18,Female,1,6,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,8667.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,54,Male,2,1,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5296.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,23,Male,1,5,3,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,7967.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,40,Female,2,2,5,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,19830.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,12,Female,1,5,5,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,10138.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,46,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,6742.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,40,Male,2,3,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,23328.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,65,Female,3,7,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,9409.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,50,Male,2,1,6,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,12500.0,13530.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,30,Female,2,4,6,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14729.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,46,Female,3,1,1,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,5026.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,29,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,12000.0,11871.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,19,Female,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12435.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,45,Female,2,2,4,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,9908.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,5,Male,1,6,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10828.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,35,Female,3,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8329.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,27,Male,2,1,4,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,6015.0,Scheduled Caste,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,0,Male,1,6,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,19437.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,25,Male,2,3,6,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,24910.0,Scheduled Caste,RESAMPLED_BASELINE
+Madurai,22,Rural,2,Male,1,5,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6015.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,43,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,16000.0,13342.0,Others,RESAMPLED_BASELINE
+Cuddalore,16,Rural,53,Male,2,3,5,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,12083.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,24,Female,2,4,6,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13530.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,70,Male,4,1,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7842.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,40,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14087.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,4,Male,1,5,4,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12975.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,82,Female,3,7,2,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,2240.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,47,Female,2,2,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,9817.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,55,Female,2,2,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,10828.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,56,Female,2,2,6,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,13910.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,3,Female,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12500.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,70,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,7194.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,77,Male,2,7,4,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,15038.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,35,Female,2,4,4,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,6815.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,28,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,10638.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,5,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,11,Male,1,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9251.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,42,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,18500.0,12239.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,1,Male,1,6,8,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,25227.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,7,Male,1,6,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11017.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,7,Female,1,5,6,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16859.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,20,Male,1,5,5,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,7093.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,45,Male,2,1,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,5528.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,61,Female,3,1,1,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4107.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,39,Female,2,2,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,8903.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,3,Female,1,6,8,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,17738.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,55,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11086.0,Scheduled Caste,RESAMPLED_BASELINE
+Theni,23,Rural,50,Female,2,2,6,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,15000.0,15369.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,45,Male,2,1,6,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,15717.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,64,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,4360.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,57,Male,2,1,2,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,7437.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,18,Female,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,21413.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,33,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,15000.0,12247.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,68,Male,2,1,6,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,14729.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,52,Female,2,2,5,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11578.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,6,Male,1,5,3,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12577.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,18,Female,2,8,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,13742.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,34,Male,2,1,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,5894.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,63,Female,2,7,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15533.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,42,Female,3,1,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,7489.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,16,Male,1,6,4,Casual labour in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,14127.0,Scheduled Caste,RESAMPLED_BASELINE
+Dindigul,11,Rural,25,Female,2,4,8,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,2500.0,25227.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,34,Male,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,13100.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,75,Male,2,1,2,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8685.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,14,Female,1,5,3,Casual labour in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,6147.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,17,Female,1,5,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,13817.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,43,Male,2,1,5,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,19433.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,75,Male,2,1,2,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8433.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,59,Male,2,1,3,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,14112.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,40,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,56000.0,16458.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,32,Male,2,3,6,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,12817.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,51,Female,3,7,4,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,9158.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,8,Female,1,6,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10620.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,9,Female,1,5,5,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,27190.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,24,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,26743.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,52,Female,3,1,3,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10570.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,3,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,20,Male,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,9517.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,8,Male,1,5,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,28,Male,2,3,5,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10139.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,35,Female,2,4,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11433.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,62,Female,3,1,1,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,2761.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,45,Female,2,2,5,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,12000.0,7513.0,Scheduled Caste,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,42,Female,2,2,6,Regular wage/salary earning,Literate,Primary,Employed,Employed,16000.0,19417.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,8,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9950.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,11,Female,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,18967.0,Other Backward Class,RESAMPLED_BASELINE
+Karur,12,Rural,58,Male,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,5991.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,25,Male,2,3,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,12783.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,19,Female,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10083.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,27,Male,1,5,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,14315.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,65,Female,2,2,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,6821.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,10,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13725.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,28,Male,1,5,3,Casual labour in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,4742.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,52,Male,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,15000.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,70,Female,3,7,5,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15467.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,43,Female,2,2,3,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,5855.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,58,Female,2,2,6,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,16809.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,16,Female,1,5,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,13375.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,48,Female,2,2,3,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,15608.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,31,Male,2,3,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,18000.0,18350.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,29,Female,2,1,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13753.0,Scheduled Caste,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,37,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,14027.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,57,Male,2,1,5,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,8147.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,23,Male,2,3,6,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,19268.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,25,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,15307.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,12,Male,1,5,4,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,13301.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,3,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8766.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,1,Male,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,6408.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,15,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,11417.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,60,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,12467.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,47,Male,2,1,5,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,13983.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,19,Male,1,5,6,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,17333.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,58,Female,3,7,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,41,Female,2,2,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,7500.0,14679.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,19,Male,1,5,5,Self-employed in agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,13417.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,3,Female,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16042.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,13,Male,1,5,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,19141.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,4,Male,1,5,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12890.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,50,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4253.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,48,Female,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,9660.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,24,Female,2,2,6,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,8947.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,15,Female,1,6,12,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,22,Male,1,1,2,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,10983.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,9,Male,1,5,2,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10440.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,44,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,48500.0,15083.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,7,Male,1,5,3,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,8574.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,47,Female,2,2,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,14315.0,Scheduled Caste,RESAMPLED_BASELINE
+Ariyalur,15,Rural,24,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,18706.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,17,Male,1,5,6,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,19268.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,80,Male,3,7,5,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,15150.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,22,Female,2,2,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,9900.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,39,Male,2,3,5,Regular wage/salary earning,Literate,Secondary,Employed,Employed,13800.0,11075.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,31,Male,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,15,Female,1,5,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,10092.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,5,Female,1,5,7,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16613.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,30,Female,2,2,6,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9368.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,75,Male,2,1,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3958.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,13,Female,1,5,4,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11738.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,62,Female,3,1,5,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11075.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,51,Male,2,1,3,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,7163.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,48,Male,2,1,3,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,12480.0,Scheduled Caste,RESAMPLED_BASELINE
+Madurai,22,Rural,42,Male,2,3,4,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,6815.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,34,Female,2,4,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,16451.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,67,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,5480.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,56,Female,2,2,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,8067.0,Scheduled Caste,RESAMPLED_BASELINE
+Unknown,37,Rural,9,Male,1,5,4,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11042.0,Scheduled Caste,RESAMPLED_BASELINE
+Coimbatore,31,Rural,70,Male,2,1,2,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,3725.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,39,Male,2,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,26000.0,18597.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,40,Female,2,2,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11142.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,27,Female,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,8500.0,6200.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,10,Female,1,5,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,19653.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,36,Female,2,4,12,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,52,Female,2,2,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5040.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,57,Male,2,1,5,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,10940.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,44,Female,2,2,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,6423.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,48,Female,2,2,4,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,12200.0,Scheduled Caste,RESAMPLED_BASELINE
+Unknown,37,Rural,50,Male,2,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,17008.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,20,Male,1,5,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,14317.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,40,Female,2,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11175.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,14,Male,1,5,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9150.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,68,Female,3,1,6,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,19033.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,49,Male,2,1,4,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,30000.0,10533.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,52,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,11718.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,43,Male,2,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,23000.0,13807.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,44,Female,2,2,3,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,9347.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,39,Female,2,2,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,8000.0,8758.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,42,Female,3,7,2,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,13721.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,5,Male,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10575.0,Scheduled Caste,RESAMPLED_BASELINE
+Sivaganga,21,Rural,29,Female,2,4,6,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,19033.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,34,Female,2,2,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10332.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,28,Female,3,3,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,8600.0,8942.0,Scheduled Caste,RESAMPLED_BASELINE
+Salem,07,Rural,42,Female,2,2,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,8717.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,31,Male,2,1,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,22145.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,35,Female,3,1,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,13,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10332.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,50,Female,2,2,4,Regular wage/salary earning,Literate,Middle,Unemployed,Unemployed,0.0,14778.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,34,Female,2,2,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,16287.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,62,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,5040.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,4,Female,1,6,8,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,16,Male,1,5,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,8831.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,11,Male,1,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9251.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,46,Female,2,2,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,14477.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,14,Male,1,5,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,15150.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,5,Female,1,5,3,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,14568.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,33,Male,2,3,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,24800.0,12369.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,6,Male,1,6,8,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,14,Male,1,6,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8708.0,Other Backward Class,RESAMPLED_BASELINE
+Theni,23,Rural,42,Male,2,1,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,10843.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,65,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9850.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,4,Male,1,5,5,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10628.0,Scheduled Caste,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,54,Female,2,2,8,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,38,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,42580.0,22075.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,43,Male,2,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,24808.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,47,Female,2,2,4,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,5828.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,22,Female,1,5,4,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12200.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,79,Male,2,1,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,15350.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,52,Male,2,1,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,11300.0,11252.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,34,Male,2,1,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,18167.0,Scheduled Caste,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,48,Female,2,2,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,15300.0,14844.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,64,Female,2,2,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,2846.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,4,Male,1,5,5,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,18167.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,38,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,42580.0,22075.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,79,Male,2,1,3,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,15747.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,58,Male,2,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,13910.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,30,Female,2,2,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,19388.0,Others,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,43,Male,2,1,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,15790.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,24,Male,1,5,5,Regular wage/salary earning,Literate,Secondary,Employed,Employed,7000.0,16368.0,Other Backward Class,RESAMPLED_BASELINE
+Coimbatore,31,Rural,40,Male,2,2,4,Casual labour in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,14559.0,Scheduled Caste,RESAMPLED_BASELINE
+Theni,23,Rural,34,Male,3,1,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,8303.0,Scheduled Caste,RESAMPLED_BASELINE
+Madurai,22,Rural,70,Male,2,1,2,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,5480.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,37,Female,2,2,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,22600.0,18595.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,2,Male,1,5,4,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15142.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,40,Male,2,2,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,25000.0,7487.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,27,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9375.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,7,Female,1,5,7,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,18595.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,72,Male,3,7,6,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15753.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,80,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,2625.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,49,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,12642.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,24,Male,2,3,6,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,15000.0,17333.0,Other Backward Class,RESAMPLED_BASELINE
+Vellore,04,Rural,60,Female,3,7,6,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,12988.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,60,Female,3,1,6,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,9275.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,65,Female,3,8,4,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12763.0,Scheduled Caste,RESAMPLED_BASELINE
+Namakkal,08,Rural,9,Female,1,5,5,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,17229.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,34,Female,2,2,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,4000.0,15150.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,5,Male,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12220.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,29,Female,2,4,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,8992.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,36,Male,2,1,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,15983.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,49,Male,2,1,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,10083.0,Scheduled Caste,RESAMPLED_BASELINE
+Thanjavur,19,Rural,49,Male,2,1,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,12980.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,19,Female,1,5,5,Casual labour in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13108.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,50,Female,2,2,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,18706.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,47,Female,2,2,4,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,12925.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,19,Female,2,4,6,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,17333.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,70,Male,2,7,6,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,13763.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,69,Female,3,7,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10473.0,Scheduled Caste,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,33,Male,2,1,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,11772.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,24,Female,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,12700.0,9660.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,63,Female,3,1,1,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,5288.0,Scheduled Caste,RESAMPLED_BASELINE
+Viluppuram,06,Rural,11,Female,1,5,5,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,16000.0,Other Backward Class,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,29,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10648.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,47,Male,2,1,5,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,11957.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,36,Female,2,2,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,9010.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,31,Female,2,2,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,8579.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,49,Male,2,1,3,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,9427.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,20,Male,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,14542.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,1,Male,1,5,3,Self-employed in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15702.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,45,Female,2,1,3,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,11397.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,45,Male,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8534.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,48,Female,3,1,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,9446.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,42,Male,2,1,4,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,11738.0,Scheduled Caste,RESAMPLED_BASELINE
+Cuddalore,16,Rural,52,Female,3,7,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,9900.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,3,Male,1,5,7,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16613.0,Other Backward Class,RESAMPLED_BASELINE
+Virudhunagar,24,Rural,40,Male,2,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10332.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvallur,01,Rural,25,Male,2,3,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,12783.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,58,Female,3,1,2,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,4271.0,Scheduled Caste,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,59,Male,2,1,2,Regular wage/salary earning,Literate,Secondary,Employed,Employed,30000.0,13315.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,29,Male,2,3,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Ariyalur,15,Rural,12,Female,1,5,3,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9533.0,Scheduled Caste,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,54,Male,2,1,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5296.0,Other Backward Class,RESAMPLED_BASELINE
+Pudukkottai,20,Rural,55,Female,2,2,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,8481.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,53,Male,2,1,7,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,16501.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,38,Female,2,2,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17117.0,Other Backward Class,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,25,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,8733.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,3,1,1,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3404.0,Other Backward Class,RESAMPLED_BASELINE
+Viluppuram,06,Rural,9,Male,1,5,4,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10083.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13753.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,44,Female,2,1,3,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12952.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,27,Female,2,1,3,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,5385.0,Other Backward Class,RESAMPLED_BASELINE
+Erode,09,Rural,69,Male,2,1,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,16000.0,14085.0,Other Backward Class,RESAMPLED_BASELINE
+Tenkasi,33,Rural,74,Female,2,2,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,25680.0,Other Backward Class,RESAMPLED_BASELINE
+Ariyalur,15,Rural,27,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,12000.0,15742.0,Other Backward Class,RESAMPLED_BASELINE
+Ramanathapuram,25,Rural,7,Female,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9692.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,70,Female,3,1,1,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,3083.0,Scheduled Caste,RESAMPLED_BASELINE
+Ranipet,35,Rural,85,Female,3,7,5,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11170.0,Other Backward Class,RESAMPLED_BASELINE
+Cuddalore,16,Rural,25,Male,1,5,6,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,8458.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,66,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,3267.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,9,Male,1,5,6,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12988.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,49,Male,2,1,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,8500.0,6423.0,Other Backward Class,RESAMPLED_BASELINE
+The Nilgiris,10,Rural,6,Female,1,8,5,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13558.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,1,Male,1,5,7,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,16613.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,68,Female,1,1,3,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,6871.0,Other Backward Class,RESAMPLED_BASELINE
+Madurai,22,Rural,54,Male,2,1,3,Casual labour in agriculture,Literate,Primary,Employed,Employed,3000.0,8001.0,Other Backward Class,RESAMPLED_BASELINE
+Tirunelveli,27,Rural,7,Male,1,6,5,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15397.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,22,Male,1,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,16400.0,14797.0,Other Backward Class,RESAMPLED_BASELINE
+Tirupathur,36,Rural,35,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,7960.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,59,Male,2,2,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,4053.0,Other Backward Class,RESAMPLED_BASELINE
+Ranipet,35,Rural,24,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,7718.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,47,Female,2,2,4,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,12925.0,Other Backward Class,RESAMPLED_BASELINE
+Dindigul,11,Rural,60,Female,2,2,3,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5330.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,29,Male,1,5,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,7348.0,Other Backward Class,RESAMPLED_BASELINE
+Perambalur,14,Rural,38,Female,2,2,2,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,8148.0,Other Backward Class,RESAMPLED_BASELINE
+Mayiladuthurai,38,Rural,65,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,5471.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,39,Female,2,8,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,3000.0,5208.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,8,Male,1,5,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7328.0,Other Backward Class,RESAMPLED_BASELINE
+Sivaganga,21,Rural,7,Female,1,5,7,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10013.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruppur,32,Rural,12,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,24808.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,58,Male,2,1,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,39367.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,40,Male,2,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,9019.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,66,Male,2,1,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,10286.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,16,Male,1,5,5,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11377.0,Scheduled Caste,RESAMPLED_BASELINE
+Tenkasi,33,Rural,19,Male,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,7620.0,Scheduled Caste,RESAMPLED_BASELINE
+Thoothukudi,26,Rural,49,Female,2,2,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13210.0,Other Backward Class,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,27,Male,1,5,3,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,5698.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,23,Male,1,5,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,12925.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,9,Male,1,5,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,16574.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,45,Male,2,1,8,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,18563.0,Other Backward Class,RESAMPLED_BASELINE
+Namakkal,08,Rural,4,Female,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,11546.0,Other Backward Class,RESAMPLED_BASELINE
+Thiruvarur,18,Rural,14,Female,1,6,12,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,58995.0,Scheduled Caste,RESAMPLED_BASELINE
+Kallakurichi,34,Rural,62,Male,2,1,2,Casual labour in agriculture,Illiterate,Not literate,Employed,Employed,0.0,8067.0,Scheduled Caste,RESAMPLED_BASELINE
+Erode,09,Rural,16,Male,1,5,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17117.0,Other Backward Class,RESAMPLED_BASELINE
+Kancheepuram,03,Rural,22,Male,1,5,2,Self-employed in non-agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,12430.0,Scheduled Caste,RESAMPLED_BASELINE
+Vellore,04,Rural,37,Female,2,2,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,9409.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,11,Male,1,5,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,13255.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,8,Female,1,5,5,Casual labour in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,6755.0,Scheduled Caste,RESAMPLED_BASELINE
+Krishnagiri,30,Rural,14,Male,1,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8725.0,Other Backward Class,RESAMPLED_BASELINE
+Thanjavur,19,Rural,16,Female,1,5,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17437.0,Other Backward Class,RESAMPLED_BASELINE
+Salem,07,Rural,60,Female,3,1,1,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,3083.0,Other Backward Class,RESAMPLED_BASELINE
+Unknown,37,Rural,40,Female,2,2,2,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,8932.0,Other Backward Class,RESAMPLED_BASELINE
+Tiruvannamalai,05,Rural,27,Male,1,5,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,8000.0,6175.0,Scheduled Caste,RESAMPLED_BASELINE
+Tiruchirappalli,13,Rural,9,Male,1,5,2,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10440.0,Other Backward Class,RESAMPLED_BASELINE
+Dharmapuri,29,Rural,21,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,10508.0,Other Backward Class,RESAMPLED_BASELINE

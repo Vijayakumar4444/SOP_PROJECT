@@ -1,0 +1,156 @@
+{
+  "population_id": "SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-1000-44-NONE",
+  "synthetic": true,
+  "mode": "REPRESENTATIVE",
+  "model_id": "TN_GAUSSIAN_COPULA_CB9DD0CE87",
+  "generator_type": "gaussian_copula",
+  "model_version": "gaussian_copula_pure_python_v1",
+  "requested_count": 1000,
+  "generated_count": 1000,
+  "accepted_count": 1000,
+  "acceptance_rate": 100.0,
+  "seed": 44,
+  "conditions": {},
+  "batch_size": 50000,
+  "batch_count": 1,
+  "generated_at": "2026-09-11T16:28:04.715048+00:00",
+  "generation_duration_seconds": 0.1074,
+  "constraint_summary": {
+    "constraint_version": "phase3_constraints_v1",
+    "total_records": 1000,
+    "hard_violation_count": 0,
+    "soft_anomaly_count": 80,
+    "records_repaired": 0,
+    "records_rejected": 0,
+    "hard_violation_rate": 0.0,
+    "soft_anomaly_rate": 8.0,
+    "hard_violations_by_type": {},
+    "soft_anomalies_by_type": {
+      "CHILD_LABOUR_FORCE_STATUS": 80
+    },
+    "sample_hard_violations": [],
+    "sample_soft_anomalies": [
+      {
+        "row_number": 3,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 70,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 79,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 83,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 88,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 131,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 136,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 139,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 147,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 150,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 172,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 187,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 206,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 224,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 231,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 234,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 241,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 243,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 262,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 280,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      }
+    ]
+  },
+  "output_path": "data/synthetic/sampling/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-1000-44-NONE.csv"
+}

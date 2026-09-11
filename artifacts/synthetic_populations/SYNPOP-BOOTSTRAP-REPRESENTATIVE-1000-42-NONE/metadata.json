@@ -1,0 +1,102 @@
+{
+  "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-1000-42-NONE",
+  "generation_experiment_id": "SYNEXP-F60D93D917",
+  "synthetic": true,
+  "synthetic_data_label": "This file contains artificially generated synthetic records. These rows are not actual residents or survey respondents. They were generated from statistical relationships learned from the Tamil Nadu reference data foundation.",
+  "jurisdiction": "Tamil Nadu",
+  "generator_type": "bootstrap",
+  "generator_version": "bootstrap_baseline_v1",
+  "model_id": "TN_BOOTSTRAP_1D08E0184C",
+  "reference_template_version": "0.3.0-modular",
+  "phase2_requirement_version": "synthetic_population_requirements_current",
+  "training_dataset_version": "phase3_training_v1",
+  "generated_at": "2026-09-11T16:28:04.202475+00:00",
+  "persisted_at": "2026-09-11T16:28:46.747815+00:00",
+  "size": 1000,
+  "seed": 42,
+  "mode": "REPRESENTATIVE",
+  "condition": {},
+  "constraint_version": "phase3_constraints_v1",
+  "variables": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "age",
+    "gender",
+    "marital_status",
+    "relationship_to_head",
+    "household_size",
+    "household_type",
+    "literacy_status",
+    "education_level",
+    "labour_force_status",
+    "employment_status",
+    "individual_income",
+    "consumption_expenditure",
+    "social_group"
+  ],
+  "id_policy": {
+    "person_id_column": "synthetic_person_id",
+    "person_id_format": "TN-SYN-P-000000001",
+    "unique": true,
+    "stable_within_exported_dataset": true,
+    "linked_to_real_identifiers": false,
+    "household_ids": "not emitted; Phase 3 MVP persists person-level synthetic populations only"
+  },
+  "artifact_paths": {
+    "population_csv": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-1000-42-NONE/population.csv",
+    "population_parquet": null
+  },
+  "export_formats": {
+    "csv": "available",
+    "parquet": "skipped_missing_parquet_writer_dependency",
+    "excel_preview": "data/exports/tamil_nadu_synthetic_population_preview.xlsx"
+  },
+  "quality": {
+    "constraint_summary": {
+      "constraint_version": "phase3_constraints_v1",
+      "total_records": 1000,
+      "hard_violation_count": 0,
+      "soft_anomaly_count": 0,
+      "records_repaired": 0,
+      "records_rejected": 0,
+      "hard_violation_rate": 0.0,
+      "soft_anomaly_rate": 0.0,
+      "hard_violations_by_type": {},
+      "soft_anomalies_by_type": {},
+      "sample_hard_violations": [],
+      "sample_soft_anomalies": []
+    },
+    "exact_reference_duplicate_diagnostic": {
+      "reference_dataset_path": "data/synthetic/training/reference_training_v1.csv",
+      "comparison_columns": [
+        "district",
+        "district_code",
+        "urban_rural",
+        "age",
+        "gender",
+        "marital_status",
+        "relationship_to_head",
+        "household_size",
+        "household_type",
+        "literacy_status",
+        "education_level",
+        "labour_force_status",
+        "employment_status",
+        "individual_income",
+        "consumption_expenditure",
+        "social_group"
+      ],
+      "generated_rows_checked": 1000,
+      "exact_reference_duplicate_count": 1000,
+      "exact_reference_duplicate_rate": 100.0,
+      "interpretation": "Exact row-level feature matches are expected for bootstrap resampling and should be lower for generative candidates."
+    }
+  },
+  "warnings": [
+    "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
+    "Synthetic population has not yet passed Phase 4 population validation.",
+    "Bootstrap output is a resampled baseline and may have high exact reference duplicate rates.",
+    "Exact reference duplicate diagnostic found 100.0% feature-level matches."
+  ]
+}

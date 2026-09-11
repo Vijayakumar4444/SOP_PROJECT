@@ -1,0 +1,35 @@
+{
+  "population_id": "SYNPOP-BOOTSTRAP-CONDITIONAL-1000-43-COND54D3C7AA",
+  "synthetic": true,
+  "mode": "CONDITIONAL",
+  "model_id": "TN_BOOTSTRAP_1D08E0184C",
+  "generator_type": "bootstrap",
+  "model_version": "bootstrap_baseline_v1",
+  "requested_count": 1000,
+  "generated_count": 1000,
+  "accepted_count": 1000,
+  "acceptance_rate": 100.0,
+  "seed": 43,
+  "conditions": {
+    "urban_rural": "Rural"
+  },
+  "batch_size": 50000,
+  "batch_count": 1,
+  "generated_at": "2026-09-11T16:28:04.511918+00:00",
+  "generation_duration_seconds": 0.0627,
+  "constraint_summary": {
+    "constraint_version": "phase3_constraints_v1",
+    "total_records": 1000,
+    "hard_violation_count": 0,
+    "soft_anomaly_count": 0,
+    "records_repaired": 0,
+    "records_rejected": 0,
+    "hard_violation_rate": 0.0,
+    "soft_anomaly_rate": 0.0,
+    "hard_violations_by_type": {},
+    "soft_anomalies_by_type": {},
+    "sample_hard_violations": [],
+    "sample_soft_anomalies": []
+  },
+  "output_path": "data/synthetic/sampling/SYNPOP-BOOTSTRAP-CONDITIONAL-1000-43-COND54D3C7AA.csv"
+}
