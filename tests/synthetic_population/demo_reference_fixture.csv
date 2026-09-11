@@ -1,0 +1,7 @@
+fixture_label,age,gender,district,urban_rural,education_level,employment_status,household_size,individual_income
+TEST FIXTURE,22,Female,Chennai,Urban,Higher secondary,Employed,3,18000
+TEST FIXTURE,67,Male,Madurai,Rural,Primary,Not in labour force,5,0
+TEST FIXTURE,35,Female,Coimbatore,Urban,Graduate,Employed,4,42000
+TEST FIXTURE,16,Male,Salem,Rural,Secondary,Not in labour force,6,0
+TEST FIXTURE,44,Other,Tiruchirappalli,Urban,Diploma,Unemployed,2,0
+TEST FIXTURE,72,Female,Thanjavur,Rural,No formal schooling,Not in labour force,4,0

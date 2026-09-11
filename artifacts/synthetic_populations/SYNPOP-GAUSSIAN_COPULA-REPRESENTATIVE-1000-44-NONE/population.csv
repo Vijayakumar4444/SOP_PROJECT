@@ -1,0 +1,1001 @@
+synthetic_person_id,district,district_code,urban_rural,age,gender,marital_status,relationship_to_head,household_size,household_type,literacy_status,education_level,labour_force_status,employment_status,individual_income,consumption_expenditure,social_group
+TN-SYN-P-000000001,Cuddalore,27,Urban,23,Male,2,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,14798.0,Other Backward Class
+TN-SYN-P-000000002,Viluppuram,31,Rural,25,Male,1,5,4,Casual labour in agriculture,Illiterate,Secondary,Not in labour force,Not in labour force,0.0,10504.0,Other Backward Class
+TN-SYN-P-000000003,Ranipet,23,Rural,4,Female,1,5,2,Others,Illiterate,Not literate,Employed,Employed,0.0,8775.0,Other Backward Class
+TN-SYN-P-000000004,Thanjavur,02,Rural,67,Female,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,15397.0,Other Backward Class
+TN-SYN-P-000000005,Cuddalore,35,Urban,29,Female,2,2,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,10000.0,13032.0,Other Backward Class
+TN-SYN-P-000000006,Mayiladuthurai,34,Rural,22,Male,1,2,8,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,15357.0,Other Backward Class
+TN-SYN-P-000000007,Madurai,31,Rural,16,Female,1,5,4,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,11957.0,Other Backward Class
+TN-SYN-P-000000008,Chennai,08,Urban,69,Female,2,1,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16223.0,Other Backward Class
+TN-SYN-P-000000009,Chennai,16,Urban,60,Male,2,4,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,105000.0,17587.0,Scheduled Caste
+TN-SYN-P-000000010,Krishnagiri,32,Urban,46,Male,2,5,5,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,10325.0,Other Backward Class
+TN-SYN-P-000000011,Kancheepuram,33,Rural,64,Female,2,1,3,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,3733.0,Others
+TN-SYN-P-000000012,Tiruvannamalai,03,Rural,53,Male,2,1,4,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,14900.0,Other Backward Class
+TN-SYN-P-000000013,Thoothukudi,07,Rural,52,Female,1,3,6,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,21287.0,Other Backward Class
+TN-SYN-P-000000014,Tirunelveli,14,Urban,37,Male,2,2,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,15000.0,9147.0,Other Backward Class
+TN-SYN-P-000000015,Dharmapuri,02,Rural,63,Female,2,1,2,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,8367.0,Other Backward Class
+TN-SYN-P-000000016,Tenkasi,19,Urban,40,Female,2,1,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,12000.0,24808.0,Scheduled Caste
+TN-SYN-P-000000017,Madurai,11,Urban,4,Female,1,4,5,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12417.0,Other Backward Class
+TN-SYN-P-000000018,Chennai,08,Urban,53,Male,2,2,2,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,11372.0,Other Backward Class
+TN-SYN-P-000000019,Thiruvarur,21,Urban,62,Female,3,2,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,13453.0,Other Backward Class
+TN-SYN-P-000000020,Chennai,01,Rural,68,Female,3,2,3,Casual labour in agriculture,Illiterate,Middle,Employed,Employed,0.0,8317.0,Other Backward Class
+TN-SYN-P-000000021,Thanjavur,21,Urban,31,Male,2,6,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,36580.0,10560.0,Scheduled Tribe
+TN-SYN-P-000000022,Dharmapuri,11,Rural,31,Female,1,5,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9783.0,Scheduled Caste
+TN-SYN-P-000000023,Thiruvallur,21,Rural,35,Female,2,2,4,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,23237.0,Other Backward Class
+TN-SYN-P-000000024,Pudukkottai,22,Urban,57,Female,2,5,5,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,12663.0,Other Backward Class
+TN-SYN-P-000000025,Madurai,05,Urban,30,Female,2,2,5,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,26328.0,Scheduled Caste
+TN-SYN-P-000000026,The Nilgiris,31,Urban,69,Male,4,3,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15899.0,14623.0,Scheduled Caste
+TN-SYN-P-000000027,Tirunelveli,11,Urban,43,Male,3,4,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,25000.0,22651.0,Other Backward Class
+TN-SYN-P-000000028,Thanjavur,18,Urban,41,Male,2,1,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,5200.0,13412.0,Scheduled Caste
+TN-SYN-P-000000029,Ramanathapuram,22,Urban,55,Male,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12053.0,Other Backward Class
+TN-SYN-P-000000030,The Nilgiris,03,Rural,4,Female,1,5,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9747.0,Scheduled Caste
+TN-SYN-P-000000031,Pudukkottai,29,Urban,62,Male,2,5,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,22970.0,Other Backward Class
+TN-SYN-P-000000032,Thanjavur,21,Rural,52,Male,2,2,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,15983.0,Other Backward Class
+TN-SYN-P-000000033,Pudukkottai,03,Rural,1,Female,1,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,11175.0,Other Backward Class
+TN-SYN-P-000000034,Tirupathur,07,Rural,70,Female,2,1,3,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,10875.0,Other Backward Class
+TN-SYN-P-000000035,Madurai,02,Urban,71,Male,3,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,10083.0,Other Backward Class
+TN-SYN-P-000000036,Tirunelveli,09,Urban,11,Male,1,7,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,22843.0,Other Backward Class
+TN-SYN-P-000000037,Krishnagiri,19,Rural,25,Male,1,1,5,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9307.0,Scheduled Caste
+TN-SYN-P-000000038,Sivaganga,11,Rural,45,Female,1,2,6,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,27903.0,Other Backward Class
+TN-SYN-P-000000039,Ramanathapuram,02,Rural,34,Female,1,1,3,Casual labour in agriculture,Illiterate,Higher Secondary,Not in labour force,Not in labour force,0.0,13843.0,Other Backward Class
+TN-SYN-P-000000040,Chennai,29,Rural,32,Female,2,1,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,19017.0,Scheduled Caste
+TN-SYN-P-000000041,Chennai,05,Urban,37,Female,1,6,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Employed,0.0,21230.0,Other Backward Class
+TN-SYN-P-000000042,Dindigul,32,Rural,73,Female,3,1,2,Self-employed in non-agriculture,Illiterate,Secondary,Employed,Employed,0.0,10067.0,Other Backward Class
+TN-SYN-P-000000043,Coimbatore,19,Rural,46,Female,2,5,4,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,14920.0,Other Backward Class
+TN-SYN-P-000000044,Cuddalore,18,Rural,54,Female,2,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8943.0,Other Backward Class
+TN-SYN-P-000000045,Thiruvallur,24,Urban,13,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,12550.0,Other Backward Class
+TN-SYN-P-000000046,Thanjavur,30,Urban,43,Male,2,2,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,15000.0,9101.0,Other Backward Class
+TN-SYN-P-000000047,Pudukkottai,20,Urban,27,Male,1,7,6,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,29382.0,Other Backward Class
+TN-SYN-P-000000048,Tirupathur,19,Rural,15,Female,1,2,1,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,2100.0,Other Backward Class
+TN-SYN-P-000000049,Perambalur,14,Urban,20,Male,2,5,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17083.0,Scheduled Caste
+TN-SYN-P-000000050,Mayiladuthurai,01,Urban,17,Female,1,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,23322.0,Other Backward Class
+TN-SYN-P-000000051,Thanjavur,19,Urban,22,Female,2,7,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,17959.0,Others
+TN-SYN-P-000000052,Coimbatore,18,Urban,34,Male,2,3,7,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,32827.0,Other Backward Class
+TN-SYN-P-000000053,Madurai,19,Urban,25,Male,2,5,2,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,9083.0,Others
+TN-SYN-P-000000054,Thiruvallur,16,Urban,60,Female,2,5,5,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16557.0,Other Backward Class
+TN-SYN-P-000000055,Tirupathur,30,Urban,76,Male,3,3,6,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,25264.0,Other Backward Class
+TN-SYN-P-000000056,Tiruppur,23,Rural,30,Male,1,1,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,10339.0,Other Backward Class
+TN-SYN-P-000000057,Tiruvannamalai,26,Urban,35,Female,2,4,2,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8580.0,Scheduled Caste
+TN-SYN-P-000000058,Ranipet,02,Rural,47,Female,1,4,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,13267.0,Other Backward Class
+TN-SYN-P-000000059,Unknown,15,Urban,40,Male,2,6,6,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,27750.0,Other Backward Class
+TN-SYN-P-000000060,Thiruvallur,16,Urban,46,Male,2,1,3,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,12750.0,Other Backward Class
+TN-SYN-P-000000061,Krishnagiri,11,Urban,36,Male,2,1,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,15369.0,Scheduled Caste
+TN-SYN-P-000000062,Coimbatore,26,Rural,47,Male,2,2,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,18697.0,Other Backward Class
+TN-SYN-P-000000063,Thanjavur,16,Rural,45,Female,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,6200.0,Other Backward Class
+TN-SYN-P-000000064,Salem,27,Rural,40,Female,2,5,4,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5752.0,Scheduled Caste
+TN-SYN-P-000000065,Sivaganga,02,Rural,16,Male,2,1,5,Self-employed in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,6000.0,16592.0,Scheduled Caste
+TN-SYN-P-000000066,Sivaganga,02,Rural,24,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13113.0,Other Backward Class
+TN-SYN-P-000000067,Ranipet,19,Rural,49,Female,2,5,2,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,11644.0,Other Backward Class
+TN-SYN-P-000000068,Tiruppur,32,Rural,4,Female,1,3,5,Casual labour in non-agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,4468.0,Other Backward Class
+TN-SYN-P-000000069,Kanniyakumari,13,Urban,16,Male,2,1,7,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,13947.0,Scheduled Caste
+TN-SYN-P-000000070,Virudhunagar,23,Urban,2,Female,1,5,10,Self-employed in agriculture,Literate,Primary,Not in labour force,Unemployed,0.0,16453.0,Scheduled Caste
+TN-SYN-P-000000071,Tenkasi,07,Rural,31,Male,2,2,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,12433.0,Other Backward Class
+TN-SYN-P-000000072,Ranipet,30,Urban,50,Female,3,6,2,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,5383.0,Scheduled Caste
+TN-SYN-P-000000073,Chennai,02,Rural,62,Female,2,1,1,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,8227.0,Other Backward Class
+TN-SYN-P-000000074,Chennai,30,Urban,70,Male,2,1,2,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,50000.0,15996.0,Other Backward Class
+TN-SYN-P-000000075,Karur,10,Rural,8,Female,1,5,2,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,5607.0,Other Backward Class
+TN-SYN-P-000000076,Ramanathapuram,19,Rural,33,Female,2,5,5,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,12137.0,Scheduled Caste
+TN-SYN-P-000000077,Theni,09,Urban,5,Female,1,6,10,Others,Literate,Secondary,Not in labour force,Not in labour force,0.0,11477.0,Other Backward Class
+TN-SYN-P-000000078,Theni,18,Urban,42,Female,2,6,3,Regular wage/salary earning,Illiterate,Primary,Not in labour force,Not in labour force,0.0,9663.0,Scheduled Caste
+TN-SYN-P-000000079,Chennai,18,Urban,13,Male,2,5,11,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,24200.0,97333.0,Other Backward Class
+TN-SYN-P-000000080,The Nilgiris,01,Rural,19,Female,1,3,6,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,7375.0,Scheduled Caste
+TN-SYN-P-000000081,Karur,23,Urban,14,Male,2,5,6,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,18411.0,16639.0,Scheduled Caste
+TN-SYN-P-000000082,Virudhunagar,35,Rural,4,Female,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,6992.0,Other Backward Class
+TN-SYN-P-000000083,Sivaganga,22,Urban,2,Male,1,8,2,Self-employed in non-agriculture,Literate,Not literate,Unemployed,Unemployed,15000.0,11564.0,Other Backward Class
+TN-SYN-P-000000084,Cuddalore,26,Urban,71,Male,3,1,1,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10639.0,Scheduled Caste
+TN-SYN-P-000000085,Chennai,26,Urban,20,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,60000.0,23100.0,Scheduled Caste
+TN-SYN-P-000000086,Thanjavur,38,Rural,35,Female,2,5,6,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,17123.0,Other Backward Class
+TN-SYN-P-000000087,Coimbatore,15,Urban,48,Female,3,1,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9491.0,Other Backward Class
+TN-SYN-P-000000088,Tenkasi,01,Rural,14,Male,1,1,2,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,7710.0,Other Backward Class
+TN-SYN-P-000000089,Thiruvallur,19,Urban,41,Female,2,3,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,15495.0,Scheduled Caste
+TN-SYN-P-000000090,Dharmapuri,26,Rural,43,Female,1,2,4,Casual labour in agriculture,Literate,Below Primary,Employed,Employed,0.0,14683.0,Other Backward Class
+TN-SYN-P-000000091,Kancheepuram,33,Urban,14,Male,1,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,11368.0,Scheduled Caste
+TN-SYN-P-000000092,Thoothukudi,27,Rural,25,Female,1,1,3,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,5955.0,Scheduled Caste
+TN-SYN-P-000000093,Tenkasi,35,Urban,50,Female,2,2,2,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,8500.0,13148.0,Scheduled Caste
+TN-SYN-P-000000094,Coimbatore,33,Rural,28,Female,2,2,6,Casual labour in agriculture,Illiterate,Higher Secondary,Employed,Employed,0.0,12108.0,Scheduled Caste
+TN-SYN-P-000000095,Salem,19,Rural,35,Female,1,1,2,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,9100.0,Other Backward Class
+TN-SYN-P-000000096,Ariyalur,03,Rural,41,Female,2,1,1,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,9673.0,Scheduled Caste
+TN-SYN-P-000000097,Perambalur,24,Rural,14,Female,1,6,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8333.0,Other Backward Class
+TN-SYN-P-000000098,Dharmapuri,07,Rural,69,Female,2,1,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,18973.0,Other Backward Class
+TN-SYN-P-000000099,Cuddalore,38,Rural,30,Male,1,7,5,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,10638.0,Scheduled Caste
+TN-SYN-P-000000100,Chennai,08,Urban,63,Male,2,2,5,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,10500.0,28548.0,Other Backward Class
+TN-SYN-P-000000101,Virudhunagar,31,Urban,24,Male,2,5,10,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,34522.0,Other Backward Class
+TN-SYN-P-000000102,Salem,21,Urban,24,Female,2,5,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,4630.0,Other Backward Class
+TN-SYN-P-000000103,Karur,34,Urban,75,Male,3,2,2,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,9283.0,Other Backward Class
+TN-SYN-P-000000104,Pudukkottai,09,Rural,48,Male,2,3,1,Self-employed in agriculture,Illiterate,Middle,Employed,Employed,0.0,6783.0,Other Backward Class
+TN-SYN-P-000000105,Dharmapuri,25,Rural,50,Female,1,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,12467.0,Other Backward Class
+TN-SYN-P-000000106,Mayiladuthurai,35,Rural,56,Male,1,2,6,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,22495.0,Other Backward Class
+TN-SYN-P-000000107,Dindigul,23,Urban,16,Male,2,6,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,40000.0,19013.0,Other Backward Class
+TN-SYN-P-000000108,Tirunelveli,28,Rural,62,Female,2,1,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,13113.0,Other Backward Class
+TN-SYN-P-000000109,Theni,38,Urban,55,Male,2,1,3,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,40000.0,12483.0,Scheduled Caste
+TN-SYN-P-000000110,Kancheepuram,16,Rural,34,Female,1,1,1,Casual labour in agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,2590.0,Other Backward Class
+TN-SYN-P-000000111,Salem,02,Urban,16,Male,1,6,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,20943.0,Other Backward Class
+TN-SYN-P-000000112,Pudukkottai,23,Urban,24,Male,1,5,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,18000.0,15747.0,Scheduled Caste
+TN-SYN-P-000000113,Dindigul,01,Urban,48,Female,2,3,2,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,9858.0,Other Backward Class
+TN-SYN-P-000000114,Tiruchirappalli,03,Urban,28,Male,2,4,2,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,10349.0,Scheduled Caste
+TN-SYN-P-000000115,Salem,38,Rural,25,Female,1,5,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,13850.0,Scheduled Caste
+TN-SYN-P-000000116,Ramanathapuram,20,Rural,52,Male,2,2,5,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,20833.0,Other Backward Class
+TN-SYN-P-000000117,Virudhunagar,26,Urban,62,Female,2,5,7,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,14550.0,18350.0,Other Backward Class
+TN-SYN-P-000000118,Cuddalore,23,Rural,59,Female,2,2,6,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9943.0,Other Backward Class
+TN-SYN-P-000000119,Ariyalur,03,Urban,40,Male,3,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15000.0,17073.0,Other Backward Class
+TN-SYN-P-000000120,Virudhunagar,13,Rural,67,Male,2,2,5,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,9067.0,Other Backward Class
+TN-SYN-P-000000121,Kanniyakumari,23,Urban,43,Female,2,1,5,Casual labour in non-agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,20208.0,Other Backward Class
+TN-SYN-P-000000122,Dharmapuri,22,Urban,23,Female,2,5,4,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,20000.0,10500.0,Other Backward Class
+TN-SYN-P-000000123,Nagapattinam,26,Urban,19,Female,1,5,2,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,7600.0,Other Backward Class
+TN-SYN-P-000000124,Tiruvannamalai,19,Rural,20,Female,1,5,5,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,16268.0,Other Backward Class
+TN-SYN-P-000000125,Salem,30,Urban,38,Male,2,5,5,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,20758.0,Other Backward Class
+TN-SYN-P-000000126,Kancheepuram,24,Urban,62,Male,3,1,4,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,13500.0,17200.0,Other Backward Class
+TN-SYN-P-000000127,Tiruchirappalli,11,Urban,28,Male,1,5,3,Self-employed in agriculture,Literate,Not literate,Employed,Employed,16400.0,31313.0,Scheduled Tribe
+TN-SYN-P-000000128,Namakkal,09,Urban,28,Female,2,5,10,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,34522.0,Other Backward Class
+TN-SYN-P-000000129,Coimbatore,26,Rural,22,Female,1,1,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,6993.0,Other Backward Class
+TN-SYN-P-000000130,Ranipet,05,Rural,34,Female,1,5,6,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,24037.0,Scheduled Caste
+TN-SYN-P-000000131,Salem,31,Rural,14,Female,2,1,3,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,11942.0,Other Backward Class
+TN-SYN-P-000000132,Chennai,28,Urban,59,Male,2,1,6,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,25717.0,Other Backward Class
+TN-SYN-P-000000133,Erode,02,Rural,44,Female,1,5,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10917.0,Other Backward Class
+TN-SYN-P-000000134,Chennai,05,Urban,20,Female,3,8,7,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,22073.0,Scheduled Caste
+TN-SYN-P-000000135,Namakkal,16,Rural,55,Male,1,4,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,27656.0,Other Backward Class
+TN-SYN-P-000000136,Dharmapuri,15,Urban,5,Male,2,6,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,20950.0,Other Backward Class
+TN-SYN-P-000000137,Chennai,11,Urban,86,Female,3,2,2,Casual labour in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,4360.0,Other Backward Class
+TN-SYN-P-000000138,Coimbatore,29,Rural,58,Female,2,1,1,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,4873.0,Other Backward Class
+TN-SYN-P-000000139,Cuddalore,34,Rural,13,Female,2,1,3,Others,Literate,Not literate,Employed,Employed,0.0,12980.0,Other Backward Class
+TN-SYN-P-000000140,Thiruvarur,05,Urban,49,Male,2,1,6,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,24037.0,Other Backward Class
+TN-SYN-P-000000141,Dharmapuri,20,Urban,29,Male,2,5,7,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,24810.0,Scheduled Caste
+TN-SYN-P-000000142,Tiruvannamalai,28,Rural,19,Female,1,5,2,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,7683.0,Other Backward Class
+TN-SYN-P-000000143,Thanjavur,10,Rural,27,Female,1,5,2,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9124.0,Scheduled Caste
+TN-SYN-P-000000144,Thiruvallur,07,Rural,10,Male,1,1,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12452.0,Other Backward Class
+TN-SYN-P-000000145,Thiruvarur,26,Rural,59,Female,1,5,3,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,10267.0,Other Backward Class
+TN-SYN-P-000000146,Dindigul,20,Urban,13,Male,2,2,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,11917.0,Scheduled Caste
+TN-SYN-P-000000147,Salem,23,Urban,7,Male,2,1,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,8663.0,Scheduled Caste
+TN-SYN-P-000000148,Kancheepuram,22,Urban,43,Male,3,6,8,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,42580.0,19895.0,Scheduled Caste
+TN-SYN-P-000000149,Mayiladuthurai,20,Urban,27,Female,2,1,3,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7725.0,Other Backward Class
+TN-SYN-P-000000150,Madurai,02,Urban,3,Male,1,5,5,Self-employed in agriculture,Illiterate,Primary,Not in labour force,Unemployed,0.0,19200.0,Other Backward Class
+TN-SYN-P-000000151,The Nilgiris,24,Rural,13,Female,2,5,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,21875.0,Other Backward Class
+TN-SYN-P-000000152,Kallakurichi,01,Urban,23,Male,2,5,9,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,45000.0,51787.0,Other Backward Class
+TN-SYN-P-000000153,Thoothukudi,20,Urban,28,Male,2,5,6,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,12498.0,Other Backward Class
+TN-SYN-P-000000154,Coimbatore,03,Rural,16,Female,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,7483.0,Other Backward Class
+TN-SYN-P-000000155,Vellore,35,Urban,35,Male,1,2,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9883.0,Other Backward Class
+TN-SYN-P-000000156,Tiruvannamalai,22,Urban,46,Male,2,5,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,14000.0,22150.0,Scheduled Tribe
+TN-SYN-P-000000157,Tirupathur,22,Urban,38,Female,2,2,5,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,15880.0,Other Backward Class
+TN-SYN-P-000000158,Chennai,05,Urban,14,Female,1,6,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9502.0,Scheduled Caste
+TN-SYN-P-000000159,Coimbatore,22,Urban,5,Male,2,5,3,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,10000.0,10828.0,Other Backward Class
+TN-SYN-P-000000160,Dharmapuri,02,Urban,43,Male,2,3,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,8278.0,Scheduled Caste
+TN-SYN-P-000000161,Tiruchirappalli,36,Rural,56,Female,2,1,1,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,8775.0,Other Backward Class
+TN-SYN-P-000000162,Erode,03,Urban,61,Male,2,2,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,8658.0,Scheduled Caste
+TN-SYN-P-000000163,Sivaganga,25,Urban,36,Male,1,7,4,Self-employed in agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,7400.0,Scheduled Caste
+TN-SYN-P-000000164,Tenkasi,22,Rural,49,Male,1,2,5,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,16720.0,Other Backward Class
+TN-SYN-P-000000165,Thiruvallur,33,Urban,45,Female,2,3,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13989.0,Scheduled Caste
+TN-SYN-P-000000166,Salem,27,Urban,48,Male,2,5,2,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9798.0,Scheduled Caste
+TN-SYN-P-000000167,Namakkal,05,Rural,4,Male,1,5,4,Others,Literate,Not literate,Not in labour force,Not in labour force,0.0,14926.0,Other Backward Class
+TN-SYN-P-000000168,Thoothukudi,02,Rural,25,Male,1,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16418.0,Other Backward Class
+TN-SYN-P-000000169,Thoothukudi,22,Urban,57,Female,3,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,20725.0,Others
+TN-SYN-P-000000170,Kanniyakumari,28,Rural,43,Female,2,1,5,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,8000.0,9131.0,Other Backward Class
+TN-SYN-P-000000171,Ramanathapuram,28,Rural,40,Female,1,1,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12897.0,Other Backward Class
+TN-SYN-P-000000172,Pudukkottai,20,Rural,11,Male,1,1,4,Others,Illiterate,Diploma/Certificate,Employed,Employed,0.0,10643.0,Other Backward Class
+TN-SYN-P-000000173,Chennai,08,Urban,38,Male,2,7,8,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,34425.0,Other Backward Class
+TN-SYN-P-000000174,Thiruvallur,24,Rural,66,Male,2,2,4,Others,Literate,Diploma/Certificate,Employed,Employed,0.0,10552.0,Other Backward Class
+TN-SYN-P-000000175,Tiruvannamalai,09,Rural,2,Male,1,7,4,Regular wage/salary earning,Illiterate,Middle,Employed,Not in labour force,0.0,15650.0,Other Backward Class
+TN-SYN-P-000000176,Kallakurichi,21,Rural,26,Female,2,6,4,Self-employed in agriculture,Illiterate,Middle,Employed,Employed,0.0,18146.0,Other Backward Class
+TN-SYN-P-000000177,Tirunelveli,24,Rural,32,Male,1,1,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,18453.0,Other Backward Class
+TN-SYN-P-000000178,Mayiladuthurai,33,Rural,49,Male,2,5,6,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,15417.0,Other Backward Class
+TN-SYN-P-000000179,Ranipet,02,Urban,29,Male,2,5,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12422.0,Scheduled Caste
+TN-SYN-P-000000180,Thanjavur,16,Rural,42,Male,2,5,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,17038.0,Scheduled Caste
+TN-SYN-P-000000181,Ramanathapuram,07,Rural,48,Female,1,1,6,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,16158.0,Other Backward Class
+TN-SYN-P-000000182,Tirunelveli,20,Urban,25,Female,3,1,3,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,16900.0,Scheduled Caste
+TN-SYN-P-000000183,Tiruchirappalli,29,Rural,18,Female,2,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10145.0,Other Backward Class
+TN-SYN-P-000000184,Thanjavur,16,Urban,33,Male,3,2,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,14950.0,Other Backward Class
+TN-SYN-P-000000185,Thiruvarur,15,Rural,65,Female,2,2,4,Regular wage/salary earning,Illiterate,Primary,Not in labour force,Not in labour force,0.0,9358.0,Other Backward Class
+TN-SYN-P-000000186,Erode,24,Rural,12,Female,1,5,4,Others,Literate,Not literate,Not in labour force,Not in labour force,0.0,18928.0,Other Backward Class
+TN-SYN-P-000000187,Thanjavur,30,Urban,11,Male,2,5,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,16428.0,Other Backward Class
+TN-SYN-P-000000188,Kallakurichi,28,Urban,2,Male,1,5,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,17073.0,Other Backward Class
+TN-SYN-P-000000189,Sivaganga,06,Urban,50,Male,2,2,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,13608.0,Scheduled Caste
+TN-SYN-P-000000190,Thanjavur,34,Rural,42,Male,2,1,3,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,12302.0,Other Backward Class
+TN-SYN-P-000000191,Vellore,34,Rural,30,Female,1,4,2,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,6742.0,Other Backward Class
+TN-SYN-P-000000192,Cuddalore,26,Urban,55,Female,2,1,3,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,8708.0,Other Backward Class
+TN-SYN-P-000000193,Viluppuram,32,Urban,13,Male,2,1,5,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,19645.0,Other Backward Class
+TN-SYN-P-000000194,Coimbatore,01,Urban,36,Female,2,2,5,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Employed,0.0,12038.0,Other Backward Class
+TN-SYN-P-000000195,Tiruvannamalai,07,Urban,67,Male,2,1,2,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,8297.0,Other Backward Class
+TN-SYN-P-000000196,Coimbatore,01,Urban,52,Male,2,4,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,15310.0,Other Backward Class
+TN-SYN-P-000000197,Thiruvallur,10,Urban,32,Female,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,29604.0,Other Backward Class
+TN-SYN-P-000000198,Thoothukudi,23,Urban,29,Male,2,2,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,24753.0,Scheduled Caste
+TN-SYN-P-000000199,Thoothukudi,33,Rural,48,Female,2,2,5,Self-employed in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,25752.0,Other Backward Class
+TN-SYN-P-000000200,Ariyalur,16,Urban,67,Male,3,2,3,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,27000.0,8633.0,Scheduled Caste
+TN-SYN-P-000000201,Tiruppur,20,Rural,29,Male,2,1,4,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,11335.0,Other Backward Class
+TN-SYN-P-000000202,Ranipet,02,Rural,62,Female,2,1,2,Self-employed in agriculture,Illiterate,Secondary,Employed,Employed,0.0,10730.0,Other Backward Class
+TN-SYN-P-000000203,Tiruvannamalai,18,Urban,46,Male,2,2,6,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,28000.0,19673.0,Other Backward Class
+TN-SYN-P-000000204,Ranipet,12,Rural,63,Female,2,1,1,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,8058.0,Other Backward Class
+TN-SYN-P-000000205,Thanjavur,33,Urban,18,Female,1,7,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,15633.0,Other Backward Class
+TN-SYN-P-000000206,Chennai,30,Rural,13,Male,1,2,6,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,12800.0,38967.0,Scheduled Caste
+TN-SYN-P-000000207,Vellore,25,Rural,15,Male,1,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,14300.0,Other Backward Class
+TN-SYN-P-000000208,Madurai,26,Urban,59,Male,3,1,3,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,14898.0,Other Backward Class
+TN-SYN-P-000000209,Madurai,06,Urban,53,Male,2,1,2,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,8433.0,Scheduled Caste
+TN-SYN-P-000000210,Tenkasi,29,Rural,70,Female,3,2,1,Casual labour in non-agriculture,Literate,Secondary,Employed,Employed,0.0,6350.0,Other Backward Class
+TN-SYN-P-000000211,Thoothukudi,29,Rural,32,Female,2,5,7,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,27077.0,Others
+TN-SYN-P-000000212,Tenkasi,15,Urban,45,Female,3,2,4,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11877.0,Other Backward Class
+TN-SYN-P-000000213,Virudhunagar,28,Urban,39,Female,2,5,3,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10860.0,Others
+TN-SYN-P-000000214,Chennai,02,Rural,17,Male,1,3,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,13535.0,Scheduled Caste
+TN-SYN-P-000000215,Salem,02,Urban,42,Male,2,2,7,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,9000.0,16110.0,Other Backward Class
+TN-SYN-P-000000216,Cuddalore,28,Urban,47,Male,2,5,8,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,17079.0,Scheduled Caste
+TN-SYN-P-000000217,Erode,02,Urban,10,Male,2,2,5,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,12000.0,22477.0,Scheduled Caste
+TN-SYN-P-000000218,Viluppuram,21,Rural,35,Female,2,1,2,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,8388.0,Other Backward Class
+TN-SYN-P-000000219,Unknown,07,Urban,38,Male,1,2,2,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,37450.0,12461.0,Other Backward Class
+TN-SYN-P-000000220,Mayiladuthurai,01,Urban,47,Female,2,5,4,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,10778.0,Other Backward Class
+TN-SYN-P-000000221,Tiruvannamalai,09,Urban,7,Male,1,6,6,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,13517.0,Others
+TN-SYN-P-000000222,Ranipet,26,Urban,55,Male,3,1,2,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,9000.0,Scheduled Caste
+TN-SYN-P-000000223,Coimbatore,27,Rural,44,Female,2,6,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12667.0,Scheduled Caste
+TN-SYN-P-000000224,Thanjavur,31,Rural,5,Female,1,5,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,17297.0,Other Backward Class
+TN-SYN-P-000000225,Kanniyakumari,02,Rural,59,Female,2,2,5,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,16805.0,Other Backward Class
+TN-SYN-P-000000226,Nagapattinam,25,Urban,48,Female,1,5,6,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,9000.0,19575.0,Scheduled Caste
+TN-SYN-P-000000227,Virudhunagar,02,Rural,34,Female,1,1,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,21355.0,Other Backward Class
+TN-SYN-P-000000228,Thanjavur,19,Rural,27,Female,1,3,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,11550.0,Other Backward Class
+TN-SYN-P-000000229,Dindigul,36,Urban,39,Male,2,2,5,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,16955.0,Scheduled Caste
+TN-SYN-P-000000230,Tiruppur,25,Rural,3,Female,1,6,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8961.0,Other Backward Class
+TN-SYN-P-000000231,Tirupathur,20,Rural,5,Female,1,5,1,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,17922.0,Other Backward Class
+TN-SYN-P-000000232,Tiruppur,16,Rural,1,Female,1,6,5,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10557.0,Other Backward Class
+TN-SYN-P-000000233,Dindigul,02,Urban,23,Male,1,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,23912.0,Other Backward Class
+TN-SYN-P-000000234,Chennai,25,Rural,12,Female,1,1,4,Casual labour in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,9280.0,Other Backward Class
+TN-SYN-P-000000235,Tiruvannamalai,26,Rural,54,Female,2,2,2,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,6992.0,Scheduled Caste
+TN-SYN-P-000000236,Pudukkottai,08,Urban,6,Female,1,7,4,Casual labour in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10006.0,Scheduled Caste
+TN-SYN-P-000000237,Pudukkottai,07,Urban,49,Male,1,5,2,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,17044.0,Other Backward Class
+TN-SYN-P-000000238,Kancheepuram,20,Urban,59,Male,3,1,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,29604.0,Other Backward Class
+TN-SYN-P-000000239,Kancheepuram,21,Rural,16,Female,1,5,6,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,30359.0,Other Backward Class
+TN-SYN-P-000000240,Pudukkottai,11,Urban,8,Female,1,4,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7571.0,Other Backward Class
+TN-SYN-P-000000241,Dindigul,30,Urban,6,Male,1,4,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,19000.0,15517.0,Scheduled Caste
+TN-SYN-P-000000242,Chennai,02,Urban,65,Male,3,5,3,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,18733.0,Other Backward Class
+TN-SYN-P-000000243,Thiruvallur,22,Urban,2,Female,1,8,6,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,38360.0,Scheduled Caste
+TN-SYN-P-000000244,Madurai,21,Urban,50,Male,2,1,1,Casual labour in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,3047.0,Scheduled Caste
+TN-SYN-P-000000245,Kanniyakumari,30,Urban,46,Male,2,6,6,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,13500.0,20552.0,Other Backward Class
+TN-SYN-P-000000246,Ariyalur,01,Urban,22,Male,2,2,2,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9428.0,Scheduled Caste
+TN-SYN-P-000000247,Tirunelveli,28,Urban,42,Female,2,6,6,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,26043.0,Other Backward Class
+TN-SYN-P-000000248,Tiruchirappalli,34,Rural,35,Female,2,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,6903.0,Other Backward Class
+TN-SYN-P-000000249,Sivaganga,16,Rural,75,Male,3,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,15717.0,Other Backward Class
+TN-SYN-P-000000250,Ariyalur,02,Urban,70,Female,3,1,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,19986.0,Scheduled Caste
+TN-SYN-P-000000251,Tirunelveli,36,Rural,34,Female,2,1,3,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,13132.0,Other Backward Class
+TN-SYN-P-000000252,Madurai,22,Rural,36,Female,2,3,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,36843.0,Other Backward Class
+TN-SYN-P-000000253,Ramanathapuram,16,Rural,56,Female,2,1,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,50046.0,Scheduled Caste
+TN-SYN-P-000000254,Salem,08,Rural,55,Female,2,1,1,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,10320.0,Scheduled Caste
+TN-SYN-P-000000255,Kallakurichi,03,Urban,3,Female,1,6,13,Self-employed in agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,69233.0,Other Backward Class
+TN-SYN-P-000000256,Chennai,25,Rural,66,Male,2,1,4,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,17738.0,Other Backward Class
+TN-SYN-P-000000257,Viluppuram,15,Urban,50,Male,2,5,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10024.0,Scheduled Caste
+TN-SYN-P-000000258,Virudhunagar,28,Rural,45,Female,1,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,10286.0,Other Backward Class
+TN-SYN-P-000000259,Perambalur,30,Rural,27,Female,1,2,6,Casual labour in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,12369.0,Other Backward Class
+TN-SYN-P-000000260,Kanniyakumari,34,Urban,23,Male,2,6,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,28375.0,Other Backward Class
+TN-SYN-P-000000261,Tiruchirappalli,07,Rural,85,Female,3,1,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,20122.0,Scheduled Caste
+TN-SYN-P-000000262,Unknown,07,Urban,12,Male,1,6,5,Self-employed in non-agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,11426.0,Other Backward Class
+TN-SYN-P-000000263,Coimbatore,02,Urban,57,Female,2,2,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,8753.0,Other Backward Class
+TN-SYN-P-000000264,Kanniyakumari,07,Rural,16,Female,1,2,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,12425.0,Scheduled Caste
+TN-SYN-P-000000265,Tiruchirappalli,03,Rural,47,Female,2,5,2,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,3565.0,Scheduled Caste
+TN-SYN-P-000000266,Salem,21,Urban,47,Female,2,6,6,Self-employed in non-agriculture,Literate,Primary,Unemployed,Not in labour force,12000.0,25953.0,Other Backward Class
+TN-SYN-P-000000267,Dindigul,33,Urban,25,Male,1,7,7,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11178.0,Other Backward Class
+TN-SYN-P-000000268,Cuddalore,16,Urban,81,Female,3,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,17208.0,Other Backward Class
+TN-SYN-P-000000269,Pudukkottai,33,Rural,25,Female,1,5,4,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,13375.0,Other Backward Class
+TN-SYN-P-000000270,Pudukkottai,01,Rural,38,Female,1,4,4,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,16418.0,Other Backward Class
+TN-SYN-P-000000271,Kallakurichi,02,Urban,56,Male,2,5,6,Regular wage/salary earning,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,19837.0,Other Backward Class
+TN-SYN-P-000000272,Thanjavur,05,Rural,16,Female,2,5,6,Regular wage/salary earning,Illiterate,Primary,Not in labour force,Not in labour force,0.0,14575.0,Other Backward Class
+TN-SYN-P-000000273,Salem,02,Rural,36,Male,1,3,1,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,11092.0,Other Backward Class
+TN-SYN-P-000000274,Ariyalur,09,Rural,61,Female,2,1,2,Casual labour in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,10707.0,Other Backward Class
+TN-SYN-P-000000275,Erode,01,Urban,35,Male,1,3,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,18147.0,13142.0,Other Backward Class
+TN-SYN-P-000000276,Coimbatore,07,Urban,53,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,56500.0,20067.0,Scheduled Caste
+TN-SYN-P-000000277,Ramanathapuram,07,Rural,51,Male,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,6000.0,17142.0,Other Backward Class
+TN-SYN-P-000000278,Coimbatore,20,Rural,22,Male,1,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,39653.0,Other Backward Class
+TN-SYN-P-000000279,Tirupathur,05,Urban,23,Male,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,13417.0,Other Backward Class
+TN-SYN-P-000000280,Thiruvarur,02,Rural,7,Female,1,5,5,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,15050.0,Other Backward Class
+TN-SYN-P-000000281,Tiruvannamalai,36,Rural,26,Female,2,1,4,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,9325.0,Other Backward Class
+TN-SYN-P-000000282,Kancheepuram,15,Urban,60,Male,2,1,1,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,7958.0,Other Backward Class
+TN-SYN-P-000000283,Coimbatore,21,Rural,82,Male,2,1,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,14160.0,Other Backward Class
+TN-SYN-P-000000284,Madurai,02,Urban,9,Male,2,6,3,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,48000.0,17833.0,Other Backward Class
+TN-SYN-P-000000285,Thanjavur,22,Rural,23,Male,1,3,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Unemployed,Unemployed,0.0,18786.0,Other Backward Class
+TN-SYN-P-000000286,Ariyalur,09,Urban,80,Male,4,1,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,49600.0,17800.0,Scheduled Caste
+TN-SYN-P-000000287,Thanjavur,02,Urban,14,Male,2,3,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,9000.0,12467.0,Other Backward Class
+TN-SYN-P-000000288,Virudhunagar,26,Rural,1,Male,1,6,6,Casual labour in agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,9251.0,Other Backward Class
+TN-SYN-P-000000289,Cuddalore,24,Urban,68,Male,2,1,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,17073.0,Scheduled Caste
+TN-SYN-P-000000290,Tiruvannamalai,23,Urban,23,Female,2,7,9,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10116.0,Other Backward Class
+TN-SYN-P-000000291,Sivaganga,35,Urban,35,Male,3,5,7,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,10000.0,31988.0,Other Backward Class
+TN-SYN-P-000000292,Thiruvallur,21,Urban,17,Male,1,5,6,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,18782.0,Other Backward Class
+TN-SYN-P-000000293,Salem,38,Urban,49,Male,3,2,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6950.0,Scheduled Caste
+TN-SYN-P-000000294,Tirunelveli,21,Urban,40,Male,2,3,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,22377.0,Other Backward Class
+TN-SYN-P-000000295,Tirupathur,35,Urban,50,Female,3,1,5,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,11567.0,Other Backward Class
+TN-SYN-P-000000296,Perambalur,11,Rural,72,Female,2,2,3,Regular wage/salary earning,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,14477.0,Other Backward Class
+TN-SYN-P-000000297,Chennai,32,Urban,74,Male,3,1,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,9133.0,Other Backward Class
+TN-SYN-P-000000298,Vellore,16,Rural,29,Female,2,1,5,Self-employed in agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,16933.0,Other Backward Class
+TN-SYN-P-000000299,Unknown,30,Rural,60,Female,2,1,2,Others,Illiterate,Diploma/Certificate,Employed,Employed,0.0,1658.0,Other Backward Class
+TN-SYN-P-000000300,Ranipet,34,Rural,59,Female,2,3,3,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,14930.0,Other Backward Class
+TN-SYN-P-000000301,Tirupathur,31,Urban,62,Male,2,2,1,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,5000.0,7783.0,Other Backward Class
+TN-SYN-P-000000302,Dindigul,18,Rural,44,Female,1,2,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,22050.0,Other Backward Class
+TN-SYN-P-000000303,Dindigul,26,Rural,33,Female,2,2,5,Regular wage/salary earning,Illiterate,Middle,Employed,Employed,0.0,24667.0,Scheduled Caste
+TN-SYN-P-000000304,Tiruvannamalai,33,Urban,55,Female,3,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,20000.0,11270.0,Other Backward Class
+TN-SYN-P-000000305,Thiruvallur,13,Urban,19,Male,1,5,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,10000.0,38657.0,Other Backward Class
+TN-SYN-P-000000306,Dharmapuri,02,Rural,2,Male,1,3,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13032.0,Other Backward Class
+TN-SYN-P-000000307,Chennai,07,Urban,49,Male,2,6,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,18000.0,21367.0,Scheduled Caste
+TN-SYN-P-000000308,Tiruchirappalli,02,Urban,45,Female,2,1,2,Self-employed in agriculture,Literate,Not literate,Employed,Employed,18150.0,14448.0,Other Backward Class
+TN-SYN-P-000000309,Tenkasi,35,Rural,27,Female,1,5,6,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,38657.0,Other Backward Class
+TN-SYN-P-000000310,Kancheepuram,02,Rural,2,Female,1,3,3,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,14873.0,Other Backward Class
+TN-SYN-P-000000311,Salem,34,Urban,68,Female,3,1,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,8990.0,Other Backward Class
+TN-SYN-P-000000312,The Nilgiris,02,Rural,45,Female,2,5,3,Casual labour in non-agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,6996.0,Other Backward Class
+TN-SYN-P-000000313,Dindigul,03,Urban,40,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,30860.0,Scheduled Caste
+TN-SYN-P-000000314,Erode,24,Rural,55,Female,2,1,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,21373.0,Other Backward Class
+TN-SYN-P-000000315,Coimbatore,03,Urban,30,Male,2,1,6,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,24537.0,Other Backward Class
+TN-SYN-P-000000316,Perambalur,32,Urban,18,Female,1,5,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,10805.0,Other Backward Class
+TN-SYN-P-000000317,Unknown,27,Rural,22,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9415.0,Other Backward Class
+TN-SYN-P-000000318,Thiruvallur,09,Urban,40,Male,2,1,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17375.0,Scheduled Caste
+TN-SYN-P-000000319,Virudhunagar,35,Rural,54,Female,3,1,2,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10322.0,Other Backward Class
+TN-SYN-P-000000320,Tiruppur,15,Rural,51,Female,2,1,1,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,1640.0,Other Backward Class
+TN-SYN-P-000000321,Thiruvallur,37,Rural,52,Male,2,1,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,9983.0,Other Backward Class
+TN-SYN-P-000000322,Cuddalore,05,Rural,12,Male,1,5,6,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12550.0,Other Backward Class
+TN-SYN-P-000000323,Erode,26,Urban,32,Female,1,2,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,52000.0,11966.0,Other Backward Class
+TN-SYN-P-000000324,Tiruvannamalai,03,Urban,46,Female,3,2,3,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,13192.0,Other Backward Class
+TN-SYN-P-000000325,Tenkasi,02,Urban,52,Male,2,5,5,Regular wage/salary earning,Literate,Secondary,Employed,Employed,35000.0,16952.0,Scheduled Caste
+TN-SYN-P-000000326,Salem,22,Urban,1,Male,1,6,5,Self-employed in non-agriculture,Literate,Below Primary,Unemployed,Unemployed,13500.0,18585.0,Others
+TN-SYN-P-000000327,Kallakurichi,30,Rural,73,Female,2,2,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11514.0,Scheduled Caste
+TN-SYN-P-000000328,Chennai,09,Urban,58,Male,2,2,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,15397.0,Scheduled Caste
+TN-SYN-P-000000329,Thoothukudi,27,Urban,4,Female,1,1,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13567.0,Other Backward Class
+TN-SYN-P-000000330,Chennai,03,Rural,25,Male,1,2,4,Others,Illiterate,Diploma/Certificate,Employed,Employed,0.0,13037.0,Other Backward Class
+TN-SYN-P-000000331,Erode,24,Urban,63,Male,3,1,2,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,11725.0,Other Backward Class
+TN-SYN-P-000000332,Virudhunagar,35,Urban,56,Female,2,3,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,15000.0,8447.0,Other Backward Class
+TN-SYN-P-000000333,Pudukkottai,26,Urban,16,Male,1,7,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,23389.0,Other Backward Class
+TN-SYN-P-000000334,Tiruvannamalai,02,Rural,14,Female,1,7,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,6785.0,Other Backward Class
+TN-SYN-P-000000335,Madurai,14,Rural,67,Female,2,2,5,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,15643.0,Scheduled Caste
+TN-SYN-P-000000336,Pudukkottai,33,Rural,27,Female,2,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,15823.0,Other Backward Class
+TN-SYN-P-000000337,Tirunelveli,31,Rural,61,Female,2,1,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,5828.0,Other Backward Class
+TN-SYN-P-000000338,Theni,14,Urban,70,Male,2,1,1,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,4500.0,8850.0,Other Backward Class
+TN-SYN-P-000000339,Cuddalore,16,Urban,54,Male,2,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,15000.0,21180.0,Scheduled Caste
+TN-SYN-P-000000340,Vellore,29,Rural,26,Female,1,6,6,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9817.0,Other Backward Class
+TN-SYN-P-000000341,Karur,36,Urban,40,Male,2,2,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,13683.0,Other Backward Class
+TN-SYN-P-000000342,Thiruvallur,36,Urban,5,Male,1,5,6,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,9800.0,27808.0,Other Backward Class
+TN-SYN-P-000000343,Dindigul,23,Urban,18,Male,2,5,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,15417.0,Other Backward Class
+TN-SYN-P-000000344,Ramanathapuram,02,Urban,45,Male,2,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13792.0,Other Backward Class
+TN-SYN-P-000000345,Salem,33,Rural,19,Female,2,2,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13672.0,Other Backward Class
+TN-SYN-P-000000346,Tiruchirappalli,11,Urban,44,Male,2,1,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,10853.0,Other Backward Class
+TN-SYN-P-000000347,Krishnagiri,23,Urban,53,Male,3,1,1,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,10000.0,6666.0,Other Backward Class
+TN-SYN-P-000000348,Erode,11,Urban,0,Female,1,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,24292.0,Other Backward Class
+TN-SYN-P-000000349,Erode,11,Rural,45,Female,2,1,2,Casual labour in non-agriculture,Literate,Not literate,Employed,Not in labour force,0.0,7598.0,Scheduled Caste
+TN-SYN-P-000000350,Ariyalur,07,Urban,25,Male,2,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,6000.0,16805.0,Other Backward Class
+TN-SYN-P-000000351,Ariyalur,02,Rural,9,Female,1,5,4,Regular wage/salary earning,Illiterate,Secondary,Employed,Employed,0.0,13352.0,Other Backward Class
+TN-SYN-P-000000352,Tenkasi,37,Urban,25,Male,1,5,7,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,13683.0,Other Backward Class
+TN-SYN-P-000000353,Theni,31,Rural,59,Female,2,5,8,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,29312.0,Other Backward Class
+TN-SYN-P-000000354,Viluppuram,13,Urban,19,Male,2,8,3,Self-employed in non-agriculture,Literate,Secondary,Unemployed,Unemployed,12560.0,19779.0,Other Backward Class
+TN-SYN-P-000000355,Tiruvannamalai,04,Rural,34,Female,1,8,4,Others,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,16100.0,Other Backward Class
+TN-SYN-P-000000356,Chennai,07,Urban,85,Male,3,5,2,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,6692.0,Scheduled Caste
+TN-SYN-P-000000357,Chennai,12,Urban,54,Male,3,5,3,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,50000.0,16085.0,Scheduled Tribe
+TN-SYN-P-000000358,Madurai,22,Urban,84,Male,2,1,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,9000.0,7571.0,Other Backward Class
+TN-SYN-P-000000359,Chennai,30,Urban,14,Male,2,7,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,9600.0,7600.0,Scheduled Caste
+TN-SYN-P-000000360,Erode,13,Urban,37,Male,3,1,3,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,9660.0,Other Backward Class
+TN-SYN-P-000000361,Dharmapuri,13,Rural,1,Male,1,2,3,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10473.0,Scheduled Tribe
+TN-SYN-P-000000362,Ranipet,16,Urban,80,Male,3,1,1,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11423.0,Scheduled Caste
+TN-SYN-P-000000363,Vellore,23,Rural,53,Female,1,5,6,Casual labour in agriculture,Literate,Not literate,Employed,Employed,0.0,17700.0,Other Backward Class
+TN-SYN-P-000000364,Sivaganga,02,Urban,13,Male,2,4,5,Self-employed in agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,24808.0,Other Backward Class
+TN-SYN-P-000000365,Kancheepuram,02,Rural,29,Female,2,3,4,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,15222.0,Other Backward Class
+TN-SYN-P-000000366,Dharmapuri,34,Rural,37,Female,1,1,3,Casual labour in non-agriculture,Illiterate,Below Primary,Employed,Employed,0.0,7258.0,Other Backward Class
+TN-SYN-P-000000367,Chennai,09,Urban,25,Male,2,2,6,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,15217.0,Other Backward Class
+TN-SYN-P-000000368,Tiruppur,26,Rural,42,Male,1,1,4,Others,Literate,Not literate,Employed,Employed,0.0,13242.0,Other Backward Class
+TN-SYN-P-000000369,Tiruvannamalai,05,Urban,58,Male,3,1,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13390.0,Other Backward Class
+TN-SYN-P-000000370,Tirunelveli,29,Urban,35,Female,2,5,6,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,19387.0,Others
+TN-SYN-P-000000371,Krishnagiri,24,Rural,45,Female,2,1,2,Casual labour in agriculture,Literate,Not literate,Employed,Employed,0.0,3292.0,Other Backward Class
+TN-SYN-P-000000372,Virudhunagar,15,Urban,60,Female,3,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,19350.0,Other Backward Class
+TN-SYN-P-000000373,Thanjavur,04,Urban,53,Male,2,5,5,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,17033.0,Other Backward Class
+TN-SYN-P-000000374,Salem,23,Urban,56,Female,2,5,2,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,4053.0,Other Backward Class
+TN-SYN-P-000000375,Coimbatore,11,Urban,11,Male,1,7,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,27109.0,Scheduled Caste
+TN-SYN-P-000000376,Salem,19,Rural,34,Female,2,5,4,Self-employed in agriculture,Illiterate,Below Primary,Employed,Employed,0.0,11800.0,Other Backward Class
+TN-SYN-P-000000377,Ramanathapuram,19,Urban,13,Male,2,5,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,18090.0,Scheduled Caste
+TN-SYN-P-000000378,Pudukkottai,31,Urban,4,Female,1,7,12,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,13500.0,58995.0,Other Backward Class
+TN-SYN-P-000000379,Thiruvallur,21,Urban,52,Male,2,3,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13807.0,Other Backward Class
+TN-SYN-P-000000380,Kancheepuram,18,Rural,24,Female,2,5,2,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,7500.0,7550.0,Other Backward Class
+TN-SYN-P-000000381,Chennai,02,Urban,63,Male,2,2,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,14853.0,Other Backward Class
+TN-SYN-P-000000382,Unknown,19,Urban,14,Female,2,8,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,15000.0,40392.0,Scheduled Caste
+TN-SYN-P-000000383,Salem,20,Urban,31,Male,2,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,13183.0,Other Backward Class
+TN-SYN-P-000000384,Cuddalore,11,Urban,54,Male,3,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,42000.0,37285.0,Other Backward Class
+TN-SYN-P-000000385,Ranipet,19,Rural,6,Female,1,5,5,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,36843.0,Other Backward Class
+TN-SYN-P-000000386,Dindigul,03,Rural,52,Female,2,2,5,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,9208.0,Other Backward Class
+TN-SYN-P-000000387,Ramanathapuram,33,Urban,17,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,12321.0,Other Backward Class
+TN-SYN-P-000000388,Cuddalore,02,Rural,35,Female,1,2,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,12988.0,Other Backward Class
+TN-SYN-P-000000389,Ramanathapuram,19,Rural,55,Female,2,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,14450.0,Other Backward Class
+TN-SYN-P-000000390,Thoothukudi,24,Urban,86,Male,4,1,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,13580.0,Other Backward Class
+TN-SYN-P-000000391,Cuddalore,24,Urban,30,Female,1,5,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,13090.0,Other Backward Class
+TN-SYN-P-000000392,Thiruvarur,19,Rural,28,Male,1,2,5,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,20587.0,Other Backward Class
+TN-SYN-P-000000393,Chennai,20,Urban,49,Male,1,2,2,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,13493.0,Other Backward Class
+TN-SYN-P-000000394,Erode,19,Rural,18,Female,1,5,3,Self-employed in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,8349.0,Other Backward Class
+TN-SYN-P-000000395,Sivaganga,20,Rural,12,Male,1,5,4,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11550.0,Other Backward Class
+TN-SYN-P-000000396,Madurai,26,Urban,14,Male,2,3,4,Self-employed in non-agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,7148.0,Other Backward Class
+TN-SYN-P-000000397,Tiruchirappalli,33,Rural,58,Female,2,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,7770.0,Other Backward Class
+TN-SYN-P-000000398,Ariyalur,29,Urban,68,Male,3,1,2,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,14703.0,Scheduled Caste
+TN-SYN-P-000000399,Virudhunagar,16,Urban,11,Male,1,3,2,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,5250.0,Other Backward Class
+TN-SYN-P-000000400,Tiruvannamalai,21,Urban,44,Male,2,5,6,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,6758.0,Other Backward Class
+TN-SYN-P-000000401,Kallakurichi,13,Rural,37,Female,1,1,4,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,11080.0,Scheduled Caste
+TN-SYN-P-000000402,Ranipet,20,Urban,55,Male,3,4,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,26000.0,18632.0,Other Backward Class
+TN-SYN-P-000000403,Chennai,07,Rural,14,Male,1,2,5,Others,Literate,Secondary,Employed,Employed,0.0,15043.0,Other Backward Class
+TN-SYN-P-000000404,Chennai,17,Urban,62,Male,4,1,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9800.0,Other Backward Class
+TN-SYN-P-000000405,Thanjavur,06,Rural,30,Female,1,1,4,Regular wage/salary earning,Illiterate,Higher Secondary,Employed,Employed,0.0,10665.0,Other Backward Class
+TN-SYN-P-000000406,Kanniyakumari,22,Rural,7,Male,1,5,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,15154.0,Other Backward Class
+TN-SYN-P-000000407,Sivaganga,09,Urban,47,Male,2,5,4,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10342.0,Other Backward Class
+TN-SYN-P-000000408,Virudhunagar,38,Rural,18,Female,1,7,5,Others,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9668.0,Other Backward Class
+TN-SYN-P-000000409,Kanniyakumari,23,Urban,28,Male,1,5,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,16188.0,Scheduled Caste
+TN-SYN-P-000000410,Thoothukudi,22,Urban,31,Male,1,5,4,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,6000.0,Other Backward Class
+TN-SYN-P-000000411,Kancheepuram,36,Urban,57,Male,3,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,26700.0,14973.0,Scheduled Caste
+TN-SYN-P-000000412,Dindigul,06,Rural,21,Female,1,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,17620.0,Other Backward Class
+TN-SYN-P-000000413,Tenkasi,23,Rural,47,Male,1,2,5,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,7842.0,Scheduled Caste
+TN-SYN-P-000000414,Tenkasi,22,Urban,19,Male,1,5,4,Others,Literate,Middle,Not in labour force,Not in labour force,6000.0,15633.0,Other Backward Class
+TN-SYN-P-000000415,Nagapattinam,36,Urban,20,Female,2,6,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8432.0,Other Backward Class
+TN-SYN-P-000000416,Kancheepuram,13,Urban,39,Male,2,3,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,6767.0,Scheduled Caste
+TN-SYN-P-000000417,Erode,31,Rural,50,Female,2,4,6,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,16970.0,Other Backward Class
+TN-SYN-P-000000418,Tirupathur,16,Rural,44,Female,2,2,5,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8983.0,Other Backward Class
+TN-SYN-P-000000419,Dindigul,30,Rural,39,Male,1,1,3,Self-employed in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,15450.0,Other Backward Class
+TN-SYN-P-000000420,Madurai,15,Urban,10,Male,2,2,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,32827.0,Other Backward Class
+TN-SYN-P-000000421,Erode,33,Urban,28,Female,2,7,6,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,22377.0,Scheduled Caste
+TN-SYN-P-000000422,Thanjavur,24,Rural,60,Male,2,1,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7487.0,Other Backward Class
+TN-SYN-P-000000423,Dharmapuri,07,Urban,30,Male,2,2,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,10000.0,12510.0,Scheduled Tribe
+TN-SYN-P-000000424,Erode,31,Rural,60,Female,2,4,5,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12528.0,Other Backward Class
+TN-SYN-P-000000425,Tenkasi,07,Rural,40,Male,1,1,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,6833.0,Other Backward Class
+TN-SYN-P-000000426,Kancheepuram,07,Rural,1,Female,1,5,4,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,15733.0,Other Backward Class
+TN-SYN-P-000000427,Thiruvarur,02,Rural,17,Male,1,5,3,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,18203.0,Other Backward Class
+TN-SYN-P-000000428,Coimbatore,26,Rural,32,Female,1,5,3,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,13983.0,Other Backward Class
+TN-SYN-P-000000429,Erode,31,Urban,26,Male,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,22388.0,Scheduled Caste
+TN-SYN-P-000000430,Unknown,27,Urban,15,Male,2,3,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,52480.0,13113.0,Scheduled Caste
+TN-SYN-P-000000431,Tiruvannamalai,35,Rural,84,Female,2,1,4,Regular wage/salary earning,Illiterate,Middle,Employed,Employed,0.0,16805.0,Other Backward Class
+TN-SYN-P-000000432,Virudhunagar,35,Urban,18,Male,1,2,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,17192.0,Other Backward Class
+TN-SYN-P-000000433,Salem,13,Urban,70,Female,3,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,14267.0,Other Backward Class
+TN-SYN-P-000000434,Tenkasi,08,Rural,42,Female,2,3,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,14279.0,Other Backward Class
+TN-SYN-P-000000435,Kancheepuram,26,Rural,34,Male,2,1,7,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,11617.0,Other Backward Class
+TN-SYN-P-000000436,Ranipet,07,Rural,58,Female,2,1,4,Casual labour in non-agriculture,Illiterate,Secondary,Employed,Employed,0.0,16132.0,Other Backward Class
+TN-SYN-P-000000437,Chennai,31,Rural,18,Female,2,3,3,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,26250.0,Others
+TN-SYN-P-000000438,Kanniyakumari,11,Rural,18,Female,2,2,3,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,12321.0,Other Backward Class
+TN-SYN-P-000000439,Coimbatore,03,Urban,32,Male,1,4,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,40000.0,12583.0,Other Backward Class
+TN-SYN-P-000000440,Erode,35,Urban,26,Female,2,1,6,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,8500.0,20433.0,Other Backward Class
+TN-SYN-P-000000441,Cuddalore,06,Rural,47,Female,2,2,3,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,5360.0,Scheduled Caste
+TN-SYN-P-000000442,Chennai,23,Rural,68,Female,2,1,3,Casual labour in agriculture,Illiterate,Below Primary,Employed,Employed,0.0,11117.0,Other Backward Class
+TN-SYN-P-000000443,Tenkasi,26,Rural,56,Female,3,1,4,Self-employed in agriculture,Illiterate,Secondary,Employed,Employed,0.0,7513.0,Other Backward Class
+TN-SYN-P-000000444,Chennai,24,Urban,36,Female,2,2,5,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,9817.0,Scheduled Caste
+TN-SYN-P-000000445,Cuddalore,21,Rural,47,Female,2,1,2,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Not in labour force,0.0,6905.0,Other Backward Class
+TN-SYN-P-000000446,Chennai,21,Urban,41,Male,2,3,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,4000.0,17008.0,Scheduled Caste
+TN-SYN-P-000000447,Erode,33,Rural,46,Male,1,5,5,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,12578.0,Other Backward Class
+TN-SYN-P-000000448,Coimbatore,26,Urban,55,Male,2,1,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,18412.0,Scheduled Caste
+TN-SYN-P-000000449,Cuddalore,11,Urban,42,Male,3,2,7,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,12247.0,Other Backward Class
+TN-SYN-P-000000450,Erode,14,Urban,62,Male,2,1,1,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6550.0,Other Backward Class
+TN-SYN-P-000000451,Kanniyakumari,24,Urban,12,Female,1,5,5,Self-employed in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,51667.0,Other Backward Class
+TN-SYN-P-000000452,Thiruvallur,25,Rural,10,Female,1,3,10,Others,Literate,Below Primary,Employed,Employed,0.0,31350.0,Other Backward Class
+TN-SYN-P-000000453,Virudhunagar,11,Rural,55,Male,2,1,3,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,10046.0,Other Backward Class
+TN-SYN-P-000000454,Dindigul,09,Urban,35,Male,2,4,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,65125.0,Other Backward Class
+TN-SYN-P-000000455,Tiruchirappalli,16,Rural,65,Male,2,1,2,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,14896.0,Other Backward Class
+TN-SYN-P-000000456,The Nilgiris,06,Rural,25,Female,2,1,3,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,10570.0,Other Backward Class
+TN-SYN-P-000000457,Coimbatore,05,Rural,60,Male,2,1,3,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,13728.0,Other Backward Class
+TN-SYN-P-000000458,Chennai,09,Urban,72,Female,3,1,2,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,11002.0,Others
+TN-SYN-P-000000459,Sivaganga,21,Rural,23,Male,2,1,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,11750.0,Other Backward Class
+TN-SYN-P-000000460,Pudukkottai,18,Urban,22,Female,2,5,9,Self-employed in agriculture,Illiterate,Primary,Not in labour force,Not in labour force,18000.0,12663.0,Scheduled Caste
+TN-SYN-P-000000461,Dindigul,05,Urban,11,Male,2,6,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15690.0,40392.0,Scheduled Caste
+TN-SYN-P-000000462,Salem,05,Urban,15,Male,1,6,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,8000.0,20867.0,Scheduled Caste
+TN-SYN-P-000000463,Kancheepuram,16,Urban,12,Female,2,2,3,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,11500.0,8650.0,Other Backward Class
+TN-SYN-P-000000464,Thiruvallur,04,Urban,4,Male,1,8,8,Self-employed in non-agriculture,Illiterate,Higher Secondary,Not in labour force,Not in labour force,8500.0,16708.0,Scheduled Caste
+TN-SYN-P-000000465,Krishnagiri,22,Urban,61,Female,2,1,2,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,18203.0,Scheduled Caste
+TN-SYN-P-000000466,Chennai,02,Urban,12,Male,1,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,0.0,14818.0,Other Backward Class
+TN-SYN-P-000000467,Thiruvallur,03,Rural,8,Female,1,1,5,Others,Literate,Not literate,Employed,Employed,0.0,9250.0,Other Backward Class
+TN-SYN-P-000000468,Theni,22,Urban,50,Male,2,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15000.0,36373.0,Other Backward Class
+TN-SYN-P-000000469,Pudukkottai,25,Rural,65,Female,2,2,3,Regular wage/salary earning,Illiterate,Higher Secondary,Not in labour force,Not in labour force,0.0,13535.0,Other Backward Class
+TN-SYN-P-000000470,Tiruchirappalli,02,Urban,75,Male,3,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Unemployed,Unemployed,20000.0,11933.0,Other Backward Class
+TN-SYN-P-000000471,Tiruchirappalli,03,Rural,9,Female,1,1,5,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,14675.0,Other Backward Class
+TN-SYN-P-000000472,Thoothukudi,21,Rural,79,Female,2,1,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,10942.0,Other Backward Class
+TN-SYN-P-000000473,Thoothukudi,35,Urban,20,Female,1,3,5,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,12740.0,Other Backward Class
+TN-SYN-P-000000474,Theni,34,Rural,8,Male,1,1,3,Self-employed in agriculture,Illiterate,Primary,Employed,Employed,0.0,11550.0,Scheduled Caste
+TN-SYN-P-000000475,Tiruvannamalai,23,Rural,41,Male,2,1,3,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9409.0,Scheduled Caste
+TN-SYN-P-000000476,Madurai,01,Urban,41,Female,2,6,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,5860.0,Other Backward Class
+TN-SYN-P-000000477,Chennai,32,Urban,23,Male,2,2,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,12180.0,Other Backward Class
+TN-SYN-P-000000478,Kallakurichi,02,Urban,10,Male,1,7,5,Regular wage/salary earning,Literate,Primary,Unemployed,Unemployed,0.0,20225.0,Scheduled Caste
+TN-SYN-P-000000479,Kanniyakumari,25,Urban,40,Male,2,5,1,Others,Illiterate,Secondary,Not in labour force,Not in labour force,0.0,8017.0,Other Backward Class
+TN-SYN-P-000000480,Thoothukudi,33,Urban,65,Male,3,1,3,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Not in labour force,0.0,10325.0,Other Backward Class
+TN-SYN-P-000000481,Coimbatore,29,Urban,33,Female,2,5,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,17623.0,Other Backward Class
+TN-SYN-P-000000482,Tenkasi,02,Rural,45,Female,1,2,5,Casual labour in non-agriculture,Illiterate,Higher Secondary,Employed,Employed,0.0,17117.0,Other Backward Class
+TN-SYN-P-000000483,Salem,13,Urban,53,Female,2,2,3,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11800.0,Other Backward Class
+TN-SYN-P-000000484,Coimbatore,03,Urban,54,Male,2,5,4,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,35417.0,Scheduled Caste
+TN-SYN-P-000000485,Chennai,01,Urban,20,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,12600.0,Scheduled Caste
+TN-SYN-P-000000486,Chennai,33,Urban,27,Male,1,5,6,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,19830.0,Other Backward Class
+TN-SYN-P-000000487,Thiruvallur,13,Urban,65,Male,2,1,6,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17229.0,Other Backward Class
+TN-SYN-P-000000488,Krishnagiri,35,Rural,14,Female,1,5,4,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,6609.0,Scheduled Caste
+TN-SYN-P-000000489,Viluppuram,16,Rural,58,Female,2,2,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,13180.0,Other Backward Class
+TN-SYN-P-000000490,Kancheepuram,26,Urban,23,Female,3,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13530.0,Other Backward Class
+TN-SYN-P-000000491,Thanjavur,05,Rural,16,Male,1,5,4,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,16918.0,Other Backward Class
+TN-SYN-P-000000492,Krishnagiri,10,Rural,38,Male,2,1,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,19152.0,Other Backward Class
+TN-SYN-P-000000493,The Nilgiris,33,Rural,7,Male,1,2,2,Self-employed in agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,7037.0,Other Backward Class
+TN-SYN-P-000000494,Coimbatore,36,Rural,47,Female,2,5,6,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,18733.0,Other Backward Class
+TN-SYN-P-000000495,Theni,07,Urban,51,Male,2,5,6,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,24000.0,58995.0,Other Backward Class
+TN-SYN-P-000000496,Pudukkottai,02,Urban,29,Male,2,2,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,11550.0,Other Backward Class
+TN-SYN-P-000000497,Chennai,07,Urban,74,Male,3,1,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,10000.0,9645.0,Scheduled Caste
+TN-SYN-P-000000498,Vellore,30,Rural,43,Female,2,1,3,Casual labour in non-agriculture,Illiterate,Secondary,Employed,Employed,0.0,8875.0,Other Backward Class
+TN-SYN-P-000000499,Dindigul,02,Urban,94,Male,2,1,3,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,27077.0,Other Backward Class
+TN-SYN-P-000000500,Tiruvannamalai,31,Urban,26,Female,1,4,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,18632.0,Other Backward Class
+TN-SYN-P-000000501,Salem,21,Rural,22,Female,1,1,3,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,5435.0,Other Backward Class
+TN-SYN-P-000000502,Sivaganga,08,Urban,54,Female,1,5,4,Self-employed in agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7875.0,Other Backward Class
+TN-SYN-P-000000503,Ranipet,23,Rural,0,Female,1,8,6,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,18928.0,Scheduled Caste
+TN-SYN-P-000000504,Tenkasi,27,Rural,53,Female,2,2,4,Self-employed in agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,12271.0,Other Backward Class
+TN-SYN-P-000000505,Namakkal,25,Urban,42,Male,2,2,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,6604.0,Other Backward Class
+TN-SYN-P-000000506,Ranipet,18,Rural,50,Female,2,1,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,6900.0,11032.0,Other Backward Class
+TN-SYN-P-000000507,Tiruvannamalai,27,Rural,96,Female,3,1,1,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,5142.0,Other Backward Class
+TN-SYN-P-000000508,Madurai,16,Urban,50,Male,3,1,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,16527.0,Other Backward Class
+TN-SYN-P-000000509,Salem,36,Urban,53,Male,2,2,3,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,70000.0,12009.0,Scheduled Caste
+TN-SYN-P-000000510,Ranipet,25,Urban,4,Male,1,5,3,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10533.0,Scheduled Caste
+TN-SYN-P-000000511,Sivaganga,21,Rural,11,Male,1,2,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,17044.0,Other Backward Class
+TN-SYN-P-000000512,Virudhunagar,30,Urban,58,Male,2,5,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,13000.0,7375.0,Other Backward Class
+TN-SYN-P-000000513,Salem,02,Rural,11,Female,2,2,1,Others,Literate,Primary,Employed,Employed,0.0,6433.0,Other Backward Class
+TN-SYN-P-000000514,Ranipet,37,Rural,12,Female,1,5,3,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,25575.0,Other Backward Class
+TN-SYN-P-000000515,Ramanathapuram,27,Rural,0,Female,1,6,6,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13683.0,Other Backward Class
+TN-SYN-P-000000516,Coimbatore,16,Urban,35,Male,2,5,2,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,6813.0,Other Backward Class
+TN-SYN-P-000000517,Thoothukudi,26,Rural,16,Female,1,4,3,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,10996.0,Other Backward Class
+TN-SYN-P-000000518,Tenkasi,19,Rural,37,Female,2,2,4,Others,Literate,Primary,Employed,Employed,0.0,9747.0,Other Backward Class
+TN-SYN-P-000000519,Thoothukudi,23,Urban,37,Male,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,19557.0,Scheduled Caste
+TN-SYN-P-000000520,Chennai,29,Rural,10,Male,1,5,5,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,40392.0,Other Backward Class
+TN-SYN-P-000000521,Thanjavur,10,Urban,69,Male,2,5,5,Self-employed in non-agriculture,Literate,Not literate,Unemployed,Unemployed,0.0,11448.0,Scheduled Caste
+TN-SYN-P-000000522,Tirunelveli,18,Urban,52,Female,2,5,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,17437.0,Other Backward Class
+TN-SYN-P-000000523,Karur,30,Rural,42,Female,2,4,2,Others,Illiterate,Higher Secondary,Employed,Employed,0.0,10098.0,Other Backward Class
+TN-SYN-P-000000524,Dharmapuri,02,Urban,20,Male,1,2,4,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,17500.0,31838.0,Others
+TN-SYN-P-000000525,Viluppuram,19,Urban,6,Female,2,8,4,Self-employed in agriculture,Literate,Secondary,Unemployed,Unemployed,28000.0,14412.0,Scheduled Caste
+TN-SYN-P-000000526,Chennai,16,Urban,42,Female,2,6,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16581.0,Other Backward Class
+TN-SYN-P-000000527,Chennai,01,Urban,16,Male,2,6,6,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,13500.0,29670.0,Scheduled Caste
+TN-SYN-P-000000528,Vellore,27,Urban,38,Male,2,2,2,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,65000.0,25575.0,Other Backward Class
+TN-SYN-P-000000529,Thiruvallur,09,Rural,45,Female,1,1,4,Casual labour in agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,6580.0,Other Backward Class
+TN-SYN-P-000000530,Unknown,26,Urban,64,Female,2,4,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12792.0,Other Backward Class
+TN-SYN-P-000000531,Krishnagiri,35,Urban,5,Male,1,5,4,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,12667.0,Other Backward Class
+TN-SYN-P-000000532,Sivaganga,38,Rural,28,Male,1,5,12,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,24680.0,Other Backward Class
+TN-SYN-P-000000533,Tiruppur,34,Rural,38,Female,2,5,4,Regular wage/salary earning,Illiterate,Middle,Not in labour force,Not in labour force,0.0,8077.0,Other Backward Class
+TN-SYN-P-000000534,Sivaganga,21,Rural,27,Female,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12377.0,Other Backward Class
+TN-SYN-P-000000535,Madurai,02,Rural,58,Male,2,2,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,22202.0,Other Backward Class
+TN-SYN-P-000000536,Coimbatore,31,Rural,1,Male,1,2,3,Self-employed in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,12667.0,Other Backward Class
+TN-SYN-P-000000537,Kancheepuram,08,Rural,60,Male,2,1,3,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10245.0,Other Backward Class
+TN-SYN-P-000000538,Thoothukudi,07,Rural,38,Female,1,6,4,Self-employed in agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7375.0,Other Backward Class
+TN-SYN-P-000000539,Pudukkottai,16,Urban,27,Male,1,2,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,5417.0,Other Backward Class
+TN-SYN-P-000000540,Tiruvannamalai,33,Urban,7,Male,1,8,9,Self-employed in non-agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,23179.0,Other Backward Class
+TN-SYN-P-000000541,Thiruvarur,23,Rural,65,Male,2,1,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,8500.0,15310.0,Other Backward Class
+TN-SYN-P-000000542,Thanjavur,18,Urban,30,Male,2,2,2,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,12000.0,8900.0,Scheduled Caste
+TN-SYN-P-000000543,Kanniyakumari,22,Rural,32,Female,1,6,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,12725.0,Other Backward Class
+TN-SYN-P-000000544,Krishnagiri,26,Urban,5,Male,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,23054.0,Other Backward Class
+TN-SYN-P-000000545,Thanjavur,07,Rural,27,Male,1,1,3,Self-employed in agriculture,Illiterate,Middle,Employed,Employed,0.0,11673.0,Other Backward Class
+TN-SYN-P-000000546,Perambalur,16,Rural,46,Female,3,1,3,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,8717.0,Scheduled Caste
+TN-SYN-P-000000547,Cuddalore,07,Urban,19,Female,2,5,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7683.0,Other Backward Class
+TN-SYN-P-000000548,Cuddalore,05,Urban,32,Male,2,2,4,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,14286.0,Other Backward Class
+TN-SYN-P-000000549,Kancheepuram,14,Urban,28,Female,1,8,7,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,50046.0,Other Backward Class
+TN-SYN-P-000000550,Dharmapuri,15,Rural,1,Female,1,5,1,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7665.0,Other Backward Class
+TN-SYN-P-000000551,Sivaganga,28,Urban,10,Female,1,7,7,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,40274.0,Scheduled Caste
+TN-SYN-P-000000552,Ariyalur,03,Rural,1,Female,1,5,5,Casual labour in non-agriculture,Illiterate,Below Primary,Employed,Employed,0.0,17073.0,Other Backward Class
+TN-SYN-P-000000553,Thoothukudi,15,Rural,17,Female,1,7,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,41033.0,Other Backward Class
+TN-SYN-P-000000554,Coimbatore,03,Urban,19,Male,1,7,8,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,21038.0,Other Backward Class
+TN-SYN-P-000000555,Tiruchirappalli,06,Urban,30,Female,2,2,2,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8169.0,Other Backward Class
+TN-SYN-P-000000556,Cuddalore,23,Urban,55,Male,4,1,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,28130.0,10050.0,Scheduled Caste
+TN-SYN-P-000000557,Coimbatore,01,Urban,11,Female,1,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,21908.0,Scheduled Caste
+TN-SYN-P-000000558,Kallakurichi,33,Urban,37,Male,1,2,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12828.0,Other Backward Class
+TN-SYN-P-000000559,Coimbatore,05,Urban,19,Male,2,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9633.0,Other Backward Class
+TN-SYN-P-000000560,Ramanathapuram,24,Rural,13,Female,1,2,4,Casual labour in non-agriculture,Illiterate,Secondary,Employed,Employed,0.0,8367.0,Other Backward Class
+TN-SYN-P-000000561,Pudukkottai,33,Urban,7,Male,1,8,3,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11571.0,Other Backward Class
+TN-SYN-P-000000562,Tirunelveli,36,Urban,43,Male,2,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,30000.0,14730.0,Other Backward Class
+TN-SYN-P-000000563,Thiruvallur,29,Urban,1,Male,1,7,5,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,16574.0,Scheduled Caste
+TN-SYN-P-000000564,Vellore,07,Rural,2,Female,1,1,6,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,32730.0,Other Backward Class
+TN-SYN-P-000000565,Pudukkottai,30,Rural,28,Female,1,2,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,15517.0,Other Backward Class
+TN-SYN-P-000000566,Dindigul,11,Urban,67,Female,3,1,6,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,64917.0,Other Backward Class
+TN-SYN-P-000000567,Sivaganga,01,Urban,40,Female,1,6,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11760.0,Other Backward Class
+TN-SYN-P-000000568,Madurai,03,Urban,61,Female,2,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,7500.0,21627.0,Scheduled Caste
+TN-SYN-P-000000569,Salem,38,Rural,41,Female,1,2,1,Casual labour in agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,7951.0,Other Backward Class
+TN-SYN-P-000000570,Thiruvallur,16,Urban,8,Male,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,10500.0,17720.0,Other Backward Class
+TN-SYN-P-000000571,Thiruvallur,02,Rural,38,Female,1,2,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,10509.0,Other Backward Class
+TN-SYN-P-000000572,Virudhunagar,33,Urban,50,Male,2,2,10,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,10000.0,19007.0,Scheduled Caste
+TN-SYN-P-000000573,Theni,27,Urban,65,Male,1,1,5,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,28387.0,Other Backward Class
+TN-SYN-P-000000574,Chennai,03,Urban,38,Male,3,5,3,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,10150.0,Scheduled Caste
+TN-SYN-P-000000575,Cuddalore,33,Rural,34,Female,1,1,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,12973.0,Other Backward Class
+TN-SYN-P-000000576,Thanjavur,37,Urban,69,Male,2,1,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,11800.0,Other Backward Class
+TN-SYN-P-000000577,Madurai,22,Urban,67,Male,3,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,20000.0,11622.0,Other Backward Class
+TN-SYN-P-000000578,Tiruchirappalli,05,Urban,10,Female,1,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12958.0,Others
+TN-SYN-P-000000579,Cuddalore,23,Rural,22,Male,1,5,2,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,11933.0,Others
+TN-SYN-P-000000580,Pudukkottai,02,Urban,55,Female,2,5,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,24800.0,11125.0,Others
+TN-SYN-P-000000581,Sivaganga,01,Rural,18,Female,1,6,4,Casual labour in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,17297.0,Scheduled Caste
+TN-SYN-P-000000582,Pudukkottai,25,Urban,44,Male,2,2,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,10336.0,Other Backward Class
+TN-SYN-P-000000583,Salem,01,Urban,35,Male,2,2,3,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16750.0,Other Backward Class
+TN-SYN-P-000000584,Ranipet,01,Urban,53,Male,2,1,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,17922.0,Other Backward Class
+TN-SYN-P-000000585,Ranipet,29,Urban,67,Male,3,1,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,10500.0,19633.0,Scheduled Caste
+TN-SYN-P-000000586,Salem,36,Urban,1,Male,1,6,5,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,16963.0,Other Backward Class
+TN-SYN-P-000000587,Thiruvallur,09,Urban,3,Female,1,7,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,24237.0,Scheduled Caste
+TN-SYN-P-000000588,Thanjavur,19,Rural,80,Male,2,1,1,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,15717.0,Scheduled Caste
+TN-SYN-P-000000589,Mayiladuthurai,32,Urban,35,Male,2,5,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,13000.0,11255.0,Scheduled Caste
+TN-SYN-P-000000590,Salem,21,Urban,23,Male,2,2,3,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,13588.0,Scheduled Caste
+TN-SYN-P-000000591,Erode,02,Urban,67,Female,3,1,2,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,7443.0,Other Backward Class
+TN-SYN-P-000000592,Thiruvallur,24,Rural,36,Female,1,1,5,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,13712.0,Other Backward Class
+TN-SYN-P-000000593,Chennai,38,Urban,55,Female,1,5,1,Others,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,3982.0,Others
+TN-SYN-P-000000594,Thiruvarur,22,Urban,55,Male,3,1,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,12000.0,15717.0,Scheduled Caste
+TN-SYN-P-000000595,Tiruppur,21,Rural,18,Male,2,1,4,Others,Illiterate,Middle,Not in labour force,Not in labour force,0.0,19167.0,Other Backward Class
+TN-SYN-P-000000596,Kancheepuram,11,Urban,63,Male,3,2,4,Regular wage/salary earning,Illiterate,Higher Secondary,Employed,Employed,12500.0,7700.0,Scheduled Caste
+TN-SYN-P-000000597,Thanjavur,11,Rural,70,Male,2,1,5,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,17073.0,Other Backward Class
+TN-SYN-P-000000598,Madurai,27,Urban,65,Male,3,1,2,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,22000.0,26043.0,Scheduled Caste
+TN-SYN-P-000000599,Thanjavur,32,Urban,60,Male,3,2,6,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,19653.0,Other Backward Class
+TN-SYN-P-000000600,Ramanathapuram,05,Urban,12,Female,1,5,5,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,19033.0,Other Backward Class
+TN-SYN-P-000000601,Thanjavur,02,Urban,64,Male,2,6,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10245.0,Other Backward Class
+TN-SYN-P-000000602,Thoothukudi,18,Rural,24,Female,2,1,2,Regular wage/salary earning,Illiterate,Primary,Employed,Employed,0.0,20800.0,Other Backward Class
+TN-SYN-P-000000603,Thiruvallur,05,Rural,34,Male,1,1,2,Casual labour in agriculture,Illiterate,Secondary,Employed,Employed,0.0,9975.0,Other Backward Class
+TN-SYN-P-000000604,Ramanathapuram,15,Urban,6,Male,1,5,2,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,5933.0,Other Backward Class
+TN-SYN-P-000000605,Tirunelveli,04,Rural,52,Female,2,1,3,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,13608.0,Other Backward Class
+TN-SYN-P-000000606,The Nilgiris,33,Rural,14,Female,2,1,3,Casual labour in non-agriculture,Illiterate,Higher Secondary,Employed,Employed,0.0,13658.0,Other Backward Class
+TN-SYN-P-000000607,Thoothukudi,24,Rural,44,Female,1,1,3,Others,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6028.0,Scheduled Caste
+TN-SYN-P-000000608,Viluppuram,07,Rural,35,Male,2,1,7,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,25717.0,Other Backward Class
+TN-SYN-P-000000609,Kancheepuram,07,Urban,34,Female,2,2,4,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,17459.0,Scheduled Caste
+TN-SYN-P-000000610,Tirupathur,07,Rural,58,Female,2,1,4,Casual labour in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7772.0,Scheduled Caste
+TN-SYN-P-000000611,Thiruvallur,02,Urban,30,Male,2,5,7,Self-employed in non-agriculture,Literate,Middle,Unemployed,Unemployed,42500.0,20828.0,Other Backward Class
+TN-SYN-P-000000612,Tenkasi,31,Urban,19,Male,2,5,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,3950.0,Other Backward Class
+TN-SYN-P-000000613,Thoothukudi,02,Rural,19,Female,1,5,6,Casual labour in non-agriculture,Illiterate,Below Primary,Employed,Employed,0.0,21287.0,Scheduled Caste
+TN-SYN-P-000000614,Tiruchirappalli,35,Urban,73,Male,2,2,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6917.0,Other Backward Class
+TN-SYN-P-000000615,Vellore,37,Rural,50,Female,2,3,4,Casual labour in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,7326.0,Other Backward Class
+TN-SYN-P-000000616,Coimbatore,24,Urban,50,Male,3,4,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,51369.0,13887.0,Scheduled Caste
+TN-SYN-P-000000617,Ariyalur,16,Urban,34,Male,2,1,3,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,25000.0,9133.0,Other Backward Class
+TN-SYN-P-000000618,Thanjavur,11,Urban,17,Male,1,7,11,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,38013.0,Other Backward Class
+TN-SYN-P-000000619,Chennai,06,Rural,42,Female,1,2,4,Casual labour in agriculture,Illiterate,Higher Secondary,Employed,Employed,0.0,9893.0,Other Backward Class
+TN-SYN-P-000000620,Krishnagiri,32,Urban,3,Male,1,6,7,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,20823.0,Scheduled Caste
+TN-SYN-P-000000621,Tenkasi,16,Urban,14,Male,2,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,15000.0,11335.0,Other Backward Class
+TN-SYN-P-000000622,Tiruvannamalai,31,Urban,44,Male,3,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,20000.0,19575.0,Scheduled Caste
+TN-SYN-P-000000623,Madurai,38,Rural,15,Female,1,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,22842.0,Other Backward Class
+TN-SYN-P-000000624,Thanjavur,02,Rural,48,Female,2,2,4,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,16483.0,Other Backward Class
+TN-SYN-P-000000625,Tiruchirappalli,34,Urban,11,Female,2,3,4,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,4725.0,Other Backward Class
+TN-SYN-P-000000626,Salem,16,Urban,42,Female,2,5,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,16500.0,18447.0,Scheduled Caste
+TN-SYN-P-000000627,Sivaganga,26,Urban,60,Male,2,2,5,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,16213.0,9850.0,Scheduled Caste
+TN-SYN-P-000000628,Coimbatore,09,Rural,48,Female,1,2,4,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,26125.0,Other Backward Class
+TN-SYN-P-000000629,Madurai,26,Rural,5,Male,1,5,7,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,41039.0,Other Backward Class
+TN-SYN-P-000000630,Tiruppur,08,Urban,49,Female,2,2,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,24237.0,Others
+TN-SYN-P-000000631,Kanniyakumari,11,Rural,14,Male,1,5,3,Regular wage/salary earning,Illiterate,Below Primary,Not in labour force,Not in labour force,0.0,12417.0,Other Backward Class
+TN-SYN-P-000000632,Chennai,27,Urban,44,Female,2,1,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,19007.0,Other Backward Class
+TN-SYN-P-000000633,Krishnagiri,14,Rural,52,Female,2,2,2,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,10867.0,Scheduled Caste
+TN-SYN-P-000000634,Kanniyakumari,27,Rural,14,Male,1,1,4,Others,Illiterate,Higher Secondary,Not in labour force,Not in labour force,0.0,8243.0,Other Backward Class
+TN-SYN-P-000000635,Chennai,34,Urban,13,Male,2,6,4,Others,Literate,Middle,Employed,Employed,0.0,13636.0,Scheduled Caste
+TN-SYN-P-000000636,Unknown,02,Urban,41,Male,2,5,4,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,5250.0,Scheduled Caste
+TN-SYN-P-000000637,Coimbatore,05,Rural,53,Female,1,1,2,Self-employed in agriculture,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,15650.0,Other Backward Class
+TN-SYN-P-000000638,Namakkal,29,Urban,18,Male,1,2,4,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,8000.0,10952.0,Scheduled Caste
+TN-SYN-P-000000639,Virudhunagar,27,Rural,7,Female,1,2,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,14468.0,Other Backward Class
+TN-SYN-P-000000640,Krishnagiri,16,Urban,54,Female,2,2,4,Others,Literate,Not literate,Employed,Employed,0.0,12642.0,Other Backward Class
+TN-SYN-P-000000641,Thiruvallur,17,Urban,45,Male,2,5,3,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,13000.0,32644.0,Other Backward Class
+TN-SYN-P-000000642,Madurai,23,Urban,37,Male,3,8,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,110000.0,41293.0,Other Backward Class
+TN-SYN-P-000000643,Tenkasi,02,Rural,50,Female,2,2,3,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,11283.0,Other Backward Class
+TN-SYN-P-000000644,Chennai,11,Rural,5,Female,1,5,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,20892.0,Other Backward Class
+TN-SYN-P-000000645,Ariyalur,11,Urban,4,Male,1,2,3,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9428.0,Other Backward Class
+TN-SYN-P-000000646,Chennai,32,Rural,64,Female,2,1,1,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,4197.0,Other Backward Class
+TN-SYN-P-000000647,Dindigul,19,Urban,54,Male,2,6,8,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,63493.0,Other Backward Class
+TN-SYN-P-000000648,Salem,11,Rural,29,Female,1,2,4,Others,Illiterate,Below Primary,Employed,Employed,0.0,5050.0,Other Backward Class
+TN-SYN-P-000000649,Tenkasi,19,Rural,57,Female,2,1,4,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,10700.0,Scheduled Caste
+TN-SYN-P-000000650,Tiruvannamalai,20,Urban,45,Female,2,2,5,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,17220.0,Other Backward Class
+TN-SYN-P-000000651,Tiruchirappalli,34,Rural,60,Female,1,2,2,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9683.0,Other Backward Class
+TN-SYN-P-000000652,Tiruvannamalai,36,Urban,60,Female,2,2,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,4000.0,8167.0,Other Backward Class
+TN-SYN-P-000000653,Coimbatore,26,Urban,25,Female,2,2,3,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,10857.0,Other Backward Class
+TN-SYN-P-000000654,Ranipet,12,Rural,40,Female,2,1,2,Casual labour in agriculture,Literate,Not literate,Employed,Employed,0.0,14095.0,Other Backward Class
+TN-SYN-P-000000655,Sivaganga,30,Urban,30,Female,2,5,6,Self-employed in agriculture,Literate,Primary,Unemployed,Unemployed,0.0,27903.0,Scheduled Caste
+TN-SYN-P-000000656,Vellore,22,Urban,67,Female,3,1,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,11578.0,Other Backward Class
+TN-SYN-P-000000657,Madurai,21,Urban,75,Female,3,1,2,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,8317.0,Other Backward Class
+TN-SYN-P-000000658,Thoothukudi,03,Urban,40,Male,1,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10952.0,Scheduled Caste
+TN-SYN-P-000000659,Ranipet,16,Urban,27,Female,2,5,6,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11622.0,Other Backward Class
+TN-SYN-P-000000660,Cuddalore,18,Urban,11,Female,1,7,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,14468.0,Other Backward Class
+TN-SYN-P-000000661,Nagapattinam,09,Urban,51,Male,1,5,4,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,28130.0,22592.0,Other Backward Class
+TN-SYN-P-000000662,Salem,06,Rural,42,Male,2,5,2,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,4845.0,Scheduled Caste
+TN-SYN-P-000000663,Salem,20,Urban,50,Male,2,3,3,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,10610.0,Other Backward Class
+TN-SYN-P-000000664,Namakkal,09,Rural,80,Male,3,1,4,Self-employed in agriculture,Illiterate,Secondary,Not in labour force,Not in labour force,0.0,28597.0,Other Backward Class
+TN-SYN-P-000000665,Kallakurichi,07,Urban,46,Male,1,4,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,11617.0,Scheduled Caste
+TN-SYN-P-000000666,Dindigul,02,Rural,44,Male,2,1,2,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13285.0,Other Backward Class
+TN-SYN-P-000000667,Viluppuram,27,Rural,46,Male,1,1,4,Casual labour in agriculture,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12167.0,Other Backward Class
+TN-SYN-P-000000668,Dindigul,09,Urban,66,Male,2,2,2,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,13500.0,18497.0,Other Backward Class
+TN-SYN-P-000000669,Cuddalore,25,Rural,59,Female,3,1,1,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,8471.0,Other Backward Class
+TN-SYN-P-000000670,Tirupathur,29,Urban,44,Male,2,6,5,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10028.0,Scheduled Caste
+TN-SYN-P-000000671,Perambalur,26,Urban,5,Male,1,6,7,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,27109.0,Others
+TN-SYN-P-000000672,Coimbatore,25,Rural,1,Female,1,2,6,Others,Literate,Higher Secondary,Employed,Employed,0.0,11218.0,Other Backward Class
+TN-SYN-P-000000673,Pudukkottai,33,Rural,37,Female,2,1,4,Casual labour in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,11397.0,Other Backward Class
+TN-SYN-P-000000674,Unknown,22,Rural,41,Male,1,1,3,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,10975.0,Other Backward Class
+TN-SYN-P-000000675,Sivaganga,20,Rural,75,Female,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,10125.0,Other Backward Class
+TN-SYN-P-000000676,Chennai,23,Rural,29,Female,2,5,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10638.0,Other Backward Class
+TN-SYN-P-000000677,Tiruvannamalai,28,Urban,31,Male,3,6,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,48500.0,13983.0,Scheduled Tribe
+TN-SYN-P-000000678,Erode,09,Urban,21,Male,2,5,5,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,62400.0,10881.0,Other Backward Class
+TN-SYN-P-000000679,Madurai,03,Urban,62,Female,2,2,3,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,0.0,16335.0,Other Backward Class
+TN-SYN-P-000000680,Thoothukudi,23,Urban,55,Female,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,12988.0,Other Backward Class
+TN-SYN-P-000000681,The Nilgiris,08,Urban,14,Female,1,5,6,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,29731.0,Other Backward Class
+TN-SYN-P-000000682,Madurai,11,Rural,75,Female,3,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9133.0,Other Backward Class
+TN-SYN-P-000000683,Dindigul,04,Rural,45,Female,1,2,3,Casual labour in non-agriculture,Illiterate,Below Primary,Employed,Employed,0.0,17516.0,Scheduled Caste
+TN-SYN-P-000000684,Pudukkottai,02,Rural,43,Female,1,6,4,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,11203.0,Other Backward Class
+TN-SYN-P-000000685,Thiruvallur,01,Rural,3,Male,1,5,5,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,19633.0,Other Backward Class
+TN-SYN-P-000000686,Thiruvallur,35,Urban,56,Female,2,5,5,Others,Literate,Not literate,Not in labour force,Not in labour force,0.0,16458.0,Other Backward Class
+TN-SYN-P-000000687,Dharmapuri,36,Rural,17,Female,1,2,6,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9158.0,Scheduled Caste
+TN-SYN-P-000000688,Namakkal,02,Urban,70,Male,2,4,2,Regular wage/salary earning,Literate,Primary,Not in labour force,Not in labour force,4000.0,6655.0,Other Backward Class
+TN-SYN-P-000000689,Pudukkottai,22,Urban,6,Female,1,5,3,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9242.0,Other Backward Class
+TN-SYN-P-000000690,Cuddalore,35,Urban,42,Female,2,2,1,Others,Literate,Not literate,Employed,Not in labour force,0.0,3013.0,Other Backward Class
+TN-SYN-P-000000691,Virudhunagar,33,Urban,9,Male,1,6,5,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,11383.0,Other Backward Class
+TN-SYN-P-000000692,Tiruchirappalli,19,Urban,6,Female,1,7,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16596.0,Other Backward Class
+TN-SYN-P-000000693,Thoothukudi,07,Urban,63,Male,2,5,2,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,7000.0,15122.0,Other Backward Class
+TN-SYN-P-000000694,Theni,18,Rural,25,Female,2,1,2,Others,Illiterate,Below Primary,Employed,Employed,0.0,9879.0,Other Backward Class
+TN-SYN-P-000000695,Virudhunagar,30,Urban,0,Male,1,5,6,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,17516.0,Other Backward Class
+TN-SYN-P-000000696,Unknown,27,Urban,20,Male,2,6,7,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15369.0,Scheduled Caste
+TN-SYN-P-000000697,Chennai,05,Rural,15,Female,1,2,4,Casual labour in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,13248.0,Scheduled Caste
+TN-SYN-P-000000698,Tirupathur,19,Urban,11,Female,2,3,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,18053.0,Other Backward Class
+TN-SYN-P-000000699,Chennai,05,Urban,11,Male,1,5,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,30000.0,25975.0,Other Backward Class
+TN-SYN-P-000000700,Kanniyakumari,04,Rural,52,Female,1,2,5,Casual labour in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,18310.0,Other Backward Class
+TN-SYN-P-000000701,Tenkasi,16,Urban,0,Male,1,7,7,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,9885.0,Other Backward Class
+TN-SYN-P-000000702,Virudhunagar,33,Urban,76,Male,4,2,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,20000.0,11783.0,Scheduled Caste
+TN-SYN-P-000000703,Thanjavur,08,Urban,12,Male,2,2,4,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,25000.0,21800.0,Scheduled Caste
+TN-SYN-P-000000704,Mayiladuthurai,04,Rural,40,Male,1,2,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12248.0,Other Backward Class
+TN-SYN-P-000000705,Kancheepuram,27,Urban,48,Male,2,2,2,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,13800.0,8180.0,Other Backward Class
+TN-SYN-P-000000706,Pudukkottai,19,Rural,8,Female,1,5,2,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12792.0,Other Backward Class
+TN-SYN-P-000000707,Tenkasi,06,Rural,50,Female,2,4,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,11404.0,Other Backward Class
+TN-SYN-P-000000708,Krishnagiri,29,Urban,40,Male,2,2,1,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,14200.0,12369.0,Scheduled Caste
+TN-SYN-P-000000709,Chennai,16,Urban,64,Male,2,1,3,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,8500.0,8858.0,Other Backward Class
+TN-SYN-P-000000710,Tenkasi,19,Rural,43,Male,2,1,4,Self-employed in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,10641.0,Other Backward Class
+TN-SYN-P-000000711,Dindigul,29,Urban,15,Male,2,5,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,9811.0,Other Backward Class
+TN-SYN-P-000000712,Sivaganga,27,Urban,43,Male,3,1,4,Self-employed in non-agriculture,Illiterate,Below Primary,Not in labour force,Not in labour force,0.0,13733.0,Other Backward Class
+TN-SYN-P-000000713,Dharmapuri,21,Rural,8,Female,2,2,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,25000.0,12550.0,Other Backward Class
+TN-SYN-P-000000714,Sivaganga,33,Rural,40,Female,1,1,4,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,12467.0,Other Backward Class
+TN-SYN-P-000000715,Mayiladuthurai,27,Urban,22,Male,1,1,5,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16223.0,Other Backward Class
+TN-SYN-P-000000716,Thiruvallur,23,Urban,11,Male,1,6,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,15500.0,15682.0,Scheduled Caste
+TN-SYN-P-000000717,Vellore,14,Rural,8,Female,1,8,6,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7183.0,Scheduled Caste
+TN-SYN-P-000000718,Erode,36,Urban,52,Female,2,4,4,Self-employed in agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,9845.0,Other Backward Class
+TN-SYN-P-000000719,Salem,20,Urban,40,Male,2,1,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,14000.0,13548.0,Scheduled Caste
+TN-SYN-P-000000720,Tirupathur,19,Urban,48,Male,3,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,15715.0,Scheduled Caste
+TN-SYN-P-000000721,Coimbatore,20,Rural,13,Female,1,5,3,Regular wage/salary earning,Illiterate,Primary,Not in labour force,Not in labour force,0.0,13852.0,Other Backward Class
+TN-SYN-P-000000722,Ranipet,26,Rural,18,Female,2,1,5,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,30610.0,Scheduled Caste
+TN-SYN-P-000000723,Thiruvallur,07,Urban,58,Male,3,1,4,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,11133.0,Other Backward Class
+TN-SYN-P-000000724,Vellore,10,Urban,14,Male,2,7,5,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,52000.0,40509.0,Other Backward Class
+TN-SYN-P-000000725,Cuddalore,23,Urban,3,Male,1,7,7,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12492.0,Scheduled Caste
+TN-SYN-P-000000726,Kanniyakumari,22,Rural,48,Female,1,1,2,Others,Literate,Middle,Employed,Employed,0.0,9883.0,Other Backward Class
+TN-SYN-P-000000727,Virudhunagar,04,Rural,18,Female,2,2,4,Casual labour in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,2983.0,Other Backward Class
+TN-SYN-P-000000728,Kanniyakumari,18,Urban,13,Male,2,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9329.0,Scheduled Caste
+TN-SYN-P-000000729,Thanjavur,36,Rural,51,Female,2,1,6,Regular wage/salary earning,Illiterate,Middle,Employed,Employed,0.0,19172.0,Other Backward Class
+TN-SYN-P-000000730,The Nilgiris,30,Rural,65,Female,2,1,1,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,9558.0,Other Backward Class
+TN-SYN-P-000000731,Madurai,01,Rural,22,Female,1,2,2,Casual labour in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,7167.0,Other Backward Class
+TN-SYN-P-000000732,Sivaganga,03,Urban,42,Female,2,3,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13380.0,Other Backward Class
+TN-SYN-P-000000733,Tirunelveli,22,Urban,63,Male,3,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,8000.0,11960.0,Other Backward Class
+TN-SYN-P-000000734,Ramanathapuram,32,Urban,55,Female,2,1,3,Casual labour in agriculture,Literate,Primary,Employed,Employed,0.0,3982.0,Other Backward Class
+TN-SYN-P-000000735,Ariyalur,13,Rural,22,Female,1,3,4,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,9504.0,Other Backward Class
+TN-SYN-P-000000736,Namakkal,34,Urban,73,Female,2,1,2,Regular wage/salary earning,Literate,Primary,Employed,Employed,42580.0,8604.0,Scheduled Caste
+TN-SYN-P-000000737,Dindigul,31,Urban,55,Female,2,5,1,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,5918.0,Other Backward Class
+TN-SYN-P-000000738,Kallakurichi,24,Urban,53,Male,2,1,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,27550.0,17242.0,Other Backward Class
+TN-SYN-P-000000739,Kanniyakumari,08,Urban,45,Male,2,5,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,7093.0,Scheduled Caste
+TN-SYN-P-000000740,Chennai,13,Urban,42,Male,3,5,5,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,22917.0,Other Backward Class
+TN-SYN-P-000000741,Tiruvannamalai,32,Urban,51,Male,2,1,4,Casual labour in agriculture,Literate,Secondary,Employed,Employed,0.0,10509.0,Other Backward Class
+TN-SYN-P-000000742,Tiruchirappalli,35,Rural,54,Female,2,1,2,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,8913.0,Other Backward Class
+TN-SYN-P-000000743,Thiruvarur,32,Rural,16,Female,1,2,1,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,25517.0,Scheduled Caste
+TN-SYN-P-000000744,Tirunelveli,33,Urban,39,Male,2,2,4,Self-employed in agriculture,Literate,Higher Secondary,Unemployed,Unemployed,0.0,15633.0,Scheduled Caste
+TN-SYN-P-000000745,Cuddalore,08,Urban,34,Male,2,1,3,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,12823.0,Other Backward Class
+TN-SYN-P-000000746,Karur,23,Urban,38,Male,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,9725.0,Other Backward Class
+TN-SYN-P-000000747,Chennai,18,Urban,46,Male,2,1,4,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,42680.0,Other Backward Class
+TN-SYN-P-000000748,Thiruvarur,02,Urban,45,Female,3,2,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,20930.0,Other Backward Class
+TN-SYN-P-000000749,Thiruvarur,02,Rural,60,Female,2,1,4,Regular wage/salary earning,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,10793.0,Scheduled Caste
+TN-SYN-P-000000750,Thanjavur,16,Urban,4,Female,1,5,10,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,21413.0,Other Backward Class
+TN-SYN-P-000000751,Cuddalore,34,Rural,8,Female,1,1,5,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,8841.0,Scheduled Caste
+TN-SYN-P-000000752,Kancheepuram,06,Urban,11,Male,2,5,5,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,11100.0,Scheduled Caste
+TN-SYN-P-000000753,Namakkal,03,Rural,16,Female,2,5,6,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,25550.0,Other Backward Class
+TN-SYN-P-000000754,Madurai,09,Rural,22,Female,1,2,5,Self-employed in agriculture,Illiterate,Below Primary,Employed,Employed,0.0,18047.0,Other Backward Class
+TN-SYN-P-000000755,Chennai,01,Rural,0,Female,1,5,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,12377.0,Other Backward Class
+TN-SYN-P-000000756,Kancheepuram,02,Rural,68,Female,2,1,3,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,16512.0,Other Backward Class
+TN-SYN-P-000000757,Unknown,32,Rural,39,Female,1,1,3,Casual labour in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,7348.0,Other Backward Class
+TN-SYN-P-000000758,Ranipet,07,Rural,6,Male,1,5,8,Self-employed in agriculture,Illiterate,Not literate,Employed,Employed,0.0,15990.0,Others
+TN-SYN-P-000000759,Thiruvallur,31,Urban,16,Male,2,6,8,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,11000.0,51667.0,Others
+TN-SYN-P-000000760,Tenkasi,33,Urban,33,Male,2,4,7,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,18000.0,17647.0,Other Backward Class
+TN-SYN-P-000000761,Theni,03,Urban,44,Male,2,5,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,33156.0,Other Backward Class
+TN-SYN-P-000000762,Chennai,38,Urban,24,Female,3,2,7,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,17707.0,Other Backward Class
+TN-SYN-P-000000763,Kallakurichi,03,Rural,44,Female,2,5,6,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,21685.0,Other Backward Class
+TN-SYN-P-000000764,Dindigul,30,Urban,37,Male,2,1,1,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,7500.0,6448.0,Other Backward Class
+TN-SYN-P-000000765,Madurai,09,Urban,70,Female,3,2,2,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7083.0,Scheduled Caste
+TN-SYN-P-000000766,Vellore,09,Rural,22,Female,1,2,3,Others,Illiterate,Higher Secondary,Not in labour force,Not in labour force,0.0,15650.0,Other Backward Class
+TN-SYN-P-000000767,Coimbatore,35,Urban,55,Male,2,5,3,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,7386.0,Others
+TN-SYN-P-000000768,Thoothukudi,24,Urban,69,Male,3,1,3,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10377.0,Scheduled Caste
+TN-SYN-P-000000769,Viluppuram,27,Rural,53,Female,2,1,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Employed,0.0,12067.0,Other Backward Class
+TN-SYN-P-000000770,Sivaganga,08,Urban,14,Female,1,7,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,38013.0,Scheduled Caste
+TN-SYN-P-000000771,Sivaganga,07,Rural,4,Female,2,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,20950.0,Other Backward Class
+TN-SYN-P-000000772,Virudhunagar,02,Urban,41,Female,2,5,5,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,15398.0,Other Backward Class
+TN-SYN-P-000000773,Dharmapuri,21,Rural,20,Male,1,5,6,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,0.0,13158.0,Scheduled Caste
+TN-SYN-P-000000774,Pudukkottai,35,Urban,24,Female,1,5,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,16097.0,Other Backward Class
+TN-SYN-P-000000775,Dindigul,33,Urban,13,Male,1,8,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,48000.0,29567.0,Scheduled Caste
+TN-SYN-P-000000776,Tiruchirappalli,09,Urban,74,Female,2,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13725.0,Other Backward Class
+TN-SYN-P-000000777,Thanjavur,08,Urban,24,Male,2,7,6,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,20000.0,27808.0,Scheduled Caste
+TN-SYN-P-000000778,Kancheepuram,32,Rural,1,Male,1,7,6,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,17008.0,Other Backward Class
+TN-SYN-P-000000779,Tenkasi,01,Rural,36,Female,1,5,4,Self-employed in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,17230.0,Other Backward Class
+TN-SYN-P-000000780,Karur,08,Urban,41,Male,3,5,6,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,50000.0,12880.0,Scheduled Caste
+TN-SYN-P-000000781,Tiruchirappalli,02,Rural,38,Female,2,3,2,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,7742.0,Other Backward Class
+TN-SYN-P-000000782,Erode,13,Urban,7,Female,1,5,5,Casual labour in agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,11233.0,Scheduled Caste
+TN-SYN-P-000000783,Tiruvannamalai,35,Rural,4,Female,1,5,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12642.0,Other Backward Class
+TN-SYN-P-000000784,Tirunelveli,02,Rural,17,Female,2,1,5,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,0.0,16835.0,Other Backward Class
+TN-SYN-P-000000785,Krishnagiri,18,Urban,18,Male,1,5,7,Self-employed in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,22150.0,Other Backward Class
+TN-SYN-P-000000786,Krishnagiri,29,Urban,25,Female,2,4,6,Regular wage/salary earning,Illiterate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,12925.0,Scheduled Caste
+TN-SYN-P-000000787,Tiruvannamalai,23,Urban,18,Male,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,14250.0,11368.0,Other Backward Class
+TN-SYN-P-000000788,Cuddalore,35,Urban,64,Male,2,2,2,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,6000.0,20200.0,Other Backward Class
+TN-SYN-P-000000789,Tiruppur,07,Rural,30,Female,2,1,2,Regular wage/salary earning,Illiterate,Primary,Employed,Employed,0.0,6225.0,Other Backward Class
+TN-SYN-P-000000790,Pudukkottai,24,Urban,30,Male,2,5,6,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,34800.0,30375.0,Scheduled Tribe
+TN-SYN-P-000000791,Tiruchirappalli,16,Rural,62,Female,2,2,4,Casual labour in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,10408.0,Other Backward Class
+TN-SYN-P-000000792,Tiruchirappalli,15,Urban,40,Male,2,5,3,Self-employed in agriculture,Literate,Middle,Unemployed,Unemployed,0.0,10167.0,Scheduled Caste
+TN-SYN-P-000000793,Tenkasi,20,Urban,10,Female,1,5,5,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,17044.0,Other Backward Class
+TN-SYN-P-000000794,Ariyalur,18,Rural,30,Male,1,2,3,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,13887.0,Scheduled Caste
+TN-SYN-P-000000795,Dharmapuri,28,Rural,60,Female,2,1,4,Others,Illiterate,Secondary,Not in labour force,Not in labour force,0.0,14172.0,Other Backward Class
+TN-SYN-P-000000796,Virudhunagar,14,Urban,40,Male,2,2,3,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,17988.0,Scheduled Caste
+TN-SYN-P-000000797,Dharmapuri,05,Rural,16,Female,1,1,6,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,20897.0,Scheduled Caste
+TN-SYN-P-000000798,Thiruvallur,18,Urban,2,Male,2,5,7,Self-employed in non-agriculture,Literate,Primary,Employed,Employed,0.0,33616.0,Other Backward Class
+TN-SYN-P-000000799,Sivaganga,38,Urban,8,Male,1,6,3,Self-employed in non-agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,29382.0,Scheduled Caste
+TN-SYN-P-000000800,Madurai,10,Urban,56,Female,2,5,6,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,19503.0,Other Backward Class
+TN-SYN-P-000000801,Thiruvallur,26,Rural,13,Female,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,24913.0,Other Backward Class
+TN-SYN-P-000000802,Tenkasi,22,Rural,65,Male,2,1,3,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,15998.0,Other Backward Class
+TN-SYN-P-000000803,Thiruvallur,30,Rural,45,Female,2,5,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8078.0,Other Backward Class
+TN-SYN-P-000000804,Thoothukudi,13,Urban,8,Male,2,6,4,Self-employed in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,9000.0,10175.0,Scheduled Caste
+TN-SYN-P-000000805,Tenkasi,22,Urban,56,Male,2,1,2,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,5500.0,5996.0,Scheduled Caste
+TN-SYN-P-000000806,Dindigul,09,Rural,38,Female,1,1,5,Casual labour in non-agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,17459.0,Other Backward Class
+TN-SYN-P-000000807,Ranipet,18,Rural,63,Female,2,5,3,Regular wage/salary earning,Illiterate,Middle,Not in labour force,Not in labour force,0.0,11522.0,Other Backward Class
+TN-SYN-P-000000808,Dindigul,11,Urban,24,Male,2,6,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,18000.0,15495.0,Other Backward Class
+TN-SYN-P-000000809,Ranipet,16,Urban,21,Male,1,3,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,15715.0,Other Backward Class
+TN-SYN-P-000000810,Madurai,35,Rural,19,Female,2,1,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12610.0,Other Backward Class
+TN-SYN-P-000000811,Tenkasi,32,Rural,35,Male,2,4,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13215.0,Other Backward Class
+TN-SYN-P-000000812,Theni,31,Rural,27,Female,1,1,6,Casual labour in agriculture,Literate,Middle,Employed,Employed,0.0,9800.0,Other Backward Class
+TN-SYN-P-000000813,Thiruvarur,27,Rural,46,Female,1,3,4,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,8773.0,Other Backward Class
+TN-SYN-P-000000814,Pudukkottai,33,Urban,19,Female,2,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,12783.0,Other Backward Class
+TN-SYN-P-000000815,Tiruppur,33,Rural,14,Male,1,5,6,Casual labour in non-agriculture,Literate,Below Primary,Employed,Employed,0.0,10950.0,Other Backward Class
+TN-SYN-P-000000816,Tiruchirappalli,33,Urban,70,Male,3,1,1,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,0.0,3133.0,Scheduled Caste
+TN-SYN-P-000000817,Thiruvallur,07,Rural,47,Female,1,1,1,Self-employed in agriculture,Illiterate,Below Primary,Employed,Employed,0.0,10072.0,Other Backward Class
+TN-SYN-P-000000818,Thoothukudi,09,Rural,45,Female,1,1,4,Others,Literate,Middle,Employed,Employed,0.0,11676.0,Other Backward Class
+TN-SYN-P-000000819,Tenkasi,34,Rural,18,Female,1,4,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,15900.0,2700.0,Other Backward Class
+TN-SYN-P-000000820,Ramanathapuram,37,Rural,5,Female,1,1,4,Others,Illiterate,Higher Secondary,Employed,Employed,0.0,5467.0,Other Backward Class
+TN-SYN-P-000000821,Ariyalur,26,Urban,8,Male,1,5,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Unemployed,0.0,10917.0,Other Backward Class
+TN-SYN-P-000000822,Madurai,21,Rural,50,Female,2,1,4,Others,Literate,Diploma/Certificate,Employed,Employed,0.0,12425.0,Other Backward Class
+TN-SYN-P-000000823,Perambalur,14,Urban,30,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9625.0,Other Backward Class
+TN-SYN-P-000000824,Chennai,28,Rural,42,Male,1,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,18675.0,Other Backward Class
+TN-SYN-P-000000825,Tiruppur,36,Rural,65,Female,1,2,3,Regular wage/salary earning,Literate,Secondary,Not in labour force,Not in labour force,0.0,10320.0,Other Backward Class
+TN-SYN-P-000000826,Coimbatore,14,Urban,45,Male,2,4,5,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Employed,20000.0,31327.0,Scheduled Caste
+TN-SYN-P-000000827,Unknown,22,Urban,34,Male,2,5,6,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,8000.0,19387.0,Scheduled Caste
+TN-SYN-P-000000828,Kallakurichi,10,Urban,41,Female,1,7,6,Self-employed in non-agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,17175.0,Scheduled Caste
+TN-SYN-P-000000829,Theni,19,Rural,54,Female,2,1,6,Casual labour in non-agriculture,Literate,Primary,Employed,Employed,0.0,20933.0,Other Backward Class
+TN-SYN-P-000000830,Madurai,02,Rural,25,Male,1,5,3,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10463.0,Other Backward Class
+TN-SYN-P-000000831,Viluppuram,11,Urban,32,Male,1,8,8,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,12300.0,31327.0,Other Backward Class
+TN-SYN-P-000000832,Sivaganga,34,Rural,19,Female,1,5,6,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,20418.0,Other Backward Class
+TN-SYN-P-000000833,Chennai,25,Rural,21,Male,1,5,3,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,7973.0,Other Backward Class
+TN-SYN-P-000000834,Krishnagiri,36,Rural,34,Male,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,12239.0,Other Backward Class
+TN-SYN-P-000000835,Coimbatore,05,Urban,17,Female,1,8,7,Self-employed in non-agriculture,Literate,Below Primary,Unemployed,Unemployed,0.0,27625.0,Other Backward Class
+TN-SYN-P-000000836,Coimbatore,02,Rural,11,Female,1,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,19276.0,Other Backward Class
+TN-SYN-P-000000837,Thoothukudi,16,Urban,31,Female,2,5,5,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,17825.0,Other Backward Class
+TN-SYN-P-000000838,Salem,35,Rural,52,Female,1,1,1,Casual labour in agriculture,Illiterate,Middle,Employed,Employed,0.0,2383.0,Other Backward Class
+TN-SYN-P-000000839,Salem,28,Urban,2,Female,1,6,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,22703.0,Other Backward Class
+TN-SYN-P-000000840,Tenkasi,28,Urban,19,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,8128.0,Other Backward Class
+TN-SYN-P-000000841,Tiruchirappalli,15,Rural,43,Female,1,1,5,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,15954.0,Other Backward Class
+TN-SYN-P-000000842,Coimbatore,02,Rural,63,Male,1,2,2,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,15702.0,Other Backward Class
+TN-SYN-P-000000843,Vellore,35,Rural,43,Male,2,1,4,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,6941.0,Other Backward Class
+TN-SYN-P-000000844,Virudhunagar,33,Rural,14,Female,1,1,4,Regular wage/salary earning,Illiterate,Higher Secondary,Employed,Employed,0.0,13285.0,Other Backward Class
+TN-SYN-P-000000845,Chennai,24,Rural,38,Male,1,1,2,Others,Literate,Higher Secondary,Employed,Employed,0.0,5328.0,Other Backward Class
+TN-SYN-P-000000846,Thiruvarur,23,Urban,85,Female,3,3,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,9725.0,Scheduled Caste
+TN-SYN-P-000000847,Thanjavur,06,Urban,41,Female,2,5,3,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,9295.0,Other Backward Class
+TN-SYN-P-000000848,Sivaganga,35,Rural,70,Female,2,1,1,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,4792.0,Other Backward Class
+TN-SYN-P-000000849,Thanjavur,24,Urban,1,Female,1,5,4,Regular wage/salary earning,Literate,Not literate,Unemployed,Unemployed,0.0,19223.0,Other Backward Class
+TN-SYN-P-000000850,Tiruvannamalai,16,Rural,12,Male,1,1,6,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,16953.0,Other Backward Class
+TN-SYN-P-000000851,Thanjavur,18,Urban,52,Female,2,2,3,Self-employed in agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,12995.0,Scheduled Caste
+TN-SYN-P-000000852,Ariyalur,30,Urban,23,Male,2,5,3,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,14095.0,Other Backward Class
+TN-SYN-P-000000853,Thiruvarur,09,Rural,61,Male,1,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,8367.0,Other Backward Class
+TN-SYN-P-000000854,Kancheepuram,01,Urban,29,Female,2,2,2,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13397.0,Other Backward Class
+TN-SYN-P-000000855,Sivaganga,31,Urban,47,Female,2,5,2,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,9432.0,Other Backward Class
+TN-SYN-P-000000856,Tiruvannamalai,03,Urban,23,Female,1,5,4,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15000.0,14842.0,Scheduled Caste
+TN-SYN-P-000000857,Tiruvannamalai,02,Urban,40,Male,2,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,15690.0,18786.0,Other Backward Class
+TN-SYN-P-000000858,Ranipet,02,Rural,64,Female,3,2,4,Casual labour in non-agriculture,Illiterate,Middle,Not in labour force,Not in labour force,0.0,11500.0,Scheduled Caste
+TN-SYN-P-000000859,Krishnagiri,28,Rural,42,Female,1,1,3,Others,Literate,Below Primary,Employed,Employed,0.0,7772.0,Other Backward Class
+TN-SYN-P-000000860,Salem,31,Rural,19,Male,2,1,4,Casual labour in agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,7973.0,Other Backward Class
+TN-SYN-P-000000861,Cuddalore,03,Rural,55,Female,2,2,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,0.0,18135.0,Other Backward Class
+TN-SYN-P-000000862,Kanniyakumari,03,Urban,26,Female,2,3,2,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,6000.0,10023.0,Scheduled Caste
+TN-SYN-P-000000863,Dindigul,01,Urban,22,Female,1,1,3,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,11586.0,Scheduled Caste
+TN-SYN-P-000000864,Dindigul,02,Rural,22,Male,2,2,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,10500.0,50046.0,Other Backward Class
+TN-SYN-P-000000865,Krishnagiri,11,Rural,41,Male,2,1,4,Regular wage/salary earning,Literate,Below Primary,Employed,Employed,0.0,15467.0,Other Backward Class
+TN-SYN-P-000000866,Coimbatore,19,Rural,49,Female,1,5,4,Casual labour in non-agriculture,Illiterate,Diploma/Certificate,Employed,Employed,0.0,12850.0,Other Backward Class
+TN-SYN-P-000000867,Tiruchirappalli,38,Urban,55,Male,2,1,3,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,7325.0,Scheduled Caste
+TN-SYN-P-000000868,Tirupathur,36,Urban,71,Male,3,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,52480.0,10358.0,Scheduled Caste
+TN-SYN-P-000000869,Thanjavur,30,Rural,43,Female,1,5,5,Casual labour in agriculture,Illiterate,Middle,Employed,Employed,0.0,19173.0,Other Backward Class
+TN-SYN-P-000000870,Cuddalore,26,Rural,20,Female,1,1,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,1280.0,10639.0,Other Backward Class
+TN-SYN-P-000000871,Coimbatore,19,Rural,50,Female,3,1,3,Others,Literate,Middle,Not in labour force,Not in labour force,0.0,11800.0,Other Backward Class
+TN-SYN-P-000000872,Kanniyakumari,07,Rural,11,Female,1,5,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,8633.0,Other Backward Class
+TN-SYN-P-000000873,Kanniyakumari,37,Rural,41,Female,2,2,8,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,27600.0,Other Backward Class
+TN-SYN-P-000000874,Tiruppur,35,Rural,56,Female,2,5,3,Casual labour in agriculture,Illiterate,Primary,Not in labour force,Not in labour force,0.0,15160.0,Other Backward Class
+TN-SYN-P-000000875,Thiruvallur,22,Urban,51,Male,2,5,4,Self-employed in agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,18000.0,8307.0,Scheduled Caste
+TN-SYN-P-000000876,Ranipet,33,Rural,55,Male,2,1,3,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,10092.0,Other Backward Class
+TN-SYN-P-000000877,Kancheepuram,02,Rural,0,Female,1,2,4,Regular wage/salary earning,Illiterate,Primary,Not in labour force,Not in labour force,0.0,19075.0,Other Backward Class
+TN-SYN-P-000000878,Thiruvarur,14,Rural,10,Male,2,2,5,Others,Literate,Primary,Employed,Employed,0.0,15217.0,Other Backward Class
+TN-SYN-P-000000879,Tiruchirappalli,14,Rural,33,Male,1,3,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,0.0,9133.0,Other Backward Class
+TN-SYN-P-000000880,Salem,22,Urban,14,Male,2,6,5,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,28387.0,Scheduled Caste
+TN-SYN-P-000000881,Pudukkottai,01,Urban,26,Male,2,8,5,Self-employed in non-agriculture,Literate,Higher Secondary,Unemployed,Unemployed,48000.0,24388.0,Scheduled Caste
+TN-SYN-P-000000882,Ranipet,32,Urban,13,Female,2,8,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13413.0,Other Backward Class
+TN-SYN-P-000000883,Mayiladuthurai,01,Rural,73,Male,3,1,4,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,15722.0,Other Backward Class
+TN-SYN-P-000000884,Coimbatore,22,Rural,21,Female,1,1,2,Self-employed in non-agriculture,Illiterate,Not literate,Employed,Employed,0.0,7223.0,Other Backward Class
+TN-SYN-P-000000885,Namakkal,17,Rural,60,Female,2,2,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,11000.0,Other Backward Class
+TN-SYN-P-000000886,Chennai,16,Rural,20,Female,1,4,2,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,14253.0,Other Backward Class
+TN-SYN-P-000000887,Kanniyakumari,07,Urban,53,Male,2,4,3,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10250.0,Scheduled Caste
+TN-SYN-P-000000888,Kanniyakumari,16,Rural,11,Female,1,2,2,Regular wage/salary earning,Literate,Not literate,Employed,Employed,0.0,6767.0,Others
+TN-SYN-P-000000889,Cuddalore,30,Urban,37,Male,2,5,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,15500.0,10104.0,Scheduled Caste
+TN-SYN-P-000000890,Ariyalur,02,Urban,45,Male,2,1,3,Casual labour in non-agriculture,Literate,Middle,Employed,Employed,18411.0,6983.0,Scheduled Caste
+TN-SYN-P-000000891,Tenkasi,01,Rural,37,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,12578.0,Scheduled Caste
+TN-SYN-P-000000892,Perambalur,32,Urban,32,Male,1,5,7,Casual labour in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,17915.0,Other Backward Class
+TN-SYN-P-000000893,Namakkal,19,Rural,36,Female,1,1,3,Casual labour in non-agriculture,Literate,Not literate,Employed,Employed,0.0,11575.0,Scheduled Caste
+TN-SYN-P-000000894,Salem,38,Rural,40,Female,1,2,4,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16110.0,Other Backward Class
+TN-SYN-P-000000895,Pudukkottai,27,Urban,60,Male,2,5,3,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,15000.0,10024.0,Other Backward Class
+TN-SYN-P-000000896,Tiruvannamalai,06,Rural,85,Female,3,5,3,Others,Illiterate,Secondary,Employed,Employed,0.0,10285.0,Other Backward Class
+TN-SYN-P-000000897,Cuddalore,31,Rural,42,Male,1,2,2,Others,Illiterate,Not literate,Not in labour force,Not in labour force,0.0,14415.0,Other Backward Class
+TN-SYN-P-000000898,Thoothukudi,02,Rural,62,Female,3,2,1,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,6225.0,Other Backward Class
+TN-SYN-P-000000899,Thiruvarur,27,Urban,55,Female,3,2,2,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,6978.0,Other Backward Class
+TN-SYN-P-000000900,Tirunelveli,05,Urban,78,Male,3,1,6,Regular wage/salary earning,Literate,Middle,Employed,Employed,0.0,13221.0,Other Backward Class
+TN-SYN-P-000000901,Ramanathapuram,08,Rural,56,Female,2,1,4,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,9811.0,Other Backward Class
+TN-SYN-P-000000902,Tiruvannamalai,24,Rural,14,Male,1,1,3,Casual labour in agriculture,Literate,Below Primary,Employed,Employed,0.0,9383.0,Other Backward Class
+TN-SYN-P-000000903,Pudukkottai,31,Urban,76,Female,4,1,1,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,17000.0,5048.0,Other Backward Class
+TN-SYN-P-000000904,Sivaganga,24,Rural,32,Male,1,5,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9644.0,Scheduled Tribe
+TN-SYN-P-000000905,Coimbatore,31,Urban,28,Male,1,5,1,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,5991.0,Other Backward Class
+TN-SYN-P-000000906,Tenkasi,08,Urban,53,Female,2,2,2,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,9800.0,16120.0,Other Backward Class
+TN-SYN-P-000000907,Theni,02,Urban,28,Male,1,6,6,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,43725.0,Other Backward Class
+TN-SYN-P-000000908,Namakkal,34,Rural,31,Female,2,3,5,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,21355.0,Other Backward Class
+TN-SYN-P-000000909,Vellore,05,Rural,55,Male,1,2,4,Regular wage/salary earning,Literate,Primary,Employed,Employed,0.0,14623.0,Other Backward Class
+TN-SYN-P-000000910,Salem,36,Urban,24,Male,1,1,4,Self-employed in non-agriculture,Literate,Middle,Employed,Employed,12000.0,11005.0,Scheduled Caste
+TN-SYN-P-000000911,Ranipet,07,Urban,46,Male,2,5,3,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,12500.0,8243.0,Scheduled Caste
+TN-SYN-P-000000912,Chennai,22,Rural,55,Male,3,2,7,Casual labour in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,13667.0,Other Backward Class
+TN-SYN-P-000000913,Dindigul,04,Urban,21,Male,2,5,5,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,18090.0,Other Backward Class
+TN-SYN-P-000000914,Tenkasi,01,Urban,30,Male,2,1,2,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,8500.0,14200.0,Other Backward Class
+TN-SYN-P-000000915,Tirupathur,38,Urban,51,Male,3,5,3,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,24000.0,14017.0,Scheduled Caste
+TN-SYN-P-000000916,Coimbatore,08,Rural,51,Female,2,1,4,Regular wage/salary earning,Illiterate,Middle,Employed,Employed,0.0,10920.0,Scheduled Caste
+TN-SYN-P-000000917,Cuddalore,01,Rural,15,Female,1,5,2,Others,Literate,Diploma/Certificate,Employed,Employed,0.0,9417.0,Other Backward Class
+TN-SYN-P-000000918,Tiruvannamalai,21,Urban,40,Male,3,1,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12335.0,Other Backward Class
+TN-SYN-P-000000919,Virudhunagar,11,Urban,71,Female,2,3,4,Self-employed in agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,24691.0,Other Backward Class
+TN-SYN-P-000000920,Kallakurichi,02,Rural,72,Female,3,1,1,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,5143.0,Other Backward Class
+TN-SYN-P-000000921,Karur,08,Urban,15,Female,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,9703.0,Other Backward Class
+TN-SYN-P-000000922,Ranipet,30,Urban,78,Female,3,5,3,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,4133.0,Other Backward Class
+TN-SYN-P-000000923,Dindigul,01,Urban,70,Female,3,5,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,20000.0,12365.0,Other Backward Class
+TN-SYN-P-000000924,Chennai,03,Urban,59,Female,2,1,3,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,9123.0,Other Backward Class
+TN-SYN-P-000000925,Erode,35,Rural,0,Male,1,7,3,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,5625.0,Other Backward Class
+TN-SYN-P-000000926,Tiruchirappalli,31,Urban,32,Female,2,5,6,Regular wage/salary earning,Literate,Below Primary,Not in labour force,Not in labour force,0.0,20850.0,Other Backward Class
+TN-SYN-P-000000927,Perambalur,29,Rural,51,Female,2,2,3,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,9147.0,Other Backward Class
+TN-SYN-P-000000928,Chennai,19,Rural,19,Female,1,2,6,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,35417.0,Other Backward Class
+TN-SYN-P-000000929,Kanniyakumari,38,Rural,42,Male,1,1,3,Self-employed in agriculture,Literate,Diploma/Certificate,Employed,Employed,3000.0,11432.0,Scheduled Caste
+TN-SYN-P-000000930,Theni,29,Rural,45,Female,1,1,5,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,9037.0,Other Backward Class
+TN-SYN-P-000000931,Tiruchirappalli,28,Rural,37,Male,1,1,4,Regular wage/salary earning,Literate,Middle,Employed,Employed,4000.0,18203.0,Other Backward Class
+TN-SYN-P-000000932,Dharmapuri,07,Rural,15,Male,1,1,3,Self-employed in agriculture,Literate,Higher Secondary,Employed,Employed,0.0,13022.0,Others
+TN-SYN-P-000000933,Chennai,07,Urban,24,Male,2,5,4,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,81300.0,34633.0,Scheduled Caste
+TN-SYN-P-000000934,Namakkal,06,Urban,15,Male,1,6,3,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,9642.0,Other Backward Class
+TN-SYN-P-000000935,Sivaganga,07,Rural,26,Female,1,2,3,Regular wage/salary earning,Illiterate,Primary,Employed,Employed,0.0,5328.0,Other Backward Class
+TN-SYN-P-000000936,Thiruvarur,29,Urban,15,Female,1,7,11,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,29517.0,Scheduled Caste
+TN-SYN-P-000000937,Namakkal,02,Urban,10,Female,2,2,2,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,21627.0,Other Backward Class
+TN-SYN-P-000000938,Namakkal,03,Rural,39,Female,2,1,4,Regular wage/salary earning,Literate,Higher Secondary,Employed,Employed,0.0,17468.0,Other Backward Class
+TN-SYN-P-000000939,Theni,02,Urban,49,Male,2,4,4,Self-employed in agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,10641.0,Other Backward Class
+TN-SYN-P-000000940,Thiruvarur,31,Rural,21,Female,2,3,4,Casual labour in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,13862.0,Others
+TN-SYN-P-000000941,Thiruvallur,25,Rural,17,Female,1,5,4,Others,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,15453.0,Other Backward Class
+TN-SYN-P-000000942,Thiruvarur,02,Urban,61,Male,3,5,3,Self-employed in agriculture,Literate,Primary,Employed,Employed,0.0,38657.0,Other Backward Class
+TN-SYN-P-000000943,Thoothukudi,31,Urban,7,Male,1,5,9,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,22507.0,Other Backward Class
+TN-SYN-P-000000944,Thanjavur,03,Rural,67,Female,3,2,4,Self-employed in agriculture,Literate,Below Primary,Employed,Employed,0.0,19633.0,Other Backward Class
+TN-SYN-P-000000945,Salem,38,Urban,48,Female,3,2,5,Self-employed in agriculture,Literate,Middle,Employed,Employed,0.0,12654.0,Other Backward Class
+TN-SYN-P-000000946,Salem,14,Rural,30,Male,1,2,5,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,24388.0,Scheduled Caste
+TN-SYN-P-000000947,Ranipet,02,Urban,64,Male,2,4,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,12000.0,19269.0,Scheduled Caste
+TN-SYN-P-000000948,Sivaganga,26,Rural,55,Female,1,6,4,Casual labour in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,13658.0,Other Backward Class
+TN-SYN-P-000000949,Dharmapuri,19,Urban,52,Female,3,3,4,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,0.0,14925.0,Scheduled Caste
+TN-SYN-P-000000950,Kancheepuram,23,Rural,10,Male,1,3,4,Regular wage/salary earning,Illiterate,Diploma/Certificate,Employed,Employed,0.0,24388.0,Other Backward Class
+TN-SYN-P-000000951,Virudhunagar,30,Rural,19,Female,1,1,2,Regular wage/salary earning,Illiterate,Higher Secondary,Employed,Employed,0.0,14300.0,Other Backward Class
+TN-SYN-P-000000952,Namakkal,22,Rural,55,Female,2,5,4,Others,Illiterate,Primary,Not in labour force,Not in labour force,0.0,10842.0,Other Backward Class
+TN-SYN-P-000000953,Thiruvarur,36,Rural,64,Female,2,1,3,Regular wage/salary earning,Illiterate,Below Primary,Employed,Employed,0.0,4660.0,Other Backward Class
+TN-SYN-P-000000954,Dharmapuri,26,Urban,11,Male,1,5,6,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,11917.0,Scheduled Caste
+TN-SYN-P-000000955,Pudukkottai,13,Rural,52,Female,1,1,1,Others,Literate,Middle,Employed,Employed,0.0,6092.0,Other Backward Class
+TN-SYN-P-000000956,Ramanathapuram,02,Urban,57,Female,2,5,5,Self-employed in non-agriculture,Illiterate,Secondary,Not in labour force,Not in labour force,15000.0,27360.0,Other Backward Class
+TN-SYN-P-000000957,Madurai,31,Urban,25,Male,2,1,3,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,3565.0,Other Backward Class
+TN-SYN-P-000000958,Kallakurichi,01,Rural,24,Female,1,5,3,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,16008.0,Other Backward Class
+TN-SYN-P-000000959,Nagapattinam,24,Urban,28,Female,2,5,6,Casual labour in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,17500.0,9133.0,Scheduled Caste
+TN-SYN-P-000000960,Coimbatore,07,Urban,26,Female,2,5,3,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,38000.0,17793.0,Scheduled Caste
+TN-SYN-P-000000961,Theni,15,Rural,8,Female,1,4,3,Self-employed in non-agriculture,Illiterate,Higher Secondary,Employed,Employed,0.0,7375.0,Other Backward Class
+TN-SYN-P-000000962,Tenkasi,02,Urban,66,Male,3,2,6,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,19800.0,9325.0,Scheduled Caste
+TN-SYN-P-000000963,Mayiladuthurai,17,Urban,55,Male,2,3,5,Self-employed in non-agriculture,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,9975.0,Scheduled Caste
+TN-SYN-P-000000964,Ariyalur,11,Rural,55,Female,1,5,3,Self-employed in non-agriculture,Literate,Not literate,Employed,Employed,0.0,7167.0,Other Backward Class
+TN-SYN-P-000000965,Dindigul,24,Urban,14,Female,2,5,6,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,16217.0,Other Backward Class
+TN-SYN-P-000000966,Ramanathapuram,21,Urban,27,Male,1,2,3,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,10983.0,Other Backward Class
+TN-SYN-P-000000967,Theni,18,Rural,22,Male,1,1,5,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,18617.0,Other Backward Class
+TN-SYN-P-000000968,Thiruvallur,02,Urban,62,Male,3,1,4,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Employed,0.0,17066.0,Other Backward Class
+TN-SYN-P-000000969,Tiruchirappalli,16,Urban,53,Male,3,1,3,Regular wage/salary earning,Literate,Secondary,Employed,Employed,12000.0,5610.0,Other Backward Class
+TN-SYN-P-000000970,Salem,12,Urban,7,Male,2,5,2,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,11666.0,8543.0,Others
+TN-SYN-P-000000971,Dindigul,05,Urban,36,Female,2,7,4,Self-employed in agriculture,Literate,Not literate,Unemployed,Unemployed,0.0,14988.0,Scheduled Caste
+TN-SYN-P-000000972,Thoothukudi,14,Urban,74,Female,2,1,4,Regular wage/salary earning,Literate,Middle,Not in labour force,Not in labour force,0.0,21017.0,Other Backward Class
+TN-SYN-P-000000973,Thiruvallur,12,Rural,73,Male,3,1,1,Self-employed in agriculture,Literate,Not literate,Employed,Employed,0.0,5528.0,Other Backward Class
+TN-SYN-P-000000974,Chennai,20,Urban,25,Male,2,6,4,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Unemployed,8062.0,11800.0,Other Backward Class
+TN-SYN-P-000000975,Thiruvarur,34,Rural,25,Male,1,5,7,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,12480.0,Other Backward Class
+TN-SYN-P-000000976,Chennai,30,Urban,54,Male,2,2,6,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,14830.0,21355.0,Scheduled Caste
+TN-SYN-P-000000977,Sivaganga,16,Rural,27,Male,1,1,3,Regular wage/salary earning,Illiterate,Not literate,Employed,Employed,0.0,6113.0,Scheduled Caste
+TN-SYN-P-000000978,Chennai,24,Urban,7,Female,1,2,6,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,14418.0,Other Backward Class
+TN-SYN-P-000000979,Namakkal,01,Urban,72,Female,3,2,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Not in labour force,15000.0,16757.0,Scheduled Caste
+TN-SYN-P-000000980,Thanjavur,16,Urban,12,Female,1,5,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7442.0,Other Backward Class
+TN-SYN-P-000000981,Madurai,20,Rural,22,Female,1,2,4,Casual labour in agriculture,Literate,Below Primary,Employed,Employed,0.0,11564.0,Other Backward Class
+TN-SYN-P-000000982,Virudhunagar,32,Rural,40,Female,1,1,6,Casual labour in non-agriculture,Illiterate,Middle,Employed,Employed,0.0,7887.0,Other Backward Class
+TN-SYN-P-000000983,Thiruvallur,21,Urban,4,Female,1,7,3,Self-employed in agriculture,Literate,Secondary,Unemployed,Unemployed,0.0,15200.0,Other Backward Class
+TN-SYN-P-000000984,Thiruvarur,36,Rural,15,Male,2,1,2,Self-employed in non-agriculture,Illiterate,Primary,Employed,Employed,0.0,11348.0,Other Backward Class
+TN-SYN-P-000000985,Tenkasi,20,Urban,53,Male,2,5,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,16000.0,22710.0,Other Backward Class
+TN-SYN-P-000000986,Thanjavur,27,Urban,53,Male,3,5,3,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,12500.0,9083.0,Other Backward Class
+TN-SYN-P-000000987,Dharmapuri,08,Urban,30,Male,1,5,5,Self-employed in non-agriculture,Literate,Not literate,Unemployed,Unemployed,0.0,13393.0,Scheduled Caste
+TN-SYN-P-000000988,Madurai,26,Urban,1,Male,1,5,7,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Employed,0.0,14000.0,Scheduled Caste
+TN-SYN-P-000000989,Theni,26,Urban,9,Male,1,6,5,Self-employed in non-agriculture,Literate,Below Primary,Employed,Employed,24500.0,16368.0,Other Backward Class
+TN-SYN-P-000000990,Perambalur,35,Urban,24,Female,2,5,5,Casual labour in agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,17242.0,Other Backward Class
+TN-SYN-P-000000991,Tenkasi,25,Urban,30,Male,2,5,6,Self-employed in agriculture,Literate,Not literate,Unemployed,Unemployed,0.0,9040.0,Scheduled Caste
+TN-SYN-P-000000992,Krishnagiri,18,Rural,60,Female,2,2,3,Casual labour in agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,7989.0,Other Backward Class
+TN-SYN-P-000000993,Dharmapuri,30,Rural,6,Male,1,5,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,0.0,19050.0,Other Backward Class
+TN-SYN-P-000000994,Kancheepuram,20,Rural,31,Female,2,4,5,Casual labour in non-agriculture,Literate,Below Primary,Not in labour force,Not in labour force,0.0,15715.0,Other Backward Class
+TN-SYN-P-000000995,Ariyalur,02,Urban,14,Male,2,1,4,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,16451.0,Other Backward Class
+TN-SYN-P-000000996,Cuddalore,01,Urban,62,Female,2,3,2,Regular wage/salary earning,Literate,Not literate,Not in labour force,Not in labour force,0.0,9078.0,Other Backward Class
+TN-SYN-P-000000997,Thiruvarur,28,Urban,69,Female,3,2,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,16900.0,Scheduled Caste
+TN-SYN-P-000000998,Theni,26,Urban,48,Female,2,2,3,Others,Literate,Primary,Not in labour force,Not in labour force,0.0,10483.0,Other Backward Class
+TN-SYN-P-000000999,Krishnagiri,02,Rural,19,Male,2,1,4,Self-employed in non-agriculture,Literate,Secondary,Employed,Employed,0.0,13073.0,Other Backward Class
+TN-SYN-P-000001000,Chennai,31,Urban,45,Male,3,5,5,Self-employed in non-agriculture,Literate,Secondary,Not in labour force,Not in labour force,69850.0,20858.0,Scheduled Caste

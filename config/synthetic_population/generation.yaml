@@ -1,0 +1,11 @@
+version: phase3_dynamic_sampling_v1
+supported_population_sizes: [1000, 5000, 10000, 12000, 50000, 100000]
+default_batch_size: 50000
+max_condition_attempt_multiplier: 50
+supported_modes: [REPRESENTATIVE, CONDITIONAL, SUBPOPULATION]
+demo:
+  representative_size: 1000
+  conditional_size: 1000
+  conditional_model_generator: bootstrap
+  conditions:
+    urban_rural: Rural

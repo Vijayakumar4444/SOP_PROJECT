@@ -1,0 +1,80 @@
+{
+  "module": "phase3_acceptance_demonstration",
+  "created_at": "2026-09-11T16:33:43.358707+00:00",
+  "reference_template_rows": 12000,
+  "selected_variable_count": 16,
+  "target_population_size_per_successful_model": 12000,
+  "generated_populations": [
+    {
+      "generator_type": "bootstrap",
+      "model_id": "TN_BOOTSTRAP_1D08E0184C",
+      "status": "TRAINED",
+      "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+      "rows": 12000,
+      "generation_duration_seconds": 0.0976,
+      "hard_constraint_violations": 0,
+      "soft_anomalies": 0,
+      "source_output_path": "data/synthetic/acceptance/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE"
+    },
+    {
+      "generator_type": "ctgan",
+      "model_id": "TN_CTGAN_BLOCKED_DEPENDENCIES",
+      "status": "BLOCKED",
+      "blocking_reason": "ctgan training is blocked because optional dependencies are missing: sdv, pandas."
+    },
+    {
+      "generator_type": "gaussian_copula",
+      "model_id": "TN_GAUSSIAN_COPULA_CB9DD0CE87",
+      "status": "TRAINED",
+      "population_id": "SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
+      "rows": 12000,
+      "generation_duration_seconds": 0.8295,
+      "hard_constraint_violations": 0,
+      "soft_anomalies": 813,
+      "source_output_path": "data/synthetic/acceptance/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE"
+    },
+    {
+      "generator_type": "tvae",
+      "model_id": "TN_TVAE_BLOCKED_DEPENDENCIES",
+      "status": "BLOCKED",
+      "blocking_reason": "tvae training is blocked because optional dependencies are missing: sdv, pandas."
+    }
+  ],
+  "persisted_populations": [
+    {
+      "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+      "experiment_id": "SYNEXP-D824678805",
+      "rows": 12000,
+      "artifact_dir": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+      "population_csv_path": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv",
+      "metadata_path": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/metadata.json",
+      "generation_report_json_path": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/generation_report.json",
+      "generation_report_md_path": "reports/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE.md",
+      "warnings": [
+        "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
+        "Synthetic population has not yet passed Phase 4 population validation.",
+        "Bootstrap output is a resampled baseline and may have high exact reference duplicate rates.",
+        "Exact reference duplicate diagnostic found 100.0% feature-level matches."
+      ],
+      "exact_reference_duplicate_rate": 100.0
+    },
+    {
+      "population_id": "SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
+      "experiment_id": "SYNEXP-0775E8D027",
+      "rows": 12000,
+      "artifact_dir": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
+      "population_csv_path": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/population.csv",
+      "metadata_path": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/metadata.json",
+      "generation_report_json_path": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/generation_report.json",
+      "generation_report_md_path": "reports/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE.md",
+      "warnings": [
+        "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
+        "Synthetic population has not yet passed Phase 4 population validation."
+      ],
+      "exact_reference_duplicate_rate": 0.0
+    }
+  ],
+  "warning": "Phase 3 does not select a best model. Candidate populations must be evaluated in Phase 4 population validation before policy simulation use."
+}

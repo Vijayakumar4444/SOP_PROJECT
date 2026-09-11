@@ -1,0 +1,51 @@
+{
+  "experiment_id": "SYNEXP-D824678805",
+  "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+  "generator": "bootstrap",
+  "model_id": "TN_BOOTSTRAP_1D08E0184C",
+  "reference_template_version": "0.3.0-modular",
+  "phase2_requirements_version": "synthetic_population_requirements_current",
+  "training_config": {
+    "profile": "development",
+    "generator": "bootstrap",
+    "version": "bootstrap_baseline_v1",
+    "seed": 42,
+    "weight_column": "calibrated_reference_weight_gender_ur",
+    "stratification_columns": [
+      "district",
+      "urban_rural",
+      "gender"
+    ],
+    "allow_duplicate_reference_rows": true,
+    "label": "RESAMPLED_BASELINE"
+  },
+  "generation_config": {
+    "size": 12000,
+    "seed": 142,
+    "mode": "REPRESENTATIVE",
+    "conditions": {},
+    "batch_size": 12000,
+    "batch_count": 1
+  },
+  "variables": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "age",
+    "gender",
+    "marital_status",
+    "relationship_to_head",
+    "household_size",
+    "household_type",
+    "literacy_status",
+    "education_level",
+    "labour_force_status",
+    "employment_status",
+    "individual_income",
+    "consumption_expenditure",
+    "social_group"
+  ],
+  "constraints_version": "phase3_constraints_v1",
+  "created_at": "2026-09-11T16:33:41.135864+00:00",
+  "status": "COMPLETED"
+}
