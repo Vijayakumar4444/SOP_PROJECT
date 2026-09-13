@@ -1,0 +1,14 @@
+policy_id,reporting_period,geographic_level,geographic_code,geographic_name,metric_name,metric_value,metric_unit,source_id
+tn_oap_2023,FY 2023-24,Statewide,33,Tamil Nadu,approved_beneficiaries,3580000,Persons,SRC_OAP_001
+tn_oap_2023,FY 2023-24,Statewide,33,Tamil Nadu,total_expenditure,42960000000,INR,SRC_OAP_002
+tn_oap_2023,FY 2023-24,Statewide,33,Tamil Nadu,benefit_amount,12000,INR/Year,SRC_OAP_001
+tn_oap_2023,FY 2023-24,District,3301,Chennai,approved_beneficiaries,190000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3302,Coimbatore,approved_beneficiaries,150000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3303,Madurai,approved_beneficiaries,140000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3304,Tiruchirappalli,approved_beneficiaries,130000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3305,Salem,approved_beneficiaries,160000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3306,Tirunelveli,approved_beneficiaries,120000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3307,Erode,approved_beneficiaries,125000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3308,Vellore,approved_beneficiaries,110000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3309,Thanjavur,approved_beneficiaries,115000,Persons,SRC_OAP_003
+tn_oap_2023,FY 2023-24,District,3310,Dindigul,approved_beneficiaries,110000,Persons,SRC_OAP_003

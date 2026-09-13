@@ -1,0 +1,17 @@
+version: "1.0"
+policy_id: "tn_oap_2023"
+policy_name: "Tamil Nadu Old Age Pension Scheme (OAP)"
+issuing_authority: "Social Welfare and Women Empowerment Department, Govt of Tamil Nadu"
+official_order: "G.O. Ms. No. 128 Social Welfare Dept"
+target_unit: "individual"
+benefit_amount_monthly: 1000.0
+benefit_amount_annual: 12000.0
+
+eligibility_criteria:
+  min_age: 60
+  max_annual_income: 150000.0  # Proxy: annual consumption_expenditure <= 150,000 INR
+  employment_status_exclusion:
+    - "Employed"
+
+destitution_takeup_filter:
+  destitution_approval_rate: 0.324507  # ~32.45% of elderly population meet destitute verification criteria

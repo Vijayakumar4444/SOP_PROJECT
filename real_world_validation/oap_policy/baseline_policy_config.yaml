@@ -1,0 +1,24 @@
+version: "1.0"
+policy_id: "tn_oap_baseline"
+policy_name: "Tamil Nadu Old Age Pension Scheme (OAP) - Baseline"
+description: "Experiment A: Untuned baseline eligibility"
+
+target_unit: "individual"
+benefit_calculation:
+  type: "flat"
+  monthly_amount: 1000.0
+  annual_amount: 12000.0
+
+eligibility_rules:
+  - rule_id: "age_rule"
+    variable: "age"
+    operator: ">="
+    value: 60
+  - rule_id: "income_proxy_rule"
+    variable: "consumption_expenditure"
+    operator: "<="
+    value: 150000.0
+
+implementation_parameters:
+  takeup_rate: 1.0
+  approval_probability: 1.0

@@ -1,0 +1,4 @@
+rule_id,official_clause,interpretation,project_variable,transformation_used,source_id,mapping_confidence
+R_OAP_01,Age 60+,Citizen must be at least 60 years old,age,age >= 60,SRC_OAP_001,HIGH
+R_OAP_02,Destitute / Income Cap,Annual income below INR 1.5 Lakhs,consumption_expenditure,consumption_expenditure <= 150000,SRC_OAP_001,HIGH_PROXY
+R_OAP_03,Unemployed / Non-earning,Exclusion of regularly employed persons,employment_status,employment_status != 'Employed',SRC_OAP_001,HIGH

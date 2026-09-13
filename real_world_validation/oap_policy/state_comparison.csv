@@ -1,0 +1,3 @@
+metric_name,geographic_name,actual_value,simulated_value,signed_error,absolute_error,percentage_error,ci_lower_95,ci_upper_95,inside_95_ci
+approved_beneficiaries,Tamil Nadu,3580000.0,3580118.070402112,118.07,118.07,0.0,3222106.26,3938129.88,YES
+total_expenditure,Tamil Nadu,42960000000.0,42961416844.82534,1416844.83,1416844.83,0.0,38665275160.34,47257558529.31,YES

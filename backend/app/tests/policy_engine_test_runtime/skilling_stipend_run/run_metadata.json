@@ -1,9 +1,9 @@
 {
-  "run_id": "POLICY-RUN-889AD278F1",
+  "run_id": "POLICY-RUN-86EEE394BD",
   "policy_id": "tn_youth_skilling_stipend_003",
   "policy_version": "1.0",
-  "execution_timestamp": "2026-09-13T19:01:54.968206+00:00",
-  "execution_duration_seconds": 0.591,
+  "execution_timestamp": "2026-09-13T19:31:28.769982+00:00",
+  "execution_duration_seconds": 0.376,
   "input_population_path": "C:\\Users\\Vijayakumar\\OneDrive\\Desktop\\SOP_PROJECT4\\artifacts\\calibrated_populations\\CAL-RAKING-75B3B80E36\\population_calibrated.csv",
   "input_population_checksum": "C77F78E08514",
   "policy_file_checksum": "B505E61106C4",

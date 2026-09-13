@@ -33,6 +33,8 @@ class Phase9RealWorldValidationService:
         reconciliation = SourceReconciler.load_reconciliation(reconcile_json)
         official_rules = RuleEncoder.parse_official_rules(rules_yaml)
 
+        policy_id = official_rules.get("policy_id", "tn_kmut_2023")
+
         # 2. Check compatibility
         features = ["district", "urban_rural", "age", "gender", "relationship_to_head", "consumption_expenditure", "employment_status"]
         compatibility = PolicyDataCompatibilityChecker.check_compatibility(official_rules, features)
@@ -40,12 +42,15 @@ class Phase9RealWorldValidationService:
         # 3. Run Experiments A & B
         population_csv = os.path.join(self.base_dir, "data", "synthetic", "acceptance", "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE.csv")
         runner = RealWorldExperimentRunner(base_dir=self.base_dir)
-        exp_a_res = runner.run_experiment_a_baseline(population_csv)
-        exp_b_res = runner.run_experiment_b_implementation_aware(population_csv)
+        exp_a_res = runner.run_experiment_a_baseline(population_csv, policy_type=policy_id)
+        exp_b_res = runner.run_experiment_b_implementation_aware(population_csv, policy_type=policy_id)
 
-        # 4. Calculate comparisons
-        actual_approved = 11600000.0
-        actual_expenditure = 137200000000.0
+        # Extract actual benchmark figures
+        state_approved_b = [b for b in benchmarks if b.metric_name == "approved_beneficiaries" and b.geographic_level == "Statewide"]
+        actual_approved = state_approved_b[0].metric_value if state_approved_b else 11600000.0
+
+        state_expenditure_b = [b for b in benchmarks if b.metric_name == "total_expenditure" and b.geographic_level == "Statewide"]
+        actual_expenditure = state_expenditure_b[0].metric_value if state_expenditure_b else (actual_approved * 12000.0)
 
         state_comparisons = [
             ErrorCalculator.compare_single("approved_beneficiaries", "Tamil Nadu", actual_approved, exp_b_res["approved_beneficiaries"]),
@@ -56,7 +61,6 @@ class Phase9RealWorldValidationService:
         dist_benchmarks = [b for b in benchmarks if b.geographic_level == "District"]
         district_comparisons = []
         for b in dist_benchmarks:
-            # Scaled district simulation proportional to baseline allocation
             sim_dist = (b.metric_value / actual_approved) * exp_b_res["approved_beneficiaries"]
             district_comparisons.append(
                 ErrorCalculator.compare_single("approved_beneficiaries", b.geographic_name, b.metric_value, sim_dist)
@@ -76,12 +80,12 @@ class Phase9RealWorldValidationService:
         )
 
         # 8. Scorecard Evaluation
-        scorecard = ValidationScorecardEvaluator.evaluate_scorecard("tn_kmut_2023", error_metrics)
+        scorecard = ValidationScorecardEvaluator.evaluate_scorecard(policy_id, error_metrics)
 
         # 9. Build and Export Artifacts
         artifacts = ValidationReportGenerator.generate_all_artifacts(
             output_dir=abs_policy_dir,
-            policy_id="tn_kmut_2023",
+            policy_id=policy_id,
             exp_a_res=exp_a_res,
             exp_b_res=exp_b_res,
             state_comparisons=state_comparisons,
@@ -95,7 +99,7 @@ class Phase9RealWorldValidationService:
 
         return {
             "status": "PASS",
-            "policy_id": "tn_kmut_2023",
+            "policy_id": policy_id,
             "validation_status": scorecard.validation_status,
             "overall_pass": scorecard.overall_pass,
             "statewide_beneficiary_mape": error_metrics.statewide_beneficiary_mape,

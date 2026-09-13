@@ -1,0 +1,22 @@
+{
+  "policy_id": "tn_oap_2023",
+  "policy_name": "Tamil Nadu Old Age Pension Scheme (OAP)",
+  "reconciliation_records": [
+    {
+      "metric": "approved_beneficiaries",
+      "provisional_value": 3580000,
+      "final_value": 3580000,
+      "sources": ["SRC_OAP_001"],
+      "reconciliation_reason": "Policy Note 2023-24 confirms 35.80 Lakh active OAP recipients.",
+      "selected_benchmark": 3580000
+    },
+    {
+      "metric": "annual_expenditure",
+      "provisional_value": 42960000000.0,
+      "final_value": 42960000000.0,
+      "sources": ["SRC_OAP_002"],
+      "reconciliation_reason": "Budget estimates FY 23-24 allocated INR 4,296 Crore for social security pensions.",
+      "selected_benchmark": 42960000000.0
+    }
+  ]
+}

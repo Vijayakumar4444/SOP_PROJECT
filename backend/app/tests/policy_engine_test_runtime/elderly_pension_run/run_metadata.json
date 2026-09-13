@@ -1,9 +1,9 @@
 {
-  "run_id": "POLICY-RUN-045B37E77D",
+  "run_id": "POLICY-RUN-8D4E219D72",
   "policy_id": "tn_elderly_pension_001",
   "policy_version": "1.0",
-  "execution_timestamp": "2026-09-13T19:01:55.837420+00:00",
-  "execution_duration_seconds": 0.5165,
+  "execution_timestamp": "2026-09-13T19:31:29.306432+00:00",
+  "execution_duration_seconds": 0.2993,
   "input_population_path": "C:\\Users\\Vijayakumar\\OneDrive\\Desktop\\SOP_PROJECT4\\artifacts\\calibrated_populations\\CAL-RAKING-75B3B80E36\\population_calibrated.csv",
   "input_population_checksum": "C77F78E08514",
   "policy_file_checksum": "F9AA908CCB82",

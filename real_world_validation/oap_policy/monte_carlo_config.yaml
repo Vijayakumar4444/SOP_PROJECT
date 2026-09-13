@@ -1,0 +1,18 @@
+version: "1.0"
+experiment_id: "tn_oap_mc_validation"
+title: "OAP Scheme Real-World Validation Monte Carlo Experiment"
+description: "Experiment C: Monte Carlo uncertainty propagation across OAP parameters."
+
+simulation:
+  n_iterations: 30
+  seed: 101
+
+uncertainty_parameters:
+  income_proxy_threshold:
+    distribution: "uniform"
+    min: 120000.0
+    max: 180000.0
+  takeup_rate:
+    distribution: "normal"
+    mean: 0.3245
+    std_dev: 0.015
