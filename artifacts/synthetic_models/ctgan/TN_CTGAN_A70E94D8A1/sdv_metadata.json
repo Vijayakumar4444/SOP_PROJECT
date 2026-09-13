@@ -1,0 +1,53 @@
+{
+  "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+  "columns": {
+    "district": {
+      "sdtype": "categorical"
+    },
+    "district_code": {
+      "sdtype": "categorical"
+    },
+    "urban_rural": {
+      "sdtype": "categorical"
+    },
+    "age": {
+      "sdtype": "numerical"
+    },
+    "gender": {
+      "sdtype": "categorical"
+    },
+    "marital_status": {
+      "sdtype": "categorical"
+    },
+    "relationship_to_head": {
+      "sdtype": "categorical"
+    },
+    "household_size": {
+      "sdtype": "numerical"
+    },
+    "household_type": {
+      "sdtype": "categorical"
+    },
+    "literacy_status": {
+      "sdtype": "categorical"
+    },
+    "education_level": {
+      "sdtype": "categorical"
+    },
+    "labour_force_status": {
+      "sdtype": "categorical"
+    },
+    "employment_status": {
+      "sdtype": "categorical"
+    },
+    "individual_income": {
+      "sdtype": "numerical"
+    },
+    "consumption_expenditure": {
+      "sdtype": "numerical"
+    },
+    "social_group": {
+      "sdtype": "categorical"
+    }
+  }
+}

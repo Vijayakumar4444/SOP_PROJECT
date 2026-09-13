@@ -1,0 +1,2826 @@
+{
+  "validation_version": "phase4_population_validation_v1",
+  "created_at": "2026-09-13T05:31:50.213815+00:00",
+  "population_id": "SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+  "model_id": "TN_CTGAN_A70E94D8A1",
+  "generator_type": "ctgan",
+  "generator_version": "ctgan_sdv_v1",
+  "reference": {
+    "primary_reference_artifact": "data/synthetic/training/reference_training_v1.csv",
+    "holdout_reference_artifact": "data/synthetic/training/reference_holdout_v1.csv",
+    "reference_version": "0.3.0-modular",
+    "training_dataset_version": "phase3_training_v1"
+  },
+  "population_size": 12000,
+  "reference_size": 12000,
+  "alignment": {
+    "validated_variables": [
+      {
+        "variable": "age",
+        "variable_type": "integer",
+        "validation_family": "numerical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "consumption_expenditure",
+        "variable_type": "continuous",
+        "validation_family": "numerical",
+        "level": "HOUSEHOLD",
+        "allowed_values": []
+      },
+      {
+        "variable": "district",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "district_code",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "education_level",
+        "variable_type": "ordinal",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "employment_status",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "gender",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": [
+          "Male",
+          "Female",
+          "Other",
+          "Not stated"
+        ]
+      },
+      {
+        "variable": "household_size",
+        "variable_type": "integer",
+        "validation_family": "numerical",
+        "level": "HOUSEHOLD",
+        "allowed_values": []
+      },
+      {
+        "variable": "household_type",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "individual_income",
+        "variable_type": "continuous",
+        "validation_family": "numerical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "labour_force_status",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "literacy_status",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": [
+          "Literate",
+          "Illiterate",
+          "Not stated"
+        ]
+      },
+      {
+        "variable": "marital_status",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "relationship_to_head",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "social_group",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": []
+      },
+      {
+        "variable": "urban_rural",
+        "variable_type": "categorical",
+        "validation_family": "categorical",
+        "level": "PERSON",
+        "allowed_values": [
+          "Urban",
+          "Rural"
+        ]
+      }
+    ],
+    "skipped_variables": [
+      {
+        "variable": "calibrated_reference_weight_gender_ur",
+        "status": "SKIPPED_WEIGHT"
+      },
+      {
+        "variable": "normalized_reference_weight",
+        "status": "SKIPPED_WEIGHT"
+      },
+      {
+        "variable": "survey_weight",
+        "status": "SKIPPED_WEIGHT"
+      },
+      {
+        "variable": "synthetic_person_id",
+        "status": "SKIPPED_IDENTIFIER"
+      },
+      {
+        "variable": "training_split",
+        "status": "SKIPPED_METADATA"
+      }
+    ]
+  },
+  "critical_variables": [
+    "age",
+    "consumption_expenditure",
+    "district",
+    "education_level",
+    "employment_status",
+    "gender",
+    "social_group",
+    "urban_rural"
+  ],
+  "variable_metrics": [
+    {
+      "variable": "age",
+      "variable_type": "integer",
+      "validation_family": "numerical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 35.080833,
+        "median": 35.0,
+        "std": 20.420567,
+        "min": 0.0,
+        "max": 104.0,
+        "quantiles": {
+          "p05": 4.0,
+          "p25": 18.0,
+          "p50": 35.0,
+          "p75": 50.0,
+          "p95": 70.0
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 38.888917,
+        "median": 38.0,
+        "std": 22.351515,
+        "min": 0.0,
+        "max": 104.0,
+        "quantiles": {
+          "p05": 5.0,
+          "p25": 22.0,
+          "p50": 38.0,
+          "p75": 54.0,
+          "p95": 78.0
+        }
+      },
+      "metrics": {
+        "ks_statistic": 0.062167,
+        "wasserstein_distance": 3.825583,
+        "reference_scale_for_wasserstein": 104.0,
+        "normalized_wasserstein_distance": 0.036784,
+        "missingness_score": 1.0
+      },
+      "fidelity_score": 0.967016,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "consumption_expenditure",
+      "variable_type": "continuous",
+      "validation_family": "numerical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 15053.490167,
+        "median": 13142.5,
+        "std": 8473.409218,
+        "min": 1000.0,
+        "max": 97333.0,
+        "quantiles": {
+          "p05": 5772.0,
+          "p25": 9767.0,
+          "p50": 13142.5,
+          "p75": 17833.0,
+          "p95": 30733.0
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 16745.867917,
+        "median": 15010.0,
+        "std": 9196.964528,
+        "min": 1000.0,
+        "max": 89376.0,
+        "quantiles": {
+          "p05": 6404.8,
+          "p25": 11107.75,
+          "p50": 15010.0,
+          "p75": 20056.5,
+          "p95": 32596.2
+        }
+      },
+      "metrics": {
+        "ks_statistic": 0.122667,
+        "wasserstein_distance": 1709.135417,
+        "reference_scale_for_wasserstein": 96333.0,
+        "normalized_wasserstein_distance": 0.017742,
+        "missingness_score": 1.0
+      },
+      "fidelity_score": 0.953197,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "district",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Ariyalur": 155,
+          "Chennai": 863,
+          "Coimbatore": 461,
+          "Cuddalore": 416,
+          "Dharmapuri": 289,
+          "Dindigul": 411,
+          "Erode": 309,
+          "Kallakurichi": 197,
+          "Kancheepuram": 371,
+          "Kanniyakumari": 264,
+          "Karur": 93,
+          "Krishnagiri": 411,
+          "Madurai": 548,
+          "Mayiladuthurai": 206,
+          "Nagapattinam": 43,
+          "Namakkal": 287,
+          "Perambalur": 102,
+          "Pudukkottai": 308,
+          "Ramanathapuram": 237,
+          "Ranipet": 310,
+          "Salem": 553,
+          "Sivaganga": 371,
+          "Tenkasi": 526,
+          "Thanjavur": 468,
+          "The Nilgiris": 88,
+          "Theni": 248,
+          "Thiruvallur": 584,
+          "Thiruvarur": 259,
+          "Thoothukudi": 376,
+          "Tiruchirappalli": 335,
+          "Tirunelveli": 272,
+          "Tirupathur": 168,
+          "Tiruppur": 212,
+          "Tiruvannamalai": 380,
+          "Unknown": 155,
+          "Vellore": 208,
+          "Viluppuram": 205,
+          "Virudhunagar": 311
+        },
+        "category_proportions": {
+          "Ariyalur": 0.012917,
+          "Chennai": 0.071917,
+          "Coimbatore": 0.038417,
+          "Cuddalore": 0.034667,
+          "Dharmapuri": 0.024083,
+          "Dindigul": 0.03425,
+          "Erode": 0.02575,
+          "Kallakurichi": 0.016417,
+          "Kancheepuram": 0.030917,
+          "Kanniyakumari": 0.022,
+          "Karur": 0.00775,
+          "Krishnagiri": 0.03425,
+          "Madurai": 0.045667,
+          "Mayiladuthurai": 0.017167,
+          "Nagapattinam": 0.003583,
+          "Namakkal": 0.023917,
+          "Perambalur": 0.0085,
+          "Pudukkottai": 0.025667,
+          "Ramanathapuram": 0.01975,
+          "Ranipet": 0.025833,
+          "Salem": 0.046083,
+          "Sivaganga": 0.030917,
+          "Tenkasi": 0.043833,
+          "Thanjavur": 0.039,
+          "The Nilgiris": 0.007333,
+          "Theni": 0.020667,
+          "Thiruvallur": 0.048667,
+          "Thiruvarur": 0.021583,
+          "Thoothukudi": 0.031333,
+          "Tiruchirappalli": 0.027917,
+          "Tirunelveli": 0.022667,
+          "Tirupathur": 0.014,
+          "Tiruppur": 0.017667,
+          "Tiruvannamalai": 0.031667,
+          "Unknown": 0.012917,
+          "Vellore": 0.017333,
+          "Viluppuram": 0.017083,
+          "Virudhunagar": 0.025917
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Ariyalur": 177,
+          "Chennai": 1409,
+          "Coimbatore": 271,
+          "Cuddalore": 393,
+          "Dharmapuri": 229,
+          "Dindigul": 328,
+          "Erode": 246,
+          "Kallakurichi": 255,
+          "Kancheepuram": 337,
+          "Kanniyakumari": 220,
+          "Karur": 157,
+          "Krishnagiri": 361,
+          "Madurai": 508,
+          "Mayiladuthurai": 136,
+          "Nagapattinam": 131,
+          "Namakkal": 226,
+          "Perambalur": 137,
+          "Pudukkottai": 223,
+          "Ramanathapuram": 180,
+          "Ranipet": 242,
+          "Salem": 618,
+          "Sivaganga": 310,
+          "Tenkasi": 572,
+          "Thanjavur": 426,
+          "The Nilgiris": 143,
+          "Theni": 268,
+          "Thiruvallur": 833,
+          "Thiruvarur": 302,
+          "Thoothukudi": 374,
+          "Tiruchirappalli": 268,
+          "Tirunelveli": 233,
+          "Tirupathur": 137,
+          "Tiruppur": 192,
+          "Tiruvannamalai": 344,
+          "Unknown": 126,
+          "Vellore": 181,
+          "Viluppuram": 212,
+          "Virudhunagar": 295
+        },
+        "category_proportions": {
+          "Ariyalur": 0.01475,
+          "Chennai": 0.117417,
+          "Coimbatore": 0.022583,
+          "Cuddalore": 0.03275,
+          "Dharmapuri": 0.019083,
+          "Dindigul": 0.027333,
+          "Erode": 0.0205,
+          "Kallakurichi": 0.02125,
+          "Kancheepuram": 0.028083,
+          "Kanniyakumari": 0.018333,
+          "Karur": 0.013083,
+          "Krishnagiri": 0.030083,
+          "Madurai": 0.042333,
+          "Mayiladuthurai": 0.011333,
+          "Nagapattinam": 0.010917,
+          "Namakkal": 0.018833,
+          "Perambalur": 0.011417,
+          "Pudukkottai": 0.018583,
+          "Ramanathapuram": 0.015,
+          "Ranipet": 0.020167,
+          "Salem": 0.0515,
+          "Sivaganga": 0.025833,
+          "Tenkasi": 0.047667,
+          "Thanjavur": 0.0355,
+          "The Nilgiris": 0.011917,
+          "Theni": 0.022333,
+          "Thiruvallur": 0.069417,
+          "Thiruvarur": 0.025167,
+          "Thoothukudi": 0.031167,
+          "Tiruchirappalli": 0.022333,
+          "Tirunelveli": 0.019417,
+          "Tirupathur": 0.011417,
+          "Tiruppur": 0.016,
+          "Tiruvannamalai": 0.028667,
+          "Unknown": 0.0105,
+          "Vellore": 0.015083,
+          "Viluppuram": 0.017667,
+          "Virudhunagar": 0.024583
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.01328,
+        "total_variation_distance": 0.108167,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.959518,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "district_code",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "01": 584,
+          "02": 863,
+          "03": 371,
+          "04": 208,
+          "05": 380,
+          "06": 205,
+          "07": 553,
+          "08": 287,
+          "09": 309,
+          "10": 88,
+          "11": 411,
+          "12": 93,
+          "13": 335,
+          "14": 102,
+          "15": 155,
+          "16": 416,
+          "17": 43,
+          "18": 259,
+          "19": 468,
+          "20": 308,
+          "21": 371,
+          "22": 548,
+          "23": 248,
+          "24": 311,
+          "25": 237,
+          "26": 376,
+          "27": 272,
+          "28": 264,
+          "29": 289,
+          "30": 411,
+          "31": 461,
+          "32": 212,
+          "33": 526,
+          "34": 197,
+          "35": 310,
+          "36": 168,
+          "37": 155,
+          "38": 206
+        },
+        "category_proportions": {
+          "01": 0.048667,
+          "02": 0.071917,
+          "03": 0.030917,
+          "04": 0.017333,
+          "05": 0.031667,
+          "06": 0.017083,
+          "07": 0.046083,
+          "08": 0.023917,
+          "09": 0.02575,
+          "10": 0.007333,
+          "11": 0.03425,
+          "12": 0.00775,
+          "13": 0.027917,
+          "14": 0.0085,
+          "15": 0.012917,
+          "16": 0.034667,
+          "17": 0.003583,
+          "18": 0.021583,
+          "19": 0.039,
+          "20": 0.025667,
+          "21": 0.030917,
+          "22": 0.045667,
+          "23": 0.020667,
+          "24": 0.025917,
+          "25": 0.01975,
+          "26": 0.031333,
+          "27": 0.022667,
+          "28": 0.022,
+          "29": 0.024083,
+          "30": 0.03425,
+          "31": 0.038417,
+          "32": 0.017667,
+          "33": 0.043833,
+          "34": 0.016417,
+          "35": 0.025833,
+          "36": 0.014,
+          "37": 0.012917,
+          "38": 0.017167
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "01": 863,
+          "02": 1090,
+          "03": 285,
+          "04": 192,
+          "05": 298,
+          "06": 216,
+          "07": 486,
+          "08": 224,
+          "09": 254,
+          "10": 153,
+          "11": 436,
+          "12": 138,
+          "13": 253,
+          "14": 109,
+          "15": 188,
+          "16": 345,
+          "17": 171,
+          "18": 282,
+          "19": 561,
+          "20": 230,
+          "21": 268,
+          "22": 643,
+          "23": 210,
+          "24": 246,
+          "25": 171,
+          "26": 365,
+          "27": 253,
+          "28": 258,
+          "29": 269,
+          "30": 410,
+          "31": 359,
+          "32": 240,
+          "33": 429,
+          "34": 234,
+          "35": 316,
+          "36": 194,
+          "37": 152,
+          "38": 209
+        },
+        "category_proportions": {
+          "01": 0.071917,
+          "02": 0.090833,
+          "03": 0.02375,
+          "04": 0.016,
+          "05": 0.024833,
+          "06": 0.018,
+          "07": 0.0405,
+          "08": 0.018667,
+          "09": 0.021167,
+          "10": 0.01275,
+          "11": 0.036333,
+          "12": 0.0115,
+          "13": 0.021083,
+          "14": 0.009083,
+          "15": 0.015667,
+          "16": 0.02875,
+          "17": 0.01425,
+          "18": 0.0235,
+          "19": 0.04675,
+          "20": 0.019167,
+          "21": 0.022333,
+          "22": 0.053583,
+          "23": 0.0175,
+          "24": 0.0205,
+          "25": 0.01425,
+          "26": 0.030417,
+          "27": 0.021083,
+          "28": 0.0215,
+          "29": 0.022417,
+          "30": 0.034167,
+          "31": 0.029917,
+          "32": 0.02,
+          "33": 0.03575,
+          "34": 0.0195,
+          "35": 0.026333,
+          "36": 0.016167,
+          "37": 0.012667,
+          "38": 0.017417
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.010478,
+        "total_variation_distance": 0.09425,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.965091,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "education_level",
+      "variable_type": "ordinal",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Below Primary": 1236,
+          "Diploma/Certificate": 2297,
+          "Higher Secondary": 1207,
+          "Middle": 2064,
+          "Not literate": 2093,
+          "Primary": 1653,
+          "Secondary": 1450
+        },
+        "category_proportions": {
+          "Below Primary": 0.103,
+          "Diploma/Certificate": 0.191417,
+          "Higher Secondary": 0.100583,
+          "Middle": 0.172,
+          "Not literate": 0.174417,
+          "Primary": 0.13775,
+          "Secondary": 0.120833
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Below Primary": 1243,
+          "Diploma/Certificate": 2035,
+          "Higher Secondary": 1281,
+          "Middle": 1868,
+          "Not literate": 2401,
+          "Primary": 1706,
+          "Secondary": 1466
+        },
+        "category_proportions": {
+          "Below Primary": 0.103583,
+          "Diploma/Certificate": 0.169583,
+          "Higher Secondary": 0.10675,
+          "Middle": 0.155667,
+          "Not literate": 0.200083,
+          "Primary": 0.142167,
+          "Secondary": 0.122167
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.0015,
+        "total_variation_distance": 0.038167,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.986778,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "employment_status",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Employed": 5264,
+          "Not in labour force": 6473,
+          "Unemployed": 263
+        },
+        "category_proportions": {
+          "Employed": 0.438667,
+          "Not in labour force": 0.539417,
+          "Unemployed": 0.021917
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Employed": 4857,
+          "Not in labour force": 6597,
+          "Unemployed": 546
+        },
+        "category_proportions": {
+          "Employed": 0.40475,
+          "Not in labour force": 0.54975,
+          "Unemployed": 0.0455
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.003567,
+        "total_variation_distance": 0.033917,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.987506,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "gender",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Female": 6115,
+          "Male": 5883,
+          "Other": 2
+        },
+        "category_proportions": {
+          "Female": 0.509583,
+          "Male": 0.49025,
+          "Other": 0.000167
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Female": 6446,
+          "Male": 5387,
+          "Other": 167
+        },
+        "category_proportions": {
+          "Female": 0.537167,
+          "Male": 0.448917,
+          "Other": 0.013917
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.007307,
+        "total_variation_distance": 0.041333,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.983786,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "household_size",
+      "variable_type": "integer",
+      "validation_family": "numerical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 4.10425,
+        "median": 4.0,
+        "std": 1.601175,
+        "min": 1.0,
+        "max": 14.0,
+        "quantiles": {
+          "p05": 2.0,
+          "p25": 3.0,
+          "p50": 4.0,
+          "p75": 5.0,
+          "p95": 7.0
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 4.044417,
+        "median": 4.0,
+        "std": 1.61694,
+        "min": 1.0,
+        "max": 14.0,
+        "quantiles": {
+          "p05": 2.0,
+          "p25": 3.0,
+          "p50": 4.0,
+          "p75": 5.0,
+          "p95": 6.0
+        }
+      },
+      "metrics": {
+        "ks_statistic": 0.04925,
+        "wasserstein_distance": 0.191667,
+        "reference_scale_for_wasserstein": 13.0,
+        "normalized_wasserstein_distance": 0.014744,
+        "missingness_score": 1.0
+      },
+      "fidelity_score": 0.978669,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "household_type",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Casual labour in agriculture": 600,
+          "Casual labour in non-agriculture": 1100,
+          "Others": 713,
+          "Regular wage/salary earning": 2686,
+          "Self-employed in agriculture": 2834,
+          "Self-employed in non-agriculture": 4067
+        },
+        "category_proportions": {
+          "Casual labour in agriculture": 0.05,
+          "Casual labour in non-agriculture": 0.091667,
+          "Others": 0.059417,
+          "Regular wage/salary earning": 0.223833,
+          "Self-employed in agriculture": 0.236167,
+          "Self-employed in non-agriculture": 0.338917
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Casual labour in agriculture": 671,
+          "Casual labour in non-agriculture": 1256,
+          "Others": 690,
+          "Regular wage/salary earning": 2367,
+          "Self-employed in agriculture": 2597,
+          "Self-employed in non-agriculture": 4419
+        },
+        "category_proportions": {
+          "Casual labour in agriculture": 0.055917,
+          "Casual labour in non-agriculture": 0.104667,
+          "Others": 0.0575,
+          "Regular wage/salary earning": 0.19725,
+          "Self-employed in agriculture": 0.216417,
+          "Self-employed in non-agriculture": 0.36825
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.001797,
+        "total_variation_distance": 0.04825,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.983318,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "individual_income",
+      "variable_type": "continuous",
+      "validation_family": "numerical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 3643.509083,
+        "median": 0.0,
+        "std": 11661.419949,
+        "min": 0.0,
+        "max": 520000.0,
+        "quantiles": {
+          "p05": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p95": 22000.0
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "mean": 1282.160917,
+        "median": 1.0,
+        "std": 7759.357674,
+        "min": 0.0,
+        "max": 138926.0,
+        "quantiles": {
+          "p05": 0.0,
+          "p25": 0.0,
+          "p50": 1.0,
+          "p75": 137.0,
+          "p95": 368.0
+        }
+      },
+      "metrics": {
+        "ks_statistic": 0.330833,
+        "wasserstein_distance": 2429.2685,
+        "reference_scale_for_wasserstein": 520000.0,
+        "normalized_wasserstein_distance": 0.004672,
+        "missingness_score": 1.0
+      },
+      "fidelity_score": 0.888165,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "labour_force_status",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Employed": 5264,
+          "Not in labour force": 6473,
+          "Unemployed": 263
+        },
+        "category_proportions": {
+          "Employed": 0.438667,
+          "Not in labour force": 0.539417,
+          "Unemployed": 0.021917
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Employed": 4945,
+          "Not in labour force": 6497,
+          "Unemployed": 558
+        },
+        "category_proportions": {
+          "Employed": 0.412083,
+          "Not in labour force": 0.541417,
+          "Unemployed": 0.0465
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.003559,
+        "total_variation_distance": 0.026583,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.989952,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "literacy_status",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Illiterate": 2093,
+          "Literate": 9907
+        },
+        "category_proportions": {
+          "Illiterate": 0.174417,
+          "Literate": 0.825583
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Illiterate": 2502,
+          "Literate": 9498
+        },
+        "category_proportions": {
+          "Illiterate": 0.2085,
+          "Literate": 0.7915
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.001355,
+        "total_variation_distance": 0.034083,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.988187,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "marital_status",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "1": 4581,
+          "2": 6265,
+          "3": 1070,
+          "4": 84
+        },
+        "category_proportions": {
+          "1": 0.38175,
+          "2": 0.522083,
+          "3": 0.089167,
+          "4": 0.007
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "1": 4249,
+          "2": 6381,
+          "3": 1089,
+          "4": 281
+        },
+        "category_proportions": {
+          "1": 0.354083,
+          "2": 0.53175,
+          "3": 0.09075,
+          "4": 0.023417
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.003785,
+        "total_variation_distance": 0.027667,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.989516,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "relationship_to_head",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "1": 3501,
+          "2": 2504,
+          "3": 536,
+          "4": 493,
+          "5": 3612,
+          "6": 739,
+          "7": 423,
+          "8": 187,
+          "9": 5
+        },
+        "category_proportions": {
+          "1": 0.29175,
+          "2": 0.208667,
+          "3": 0.044667,
+          "4": 0.041083,
+          "5": 0.301,
+          "6": 0.061583,
+          "7": 0.03525,
+          "8": 0.015583,
+          "9": 0.000417
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "1": 3094,
+          "2": 2969,
+          "3": 394,
+          "4": 344,
+          "5": 3891,
+          "6": 532,
+          "7": 385,
+          "8": 252,
+          "9": 139
+        },
+        "category_proportions": {
+          "1": 0.257833,
+          "2": 0.247417,
+          "3": 0.032833,
+          "4": 0.028667,
+          "5": 0.32425,
+          "6": 0.044333,
+          "7": 0.032083,
+          "8": 0.021,
+          "9": 0.011583
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.009768,
+        "total_variation_distance": 0.078583,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.970549,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "social_group",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Other Backward Class": 8964,
+          "Others": 343,
+          "Scheduled Caste": 2612,
+          "Scheduled Tribe": 81
+        },
+        "category_proportions": {
+          "Other Backward Class": 0.747,
+          "Others": 0.028583,
+          "Scheduled Caste": 0.217667,
+          "Scheduled Tribe": 0.00675
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Other Backward Class": 6863,
+          "Others": 444,
+          "Scheduled Caste": 4382,
+          "Scheduled Tribe": 311
+        },
+        "category_proportions": {
+          "Other Backward Class": 0.571917,
+          "Others": 0.037,
+          "Scheduled Caste": 0.365167,
+          "Scheduled Tribe": 0.025917
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 0.026738,
+        "total_variation_distance": 0.175083,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.932726,
+      "warnings": [],
+      "validation_status": "PASS"
+    },
+    {
+      "variable": "urban_rural",
+      "variable_type": "categorical",
+      "validation_family": "categorical",
+      "reference": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Rural": 5747,
+          "Urban": 6253
+        },
+        "category_proportions": {
+          "Rural": 0.478917,
+          "Urban": 0.521083
+        }
+      },
+      "synthetic": {
+        "count": 12000,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "category_counts": {
+          "Rural": 5664,
+          "Urban": 6336
+        },
+        "category_proportions": {
+          "Rural": 0.472,
+          "Urban": 0.528
+        }
+      },
+      "metrics": {
+        "jensen_shannon_divergence": 3.5e-05,
+        "total_variation_distance": 0.006917,
+        "missingness_score": 1.0,
+        "missing_from_synthetic": [],
+        "unexpected_in_synthetic": []
+      },
+      "fidelity_score": 0.997683,
+      "warnings": [],
+      "validation_status": "PASS"
+    }
+  ],
+  "relationship_metrics": [
+    {
+      "variable_a": "age",
+      "variable_b": "consumption_expenditure",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": -0.120156,
+      "synthetic_metric": 0.018127,
+      "difference": 0.138282,
+      "preservation_score": 0.930859,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "district",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.062616,
+      "synthetic_metric": 0.063236,
+      "difference": 0.000621,
+      "preservation_score": 0.999379,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "district_code",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.062616,
+      "synthetic_metric": 0.049101,
+      "difference": 0.013514,
+      "preservation_score": 0.986486,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "education_level",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.203927,
+      "synthetic_metric": 0.014388,
+      "difference": 0.18954,
+      "preservation_score": 0.81046,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "employment_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.307835,
+      "synthetic_metric": 0.009999,
+      "difference": 0.297836,
+      "preservation_score": 0.702164,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "gender",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.039712,
+      "synthetic_metric": 0.006811,
+      "difference": 0.032901,
+      "preservation_score": 0.967099,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "household_size",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": -0.259396,
+      "synthetic_metric": -0.002371,
+      "difference": 0.257025,
+      "preservation_score": 0.871488,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "household_type",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.225311,
+      "synthetic_metric": 0.028572,
+      "difference": 0.196739,
+      "preservation_score": 0.803261,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "individual_income",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": 0.065715,
+      "synthetic_metric": 0.010472,
+      "difference": 0.055244,
+      "preservation_score": 0.972378,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "labour_force_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.307835,
+      "synthetic_metric": 0.02126,
+      "difference": 0.286575,
+      "preservation_score": 0.713425,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "literacy_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.092918,
+      "synthetic_metric": 0.001451,
+      "difference": 0.091467,
+      "preservation_score": 0.908533,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "marital_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.808336,
+      "synthetic_metric": 0.018752,
+      "difference": 0.789584,
+      "preservation_score": 0.210416,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.834125,
+      "synthetic_metric": 0.022215,
+      "difference": 0.811909,
+      "preservation_score": 0.188091,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "social_group",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.045603,
+      "synthetic_metric": 0.016394,
+      "difference": 0.029209,
+      "preservation_score": 0.970791,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "age",
+      "variable_b": "urban_rural",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.008664,
+      "synthetic_metric": 0.000395,
+      "difference": 0.008269,
+      "preservation_score": 0.991731,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "district",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.407636,
+      "synthetic_metric": 0.047995,
+      "difference": 0.359641,
+      "preservation_score": 0.640359,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "district_code",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.407636,
+      "synthetic_metric": 0.054324,
+      "difference": 0.353312,
+      "preservation_score": 0.646688,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "education_level",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.254058,
+      "synthetic_metric": 0.022881,
+      "difference": 0.231177,
+      "preservation_score": 0.768823,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "employment_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.063122,
+      "synthetic_metric": 0.015989,
+      "difference": 0.047133,
+      "preservation_score": 0.952867,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "gender",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.013671,
+      "synthetic_metric": 0.020913,
+      "difference": 0.007242,
+      "preservation_score": 0.992758,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "household_size",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": 0.418262,
+      "synthetic_metric": -0.008802,
+      "difference": 0.427064,
+      "preservation_score": 0.786468,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "household_type",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.325171,
+      "synthetic_metric": 0.020323,
+      "difference": 0.304848,
+      "preservation_score": 0.695152,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "individual_income",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": 0.139434,
+      "synthetic_metric": 0.006884,
+      "difference": 0.132549,
+      "preservation_score": 0.933725,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "labour_force_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.063122,
+      "synthetic_metric": 0.00612,
+      "difference": 0.057002,
+      "preservation_score": 0.942998,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "literacy_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.083599,
+      "synthetic_metric": 0.00284,
+      "difference": 0.08076,
+      "preservation_score": 0.91924,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "marital_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.118991,
+      "synthetic_metric": 0.011503,
+      "difference": 0.107489,
+      "preservation_score": 0.892511,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.17552,
+      "synthetic_metric": 0.031578,
+      "difference": 0.143942,
+      "preservation_score": 0.856058,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "social_group",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.159232,
+      "synthetic_metric": 0.035138,
+      "difference": 0.124095,
+      "preservation_score": 0.875905,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "consumption_expenditure",
+      "variable_b": "urban_rural",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.328679,
+      "synthetic_metric": 0.005275,
+      "difference": 0.323404,
+      "preservation_score": 0.676596,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "district_code",
+      "relationship_type": "cramers_v",
+      "reference_metric": 1.0,
+      "synthetic_metric": 0.055576,
+      "difference": 0.944424,
+      "preservation_score": 0.055576,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "education_level",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.097053,
+      "synthetic_metric": 0.058546,
+      "difference": 0.038507,
+      "preservation_score": 0.961493,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "employment_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.098537,
+      "synthetic_metric": 0.065461,
+      "difference": 0.033077,
+      "preservation_score": 0.966923,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "gender",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.045539,
+      "synthetic_metric": 0.062732,
+      "difference": 0.017193,
+      "preservation_score": 0.982807,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "household_size",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.175321,
+      "synthetic_metric": 0.060711,
+      "difference": 0.11461,
+      "preservation_score": 0.88539,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "household_type",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.192015,
+      "synthetic_metric": 0.054205,
+      "difference": 0.13781,
+      "preservation_score": 0.86219,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.159507,
+      "synthetic_metric": 0.04189,
+      "difference": 0.117617,
+      "preservation_score": 0.882383,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.098537,
+      "synthetic_metric": 0.058328,
+      "difference": 0.040209,
+      "preservation_score": 0.959791,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.111048,
+      "synthetic_metric": 0.053929,
+      "difference": 0.057119,
+      "preservation_score": 0.942881,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.059553,
+      "synthetic_metric": 0.059585,
+      "difference": 3.1e-05,
+      "preservation_score": 0.999969,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.070547,
+      "synthetic_metric": 0.053797,
+      "difference": 0.01675,
+      "preservation_score": 0.98325,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.234643,
+      "synthetic_metric": 0.057244,
+      "difference": 0.177399,
+      "preservation_score": 0.822601,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.494974,
+      "synthetic_metric": 0.051999,
+      "difference": 0.442975,
+      "preservation_score": 0.557025,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "education_level",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.097053,
+      "synthetic_metric": 0.05546,
+      "difference": 0.041594,
+      "preservation_score": 0.958406,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "employment_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.098537,
+      "synthetic_metric": 0.051571,
+      "difference": 0.046966,
+      "preservation_score": 0.953034,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "gender",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.045539,
+      "synthetic_metric": 0.056697,
+      "difference": 0.011158,
+      "preservation_score": 0.988842,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "household_size",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.175321,
+      "synthetic_metric": 0.048786,
+      "difference": 0.126535,
+      "preservation_score": 0.873465,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "household_type",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.192015,
+      "synthetic_metric": 0.051682,
+      "difference": 0.140333,
+      "preservation_score": 0.859667,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.159507,
+      "synthetic_metric": 0.045372,
+      "difference": 0.114134,
+      "preservation_score": 0.885866,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.098537,
+      "synthetic_metric": 0.051557,
+      "difference": 0.04698,
+      "preservation_score": 0.95302,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.111048,
+      "synthetic_metric": 0.048047,
+      "difference": 0.063002,
+      "preservation_score": 0.936998,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.059553,
+      "synthetic_metric": 0.053939,
+      "difference": 0.005615,
+      "preservation_score": 0.994385,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.070547,
+      "synthetic_metric": 0.055817,
+      "difference": 0.01473,
+      "preservation_score": 0.98527,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.234643,
+      "synthetic_metric": 0.054644,
+      "difference": 0.179999,
+      "preservation_score": 0.820001,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "district_code",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.494974,
+      "synthetic_metric": 0.050937,
+      "difference": 0.444037,
+      "preservation_score": 0.555963,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "employment_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.236474,
+      "synthetic_metric": 0.025162,
+      "difference": 0.211312,
+      "preservation_score": 0.788688,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "gender",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.080743,
+      "synthetic_metric": 0.020903,
+      "difference": 0.05984,
+      "preservation_score": 0.94016,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "household_size",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.063106,
+      "synthetic_metric": 0.029592,
+      "difference": 0.033514,
+      "preservation_score": 0.966486,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "household_type",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.100237,
+      "synthetic_metric": 0.025972,
+      "difference": 0.074265,
+      "preservation_score": 0.925735,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.343979,
+      "synthetic_metric": 0.021913,
+      "difference": 0.322067,
+      "preservation_score": 0.677933,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.236474,
+      "synthetic_metric": 0.020414,
+      "difference": 0.21606,
+      "preservation_score": 0.78394,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 1.0,
+      "synthetic_metric": 0.011091,
+      "difference": 0.988909,
+      "preservation_score": 0.011091,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.193526,
+      "synthetic_metric": 0.01979,
+      "difference": 0.173736,
+      "preservation_score": 0.826264,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.185777,
+      "synthetic_metric": 0.025466,
+      "difference": 0.160311,
+      "preservation_score": 0.839689,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.072778,
+      "synthetic_metric": 0.020461,
+      "difference": 0.052318,
+      "preservation_score": 0.947682,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "education_level",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.202552,
+      "synthetic_metric": 0.025294,
+      "difference": 0.177258,
+      "preservation_score": 0.822742,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "gender",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.202968,
+      "synthetic_metric": 0.007199,
+      "difference": 0.195769,
+      "preservation_score": 0.804231,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "household_size",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.108977,
+      "synthetic_metric": 0.007505,
+      "difference": 0.101472,
+      "preservation_score": 0.898528,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "household_type",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.160107,
+      "synthetic_metric": 0.012888,
+      "difference": 0.147219,
+      "preservation_score": 0.852781,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.352039,
+      "synthetic_metric": 0.009201,
+      "difference": 0.342838,
+      "preservation_score": 0.657162,
+      "critical_relationship": true
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 1.0,
+      "synthetic_metric": 0.012396,
+      "difference": 0.987604,
+      "preservation_score": 0.012396,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.131165,
+      "synthetic_metric": 0.005774,
+      "difference": 0.125391,
+      "preservation_score": 0.874609,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.303272,
+      "synthetic_metric": 0.013414,
+      "difference": 0.289858,
+      "preservation_score": 0.710142,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.372814,
+      "synthetic_metric": 0.019217,
+      "difference": 0.353597,
+      "preservation_score": 0.646403,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.037466,
+      "synthetic_metric": 0.01419,
+      "difference": 0.023277,
+      "preservation_score": 0.976723,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "employment_status",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.074079,
+      "synthetic_metric": 0.016192,
+      "difference": 0.057886,
+      "preservation_score": 0.942114,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "household_size",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.017896,
+      "synthetic_metric": 0.013221,
+      "difference": 0.004676,
+      "preservation_score": 0.995324,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "household_type",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.042947,
+      "synthetic_metric": 0.025946,
+      "difference": 0.017001,
+      "preservation_score": 0.982999,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.159892,
+      "synthetic_metric": 0.009599,
+      "difference": 0.150293,
+      "preservation_score": 0.849707,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.202968,
+      "synthetic_metric": 0.009643,
+      "difference": 0.193325,
+      "preservation_score": 0.806675,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.094569,
+      "synthetic_metric": 0.011792,
+      "difference": 0.082776,
+      "preservation_score": 0.917224,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.159949,
+      "synthetic_metric": 0.015446,
+      "difference": 0.144503,
+      "preservation_score": 0.855497,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.419472,
+      "synthetic_metric": 0.027044,
+      "difference": 0.392428,
+      "preservation_score": 0.607572,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.010838,
+      "synthetic_metric": 0.017922,
+      "difference": 0.007084,
+      "preservation_score": 0.992916,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "gender",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.012814,
+      "synthetic_metric": 0.001676,
+      "difference": 0.011138,
+      "preservation_score": 0.988862,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "household_type",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.279293,
+      "synthetic_metric": 0.01873,
+      "difference": 0.260563,
+      "preservation_score": 0.739437,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "individual_income",
+      "relationship_type": "pearson_spearman_average",
+      "reference_metric": -0.067135,
+      "synthetic_metric": 0.015944,
+      "difference": 0.083079,
+      "preservation_score": 0.958461,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "labour_force_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.108977,
+      "synthetic_metric": 0.013296,
+      "difference": 0.095682,
+      "preservation_score": 0.904318,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "literacy_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.03248,
+      "synthetic_metric": 0.008738,
+      "difference": 0.023742,
+      "preservation_score": 0.976258,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "marital_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.173564,
+      "synthetic_metric": 0.010835,
+      "difference": 0.162729,
+      "preservation_score": 0.837271,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.44636,
+      "synthetic_metric": 0.026633,
+      "difference": 0.419726,
+      "preservation_score": 0.580274,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "social_group",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.033073,
+      "synthetic_metric": 0.00598,
+      "difference": 0.027093,
+      "preservation_score": 0.972907,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_size",
+      "variable_b": "urban_rural",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.007931,
+      "synthetic_metric": 0.00758,
+      "difference": 0.000351,
+      "preservation_score": 0.999649,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "individual_income",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.263725,
+      "synthetic_metric": 0.012101,
+      "difference": 0.251624,
+      "preservation_score": 0.748376,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "labour_force_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.160107,
+      "synthetic_metric": 0.019929,
+      "difference": 0.140178,
+      "preservation_score": 0.859822,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.113762,
+      "synthetic_metric": 0.021747,
+      "difference": 0.092015,
+      "preservation_score": 0.907985,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.08144,
+      "synthetic_metric": 0.019195,
+      "difference": 0.062245,
+      "preservation_score": 0.937755,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.079287,
+      "synthetic_metric": 0.024817,
+      "difference": 0.05447,
+      "preservation_score": 0.94553,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.169661,
+      "synthetic_metric": 0.01486,
+      "difference": 0.154801,
+      "preservation_score": 0.845199,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "household_type",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.54987,
+      "synthetic_metric": 0.010333,
+      "difference": 0.539536,
+      "preservation_score": 0.460464,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "labour_force_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.352039,
+      "synthetic_metric": 0.013986,
+      "difference": 0.338052,
+      "preservation_score": 0.661948,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "literacy_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.126347,
+      "synthetic_metric": 0.006961,
+      "difference": 0.119387,
+      "preservation_score": 0.880613,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "marital_status",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.116387,
+      "synthetic_metric": 0.018928,
+      "difference": 0.097459,
+      "preservation_score": 0.902541,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.208311,
+      "synthetic_metric": 0.028341,
+      "difference": 0.17997,
+      "preservation_score": 0.82003,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "social_group",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.052279,
+      "synthetic_metric": 0.026232,
+      "difference": 0.026046,
+      "preservation_score": 0.973954,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "individual_income",
+      "variable_b": "urban_rural",
+      "relationship_type": "correlation_ratio_eta",
+      "reference_metric": 0.133289,
+      "synthetic_metric": 0.001683,
+      "difference": 0.131606,
+      "preservation_score": 0.868394,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "labour_force_status",
+      "variable_b": "literacy_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.131165,
+      "synthetic_metric": 0.015619,
+      "difference": 0.115546,
+      "preservation_score": 0.884454,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "labour_force_status",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.303272,
+      "synthetic_metric": 0.013439,
+      "difference": 0.289833,
+      "preservation_score": 0.710167,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "labour_force_status",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.372814,
+      "synthetic_metric": 0.027239,
+      "difference": 0.345575,
+      "preservation_score": 0.654425,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "labour_force_status",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.037466,
+      "synthetic_metric": 0.018521,
+      "difference": 0.018946,
+      "preservation_score": 0.981054,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "labour_force_status",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.074079,
+      "synthetic_metric": 0.018485,
+      "difference": 0.055594,
+      "preservation_score": 0.944406,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "literacy_status",
+      "variable_b": "marital_status",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.249535,
+      "synthetic_metric": 0.02095,
+      "difference": 0.228586,
+      "preservation_score": 0.771414,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "literacy_status",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.323655,
+      "synthetic_metric": 0.025823,
+      "difference": 0.297832,
+      "preservation_score": 0.702168,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "literacy_status",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.075783,
+      "synthetic_metric": 0.005604,
+      "difference": 0.070179,
+      "preservation_score": 0.929821,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "literacy_status",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.100066,
+      "synthetic_metric": 0.009839,
+      "difference": 0.090227,
+      "preservation_score": 0.909773,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "marital_status",
+      "variable_b": "relationship_to_head",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.637533,
+      "synthetic_metric": 0.026382,
+      "difference": 0.611151,
+      "preservation_score": 0.388849,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "marital_status",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.017487,
+      "synthetic_metric": 0.016674,
+      "difference": 0.000813,
+      "preservation_score": 0.999187,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "marital_status",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.015015,
+      "synthetic_metric": 0.010141,
+      "difference": 0.004874,
+      "preservation_score": 0.995126,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "relationship_to_head",
+      "variable_b": "social_group",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.025769,
+      "synthetic_metric": 0.024553,
+      "difference": 0.001216,
+      "preservation_score": 0.998784,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "relationship_to_head",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.036028,
+      "synthetic_metric": 0.026751,
+      "difference": 0.009277,
+      "preservation_score": 0.990723,
+      "critical_relationship": false
+    },
+    {
+      "variable_a": "social_group",
+      "variable_b": "urban_rural",
+      "relationship_type": "cramers_v",
+      "reference_metric": 0.248596,
+      "synthetic_metric": 0.019798,
+      "difference": 0.228798,
+      "preservation_score": 0.771202,
+      "critical_relationship": false
+    }
+  ],
+  "validity_metrics": {
+    "constraint_version": "phase3_constraints_v1",
+    "total_records": 12000,
+    "hard_violation_count": 0,
+    "soft_anomaly_count": 937,
+    "hard_violation_row_count": 0,
+    "soft_anomaly_row_count": 937,
+    "records_repaired": 0,
+    "records_rejected": 0,
+    "hard_violation_rate": 0.0,
+    "soft_anomaly_rate": 7.8083,
+    "hard_violations_by_type": {},
+    "soft_anomalies_by_type": {
+      "CHILD_LABOUR_FORCE_STATUS": 937
+    },
+    "sample_hard_violations": [],
+    "sample_soft_anomalies": [
+      {
+        "row_number": 16,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 22,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 51,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 60,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 96,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 112,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 114,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 129,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 135,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 165,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 182,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 188,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 196,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 198,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 202,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 203,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 233,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 264,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 289,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      },
+      {
+        "row_number": 303,
+        "field": "employment_status",
+        "type": "CHILD_LABOUR_FORCE_STATUS",
+        "message": "Below-15 labour-force status is a soft anomaly for later review."
+      }
+    ],
+    "valid_rows": 12000,
+    "invalid_rows": 0,
+    "validity_rate": 1.0,
+    "validity_score": 0.992192
+  },
+  "official_marginal_metrics": [
+    {
+      "variable": "gender",
+      "reference_type": "official_marginal",
+      "jensen_shannon_divergence": 0.008489,
+      "total_variation_distance": 0.051977,
+      "score": 0.969767,
+      "official_categories": [
+        "Female",
+        "Male"
+      ],
+      "synthetic_categories": [
+        "Female",
+        "Male",
+        "Other"
+      ]
+    },
+    {
+      "variable": "urban_rural",
+      "reference_type": "official_marginal",
+      "jensen_shannon_divergence": 0.001399,
+      "total_variation_distance": 0.044024,
+      "score": 0.977289,
+      "official_categories": [
+        "Rural",
+        "Urban"
+      ],
+      "synthetic_categories": [
+        "Rural",
+        "Urban"
+      ]
+    },
+    {
+      "variable": "social_group",
+      "reference_type": "official_marginal",
+      "jensen_shannon_divergence": 0.324325,
+      "total_variation_distance": 0.39443,
+      "score": 0.640623,
+      "official_categories": [
+        "Scheduled Caste",
+        "Scheduled Tribe"
+      ],
+      "synthetic_categories": [
+        "Other Backward Class",
+        "Others",
+        "Scheduled Caste",
+        "Scheduled Tribe"
+      ]
+    }
+  ],
+  "component_scores": {
+    "distribution_fidelity": 0.970104,
+    "correlation_preservation": 0.829574,
+    "data_validity": 0.992192,
+    "official_marginal_similarity": 0.86256,
+    "statistical_similarity": 0.887413,
+    "quality_score": 0.915824
+  },
+  "quality_score": 0.915824,
+  "validation_status": "FAIL",
+  "gate_results": [
+    {
+      "name": "hard_validity",
+      "passed": true,
+      "observed": 0.0,
+      "threshold": 0.0
+    },
+    {
+      "name": "variable_fidelity:age",
+      "passed": true,
+      "observed": 0.967016,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:consumption_expenditure",
+      "passed": true,
+      "observed": 0.953197,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:district",
+      "passed": true,
+      "observed": 0.959518,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:district_code",
+      "passed": true,
+      "observed": 0.965091,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:education_level",
+      "passed": true,
+      "observed": 0.986778,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:employment_status",
+      "passed": true,
+      "observed": 0.987506,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:gender",
+      "passed": true,
+      "observed": 0.983786,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:household_size",
+      "passed": true,
+      "observed": 0.978669,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:household_type",
+      "passed": true,
+      "observed": 0.983318,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:individual_income",
+      "passed": true,
+      "observed": 0.888165,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:labour_force_status",
+      "passed": true,
+      "observed": 0.989952,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:literacy_status",
+      "passed": true,
+      "observed": 0.988187,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:marital_status",
+      "passed": true,
+      "observed": 0.989516,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:relationship_to_head",
+      "passed": true,
+      "observed": 0.970549,
+      "threshold": 0.65
+    },
+    {
+      "name": "variable_fidelity:social_group",
+      "passed": true,
+      "observed": 0.932726,
+      "threshold": 0.8
+    },
+    {
+      "name": "variable_fidelity:urban_rural",
+      "passed": true,
+      "observed": 0.997683,
+      "threshold": 0.8
+    },
+    {
+      "name": "relationship:age:employment_status",
+      "passed": true,
+      "observed": 0.702164,
+      "threshold": 0.65
+    },
+    {
+      "name": "relationship:district:urban_rural",
+      "passed": false,
+      "observed": 0.557025,
+      "threshold": 0.65
+    },
+    {
+      "name": "relationship:education_level:employment_status",
+      "passed": true,
+      "observed": 0.788688,
+      "threshold": 0.65
+    },
+    {
+      "name": "relationship:education_level:individual_income",
+      "passed": true,
+      "observed": 0.677933,
+      "threshold": 0.65
+    },
+    {
+      "name": "relationship:employment_status:gender",
+      "passed": true,
+      "observed": 0.804231,
+      "threshold": 0.65
+    },
+    {
+      "name": "relationship:employment_status:individual_income",
+      "passed": true,
+      "observed": 0.657162,
+      "threshold": 0.65
+    },
+    {
+      "name": "minimum_quality_for_warning",
+      "passed": true,
+      "observed": 0.915824,
+      "threshold": 0.7
+    }
+  ],
+  "warnings": [
+    "Gate failed: relationship:district:urban_rural observed=0.557025 threshold=0.65",
+    "Weak relationship preservation: age vs marital_status score=0.210416",
+    "Weak relationship preservation: age vs relationship_to_head score=0.188091",
+    "Weak relationship preservation: consumption_expenditure vs district score=0.640359",
+    "Weak relationship preservation: consumption_expenditure vs district_code score=0.646688",
+    "Weak relationship preservation: district vs district_code score=0.055576",
+    "Weak relationship preservation: district vs urban_rural score=0.557025",
+    "Weak relationship preservation: district_code vs urban_rural score=0.555963",
+    "Weak relationship preservation: education_level vs literacy_status score=0.011091",
+    "Weak relationship preservation: employment_status vs labour_force_status score=0.012396",
+    "Weak relationship preservation: employment_status vs relationship_to_head score=0.646403",
+    "Official marginal comparison weak for social_group score=0.640623"
+  ],
+  "methodology": {
+    "numeric_distribution": "fidelity = average(1 - KS, 1 - Wasserstein/reference_scale, missingness_score)",
+    "categorical_distribution": "fidelity = average(1 - Jensen-Shannon divergence, 1 - Total Variation Distance, missingness_score)",
+    "reference_scale": "max-min of the reference variable, falling back to 1 when the reference is constant",
+    "relationship_preservation": "1 - normalized absolute difference between reference and synthetic association measures",
+    "quality_score": "weighted composite configured in config/population_validation/scoring.yaml",
+    "status": "PASS/PASS_WITH_WARNINGS/FAIL is gate based and separate from the numeric score"
+  },
+  "holdout_summary": {
+    "reference_size": 1784,
+    "distribution_fidelity": 0.969026,
+    "correlation_preservation": 0.80567,
+    "statistical_similarity": 0.879085,
+    "validation_status": "FAIL"
+  }
+}

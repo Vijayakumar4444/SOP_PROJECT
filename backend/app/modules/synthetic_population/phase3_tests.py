@@ -10,6 +10,7 @@ from backend.app.modules.synthetic_population.constraints import ConstraintEngin
 from backend.app.modules.synthetic_population.generators.base import SyntheticGenerationError
 from backend.app.modules.synthetic_population.generators.bootstrap import BootstrapBaselineGenerator
 from backend.app.modules.synthetic_population.generators.gaussian_copula import GaussianCopulaGenerator
+from backend.app.modules.synthetic_population.generators.neural import CTGANGenerator, TVAEGenerator
 from backend.app.modules.synthetic_population.generators.registry import get_generator_class
 from backend.app.modules.synthetic_population.population_persistence import run_population_persistence
 from backend.app.modules.synthetic_population.sampling_service import DynamicSamplingService
@@ -75,6 +76,8 @@ class Phase3TestSuite:
     def _test_generator_interface(self) -> str:
         bootstrap_cls = get_generator_class("bootstrap")
         gaussian_cls = get_generator_class("gaussian_copula")
+        ctgan_cls = get_generator_class("ctgan")
+        tvae_cls = get_generator_class("tvae")
         try:
             get_generator_class("unsupported")
         except Exception:
@@ -83,6 +86,8 @@ class Phase3TestSuite:
             raise AssertionError("unsupported generator did not fail")
         assert bootstrap_cls is BootstrapBaselineGenerator
         assert gaussian_cls is GaussianCopulaGenerator
+        assert ctgan_cls is CTGANGenerator
+        assert tvae_cls is TVAEGenerator
         return "fit/sample/save/load/metadata generators are registered; unsupported generator fails."
 
     def _test_data_preparation(self) -> str:
@@ -133,7 +138,7 @@ class Phase3TestSuite:
         registry = read_json(self.root / "artifacts/synthetic_models/model_registry.json")
         trained = [item for item in registry.get("models", []) if item.get("status") == "TRAINED"]
         for item in trained:
-            model_cls = BootstrapBaselineGenerator if item["generator_type"] == "bootstrap" else GaussianCopulaGenerator
+            model_cls = get_generator_class(item["generator_type"])
             model = model_cls.load(self.root / item["artifact_path"])
             rows = model.sample(10, seed=123)
             assert len(rows) == 10

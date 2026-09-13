@@ -1,0 +1,547 @@
+{
+  "phase5_version": "phase5_calibration_reweighting_v1",
+  "created_at": "2026-09-13T13:18:52.844558+00:00",
+  "calibration_id": "CAL-RAKING-75B3B80E36",
+  "status": "PASS_WITH_WARNINGS",
+  "source_handoff": {
+    "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+    "model_id": "TN_BOOTSTRAP_1D08E0184C",
+    "generator_type": "bootstrap",
+    "validation_status": "PASS",
+    "quality_score": 0.982663,
+    "selected_for_calibration": true,
+    "calibration_priority_variables": [
+      "district",
+      "district_code",
+      "urban_rural",
+      "household_type",
+      "education_level",
+      "household_size",
+      "age",
+      "relationship_to_head"
+    ],
+    "largest_marginal_gaps": [
+      {
+        "variable": "district",
+        "fidelity_score": 0.974866
+      },
+      {
+        "variable": "district_code",
+        "fidelity_score": 0.974866
+      },
+      {
+        "variable": "urban_rural",
+        "fidelity_score": 0.987396
+      },
+      {
+        "variable": "household_type",
+        "fidelity_score": 0.990364
+      },
+      {
+        "variable": "education_level",
+        "fidelity_score": 0.991466
+      },
+      {
+        "variable": "household_size",
+        "fidelity_score": 0.991679
+      },
+      {
+        "variable": "age",
+        "fidelity_score": 0.993214
+      },
+      {
+        "variable": "relationship_to_head",
+        "fidelity_score": 0.993477
+      }
+    ],
+    "official_targets_available": [
+      "gender",
+      "social_group",
+      "urban_rural"
+    ],
+    "warnings": [
+      "Official marginal comparison weak for social_group score=0.611208"
+    ],
+    "highest_scoring_population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE"
+  },
+  "source_manifest_entry": {
+    "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+    "population_artifact": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv",
+    "metadata_artifact": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/metadata.json",
+    "generation_report": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/generation_report.json",
+    "model_id": "TN_BOOTSTRAP_1D08E0184C",
+    "generator_type": "bootstrap",
+    "model_version": "bootstrap_baseline_v1",
+    "variables": [
+      "district",
+      "district_code",
+      "urban_rural",
+      "age",
+      "gender",
+      "marital_status",
+      "relationship_to_head",
+      "household_size",
+      "household_type",
+      "literacy_status",
+      "education_level",
+      "labour_force_status",
+      "employment_status",
+      "individual_income",
+      "consumption_expenditure",
+      "social_group"
+    ],
+    "variable_schema": {
+      "district": "categorical",
+      "district_code": "categorical",
+      "urban_rural": "categorical",
+      "age": "integer",
+      "gender": "categorical",
+      "marital_status": "categorical",
+      "relationship_to_head": "categorical",
+      "household_size": "integer",
+      "household_type": "categorical",
+      "literacy_status": "categorical",
+      "education_level": "ordinal",
+      "labour_force_status": "categorical",
+      "employment_status": "categorical",
+      "individual_income": "continuous",
+      "consumption_expenditure": "continuous",
+      "social_group": "categorical"
+    },
+    "generation_config": {
+      "size": 12000,
+      "seed": 142,
+      "mode": "REPRESENTATIVE",
+      "conditions": {}
+    },
+    "constraint_results": {
+      "constraint_version": "phase3_constraints_v1",
+      "total_records": 12000,
+      "hard_violation_count": 0,
+      "soft_anomaly_count": 0,
+      "records_repaired": 0,
+      "records_rejected": 0,
+      "hard_violation_rate": 0.0,
+      "soft_anomaly_rate": 0.0,
+      "hard_violations_by_type": {},
+      "soft_anomalies_by_type": {},
+      "sample_hard_violations": [],
+      "sample_soft_anomalies": []
+    },
+    "population_size": 12000,
+    "exact_reference_duplicate_diagnostic": {
+      "reference_dataset_path": "data/synthetic/training/reference_training_v1.csv",
+      "comparison_columns": [
+        "district",
+        "district_code",
+        "urban_rural",
+        "age",
+        "gender",
+        "marital_status",
+        "relationship_to_head",
+        "household_size",
+        "household_type",
+        "literacy_status",
+        "education_level",
+        "labour_force_status",
+        "employment_status",
+        "individual_income",
+        "consumption_expenditure",
+        "social_group"
+      ],
+      "generated_rows_checked": 12000,
+      "exact_reference_duplicate_count": 12000,
+      "exact_reference_duplicate_rate": 100.0,
+      "interpretation": "Exact row-level feature matches are expected for bootstrap resampling and should be lower for generative candidates."
+    }
+  },
+  "calibration_method": "raking",
+  "calibration_result": {
+    "method": "raking",
+    "status": "CONVERGED",
+    "converged": true,
+    "iterations": 2,
+    "history": [
+      {
+        "iteration": 1,
+        "maximum_marginal_error": 0.007855,
+        "mean_marginal_error": 0.002734,
+        "weight_min": 0.87221,
+        "weight_max": 1.181492,
+        "converged": false
+      },
+      {
+        "iteration": 2,
+        "maximum_marginal_error": 0.000373,
+        "mean_marginal_error": 0.000175,
+        "weight_min": 0.851933,
+        "weight_max": 1.200743,
+        "converged": true
+      }
+    ],
+    "unresolved_targets": [],
+    "trimming": {
+      "enabled": true,
+      "method": "absolute",
+      "lower_bound": 0.2,
+      "upper_bound": 8.0,
+      "trimmed_row_count": 0,
+      "trimmed_row_indices_sample": [],
+      "normalized_to": 12000.0
+    }
+  },
+  "selected_targets": [
+    {
+      "target_id": "gender_official_marginal",
+      "variable": "gender",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/gender_marginals.csv",
+      "warnings": [
+        "Synthetic categories not directly targeted: Other."
+      ],
+      "categories": [
+        {
+          "category": "Male",
+          "synthetic_categories": [
+            "Male"
+          ],
+          "target_proportion": 0.500893,
+          "official_count": 36137975.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Female",
+          "synthetic_categories": [
+            "Female"
+          ],
+          "target_proportion": 0.499107,
+          "official_count": 36009055.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "urban_rural_official_marginal",
+      "variable": "urban_rural",
+      "status": "USABLE",
+      "source_file": "data/calibration/urban_rural_marginals.csv",
+      "warnings": [],
+      "categories": [
+        {
+          "category": "Urban",
+          "synthetic_categories": [
+            "Urban"
+          ],
+          "target_proportion": 0.483976,
+          "official_count": 34917440.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Rural",
+          "synthetic_categories": [
+            "Rural"
+          ],
+          "target_proportion": 0.516024,
+          "official_count": 37229590.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "social_group_official_marginal_grouped",
+      "variable": "social_group",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/social_group_marginals.csv",
+      "warnings": [
+        "Non-SC/ST target is an official residual grouping, not an official OBC/Others split."
+      ],
+      "categories": [
+        {
+          "category": "Scheduled Caste",
+          "synthetic_categories": [
+            "Scheduled Caste"
+          ],
+          "target_proportion": 0.200125,
+          "official_count": 14438445.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Scheduled Tribe",
+          "synthetic_categories": [
+            "Scheduled Tribe"
+          ],
+          "target_proportion": 0.011015,
+          "official_count": 794697.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Non-SC/ST",
+          "synthetic_categories": [
+            "Other Backward Class",
+            "Others"
+          ],
+          "target_proportion": 0.78886,
+          "official_count": 56913888.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Derived residual non-SC/ST target from official population total minus official SC and ST counts; mapped to synthetic Other Backward Class + Others.",
+          "status": "USABLE",
+          "warnings": [
+            "Official data does not split non-SC/ST into OBC and Others, so those synthetic categories are calibrated as one grouped residual."
+          ]
+        }
+      ]
+    }
+  ],
+  "all_target_sets": [
+    {
+      "target_id": "gender_official_marginal",
+      "variable": "gender",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/gender_marginals.csv",
+      "warnings": [
+        "Synthetic categories not directly targeted: Other."
+      ],
+      "categories": [
+        {
+          "category": "Male",
+          "synthetic_categories": [
+            "Male"
+          ],
+          "target_proportion": 0.500893,
+          "official_count": 36137975.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Female",
+          "synthetic_categories": [
+            "Female"
+          ],
+          "target_proportion": 0.499107,
+          "official_count": 36009055.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "urban_rural_official_marginal",
+      "variable": "urban_rural",
+      "status": "USABLE",
+      "source_file": "data/calibration/urban_rural_marginals.csv",
+      "warnings": [],
+      "categories": [
+        {
+          "category": "Urban",
+          "synthetic_categories": [
+            "Urban"
+          ],
+          "target_proportion": 0.483976,
+          "official_count": 34917440.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Rural",
+          "synthetic_categories": [
+            "Rural"
+          ],
+          "target_proportion": 0.516024,
+          "official_count": 37229590.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "social_group_official_marginal_grouped",
+      "variable": "social_group",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/social_group_marginals.csv",
+      "warnings": [
+        "Non-SC/ST target is an official residual grouping, not an official OBC/Others split."
+      ],
+      "categories": [
+        {
+          "category": "Scheduled Caste",
+          "synthetic_categories": [
+            "Scheduled Caste"
+          ],
+          "target_proportion": 0.200125,
+          "official_count": 14438445.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Scheduled Tribe",
+          "synthetic_categories": [
+            "Scheduled Tribe"
+          ],
+          "target_proportion": 0.011015,
+          "official_count": 794697.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Non-SC/ST",
+          "synthetic_categories": [
+            "Other Backward Class",
+            "Others"
+          ],
+          "target_proportion": 0.78886,
+          "official_count": 56913888.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Derived residual non-SC/ST target from official population total minus official SC and ST counts; mapped to synthetic Other Backward Class + Others.",
+          "status": "USABLE",
+          "warnings": [
+            "Official data does not split non-SC/ST into OBC and Others, so those synthetic categories are calibrated as one grouped residual."
+          ]
+        }
+      ]
+    }
+  ],
+  "quality_gates": [
+    {
+      "name": "calibration_converged",
+      "passed": true,
+      "detail": "Calibration convergence is required by configuration."
+    },
+    {
+      "name": "no_negative_weights",
+      "passed": true,
+      "detail": "Calibration weights must not be negative."
+    },
+    {
+      "name": "no_nan_or_infinite_weights",
+      "passed": true,
+      "detail": "Calibration weights must be finite numbers."
+    },
+    {
+      "name": "max_weight_below_threshold",
+      "passed": true,
+      "detail": "Maximum weight must be <= 8.0."
+    },
+    {
+      "name": "min_weight_above_threshold",
+      "passed": true,
+      "detail": "Minimum weight must be >= 0.2."
+    },
+    {
+      "name": "post_marginal_error_below_threshold",
+      "passed": true,
+      "detail": "Maximum post-calibration marginal error must be <= 0.02."
+    },
+    {
+      "name": "ess_ratio_above_threshold",
+      "passed": true,
+      "detail": "ESS ratio must be >= 0.8."
+    },
+    {
+      "name": "unresolved_targets_below_tolerance",
+      "passed": true,
+      "detail": "Unresolved targets must be <= 0."
+    }
+  ],
+  "input_hashes": {
+    "source_population_sha256": "878efcc3747d0c8a9c5f67eaa1c8989bd59fb6b6157ebaa7da9d563d02887be5",
+    "source_metadata_sha256": "090fcd310a88be986377d8ed73c500a44ade08797e2be917d772c70dd200d7d2",
+    "config_sha256": "afcbccf3a7e8c1e9520482b42bc340618915d718e0da5fc534604b905c34e294"
+  },
+  "software": {
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "outputs": {
+    "population_calibrated": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/population_calibrated.csv",
+    "weight_diagnostics": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/weight_diagnostics.json",
+    "convergence_history": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/convergence_history.csv",
+    "marginal_comparison_before": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/marginal_comparison_before.csv",
+    "marginal_comparison_after": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/marginal_comparison_after.csv"
+  }
+}

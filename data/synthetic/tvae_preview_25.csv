@@ -1,0 +1,26 @@
+district,district_code,urban_rural,age,gender,marital_status,relationship_to_head,household_size,household_type,literacy_status,education_level,labour_force_status,employment_status,individual_income,consumption_expenditure,social_group,synthetic_data_label
+Chennai,02,Urban,15,Female,2,1,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,8224.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,18,Male,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,8053.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,14,Male,2,5,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,9586.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,14,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10829.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,13,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,52.0,9869.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,45,Male,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,20.0,7971.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,15,Male,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Not in labour force,44.0,10186.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,16,Female,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,9894.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,45,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Employed,Not in labour force,59.0,7511.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,41,Female,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Employed,Not in labour force,71.0,12629.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,16,Female,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,13.0,10246.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,49,Female,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,113.0,10205.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,34,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,33.0,9942.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,42,Female,2,1,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,8853.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,45,Female,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,70.0,8998.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,19,Female,2,1,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,0.0,10432.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,43,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,24.0,9058.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,15,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,9908.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,14,Female,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,14.0,9032.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,38,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,3.0,8077.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,17,Male,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,58.0,12275.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,37,Male,2,5,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,0.0,10205.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,51,Female,2,1,4,Self-employed in non-agriculture,Literate,Not literate,Not in labour force,Not in labour force,67.0,8344.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Urban,20,Female,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,25.0,11815.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE
+Chennai,02,Rural,28,Male,2,5,4,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Not in labour force,70.0,9737.0,Other Backward Class,SYNTHETIC_TVAE_CANDIDATE

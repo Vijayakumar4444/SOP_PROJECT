@@ -1,0 +1,64 @@
+{
+  "experiment_id": "SYNEXP-19EB5942B1",
+  "population_id": "SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+  "generator": "tvae",
+  "model_id": "TN_TVAE_7A020BB473",
+  "reference_template_version": "0.3.0-modular",
+  "phase2_requirements_version": "synthetic_population_requirements_current",
+  "training_config": {
+    "profile": "development",
+    "generator": "tvae",
+    "version": "tvae_sdv_v1",
+    "seed": 42,
+    "epochs": 5,
+    "batch_size": 500,
+    "enable_gpu": false,
+    "enforce_min_max_values": true,
+    "enforce_rounding": true,
+    "label": "SYNTHETIC_TVAE_CANDIDATE",
+    "embedding_dim": 128,
+    "compress_dims": [
+      128,
+      128
+    ],
+    "decompress_dims": [
+      128,
+      128
+    ],
+    "l2scale": 1e-05,
+    "loss_factor": 2,
+    "required_dependencies": [
+      "sdv",
+      "pandas"
+    ]
+  },
+  "generation_config": {
+    "size": 12000,
+    "seed": 148,
+    "mode": "REPRESENTATIVE",
+    "conditions": {},
+    "batch_size": 12000,
+    "batch_count": 1
+  },
+  "variables": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "age",
+    "gender",
+    "marital_status",
+    "relationship_to_head",
+    "household_size",
+    "household_type",
+    "literacy_status",
+    "education_level",
+    "labour_force_status",
+    "employment_status",
+    "individual_income",
+    "consumption_expenditure",
+    "social_group"
+  ],
+  "constraints_version": "phase3_constraints_v1",
+  "created_at": "2026-09-12T15:17:29.216186+00:00",
+  "status": "COMPLETED"
+}

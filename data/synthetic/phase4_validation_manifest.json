@@ -1,6 +1,6 @@
 {
   "module": "phase4_validation_contract",
-  "created_at": "2026-09-11T16:33:43.594757+00:00",
+  "created_at": "2026-09-12T15:20:21.331388+00:00",
   "reference_population_artifact": "data/processed/reference_template.csv",
   "prepared_reference_artifact": "data/synthetic/training/reference_training_v1.csv",
   "holdout_reference_artifact": "data/synthetic/training/reference_holdout_v1.csv",
@@ -95,6 +95,222 @@
         "generated_rows_checked": 12000,
         "exact_reference_duplicate_count": 12000,
         "exact_reference_duplicate_rate": 100.0,
+        "interpretation": "Exact row-level feature matches are expected for bootstrap resampling and should be lower for generative candidates."
+      }
+    },
+    {
+      "population_id": "SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+      "population_artifact": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv",
+      "metadata_artifact": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/metadata.json",
+      "generation_report": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/generation_report.json",
+      "model_id": "TN_CTGAN_A70E94D8A1",
+      "generator_type": "ctgan",
+      "model_version": "ctgan_sdv_v1",
+      "variables": [
+        "district",
+        "district_code",
+        "urban_rural",
+        "age",
+        "gender",
+        "marital_status",
+        "relationship_to_head",
+        "household_size",
+        "household_type",
+        "literacy_status",
+        "education_level",
+        "labour_force_status",
+        "employment_status",
+        "individual_income",
+        "consumption_expenditure",
+        "social_group"
+      ],
+      "variable_schema": {
+        "district": "categorical",
+        "district_code": "categorical",
+        "urban_rural": "categorical",
+        "age": "integer",
+        "gender": "categorical",
+        "marital_status": "categorical",
+        "relationship_to_head": "categorical",
+        "household_size": "integer",
+        "household_type": "categorical",
+        "literacy_status": "categorical",
+        "education_level": "ordinal",
+        "labour_force_status": "categorical",
+        "employment_status": "categorical",
+        "individual_income": "continuous",
+        "consumption_expenditure": "continuous",
+        "social_group": "categorical"
+      },
+      "generation_config": {
+        "size": 12000,
+        "seed": 146,
+        "mode": "REPRESENTATIVE",
+        "conditions": {}
+      },
+      "constraint_results": {
+        "constraint_version": "phase3_constraints_v1",
+        "total_records": 12000,
+        "hard_violation_count": 0,
+        "soft_anomaly_count": 937,
+        "hard_violation_row_count": 0,
+        "soft_anomaly_row_count": 937,
+        "records_repaired": 0,
+        "records_rejected": 0,
+        "hard_violation_rate": 0.0,
+        "soft_anomaly_rate": 7.8083,
+        "hard_violations_by_type": {},
+        "soft_anomalies_by_type": {
+          "CHILD_LABOUR_FORCE_STATUS": 937
+        },
+        "sample_hard_violations": [],
+        "sample_soft_anomalies": [
+          {
+            "row_number": 16,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 22,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 51,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 60,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 96,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 112,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 114,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 129,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 135,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 165,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 182,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 188,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 196,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 198,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 202,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 203,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 233,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 264,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 289,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 303,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          }
+        ]
+      },
+      "population_size": 12000,
+      "exact_reference_duplicate_diagnostic": {
+        "reference_dataset_path": "data/synthetic/training/reference_training_v1.csv",
+        "comparison_columns": [
+          "district",
+          "district_code",
+          "urban_rural",
+          "age",
+          "gender",
+          "marital_status",
+          "relationship_to_head",
+          "household_size",
+          "household_type",
+          "literacy_status",
+          "education_level",
+          "labour_force_status",
+          "employment_status",
+          "individual_income",
+          "consumption_expenditure",
+          "social_group"
+        ],
+        "generated_rows_checked": 12000,
+        "exact_reference_duplicate_count": 0,
+        "exact_reference_duplicate_rate": 0.0,
         "interpretation": "Exact row-level feature matches are expected for bootstrap resampling and should be lower for generative candidates."
       }
     },
@@ -279,6 +495,222 @@
           },
           {
             "row_number": 326,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          }
+        ]
+      },
+      "population_size": 12000,
+      "exact_reference_duplicate_diagnostic": {
+        "reference_dataset_path": "data/synthetic/training/reference_training_v1.csv",
+        "comparison_columns": [
+          "district",
+          "district_code",
+          "urban_rural",
+          "age",
+          "gender",
+          "marital_status",
+          "relationship_to_head",
+          "household_size",
+          "household_type",
+          "literacy_status",
+          "education_level",
+          "labour_force_status",
+          "employment_status",
+          "individual_income",
+          "consumption_expenditure",
+          "social_group"
+        ],
+        "generated_rows_checked": 12000,
+        "exact_reference_duplicate_count": 0,
+        "exact_reference_duplicate_rate": 0.0,
+        "interpretation": "Exact row-level feature matches are expected for bootstrap resampling and should be lower for generative candidates."
+      }
+    },
+    {
+      "population_id": "SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+      "population_artifact": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv",
+      "metadata_artifact": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/metadata.json",
+      "generation_report": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/generation_report.json",
+      "model_id": "TN_TVAE_7A020BB473",
+      "generator_type": "tvae",
+      "model_version": "tvae_sdv_v1",
+      "variables": [
+        "district",
+        "district_code",
+        "urban_rural",
+        "age",
+        "gender",
+        "marital_status",
+        "relationship_to_head",
+        "household_size",
+        "household_type",
+        "literacy_status",
+        "education_level",
+        "labour_force_status",
+        "employment_status",
+        "individual_income",
+        "consumption_expenditure",
+        "social_group"
+      ],
+      "variable_schema": {
+        "district": "categorical",
+        "district_code": "categorical",
+        "urban_rural": "categorical",
+        "age": "integer",
+        "gender": "categorical",
+        "marital_status": "categorical",
+        "relationship_to_head": "categorical",
+        "household_size": "integer",
+        "household_type": "categorical",
+        "literacy_status": "categorical",
+        "education_level": "ordinal",
+        "labour_force_status": "categorical",
+        "employment_status": "categorical",
+        "individual_income": "continuous",
+        "consumption_expenditure": "continuous",
+        "social_group": "categorical"
+      },
+      "generation_config": {
+        "size": 12000,
+        "seed": 148,
+        "mode": "REPRESENTATIVE",
+        "conditions": {}
+      },
+      "constraint_results": {
+        "constraint_version": "phase3_constraints_v1",
+        "total_records": 12000,
+        "hard_violation_count": 0,
+        "soft_anomaly_count": 20,
+        "hard_violation_row_count": 0,
+        "soft_anomaly_row_count": 20,
+        "records_repaired": 0,
+        "records_rejected": 0,
+        "hard_violation_rate": 0.0,
+        "soft_anomaly_rate": 0.1667,
+        "hard_violations_by_type": {},
+        "soft_anomalies_by_type": {
+          "CHILD_LABOUR_FORCE_STATUS": 20
+        },
+        "sample_hard_violations": [],
+        "sample_soft_anomalies": [
+          {
+            "row_number": 823,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 1493,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 2261,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 2411,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 3576,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 4423,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 6177,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 6333,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 6564,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 6583,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 6594,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 7424,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 7965,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 8663,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 9019,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 9354,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 9430,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 9873,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 11535,
+            "field": "employment_status",
+            "type": "CHILD_LABOUR_FORCE_STATUS",
+            "message": "Below-15 labour-force status is a soft anomaly for later review."
+          },
+          {
+            "row_number": 11874,
             "field": "employment_status",
             "type": "CHILD_LABOUR_FORCE_STATUS",
             "message": "Below-15 labour-force status is a soft anomaly for later review."

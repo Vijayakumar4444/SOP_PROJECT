@@ -1,0 +1,15 @@
+{
+  "weight_column": "calibration_weight",
+  "nominal_sample_size": 12000,
+  "weight_sum": 12000.0,
+  "min_weight": 0.851541,
+  "max_weight": 1.200141,
+  "mean_weight": 1.0,
+  "median_weight": 1.02189,
+  "std_weight": 0.072438,
+  "coefficient_of_variation": 0.072438,
+  "effective_sample_size": 11937.36654,
+  "ess_ratio": 0.994781,
+  "invalid_weight_count": 0,
+  "negative_weight_count": 0
+}

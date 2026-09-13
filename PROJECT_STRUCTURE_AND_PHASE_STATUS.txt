@@ -1,0 +1,1495 @@
+SOP PROJECT - PROJECT STRUCTURE AND PHASE STATUS
+Audit date: 2026-09-13
+Repository root: C:\Users\SREEHARI\OneDrive\Documents\SOP project\SOP_PROJECT
+Branch/worktree audited: main working tree
+
+This document is a documentation-only audit of the current SOP_PROJECT working
+tree. It explains the implemented repository structure and the status of
+Phases 1 through 4 based on the current source code, manifests, artifacts,
+reports, scripts, and test outputs.
+
+
+============================================================
+1. PROJECT OVERVIEW
+============================================================
+
+Project name:
+SOP Project - Tamil Nadu synthetic population and policy simulation foundation.
+
+Main objective:
+Build a reliable data foundation and synthetic population pipeline for later
+policy simulation workflows.
+
+Tamil Nadu scope:
+The current implementation is scoped to Tamil Nadu. Phase 1 constructs a Tamil
+Nadu reference population/template from trusted data sources and produces
+official marginal/calibration datasets. Later phases use this state-scoped
+foundation rather than a national synthetic population.
+
+Why the project creates a synthetic population:
+Policy simulation needs individual and household-like records with consistent
+features such as age, gender, district, urban/rural status, education,
+employment, household size, income, consumption, and social group. Real survey
+microdata can be sensitive, incomplete for policy needs, or not shaped for
+simulation. Synthetic population generation creates candidate populations that
+preserve useful statistical structure while giving later simulation modules a
+controlled population artifact to operate on.
+
+How policy simulation will use the synthetic population:
+Later policy engines can evaluate eligibility rules, simulate alternative policy
+designs, run Monte Carlo/uncertainty workflows, compare outcomes, and generate
+recommendations using the selected and calibrated synthetic population. Phase 5
+will calibrate/reweight the selected Phase 4 population before those later
+policy simulation components are used.
+
+Simple architecture:
+
+Data Sources
+    ->
+Phase 1 - Data Foundation
+    ->
+Phase 2 - Policy-Data Compatibility
+    ->
+Phase 3 - Synthetic Population Generation
+    ->
+Phase 4 - Population Validation
+    ->
+Phase 5 - Calibration/Reweighting
+    ->
+Later Policy Simulation Components
+
+This document currently audits and explains Phases 1-4. Phase 5 is not
+implemented here.
+
+
+============================================================
+2. COMPLETE PROJECT FOLDER STRUCTURE
+============================================================
+
+Important top-level structure observed in the current repository:
+
+SOP_PROJECT/
+|
++-- backend/
++-- config/
++-- data/
++-- artifacts/
++-- reports/
++-- scripts/
++-- docs/
++-- tests/
++-- node_modules/
++-- .venv/
++-- .tmp_tests/
++-- README.md
++-- package.json
++-- package-lock.json
++-- requirements.txt
++-- .gitignore
++-- phase3.txt
++-- PROJECT_STRUCTURE_AND_PHASE_STATUS.txt
+
+backend/
+Role:
+Application source code.
+
+Phase:
+Phases 1-4.
+
+Contents type:
+Source code and Python tests.
+
+Important structure:
+
+backend/
+|
++-- app/
+    |
+    +-- modules/
+    |   |
+    |   +-- data_foundation/
+    |   |   Role: Phase 1 ingestion, cleaning, harmonization, reference template
+    |   |   preparation, calibration table generation, metadata, and reports.
+    |   |   Important files include pipeline.py and plfs_loader.py.
+    |   |
+    |   +-- compatibility/
+    |   |   Role: Phase 2 policy-data compatibility service and example policy
+    |   |   evaluation. It checks whether available data can support a policy.
+    |   |   Important files include service.py, readiness.py, and run_phase2.py.
+    |   |
+    |   +-- synthetic_population/
+    |   |   Role: Phase 3 training, model registry, sampling, constraints,
+    |   |   persistence, finalization, and Phase 4 manifest preparation.
+    |   |   Important files include generator_training.py, sampling_service.py,
+    |   |   neural_training.py, phase3_finalization.py, phase3_tests.py,
+    |   |   constraints.py, and run_phase3_* scripts.
+    |   |
+    |   +-- population_validation/
+    |       Role: Phase 4 validation, scoring, gate evaluation, comparison,
+    |       selection, and Phase 5 handoff creation.
+    |       Important files include service.py and metrics.py.
+    |
+    +-- tests/
+        Role: Python unit tests for Phase 3 and Phase 4 functionality.
+        Important files include test_neural_generators.py and
+        test_population_validation.py.
+
+config/
+Role:
+Configuration kept outside Python source so thresholds, model parameters, and
+scoring behavior can be reviewed or adjusted without changing application code.
+
+Phase:
+Phases 2-4.
+
+Contents type:
+Configuration.
+
+Important structure:
+
+config/
+|
++-- compatibility/
+|   Role: Phase 2 readiness/scoring configuration.
+|
++-- synthetic_population/
+|   |
+|   +-- models/
+|       Role: Phase 3 generator configuration for Bootstrap, Gaussian Copula,
+|       CTGAN, and TVAE.
+|
++-- population_validation/
+    Role: Phase 4 validation scoring weights, thresholds, and critical gates.
+
+data/
+Role:
+Input, intermediate, processed, synthetic, export, and calibration data.
+
+Phase:
+Phases 1-5 boundary inputs/outputs.
+
+Contents type:
+Raw/input data, processed data, generated data, manifests, handoffs.
+
+artifacts/
+Role:
+Persisted trained model artifacts, generated synthetic populations, and
+validation artifacts.
+
+Phase:
+Phases 3-4.
+
+Contents type:
+Generated artifacts.
+
+reports/
+Role:
+Human-readable reports for data foundation diagnostics, compatibility,
+synthetic model training, acceptance, validation, comparison, and handoff.
+
+Phase:
+Phases 1-4.
+
+Contents type:
+Reports.
+
+scripts/
+Role:
+PowerShell wrappers for running phase pipelines and tests from the repository
+root.
+
+Phase:
+Phases 1-4.
+
+Contents type:
+Runnable scripts.
+
+docs/
+Role:
+Developer documentation and model-specific notes.
+
+Phase:
+Mostly Phase 3 and environment setup, with project-wide explanation.
+
+Contents type:
+Documentation.
+
+tests/
+Role:
+Node-based Phase 1 and Phase 2 tests.
+
+Phase:
+Phases 1-2.
+
+Contents type:
+Tests.
+
+node_modules/
+Role:
+Installed Node dependencies for local execution. This is generated dependency
+content, not project source.
+
+.venv/
+Role:
+Local Python virtual environment used by the current repository. This is
+generated dependency/runtime content, not project source.
+
+.tmp_tests/
+Role:
+Temporary/generated local test content.
+
+
+============================================================
+3. IMPORTANT ROOT FILES
+============================================================
+
+README.md
+Project README. It still contains older wording that emphasizes Phase 1, so it
+should not be treated as the only source of truth for the current Phase 1-4
+state.
+
+package.json
+Node project metadata and script entry points. Current scripts include:
+phase1:build, phase2:build, phase3:neural, phase3:finalize, phase4:validate,
+test:python, and test.
+
+package-lock.json
+Locked Node dependency versions.
+
+requirements.txt
+Python dependency manifest. It now declares the Python packages needed by the
+current implementation, including SDV and pandas for CTGAN/TVAE work.
+
+.gitignore
+Ignore rules. Current local changes include ignoring .venv, .tmp_tests, and
+neural test runtime output.
+
+phase3.txt
+Existing Phase 3 note/document artifact in the project root.
+
+PROJECT_STRUCTURE_AND_PHASE_STATUS.txt
+This documentation file.
+
+
+============================================================
+4. DATA FOLDER - DETAILED EXPLANATION
+============================================================
+
+data/
+|
++-- raw/
++-- interim/
++-- processed/
++-- reference/
++-- calibration/
++-- synthetic/
++-- exports/
+
+data/raw/
+Purpose:
+Raw or source-like inputs used by the data foundation layer.
+
+Phase:
+Phase 1 input.
+
+Type:
+Raw/input data.
+
+data/interim/
+Purpose:
+Intermediate transformed data used during pipeline construction.
+
+Phase:
+Phase 1 intermediate processing.
+
+Type:
+Intermediate data.
+
+data/processed/
+Purpose:
+Canonical processed outputs from Phase 1.
+
+Important file:
+data/processed/reference_template.csv
+
+Purpose:
+Canonical Tamil Nadu reference population/template used by later phases.
+
+Current size:
+22,584 rows and 131 columns in the current audit.
+
+Consumes/produces:
+Produced by Phase 1; used by Phase 3 preparation and validation context.
+
+data/reference/
+Important files:
+data/reference/variable_dictionary.csv
+data/source_registry.csv
+
+Purpose:
+Variable definitions and source/provenance registry.
+
+Current size:
+variable_dictionary.csv has 131 rows and 18 columns.
+source_registry.csv has 19 rows and 18 columns.
+
+Phase:
+Produced by Phase 1; used as project metadata and data governance evidence.
+
+data/calibration/
+Purpose:
+Official marginal/calibration tables used for validation and later Phase 5
+calibration/reweighting.
+
+Important files observed:
+data/calibration/calibration_diagnostics.csv
+data/calibration/current_district_geography.csv
+data/calibration/gender_marginals.csv
+data/calibration/social_group_marginals.csv
+data/calibration/state_population_marginals.csv
+data/calibration/tn_comprehensive_policy_marginals.csv
+data/calibration/tn_health_marginals.csv
+data/calibration/tn_socioeconomic_marginals.csv
+data/calibration/urban_rural_marginals.csv
+data/calibration/worker_marginals.csv
+
+Current sizes observed:
+calibration_diagnostics.csv: 4 rows, 7 columns.
+current_district_geography.csv: 37 rows, 7 columns.
+gender_marginals.csv: 2 rows, 7 columns.
+social_group_marginals.csv: 2 rows, 7 columns.
+state_population_marginals.csv: 1 row, 18 columns.
+tn_comprehensive_policy_marginals.csv: 25 rows, 6 columns.
+tn_health_marginals.csv: 5 rows, 6 columns.
+tn_socioeconomic_marginals.csv: 22 rows, 6 columns.
+urban_rural_marginals.csv: 2 rows, 7 columns.
+worker_marginals.csv: 4 rows, 7 columns.
+
+data/synthetic/
+Purpose:
+Training data, generated population copies, manifests, model comparison
+manifests, validation manifests, and phase handoff files.
+
+Important files:
+data/synthetic/training/reference_training_v1.csv
+data/synthetic/training/reference_holdout_v1.csv
+data/synthetic/phase3_acceptance_manifest.json
+data/synthetic/phase3_finalization_manifest.json
+data/synthetic/model_comparison_manifest.json
+data/synthetic/phase4_validation_manifest.json
+data/synthetic/phase5_calibration_handoff.json
+
+Reference training dataset:
+data/synthetic/training/reference_training_v1.csv
+Current size: 12,000 rows and 20 columns.
+Phase: produced for Phase 3 training; consumed by all four generators and
+Phase 4 validation.
+
+Reference holdout dataset:
+data/synthetic/training/reference_holdout_v1.csv
+Current size: 1,784 rows and 20 columns.
+Phase: held-out reference data for validation/comparison.
+
+Phase 2 -> Phase 3 requirements:
+Produced by Phase 2 in data/synthetic/ compatibility/requirements-style
+outputs such as synthetic_population_requirements.json and supporting reports.
+These identify required variables, approved proxies, critical variables, and
+calibration variables.
+
+Phase 3 -> Phase 4 manifest:
+data/synthetic/phase4_validation_manifest.json lists the four candidate
+populations to validate: Bootstrap, Gaussian Copula, CTGAN, and TVAE.
+
+Phase 4 -> Phase 5 handoff:
+data/synthetic/phase5_calibration_handoff.json identifies the selected
+population for Phase 5 calibration/reweighting.
+
+data/exports/
+Purpose:
+User-facing export files such as spreadsheet previews.
+
+Important file:
+data/exports/tamil_nadu_synthetic_population_preview.xlsx
+
+
+============================================================
+5. ARTIFACTS FOLDER
+============================================================
+
+artifacts/
+|
++-- synthetic_models/
++-- synthetic_populations/
++-- validation/
+
+artifacts/synthetic_models/
+Purpose:
+Stores trained or persisted model artifacts and the model registry.
+
+Important file:
+artifacts/synthetic_models/model_registry.json
+
+Current trained models:
+
+Bootstrap
+Model ID: TN_BOOTSTRAP_1D08E0184C
+Model artifact: artifacts/synthetic_models/bootstrap/TN_BOOTSTRAP_1D08E0184C
+
+Gaussian Copula
+Model ID: TN_GAUSSIAN_COPULA_CB9DD0CE87
+Model artifact:
+artifacts/synthetic_models/gaussian_copula/TN_GAUSSIAN_COPULA_CB9DD0CE87
+
+CTGAN
+Model ID: TN_CTGAN_A70E94D8A1
+Model artifact: artifacts/synthetic_models/ctgan/TN_CTGAN_A70E94D8A1
+
+TVAE
+Model ID: TN_TVAE_7A020BB473
+Model artifact: artifacts/synthetic_models/tvae/TN_TVAE_7A020BB473
+
+artifacts/synthetic_populations/
+Purpose:
+Stores generated synthetic population artifacts and metadata. These are the
+population files that Phase 4 validates.
+
+Current acceptance populations:
+
+Bootstrap
+Population ID: SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE
+Population artifact:
+artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv
+Rows: 12,000
+Hard constraint violations: 0
+
+Gaussian Copula
+Population ID: SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE
+Population artifact:
+artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/population.csv
+Rows: 12,000
+Hard constraint violations: 0
+
+CTGAN
+Population ID: SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE
+Population artifact:
+artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv
+Rows: 12,000
+Hard constraint violations: 0
+
+TVAE
+Population ID: SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE
+Population artifact:
+artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv
+Rows: 12,000
+Hard constraint violations: 0
+
+Difference between a model artifact and a synthetic population artifact:
+
+MODEL ARTIFACT:
+The saved generator state or metadata needed to recreate samples later. For
+CTGAN and TVAE this includes real trained SDV model persistence. For Bootstrap
+and Gaussian Copula it includes their fitted generator state.
+
+SYNTHETIC POPULATION ARTIFACT:
+A concrete generated dataset, usually population.csv plus metadata and a
+generation report. Phase 4 validates these population artifacts, not merely the
+existence of trained models.
+
+artifacts/validation/
+Purpose:
+Phase 4 validation output artifacts.
+
+Important file:
+artifacts/validation/phase4_model_comparison.json
+
+
+============================================================
+6. CONFIG FOLDER
+============================================================
+
+Configuration is kept separately from Python code so model parameters, scoring
+weights, and validation thresholds can be reviewed, changed, and audited without
+rewriting application logic.
+
+Important configuration:
+
+config/synthetic_population/models/bootstrap.yaml
+Purpose:
+Bootstrap generator configuration. Bootstrap resamples existing reference
+records and is a strong baseline for fidelity.
+
+config/synthetic_population/models/gaussian_copula.yaml
+Purpose:
+Gaussian Copula generator configuration. It models marginal distributions and
+dependencies with a copula-style approach.
+
+config/synthetic_population/models/ctgan.yaml
+Purpose:
+CTGAN configuration for the real SDV CTGANSynthesizer path. Current settings
+include SDV model version ctgan_sdv_v1, seed 42, epochs 5, batch size 500,
+GPU disabled, min/max enforcement, and rounding enforcement.
+
+config/synthetic_population/models/tvae.yaml
+Purpose:
+TVAE configuration for the real SDV TVAESynthesizer path. Current settings
+include SDV model version tvae_sdv_v1, seed 42, epochs 5, batch size 500,
+GPU disabled, min/max enforcement, and rounding enforcement.
+
+config/population_validation/scoring.yaml
+Purpose:
+Phase 4 validation scoring configuration. It defines component weights,
+quality thresholds, warning/fail thresholds, and critical validation gates.
+
+Important Phase 4 thresholds:
+pass_quality: 0.85
+warning_quality: 0.70
+minimum critical variable fidelity: 0.80
+minimum any variable fidelity: 0.65
+minimum correlation/relationship preservation: 0.65
+maximum hard violation rate: 0.0
+
+Important critical relationship:
+district <-> urban_rural is a configured critical relationship gate.
+
+
+============================================================
+7. REPORTS FOLDER
+============================================================
+
+reports/
+Purpose:
+Human-readable diagnostics and handoff explanations.
+
+Important Phase 1 reports:
+Reports generated by the data foundation pipeline summarize ingestion,
+cleaning, data quality, source registry, variable dictionary, and reference
+template creation.
+
+Important Phase 2 reports:
+reports from compatibility evaluation, including example policy readiness and
+synthetic population requirements.
+
+Important Phase 3 reports:
+reports/phase3_summary.md
+reports/phase3_acceptance_demonstration.md
+reports/phase3_definition_of_done.md
+reports/phase3_test_report.md
+reports/synthetic_neural_generators_report.md
+reports/synthetic_model_comparison_manifest_report.md
+reports/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE.md
+reports/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE.md
+
+Important Phase 4 reports:
+reports/phase4_validation_handoff.md
+reports/phase4_model_comparison.md
+reports/phase4_summary.md
+reports/population_validation/
+
+Report types:
+Diagnostic: data quality and pipeline observations.
+Validation: Phase 4 per-population validation metrics.
+Model comparison: Phase 3/4 comparison outputs.
+Acceptance: Phase 3 12,000-row acceptance population evidence.
+Summary: phase-level summaries.
+Handoff-related: Phase 4 validation handoff and Phase 5 calibration handoff.
+
+Stale/outdated report warning:
+README.md and some older Phase 3 training/preparation text still contain older
+wording. For example, older text may imply constraints or later phases were not
+yet implemented. The current manifests, source modules, and validation artifacts
+are more current than those older narrative reports.
+
+
+============================================================
+8. SCRIPTS FOLDER
+============================================================
+
+Important runnable scripts:
+
+scripts/run_phase1_python.ps1
+Purpose: run Phase 1 data foundation pipeline.
+Phase: Phase 1.
+Command:
+npm run phase1:build
+
+scripts/run_phase2_python.ps1
+Purpose: run Phase 2 policy-data compatibility examples and outputs.
+Phase: Phase 2.
+Command:
+npm run phase2:build
+
+scripts/run_phase3_neural_generators_python.ps1
+Purpose: train real CTGAN and TVAE neural generators through the current Python
+environment.
+Phase: Phase 3.
+Command:
+npm run phase3:neural
+
+scripts/run_phase3_finalization_python.ps1
+Purpose: finalize Phase 3 candidate populations and regenerate Phase 4 manifest
+from successful populations.
+Phase: Phase 3.
+Command:
+npm run phase3:finalize
+
+scripts/run_phase4_validation_python.ps1
+Purpose: run Phase 4 population validation, comparison, selection, reports, and
+Phase 5 handoff generation.
+Phase: Phase 4.
+Command:
+npm run phase4:validate
+
+scripts/run_python_tests.ps1
+Purpose: run Python unit tests through the local virtual environment when
+available.
+Phase: Phases 3-4 tests.
+Command:
+npm run test:python
+
+tests/phase1.test.js
+Purpose: Node test for Phase 1 outputs and metadata.
+Phase: Phase 1.
+Command:
+npm test
+
+tests/phase2.test.js
+Purpose: Node test for Phase 2 compatibility outputs.
+Phase: Phase 2.
+Command:
+npm test
+
+Direct Python Phase 3 verification command:
+.\.venv\Scripts\python.exe backend\app\modules\synthetic_population\run_phase3_tests_and_comparison.py
+
+Full test command verified during the current audit:
+npm test
+
+
+============================================================
+9. PHASE 1 - DATA SOURCE COLLECTION AND DATA FOUNDATION
+============================================================
+
+PURPOSE
+Build the Tamil Nadu data foundation used by all later phases.
+
+INPUTS
+Trusted Tamil Nadu-relevant source data, survey-like records, government/
+official marginal data, variable metadata, and source registry information.
+
+PROCESS
+
+Trusted Tamil Nadu Data Sources
+        ->
+Data Ingestion
+        ->
+Cleaning
+        ->
+Harmonization
+        ->
+Preparation
+        ->
+Reference Population / Template
+        +
+Official Marginals
+        +
+Metadata / Provenance
+
+IMPORTANT MODULES
+backend/app/modules/data_foundation/pipeline.py
+backend/app/modules/data_foundation/plfs_loader.py
+
+IMPORTANT IMPLEMENTATION DETAILS
+pipeline.py writes source registry, variable dictionary, reference template,
+calibration tables, reports, and template metadata.
+
+plfs_loader.py filters the source records to Tamil Nadu, normalizes/calibrates
+weights, sets Tamil Nadu state fields, and assigns reference person IDs.
+
+OUTPUTS
+data/processed/reference_template.csv
+data/reference/variable_dictionary.csv
+data/source_registry.csv
+data/calibration/*.csv
+Phase 1 reports under reports/
+
+IMPORTANT CURRENT STATISTICS
+Canonical reference template:
+data/processed/reference_template.csv
+Rows: 22,584
+Columns: 131
+
+Reference training data prepared for Phase 3:
+data/synthetic/training/reference_training_v1.csv
+Rows: 12,000
+Columns: 20
+
+Holdout data:
+data/synthetic/training/reference_holdout_v1.csv
+Rows: 1,784
+Columns: 20
+
+TESTS
+tests/phase1.test.js verifies reference template/source registry/data quality
+and metadata expectations.
+
+WARNING
+Some enrichment fields are deterministic benchmark-derived fields rather than
+direct microdata observations. That means they are useful for demonstration and
+policy-variable coverage, but they should be treated carefully before real
+policy conclusions.
+
+PHASE 1 STATUS:
+COMPLETE WITH WARNINGS
+
+Why:
+The current repository contains a working Tamil Nadu reference template,
+variable dictionary, source registry, calibration files, reports, and passing
+Phase 1 tests. The warning is about benchmark-derived enrichment fields and
+the need for careful interpretation.
+
+
+============================================================
+10. PHASE 2 - POLICY-DATA COMPATIBILITY ENGINE
+============================================================
+
+PURPOSE
+Before simulating a policy, determine whether available data can actually
+support that policy.
+
+PROCESS
+
+Policy Requirements
+        ->
+Domain Check
+        ->
+Variable Check
+        ->
+Data Availability
+        ->
+Temporal Check
+        ->
+Reliability Score
+        ->
+Readiness Decision
+
+IMPORTANT MODULES
+backend/app/modules/compatibility/service.py
+backend/app/modules/compatibility/readiness.py
+backend/app/modules/compatibility/run_phase2.py
+config/compatibility/scoring.yaml
+
+KEY CONCEPTS IMPLEMENTED
+Variable availability:
+Determines whether a required variable is exactly available, available through
+an approved proxy, aggregate-only, or missing.
+
+Joint availability:
+Checks whether required variables can be used together for a policy.
+
+Geography compatibility:
+Checks whether the data geography supports the policy geography.
+
+Temporal compatibility:
+Checks whether the data recency is acceptable for the policy requirement.
+
+Critical requirements:
+Variables marked critical can block readiness if unavailable.
+
+Reliability score:
+Numeric score summarizing how reliable the data-policy match is.
+
+Readiness statuses:
+READY
+READY_WITH_WARNINGS
+NOT_READY
+
+ACTUAL POLICY EXAMPLE
+data/compatibility/example_policy_reports.json contains three example policies.
+
+TN_YOUTH_EMPLOYMENT_ASSISTANCE:
+Status: READY_WITH_WARNINGS
+Reliability score: 82.63
+Important requirements include age, employment_status, household_income,
+state, and district. household_income is supported through an approved proxy
+using consumption_expenditure.
+
+TN_EDUCATION_SKILLING:
+Status: READY_WITH_WARNINGS
+Reliability score: 90.18
+
+TN_HEALTH_INSURANCE_TOPUP:
+Status: NOT_READY
+Reliability score: 71.51
+Blocking issue: critical variable disability_status is AGGREGATE_ONLY.
+
+WHAT PHASE 2 PROVIDES TO PHASE 3
+Phase 2 provides synthetic population requirements: required variables,
+critical variables, approved proxies, calibration variables, and geography
+level expectations for synthetic population generation.
+
+TESTS
+tests/phase2.test.js verifies READY_WITH_WARNINGS, NOT_READY, proxy handling,
+and Phase 3 requirements output.
+
+PHASE 2 STATUS:
+COMPLETE WITH WARNINGS
+
+Why:
+The compatibility engine, readiness statuses, example policy reports, and tests
+exist and pass. Warnings remain because some policies depend on proxies or
+aggregate-only variables.
+
+
+============================================================
+11. PHASE 3 - SYNTHETIC POPULATION GENERATION
+============================================================
+
+PURPOSE
+Generate candidate synthetic populations that later validation can compare and
+select from. Phase 3 does not choose the best policy population by itself; it
+creates candidates and hands them to Phase 4.
+
+INPUTS FROM PHASE 1 AND PHASE 2
+Phase 1 provides the reference population/template, training data, holdout data,
+and official marginal/calibration data.
+
+Phase 2 provides the policy-data requirements, including variables and proxies
+needed by policy simulation.
+
+WORKFLOW
+
+Reference Training Data
+       ->
+Train/Fit Models
+       ->
+Save Model Artifacts
+       ->
+Reload
+       ->
+Sample
+       ->
+Apply Constraints
+       ->
+Generate 12,000-person candidate populations
+       ->
+Persist
+       ->
+Phase 4 Manifest
+
+IMPORTANT MODULES
+backend/app/modules/synthetic_population/generator_training.py
+backend/app/modules/synthetic_population/generators/bootstrap.py
+backend/app/modules/synthetic_population/generators/gaussian_copula.py
+backend/app/modules/synthetic_population/generators/neural.py
+backend/app/modules/synthetic_population/neural_training.py
+backend/app/modules/synthetic_population/sampling_service.py
+backend/app/modules/synthetic_population/phase3_finalization.py
+backend/app/modules/synthetic_population/constraints.py
+backend/app/modules/synthetic_population/phase3_tests.py
+
+BOOTSTRAP
+How it works:
+Bootstrap resamples complete records from the reference training data.
+
+What it learns/does:
+It does not learn a parametric model. It preserves observed records and their
+relationships by sampling from the existing reference dataset.
+
+Strengths:
+Very high distribution and relationship fidelity; simple and robust baseline.
+
+Limitations:
+Low novelty and weak privacy characteristics because exact row-level feature
+duplicates are expected.
+
+Current implementation status:
+Implemented, trained/persisted, sampled, finalized, and included in Phase 4.
+
+Current population artifact:
+artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv
+
+GAUSSIAN COPULA
+How it works:
+Models variable distributions and dependencies using a copula-style approach.
+
+Strengths:
+Can generate novel rows and preserve many marginal distributions very well.
+
+Limitations:
+May weaken important categorical/geographic relationships.
+
+Current implementation status:
+Implemented, trained/persisted, sampled, finalized, and included in Phase 4.
+
+Current population artifact:
+artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/population.csv
+
+CTGAN
+Meaning:
+Conditional Tabular GAN.
+
+How it works:
+Uses a generator/discriminator training setup for tabular data. The generator
+learns to produce synthetic records while the discriminator learns to distinguish
+synthetic from reference-like records.
+
+Why useful for tabular data:
+It can model nonlinear and mixed-type tabular patterns and produce novel
+records.
+
+Actual SDV implementation:
+backend/app/modules/synthetic_population/generators/neural.py wires CTGAN to
+SDV's CTGANSynthesizer.
+
+Training, persistence/loading, sampling:
+Training is driven by generator_training.py and neural_training.py. The model is
+saved, loaded, and sampled through the neural generator and sampling services.
+
+Current population artifact:
+artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv
+
+TVAE
+Meaning:
+Tabular Variational Autoencoder.
+
+How it works:
+Uses an encoder to map tabular records into a latent representation and a
+decoder to generate records from that latent space.
+
+Strengths:
+Can generate novel records and learn compact representations of mixed tabular
+data.
+
+Limitations:
+With the current lightweight settings, it has weaker fidelity on several
+categorical variables than Bootstrap and Gaussian Copula.
+
+Actual SDV implementation:
+backend/app/modules/synthetic_population/generators/neural.py wires TVAE to
+SDV's TVAESynthesizer.
+
+Training, persistence/loading, sampling:
+Training is driven by generator_training.py and neural_training.py. The model is
+saved, loaded, and sampled through the neural generator and sampling services.
+
+Current population artifact:
+artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv
+
+CURRENT PHASE 3 MODEL TABLE
+
+Model             Training status  Model ID                    Population ID                                             Rows   Hard violations  Final Phase 3 status
+Bootstrap         TRAINED          TN_BOOTSTRAP_1D08E0184C      SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE      12000  0                COMPLETE
+Gaussian Copula   TRAINED          TN_GAUSSIAN_COPULA_CB9DD0CE87 SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE 12000 0               COMPLETE
+CTGAN             TRAINED          TN_CTGAN_A70E94D8A1          SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE          12000  0                COMPLETE
+TVAE              TRAINED          TN_TVAE_7A020BB473           SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE           12000  0                COMPLETE
+
+TESTS
+backend/app/tests/test_neural_generators.py verifies CTGAN/TVAE lightweight
+training plus save/load/sample behavior.
+
+backend/app/modules/synthetic_population/run_phase3_tests_and_comparison.py
+verified the four-model Phase 3 registry and comparison path during the current
+audit.
+
+PHASE 3 STATUS:
+COMPLETE WITH WARNINGS
+
+Why:
+All four models are implemented, trained/persisted, reloadable, sampleable, and
+have 12,000-row acceptance population artifacts included in the Phase 4
+manifest. Warnings remain because neural models currently have validation
+quality issues in Phase 4 and because some older reports/documentation wording
+is stale relative to the completed implementation.
+
+
+============================================================
+12. PHASE 4 - POPULATION VALIDATION
+============================================================
+
+PURPOSE
+Validate candidate synthetic populations before policy simulation. A generated
+population existing does not automatically mean it is a good synthetic
+population.
+
+IMPORTANT MODULES
+backend/app/modules/population_validation/service.py
+backend/app/modules/population_validation/metrics.py
+config/population_validation/scoring.yaml
+
+VALIDATION COMPONENTS
+Distribution Fidelity:
+Compares synthetic variable distributions against the reference distribution.
+
+Numerical KS:
+Kolmogorov-Smirnov style comparison for numerical variables.
+
+Wasserstein distance:
+Measures distance between numerical distributions.
+
+Jensen-Shannon divergence:
+Measures difference between categorical probability distributions.
+
+Total Variation Distance:
+Measures categorical distribution distance.
+
+Missingness comparison:
+Checks whether missing value behavior is preserved.
+
+Pearson correlation:
+Linear relationship preservation for numeric variables.
+
+Spearman correlation:
+Rank relationship preservation for numeric/ordinal variables.
+
+Cramer's V:
+Categorical association preservation.
+
+Eta / correlation ratio:
+Relationship strength for mixed categorical/numeric associations.
+
+Constraint/data validity:
+Checks hard constraint violations and data validity.
+
+Official marginal comparison:
+Compares selected synthetic marginals with official Tamil Nadu marginal files.
+
+Statistical similarity:
+Overall statistical closeness to reference/holdout data.
+
+Composite quality score:
+Weighted combination of distribution fidelity, correlation preservation, data
+validity, and statistical similarity.
+
+Critical gates:
+Specific threshold checks that can fail a population even when the composite
+quality score is high.
+
+STATUS MEANINGS
+PASS:
+Population passes configured quality and critical validation gates.
+
+FAIL:
+Population fails one or more configured critical gates or required thresholds.
+
+PASS_WITH_WARNINGS:
+The implementation supports warning-style reporting. The current comparison
+shows Bootstrap as PASS with one warning rather than a separate
+PASS_WITH_WARNINGS status in the comparison table.
+
+WHY HIGH QUALITY CAN STILL FAIL
+A model can have a high composite quality score but still FAIL if a critical
+gate is below threshold. This is intentional: a population may be good overall
+but still unsuitable if it breaks an important variable or relationship needed
+for policy use.
+
+
+============================================================
+13. CURRENT FOUR-MODEL VALIDATION RESULTS
+============================================================
+
+Source:
+artifacts/validation/phase4_model_comparison.json
+Created at: 2026-09-13T04:48:08.049828+00:00
+Models evaluated: 4
+
+Model             Distribution  Correlation  Validity  Similarity  Quality   Failed gates  Final status
+Bootstrap         0.992149      0.984153     1.000000  0.948864    0.982663  0             PASS
+Gaussian Copula   0.997283      0.866864     0.993225  0.908397    0.939569  1             FAIL
+CTGAN             0.970104      0.829574     0.992192  0.887413    0.915824  1             FAIL
+TVAE              0.790470      0.836712     0.999833  0.793679    0.846857  5             FAIL
+
+Gaussian Copula failure:
+Technically working model: yes.
+Population validation status: FAIL.
+Reason: failed district <-> urban_rural relationship preservation gate.
+Gate: relationship:district:urban_rural
+Threshold: 0.65
+Actual value: 0.582729
+
+CTGAN failure:
+Technically working model: yes.
+Population validation status: FAIL.
+Reason: failed district <-> urban_rural relationship preservation gate.
+Gate: relationship:district:urban_rural
+Threshold: 0.65
+Actual value: 0.557025
+
+TVAE failures:
+Technically working model: yes.
+Population validation status: FAIL.
+Reasons:
+variable_fidelity:district actual 0.422408 threshold 0.80
+variable_fidelity:district_code actual 0.423696 threshold 0.65
+variable_fidelity:education_level actual 0.749840 threshold 0.80
+variable_fidelity:household_type actual 0.640456 threshold 0.65
+relationship:district:urban_rural actual 0.516649 threshold 0.65
+
+Important distinction:
+Gaussian Copula, CTGAN, and TVAE are technically working generated populations.
+Their Phase 4 failures mean those specific candidate populations did not meet
+configured validation quality gates. It does not mean the model code is absent
+or that sampling failed.
+
+
+============================================================
+14. WHY BOOTSTRAP WAS SELECTED
+============================================================
+
+Bootstrap was selected because Phase 4 selects the highest-scoring population
+that passed all configured critical validation gates.
+
+All four models successfully generated 12,000-row candidate populations:
+Bootstrap, Gaussian Copula, CTGAN, and TVAE.
+
+Only Bootstrap passed the configured Phase 4 gates in the current comparison.
+It also had the highest quality score among candidates:
+Bootstrap quality score: 0.982663
+Selected model ID: TN_BOOTSTRAP_1D08E0184C
+Selected population ID: SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE
+
+Important limitation:
+Bootstrap naturally preserves reference-data distributions and relationships
+well because it resamples complete reference records. High fidelity therefore
+does not automatically mean Bootstrap has better novelty or privacy properties
+than neural generative models.
+
+
+============================================================
+15. PHASE 4 -> PHASE 5 HANDOFF
+============================================================
+
+Phase 4 output for Phase 5:
+data/synthetic/phase5_calibration_handoff.json
+
+Selected population for Phase 5:
+SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE
+
+Selected model:
+TN_BOOTSTRAP_1D08E0184C
+
+Selected generator:
+bootstrap
+
+Validation status:
+PASS
+
+Quality score:
+0.982663
+
+Official targets available in handoff:
+gender
+social_group
+urban_rural
+
+Phase 5 expectation:
+Phase 5 should receive the selected Bootstrap population and use official Tamil
+Nadu statistics for calibration/reweighting. Phase 5 is not implemented by this
+document.
+
+
+============================================================
+16. COMPLETE PHASE HANDOFF
+============================================================
+
+PHASE 1
+Reference Population + Official Statistics
+Files:
+data/processed/reference_template.csv
+data/reference/variable_dictionary.csv
+data/source_registry.csv
+data/calibration/*.csv
+
+          ->
+
+PHASE 2
+Compatibility Requirements
+Files:
+data/compatibility/example_policy_reports.json
+data/synthetic/synthetic_population_requirements.json
+data/synthetic/requirement_results.csv
+
+          ->
+
+PHASE 3
+Four Candidate Synthetic Populations
+Files:
+artifacts/synthetic_models/model_registry.json
+artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv
+artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/population.csv
+artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv
+artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv
+data/synthetic/phase4_validation_manifest.json
+
+          ->
+
+PHASE 4
+Validate + Compare + Select
+Files:
+artifacts/validation/phase4_model_comparison.json
+reports/phase4_model_comparison.md
+reports/phase4_summary.md
+reports/phase4_validation_handoff.md
+
+          ->
+
+Selected Bootstrap Population
+File:
+artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv
+
+          ->
+
+PHASE 5
+Calibration & Reweighting
+File:
+data/synthetic/phase5_calibration_handoff.json
+
+NOT COVERED BY THIS DOCUMENT.
+
+
+============================================================
+17. CURRENT PROJECT STATUS
+============================================================
+
+Phase  Name                              Status                  Main Output
+1      Data Foundation                   COMPLETE WITH WARNINGS  Tamil Nadu reference template and official marginals
+2      Policy-Data Compatibility         COMPLETE WITH WARNINGS  Policy readiness reports and Phase 3 requirements
+3      Synthetic Population Generation   COMPLETE WITH WARNINGS  Four trained models and four 12,000-row populations
+4      Population Validation             COMPLETE WITH WARNINGS  Four-model validation, Bootstrap selected, Phase 5 handoff
+
+Overall:
+PHASES 1-4 COMPLETE WITH WARNINGS
+
+Why:
+The source modules, scripts, manifests, artifacts, reports, and tests support a
+complete Phase 1-4 workflow. Warnings remain because of data limitations,
+uncommitted local work, stale narrative docs, SDV deprecation warnings, and
+validation failures for non-selected candidate populations.
+
+
+============================================================
+18. WARNINGS AND TECHNICAL DEBT
+============================================================
+
+CRITICAL / MUST FIX BEFORE SHARING
+
+Uncommitted local work:
+The current working tree contains many modified and untracked files, including
+Phase 3 CTGAN/TVAE work and Phase 4 validation artifacts. Before sharing the
+repository or relying on a fresh clone, these changes should be committed and
+pushed.
+
+Fresh clone reproducibility:
+The current completed state is local/uncommitted. A fresh clone of the remote
+repository will not necessarily contain the CTGAN/TVAE and Phase 4 source and
+artifacts until committed and pushed.
+
+NON-BLOCKING TECHNICAL DEBT
+
+SDV deprecated APIs:
+Python test and training runs emit SDV deprecation warnings around APIs such as
+SingleTableMetadata and class-level load methods. Current tests pass, but future
+SDV upgrades may require code updates.
+
+Machine-specific PowerShell fallback paths:
+Several PowerShell scripts contain fallback paths tied to specific user machine
+directories. The newer scripts prefer the local .venv, but the legacy fallback
+paths should be cleaned before broad sharing.
+
+Outdated README wording:
+README.md still starts with older Phase 1-centered wording and should be updated
+to describe the current Phase 1-4 state.
+
+Separate/prunable Git worktree:
+A separate CTGAN/TVAE worktree was previously created during development:
+C:\Users\SREEHARI\OneDrive\Documents\SOP project\SOP_PROJECT_phase3_ctgan_tvae
+It was not deleted during integration. It should only be removed after the user
+confirms all required work is safely integrated and committed.
+
+Phase 1 benchmark-derived enrichment fields:
+Some fields are deterministic benchmark-derived enrichment variables. They are
+useful for completing the demonstration pipeline but should not be overclaimed
+as direct microdata observations.
+
+Stale reports:
+Some older Phase 3 report text can read as stale relative to the current
+completed constraints/finalization/validation workflow.
+
+FUTURE IMPROVEMENTS
+
+Improve CTGAN/TVAE validation quality:
+Tune neural model settings, increase training epochs where practical, adjust
+feature engineering, or improve conditioning to better preserve district and
+urban_rural relationships.
+
+Add privacy/novelty evaluation:
+Bootstrap has high fidelity but exact duplicate behavior. Later evaluation
+should include privacy and novelty metrics, not only fidelity.
+
+Implement Phase 5:
+Use the Phase 4 handoff to calibrate/reweight the selected population against
+official Tamil Nadu marginals.
+
+Update documentation:
+Refresh README.md and stale reports after committing the current Phase 1-4
+state.
+
+
+============================================================
+19. HOW TO RUN / VERIFY THE PROJECT
+============================================================
+
+Run commands from:
+C:\Users\SREEHARI\OneDrive\Documents\SOP project\SOP_PROJECT
+
+1. Environment setup
+
+Create a Python virtual environment:
+python -m venv .venv
+
+2. Python dependency installation
+
+Install Python dependencies:
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+3. Node dependency installation
+
+Install Node dependencies:
+npm install
+
+4. Full test command
+
+Run all currently wired tests:
+npm test
+
+Verified current audit result:
+Phase 1 tests passed, Phase 2 tests passed, and Python unit tests passed.
+
+5. Phase 3 verification
+
+Run Phase 3 tests and comparison:
+.\.venv\Scripts\python.exe backend\app\modules\synthetic_population\run_phase3_tests_and_comparison.py
+
+Train CTGAN and TVAE:
+npm run phase3:neural
+
+Finalize candidate populations and Phase 4 manifest:
+npm run phase3:finalize
+
+6. Phase 4 validation
+
+Run Phase 4 validation and selection:
+npm run phase4:validate
+
+Verified current audit result:
+Phase 4 validation evaluated four models and selected Bootstrap for Phase 5
+handoff.
+
+
+============================================================
+20. FINAL SUMMARY
+============================================================
+
+SOP_PROJECT is a Tamil Nadu-focused synthetic population foundation for later
+policy simulation.
+
+Phase 1 builds the data foundation: reference template, variable dictionary,
+source registry, calibration tables, metadata, and reports.
+
+Phase 2 checks whether policy requirements can be supported by available data,
+including exact variables, proxies, temporal suitability, geography, critical
+requirements, and readiness decisions.
+
+Phase 3 trains and persists four candidate synthetic population generators:
+Bootstrap, Gaussian Copula, CTGAN, and TVAE. It generates 12,000-row candidate
+populations for all four and writes the Phase 4 validation manifest.
+
+Phase 4 validates all four candidate populations using distribution fidelity,
+relationship/correlation preservation, data validity, statistical similarity,
+official marginal comparison, composite quality scoring, and critical gates.
+
+Bootstrap is currently selected because it is the highest-scoring candidate
+that passed all configured Phase 4 gates. Gaussian Copula, CTGAN, and TVAE are
+technically working generated populations, but their current candidate
+populations fail one or more validation gates.
+
+Phase 5 should receive:
+data/synthetic/phase5_calibration_handoff.json
+
+That handoff points to:
+SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE
+
+Remaining warnings are mostly about committing/pushing local work,
+reproducibility cleanup, stale documentation, SDV deprecations, and the need for
+Phase 5 calibration/reweighting before later policy simulation.
+
+
+============================================================
+21. PHASE 5 - CALIBRATION & REWEIGHTING UPDATE
+============================================================
+
+Phase 5 has been added as a calibration and reweighting layer. It consumes the
+Phase 4 handoff at:
+data/synthetic/phase5_calibration_handoff.json
+
+It resolves the selected Phase 4 population through:
+data/synthetic/phase4_validation_manifest.json
+
+It does not retrain Bootstrap, Gaussian Copula, CTGAN, or TVAE. It also does
+not alter demographic attributes to force totals. Instead, it preserves the
+selected synthetic records and adds weight columns:
+base_weight
+raw_calibration_weight
+calibration_weight
+normalized_weight
+population_weight
+
+Phase 5 source module:
+backend/app/modules/calibration/
+
+Main runner:
+backend/app/modules/calibration/run_phase5_calibration.py
+
+Configuration:
+config/calibration/calibration.yaml
+
+Runnable command:
+npm run phase5:calibrate
+
+Unit test command:
+npm run phase5:test
+
+Default method:
+raking / iterative proportional fitting.
+
+Current default calibration variables:
+gender
+urban_rural
+social_group
+
+Official target sources:
+data/calibration/gender_marginals.csv
+data/calibration/urban_rural_marginals.csv
+data/calibration/social_group_marginals.csv
+data/calibration/state_population_marginals.csv
+
+Important social_group handling:
+Scheduled Caste and Scheduled Tribe are exact official targets. The remaining
+non-SC/ST target is derived from the official Tamil Nadu population total minus
+official SC/ST counts and maps to the synthetic Other Backward Class + Others
+categories as one grouped target. Phase 5 does not invent an official OBC
+share.
+
+Main outputs:
+artifacts/calibrated_populations/<CALIBRATION_ID>/population_calibrated.csv
+artifacts/calibrated_populations/<CALIBRATION_ID>/calibration_metadata.json
+artifacts/calibrated_populations/<CALIBRATION_ID>/weight_diagnostics.json
+artifacts/calibrated_populations/<CALIBRATION_ID>/convergence_history.csv
+artifacts/calibrated_populations/<CALIBRATION_ID>/marginal_comparison_before.csv
+artifacts/calibrated_populations/<CALIBRATION_ID>/marginal_comparison_after.csv
+reports/calibration/phase5_summary.md
+reports/phase5_summary.md
+data/synthetic/phase6_policy_engine_handoff.json
+
+Phase 5 ends with a calibrated population and a Phase 6 handoff. It does not
+execute policies, identify beneficiaries, run Monte Carlo simulations, or create
+recommendations.

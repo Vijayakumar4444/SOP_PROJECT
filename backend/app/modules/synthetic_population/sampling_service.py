@@ -13,6 +13,7 @@ from backend.app.modules.synthetic_population.constraints import ConstraintEngin
 from backend.app.modules.synthetic_population.generators.base import SyntheticGenerationError
 from backend.app.modules.synthetic_population.generators.bootstrap import BootstrapBaselineGenerator
 from backend.app.modules.synthetic_population.generators.gaussian_copula import GaussianCopulaGenerator
+from backend.app.modules.synthetic_population.generators.neural import CTGANGenerator, TVAEGenerator
 
 
 SUPPORTED_SIZES = {1000, 5000, 10000, 12000, 50000, 100000}
@@ -21,6 +22,8 @@ DEFAULT_BATCH_SIZE = 50000
 GENERATOR_LOADERS = {
     "bootstrap": BootstrapBaselineGenerator,
     "gaussian_copula": GaussianCopulaGenerator,
+    "ctgan": CTGANGenerator,
+    "tvae": TVAEGenerator,
 }
 
 

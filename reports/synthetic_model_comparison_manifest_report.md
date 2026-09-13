@@ -17,10 +17,10 @@ Do not select a best model from this manifest. It exists so Phase 4 can compare 
 
 ### ctgan
 
-- Model ID: TN_CTGAN_BLOCKED_DEPENDENCIES
-- Status: BLOCKED
-- Population IDs: None
-- Blocking reason: ctgan training is blocked because optional dependencies are missing: sdv, pandas.
+- Model ID: TN_CTGAN_A70E94D8A1
+- Status: TRAINED
+- Population IDs: ['SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE']
+- Blocking reason: None
 
 ### gaussian_copula
 
@@ -31,7 +31,7 @@ Do not select a best model from this manifest. It exists so Phase 4 can compare 
 
 ### tvae
 
-- Model ID: TN_TVAE_BLOCKED_DEPENDENCIES
-- Status: BLOCKED
-- Population IDs: None
-- Blocking reason: tvae training is blocked because optional dependencies are missing: sdv, pandas.
+- Model ID: TN_TVAE_7A020BB473
+- Status: TRAINED
+- Population IDs: ['SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE']
+- Blocking reason: None

@@ -8,5 +8,5 @@
 - constraints_controlled_rows: PASSED - controlled valid row passes and invalid row fails hard constraints.
 - population_size_and_conditional_sampling: PASSED - representative size and rural conditional sampling passed; impossible condition failed.
 - synthetic_ids_and_persistence: PASSED - 3 persisted populations have unique synthetic IDs.
-- model_serialization: PASSED - 2 trained models reload and sample with expected schema.
+- model_serialization: PASSED - 4 trained models reload and sample with expected schema.
 - phase3_integration_path: PASSED - Phase 1/2-derived training through Gaussian generation, ID assignment, constraints, save and reload path passed.

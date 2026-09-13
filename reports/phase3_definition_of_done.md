@@ -14,8 +14,8 @@ Phase 3 does not select a best model. Candidate populations must be evaluated in
 - [x] Generator abstraction implemented
 - [x] Bootstrap baseline implemented
 - [x] Gaussian Copula implemented
-- [x] CTGAN documented as blocked
-- [x] TVAE documented as blocked
+- [x] CTGAN implemented with SDV
+- [x] TVAE implemented with SDV
 - [x] Model registry and persistence implemented
 - [x] Reproducible configurations implemented
 - [x] Synthetic IDs implemented
@@ -28,4 +28,4 @@ Phase 3 does not select a best model. Candidate populations must be evaluated in
 - [x] Documentation written
 - [x] Phase 3 summary generated
 
-- Phase 4 synthetic artifact count: 2
+- Phase 4 synthetic artifact count: 4

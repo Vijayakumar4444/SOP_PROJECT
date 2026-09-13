@@ -7,6 +7,11 @@
   "scripts": {
     "phase1:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase1_python.ps1",
     "phase2:build": "powershell -ExecutionPolicy Bypass -File scripts/run_phase2_python.ps1",
+    "phase3:neural": "powershell -ExecutionPolicy Bypass -File scripts/run_phase3_neural_generators_python.ps1",
+    "phase3:finalize": "powershell -ExecutionPolicy Bypass -File scripts/run_phase3_finalization_python.ps1",
+    "phase4:validate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase4_validation_python.ps1",
+    "phase5:calibrate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase5_calibration_python.ps1",
+    "phase5:test": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
     "test:python": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
     "test": "node tests/phase1.test.js && node tests/phase2.test.js && powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1"
   },

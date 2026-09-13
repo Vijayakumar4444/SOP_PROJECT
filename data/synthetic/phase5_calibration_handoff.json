@@ -1,0 +1,61 @@
+{
+  "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+  "model_id": "TN_BOOTSTRAP_1D08E0184C",
+  "generator_type": "bootstrap",
+  "validation_status": "PASS",
+  "quality_score": 0.982663,
+  "selected_for_calibration": true,
+  "calibration_priority_variables": [
+    "district",
+    "district_code",
+    "urban_rural",
+    "household_type",
+    "education_level",
+    "household_size",
+    "age",
+    "relationship_to_head"
+  ],
+  "largest_marginal_gaps": [
+    {
+      "variable": "district",
+      "fidelity_score": 0.974866
+    },
+    {
+      "variable": "district_code",
+      "fidelity_score": 0.974866
+    },
+    {
+      "variable": "urban_rural",
+      "fidelity_score": 0.987396
+    },
+    {
+      "variable": "household_type",
+      "fidelity_score": 0.990364
+    },
+    {
+      "variable": "education_level",
+      "fidelity_score": 0.991466
+    },
+    {
+      "variable": "household_size",
+      "fidelity_score": 0.991679
+    },
+    {
+      "variable": "age",
+      "fidelity_score": 0.993214
+    },
+    {
+      "variable": "relationship_to_head",
+      "fidelity_score": 0.993477
+    }
+  ],
+  "official_targets_available": [
+    "gender",
+    "social_group",
+    "urban_rural"
+  ],
+  "warnings": [
+    "Official marginal comparison weak for social_group score=0.611208"
+  ],
+  "highest_scoring_population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE"
+}
