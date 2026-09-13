@@ -1,0 +1,84 @@
+experiment:
+  experiment_id: tn_exp_002_param_uncertainty
+  name: Tamil Nadu Youth Skilling Policy Parameter Uncertainty
+  description: Sensitivity and uncertainty analysis of youth skilling stipend outcomes under varying income and budget parameters.
+  base_seed: 20260914
+  number_of_iterations: 50
+  execution_mode: local
+  parallel_workers: 1
+  fail_fast: false
+  resume_enabled: true
+  checkpoint_interval: 10
+
+population:
+  mode: fixed
+  population_size: 12000
+  preserve_households: true
+
+calibration:
+  enabled: false # Reusing pre-calibrated weights
+
+policy:
+  policy_path: config/policy_engine/examples/tn_youth_skilling_stipend.yaml
+  parameter_overrides: {}
+
+uncertainty:
+  population_uncertainty:
+    enabled: false
+  policy_parameter_uncertainty:
+    enabled: true
+    parameters:
+      benefit_amount:
+        distribution: discrete_uniform
+        minimum: 1500
+        maximum: 2500
+        step: 250
+      total_budget:
+        distribution: triangular
+        minimum: 3000000
+        mode: 4500000
+        maximum: 6000000
+      maximum_beneficiaries:
+        distribution: uniform
+        minimum: 500
+        maximum: 1500
+
+take_up:
+  enabled: true
+  mode: constant_probability
+  probability: 0.85
+
+convergence:
+  enabled: true
+  minimum_iterations: 20
+  check_interval: 10
+  metrics:
+    - total_policy_cost
+    - weighted_beneficiary_population
+  relative_mc_error_threshold: 0.02
+
+risk_metrics:
+  - metric: total_policy_cost
+    operator: greater_than
+    threshold: 4500000
+    output_name: probability_budget_exceeded
+
+outputs:
+  confidence_level: 0.95
+  percentiles:
+    - 0.025
+    - 0.05
+    - 0.25
+    - 0.50
+    - 0.75
+    - 0.95
+    - 0.975
+  store_record_level_results: false
+  store_iteration_populations: false
+  store_failed_iterations: true
+
+failure_handling:
+  fail_fast: false
+  maximum_failed_iterations: 10
+  maximum_failure_rate: 0.20
+  include_failed_iterations_in_statistics: false

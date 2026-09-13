@@ -1,0 +1,6 @@
+source_id,title,publishing_organization,url,publication_date,reporting_period,geographic_coverage,metrics_extracted,source_type
+SRC_001,Government Order G.O. Ms. No. 34,Special Programme Implementation Dept - Govt of Tamil Nadu,https://www.tn.gov.in/go_view/dept/31,2023-07-10,FY 2023-24,Tamil Nadu Statewide,Eligibility Criteria / Benefit Amount / Exclusion Rules,Primary
+SRC_002,Tamil Nadu Budget Speech 2024-25,Finance Department - Govt of Tamil Nadu,https://www.tn.gov.in/budget,2024-02-19,FY 2024-25,Tamil Nadu Statewide,Budget Allocation (INR 13720 Crore) / Total Beneficiary Count (1.16 Crore),Primary
+SRC_003,Policy Note 2023-24 - Special Programme Implementation,Special Programme Implementation Dept,https://www.tn.gov.in/policynote,2023-08-15,FY 2023-24,Tamil Nadu Statewide,Initial Applicant Count (1.63 Crore) / Initial Approved Count (1.065 Crore),Primary
+SRC_004,Tamil Nadu State Statistical Handbook 2023-24,Department of Economics and Statistics - Tamil Nadu,https://www.tn.gov.in/dept/des,2024-01-30,FY 2023-24,38 Districts of Tamil Nadu,District-wise Beneficiary & Household Distribution,Primary
+SRC_005,CAG Audit Report on Tamil Nadu Social Sector 2023-24,Comptroller and Auditor General of India,https://cag.gov.in/en/audit-report,2024-06-15,FY 2023-24,Tamil Nadu Statewide,Actual Expenditure (INR 6570 Crore for 7 Months FY24),Primary

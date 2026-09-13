@@ -1,0 +1,52 @@
+policy_id: tn_clean_cooking_subsidy_002
+name: Tamil Nadu Rural Household Clean Cooking Fuel Support Scheme
+version: "1.0"
+description: Household-level cooking gas subsidy for rural households in Tamil Nadu.
+jurisdiction:
+  state: Tamil Nadu
+  geographic_level: state
+status: active
+
+target_unit: household
+
+eligibility:
+  logical_operator: AND
+  rules:
+    - rule_id: R_URBAN_RURAL
+      field: urban_rural
+      operator: equals
+      value: Rural
+    - rule_id: R_CONSUMPTION
+      field: consumption_expenditure
+      operator: less_than_or_equal
+      value: 30000
+
+exclusions:
+  logical_operator: OR
+  rules:
+    - rule_id: EX_INCOME
+      field: individual_income
+      operator: greater_than
+      value: 250000
+
+benefit:
+  type: fixed_amount
+  amount: 600
+  frequency: monthly
+  currency: INR
+
+constraints:
+  total_budget: 3000000000
+  maximum_beneficiaries: null
+  allocation_strategy: all
+  missing_value_behavior: ineligible
+
+effective_period:
+  start_date: "2026-04-01"
+  end_date: "2027-03-31"
+
+required_variables:
+  - synthetic_person_id
+  - urban_rural
+  - consumption_expenditure
+  - individual_income

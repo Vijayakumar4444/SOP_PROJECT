@@ -1,0 +1,15 @@
+{
+  "experiment_id": "tn_exp_001_pop_uncertainty",
+  "name": "Tamil Nadu Policy Population Uncertainty Analysis",
+  "description": "Monte Carlo evaluation of elderly pension outcome variability across resampled synthetic populations.",
+  "start_time": "2026-09-13T18:27:08.148906+00:00",
+  "end_time": "2026-09-13T18:27:08.207680+00:00",
+  "execution_duration_seconds": 0.0588,
+  "base_seed": 20260913,
+  "total_requested_iterations": 30,
+  "completed_valid_iterations": 30,
+  "failed_iterations": 0,
+  "converged": true,
+  "population_mode": "resampling",
+  "sampling_strategy": "household_bootstrap"
+}

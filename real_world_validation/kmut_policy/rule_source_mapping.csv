@@ -1,0 +1,6 @@
+rule_id,official_clause,interpretation,project_variable,transformation_used,source_id,mapping_confidence
+R001,Section 3(a): Age 21+,Woman applicant must be at least 21 years old,age,age >= 21,SRC_001,HIGH
+R002,Section 3(b): Woman Head,Designated woman head of household,relationship_to_head,relationship_to_head IN ('Head','Spouse'),SRC_001,HIGH
+R003,Section 3(c): Gender Female,Applicant must be female,gender,gender == 'Female',SRC_001,HIGH
+R004,Section 4(a): Income Cap,Household annual income below INR 2.5 Lakhs,consumption_expenditure,consumption_expenditure <= 250000,SRC_001,HIGH_PROXY
+R005,Section 4(b): Govt/Tax Exclusion,Exclusion of tax payers and govt employees,employment_status,employment_status NOT IN ('Government Servant'),SRC_001,MODERATE_PROXY

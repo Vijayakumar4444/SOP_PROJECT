@@ -1,0 +1,22 @@
+{
+  "policy_id": "tn_kmut_2023",
+  "policy_name": "Kalaignar Magalir Urimai Thogai (KMUT)",
+  "reconciliation_records": [
+    {
+      "metric": "approved_beneficiaries",
+      "provisional_value": 10650000,
+      "final_value": 11600000,
+      "sources": ["SRC_003", "SRC_002"],
+      "reconciliation_reason": "Initial launch in September 2023 approved 1.065 Crore households. Subsequent appeal review expanded approval to 1.16 Crore households by February 2024.",
+      "selected_benchmark": 11600000
+    },
+    {
+      "metric": "annual_expenditure",
+      "provisional_value": 65700000000.0,
+      "final_value": 137200000000.0,
+      "sources": ["SRC_005", "SRC_002"],
+      "reconciliation_reason": "FY 2023-24 actual expenditure covered 7 months (Sep 2023 - Mar 2024) totaling INR 6,570 Crore. Full annual FY 2024-25 outlay is INR 13,720 Crore.",
+      "selected_benchmark": 137200000000.0
+    }
+  ]
+}

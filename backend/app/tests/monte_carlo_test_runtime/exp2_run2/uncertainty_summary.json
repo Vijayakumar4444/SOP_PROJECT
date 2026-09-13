@@ -1,0 +1,249 @@
+{
+  "n_valid": 5,
+  "n_failed": 0,
+  "metrics_summary": {
+    "eligible_count": {
+      "n_samples": 5,
+      "mean": 189.0,
+      "median": 189.0,
+      "std_dev": 0.0,
+      "variance": 0.0,
+      "min": 189.0,
+      "max": 189.0,
+      "iqr": 0.0,
+      "coefficient_of_variation": 0.0,
+      "mc_standard_error": 0.0,
+      "relative_mc_error": 0.0,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 189.0,
+        "upper": 189.0
+      },
+      "percentiles": {
+        "p2_5": 189.0,
+        "p5": 189.0,
+        "p25": 189.0,
+        "p50": 189.0,
+        "p75": 189.0,
+        "p95": 189.0,
+        "p97_5": 189.0
+      }
+    },
+    "weighted_eligible_population": {
+      "n_samples": 5,
+      "mean": 188.99,
+      "median": 188.99,
+      "std_dev": 0.0,
+      "variance": 0.0,
+      "min": 188.99,
+      "max": 188.99,
+      "iqr": 0.0,
+      "coefficient_of_variation": 0.0,
+      "mc_standard_error": 0.0,
+      "relative_mc_error": 0.0,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 188.99,
+        "upper": 188.99
+      },
+      "percentiles": {
+        "p2_5": 188.99,
+        "p5": 188.99,
+        "p25": 188.99,
+        "p50": 188.99,
+        "p75": 188.99,
+        "p95": 188.99,
+        "p97_5": 188.99
+      }
+    },
+    "eligibility_rate": {
+      "n_samples": 5,
+      "mean": 0.0157,
+      "median": 0.0157,
+      "std_dev": 0.0,
+      "variance": 0.0,
+      "min": 0.0157,
+      "max": 0.0157,
+      "iqr": 0.0,
+      "coefficient_of_variation": 0.0,
+      "mc_standard_error": 0.0,
+      "relative_mc_error": 0.0,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 0.0157,
+        "upper": 0.0157
+      },
+      "percentiles": {
+        "p2_5": 0.0157,
+        "p5": 0.0157,
+        "p25": 0.0157,
+        "p50": 0.0157,
+        "p75": 0.0157,
+        "p95": 0.0157,
+        "p97_5": 0.0157
+      }
+    },
+    "beneficiary_count": {
+      "n_samples": 5,
+      "mean": 140.6,
+      "median": 144.0,
+      "std_dev": 23.3731,
+      "variance": 546.3,
+      "min": 104.0,
+      "max": 165.0,
+      "iqr": 20.0,
+      "coefficient_of_variation": 0.1662,
+      "mc_standard_error": 10.4528,
+      "relative_mc_error": 0.0743,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 120.1126,
+        "upper": 161.0874
+      },
+      "percentiles": {
+        "p2_5": 107.1,
+        "p5": 110.2,
+        "p25": 135.0,
+        "p50": 144.0,
+        "p75": 155.0,
+        "p95": 163.0,
+        "p97_5": 164.0
+      }
+    },
+    "weighted_beneficiary_population": {
+      "n_samples": 5,
+      "mean": 140.562,
+      "median": 144.26,
+      "std_dev": 23.0844,
+      "variance": 532.8874,
+      "min": 104.56,
+      "max": 164.95,
+      "iqr": 19.78,
+      "coefficient_of_variation": 0.1642,
+      "mc_standard_error": 10.3236,
+      "relative_mc_error": 0.0734,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 120.3277,
+        "upper": 160.7963
+      },
+      "percentiles": {
+        "p2_5": 107.567,
+        "p5": 110.574,
+        "p25": 134.63,
+        "p50": 144.26,
+        "p75": 154.41,
+        "p95": 162.842,
+        "p97_5": 163.896
+      }
+    },
+    "coverage_rate": {
+      "n_samples": 5,
+      "mean": 0.7438,
+      "median": 0.7633,
+      "std_dev": 0.1221,
+      "variance": 0.0149,
+      "min": 0.5533,
+      "max": 0.8728,
+      "iqr": 0.1046,
+      "coefficient_of_variation": 0.1642,
+      "mc_standard_error": 0.0546,
+      "relative_mc_error": 0.0734,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 0.6367,
+        "upper": 0.8508
+      },
+      "percentiles": {
+        "p2_5": 0.5692,
+        "p5": 0.5851,
+        "p25": 0.7124,
+        "p50": 0.7633,
+        "p75": 0.817,
+        "p95": 0.8616,
+        "p97_5": 0.8672
+      }
+    },
+    "total_policy_cost": {
+      "n_samples": 5,
+      "mean": 3300710.558,
+      "median": 3136803.39,
+      "std_dev": 595657.5301,
+      "variance": 354807893130.0728,
+      "min": 2827230.56,
+      "max": 4327775.73,
+      "iqr": 273478.93,
+      "coefficient_of_variation": 0.1805,
+      "mc_standard_error": 266386.1457,
+      "relative_mc_error": 0.0807,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 2778593.7124,
+        "upper": 3822827.4036
+      },
+      "percentiles": {
+        "p2_5": 2841420.713,
+        "p5": 2855610.866,
+        "p25": 2969132.09,
+        "p50": 3136803.39,
+        "p75": 3242611.02,
+        "p95": 4110742.788,
+        "p97_5": 4219259.259
+      }
+    },
+    "average_benefit": {
+      "n_samples": 5,
+      "mean": 24000.0,
+      "median": 21000.0,
+      "std_dev": 5612.4861,
+      "variance": 31500000.0,
+      "min": 18000.0,
+      "max": 30000.0,
+      "iqr": 9000.0,
+      "coefficient_of_variation": 0.2339,
+      "mc_standard_error": 2509.9801,
+      "relative_mc_error": 0.1046,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 19080.439,
+        "upper": 28919.561
+      },
+      "percentiles": {
+        "p2_5": 18300.0,
+        "p5": 18600.0,
+        "p25": 21000.0,
+        "p50": 21000.0,
+        "p75": 30000.0,
+        "p95": 30000.0,
+        "p97_5": 30000.0
+      }
+    },
+    "budget_utilization": {
+      "n_samples": 5,
+      "mean": 79.206,
+      "median": 79.25,
+      "std_dev": 8.5557,
+      "variance": 73.1993,
+      "min": 65.28,
+      "max": 87.07,
+      "iqr": 6.15,
+      "coefficient_of_variation": 0.108,
+      "mc_standard_error": 3.8262,
+      "relative_mc_error": 0.0483,
+      "mean_confidence_interval": {
+        "confidence_level": 0.95,
+        "lower": 71.7066,
+        "upper": 86.7054
+      },
+      "percentiles": {
+        "p2_5": 66.666,
+        "p5": 68.052,
+        "p25": 79.14,
+        "p50": 79.25,
+        "p75": 85.29,
+        "p95": 86.714,
+        "p97_5": 86.892
+      }
+    }
+  }
+}

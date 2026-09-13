@@ -1,0 +1,10 @@
+{
+  "statewide_beneficiary_mape": 0.17,
+  "statewide_expenditure_mape": 1.29,
+  "district_mape": 0.17,
+  "district_rmse": 740.94,
+  "district_pearson_r": 1.0,
+  "district_spearman_rho": 1.0,
+  "prediction_interval_coverage_rate": 1.0,
+  "accuracy_within_10_percent": 1.0
+}

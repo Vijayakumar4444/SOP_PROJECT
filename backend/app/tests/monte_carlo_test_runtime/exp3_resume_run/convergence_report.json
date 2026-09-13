@@ -1,0 +1,7 @@
+{
+  "converged": false,
+  "status": "INSUFFICIENT_ITERATIONS",
+  "minimum_iterations_required": 20,
+  "current_valid_iterations": 5,
+  "checkpoints": []
+}

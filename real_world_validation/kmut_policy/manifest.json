@@ -1,0 +1,22 @@
+{
+  "phase": 9,
+  "policy_id": "tn_kmut_2023",
+  "status": "PASS",
+  "validation_status": "VALIDATED",
+  "artifact_dir": ".\\real_world_validation/kmut_policy",
+  "exported_files": [
+    ".\\real_world_validation/kmut_policy\\state_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\beneficiary_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\expenditure_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\district_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\demographic_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\coverage_comparison.csv",
+    ".\\real_world_validation/kmut_policy\\uncertainty_calibration.csv",
+    ".\\real_world_validation/kmut_policy\\error_metrics.json",
+    ".\\real_world_validation/kmut_policy\\error_decomposition.json",
+    ".\\real_world_validation/kmut_policy\\sensitivity_report.json",
+    ".\\real_world_validation/kmut_policy\\validation_scorecard.json",
+    ".\\real_world_validation/kmut_policy\\validation_report.md",
+    ".\\real_world_validation/kmut_policy\\executive_summary.md"
+  ]
+}

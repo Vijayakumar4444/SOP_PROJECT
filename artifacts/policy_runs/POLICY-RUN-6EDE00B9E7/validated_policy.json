@@ -1,0 +1,62 @@
+{
+  "policy_id": "tn_elderly_pension_001",
+  "name": "Tamil Nadu Social Security Elderly Assistance Scheme",
+  "version": "1.0",
+  "description": "Deterministic elderly welfare pension for low-income senior citizens in Tamil Nadu.",
+  "jurisdiction": {
+    "state": "Tamil Nadu",
+    "geographic_level": "state"
+  },
+  "status": "active",
+  "target_unit": "person",
+  "eligibility": {
+    "logical_operator": "AND",
+    "rules": [
+      {
+        "rule_id": "R_AGE",
+        "field": "age",
+        "operator": "greater_than_or_equal",
+        "value": 60
+      },
+      {
+        "rule_id": "R_INCOME",
+        "field": "individual_income",
+        "operator": "less_than_or_equal",
+        "value": 120000
+      }
+    ]
+  },
+  "exclusions": {
+    "logical_operator": "OR",
+    "rules": [
+      {
+        "rule_id": "EX_GOVT_EMP",
+        "field": "employment_status",
+        "operator": "equals",
+        "value": "Government Employed"
+      }
+    ]
+  },
+  "benefit": {
+    "type": "fixed_amount",
+    "amount": 1500,
+    "frequency": "monthly",
+    "currency": "INR"
+  },
+  "constraints": {
+    "total_budget": 5000000000,
+    "maximum_beneficiaries": null,
+    "allocation_strategy": "all",
+    "missing_value_behavior": "ineligible"
+  },
+  "effective_period": {
+    "start_date": "2026-04-01",
+    "end_date": "2027-03-31"
+  },
+  "required_variables": [
+    "synthetic_person_id",
+    "age",
+    "individual_income",
+    "employment_status"
+  ]
+}

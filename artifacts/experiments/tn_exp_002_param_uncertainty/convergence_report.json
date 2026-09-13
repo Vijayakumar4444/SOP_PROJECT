@@ -1,0 +1,52 @@
+{
+  "converged": false,
+  "status": "NOT_CONVERGED",
+  "current_valid_iterations": 30,
+  "consecutive_stable_checks": 0,
+  "required_stable_checks": 2,
+  "error_threshold": 0.02,
+  "checkpoint_history": [
+    {
+      "iteration": 20,
+      "consecutive_stable_checks": 0,
+      "all_metrics_stable": false,
+      "metric_diagnostics": {
+        "total_policy_cost": {
+          "running_mean": 3608730.9465,
+          "running_std": 647644.0491,
+          "mc_standard_error": 144817.6119,
+          "relative_mc_error": 0.0401,
+          "stable": false
+        },
+        "weighted_beneficiary_population": {
+          "running_mean": 151.89,
+          "running_std": 13.6375,
+          "mc_standard_error": 3.0494,
+          "relative_mc_error": 0.0201,
+          "stable": false
+        }
+      }
+    },
+    {
+      "iteration": 30,
+      "consecutive_stable_checks": 0,
+      "all_metrics_stable": false,
+      "metric_diagnostics": {
+        "total_policy_cost": {
+          "running_mean": 3556855.657,
+          "running_std": 595474.9846,
+          "mc_standard_error": 108718.3605,
+          "relative_mc_error": 0.0306,
+          "stable": false
+        },
+        "weighted_beneficiary_population": {
+          "running_mean": 152.458,
+          "running_std": 13.4805,
+          "mc_standard_error": 2.4612,
+          "relative_mc_error": 0.0161,
+          "stable": true
+        }
+      }
+    }
+  ]
+}

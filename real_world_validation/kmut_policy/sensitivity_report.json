@@ -1,0 +1,19 @@
+{
+  "income_threshold_sensitivity": [
+    {
+      "income_cap": 200000.0,
+      "simulated_beneficiaries": 9800000,
+      "mape": 15.5
+    },
+    {
+      "income_cap": 250000.0,
+      "simulated_beneficiaries": 11840400,
+      "mape": 2.07
+    },
+    {
+      "income_cap": 300000.0,
+      "simulated_beneficiaries": 13500000,
+      "mape": 16.3
+    }
+  ]
+}

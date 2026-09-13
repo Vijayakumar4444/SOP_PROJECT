@@ -1,0 +1,57 @@
+policy_id: tn_youth_skilling_stipend_003
+name: Tamil Nadu Youth Skill Enhancement Stipend
+version: "1.0"
+description: Budget-constrained skill enhancement stipend for unemployed youth aged 18-30.
+jurisdiction:
+  state: Tamil Nadu
+  geographic_level: state
+status: active
+
+target_unit: person
+
+eligibility:
+  logical_operator: AND
+  rules:
+    - rule_id: R_AGE_MIN
+      field: age
+      operator: greater_than_or_equal
+      value: 18
+    - rule_id: R_AGE_MAX
+      field: age
+      operator: less_than_or_equal
+      value: 30
+    - rule_id: R_EMPLOYMENT
+      field: employment_status
+      operator: in
+      value: ["Unemployed", "Not in Labour Force"]
+
+exclusions:
+  logical_operator: OR
+  rules:
+    - rule_id: EX_HIGHER_EDU
+      field: education_level
+      operator: equals
+      value: Post Graduate and Above
+
+benefit:
+  type: fixed_amount
+  amount: 2000
+  frequency: monthly
+  currency: INR
+
+constraints:
+  total_budget: 15000000 # 1.5 Crore budget limit to demonstrate capping
+  maximum_beneficiaries: 1000
+  allocation_strategy: lowest_income_first
+  missing_value_behavior: ineligible
+
+effective_period:
+  start_date: "2026-04-01"
+  end_date: "2027-03-31"
+
+required_variables:
+  - synthetic_person_id
+  - age
+  - employment_status
+  - education_level
+  - individual_income

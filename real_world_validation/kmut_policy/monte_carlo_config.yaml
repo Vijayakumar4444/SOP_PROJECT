@@ -1,0 +1,22 @@
+version: "1.0"
+experiment_id: "tn_kmut_mc_validation"
+title: "KMUT Real-World Validation Monte Carlo Experiment"
+description: "Experiment C: Monte Carlo uncertainty propagation and sensitivity analysis across population and implementation parameters."
+
+simulation:
+  n_iterations: 30
+  seed: 42
+
+uncertainty_parameters:
+  income_proxy_threshold:
+    distribution: "uniform"
+    min: 220000.0
+    max: 280000.0
+  takeup_rate:
+    distribution: "beta"
+    alpha: 20.0
+    beta: 3.0
+  approval_probability:
+    distribution: "uniform"
+    min: 0.80
+    max: 0.90

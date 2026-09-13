@@ -4,25 +4,31 @@ from pathlib import Path
 from typing import Any
 import csv
 import json
+import os
+import time
 
+def read_json(path: Path | str) -> Any:
+    path_obj = Path(path) if isinstance(path, str) else path
+    with path_obj.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
 
-def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+def read_csv(path: Path | str) -> list[dict[str, str]]:
+    path_obj = Path(path) if isinstance(path, str) else path
+    with path_obj.open("r", encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
 
-
-def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
+def write_csv(path: Path | str, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
+    path_obj = Path(path) if isinstance(path, str) else path
+    path_obj.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = fieldnames or (list(rows[0].keys()) if rows else [])
-    import os, time
     for attempt in range(5):
         try:
-            if path.exists():
+            if path_obj.exists():
                 try:
-                    os.chmod(path, 0o666)
+                    os.chmod(path_obj, 0o666)
                 except Exception:
                     pass
-            with path.open("w", encoding="utf-8", newline="") as handle:
+            with path_obj.open("w", encoding="utf-8", newline="") as handle:
                 writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
                 writer.writeheader()
                 writer.writerows(rows)
@@ -30,12 +36,16 @@ def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | No
         except PermissionError:
             time.sleep(0.5)
 
+def write_json(path: Path | str, value: Any) -> None:
+    path_obj = Path(path) if isinstance(path, str) else path
+    path_obj.parent.mkdir(parents=True, exist_ok=True)
+    path_obj.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-def write_json(path: Path, value: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-
-
-def write_md(path: Path, text: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text.strip() + "\n", encoding="utf-8")
+def write_md(path: Path | str, text: str | list[str]) -> None:
+    path_obj = Path(path) if isinstance(path, str) else path
+    path_obj.parent.mkdir(parents=True, exist_ok=True)
+    if isinstance(text, list):
+        text_content = "\n".join(text)
+    else:
+        text_content = text
+    path_obj.write_text(text_content.strip() + "\n", encoding="utf-8")

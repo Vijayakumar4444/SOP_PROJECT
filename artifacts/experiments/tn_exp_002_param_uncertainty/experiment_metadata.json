@@ -1,0 +1,15 @@
+{
+  "experiment_id": "tn_exp_002_param_uncertainty",
+  "name": "Tamil Nadu Youth Skilling Policy Parameter Uncertainty",
+  "description": "Sensitivity and uncertainty analysis of youth skilling stipend outcomes under varying income and budget parameters.",
+  "start_time": "2026-09-13T18:27:08.221418+00:00",
+  "end_time": "2026-09-13T18:27:08.279730+00:00",
+  "execution_duration_seconds": 0.0583,
+  "base_seed": 20260914,
+  "total_requested_iterations": 30,
+  "completed_valid_iterations": 30,
+  "failed_iterations": 0,
+  "converged": false,
+  "population_mode": "fixed",
+  "sampling_strategy": "household_bootstrap"
+}

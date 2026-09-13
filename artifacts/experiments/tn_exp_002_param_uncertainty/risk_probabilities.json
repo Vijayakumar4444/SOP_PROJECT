@@ -1,0 +1,17 @@
+{
+  "n_valid": 30,
+  "risk_metrics": {
+    "probability_budget_exceeded": {
+      "metric": "total_policy_cost",
+      "operator": "greater_than",
+      "threshold": 4500000.0,
+      "match_count": 2,
+      "applicable_iterations": 30,
+      "estimated_probability": 0.0667,
+      "confidence_interval_95": {
+        "lower": 0.0185,
+        "upper": 0.2132
+      }
+    }
+  }
+}

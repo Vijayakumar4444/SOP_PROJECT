@@ -1,0 +1,79 @@
+{
+  "fairness_results": [
+    {
+      "experiment_id": "tn_exp_001_pop_uncertainty",
+      "display_name": "Option A: Elderly Pension Policy (Population Uncertainty)",
+      "district_disparity": 1.75,
+      "gender_disparity": 1.083,
+      "overall_fairness_score": 0.871,
+      "group_breakdowns": {
+        "districts": {
+          "Chennai": 175.0,
+          "Coimbatore": 100.0,
+          "Madurai": 175.0,
+          "Tiruchirappalli": 100.0,
+          "Salem": 175.0,
+          "Tirunelveli": 100.0,
+          "Erode": 175.0,
+          "Vellore": 100.0,
+          "Thanjavur": 175.0,
+          "Dindigul": 100.0
+        },
+        "gender_share": {
+          "male": 0.48,
+          "female": 0.52
+        }
+      }
+    },
+    {
+      "experiment_id": "tn_exp_002_param_uncertainty",
+      "display_name": "Option B: Clean Cooking Subsidy (Parameter Uncertainty)",
+      "district_disparity": 2.2,
+      "gender_disparity": 1.041,
+      "overall_fairness_score": 0.812,
+      "group_breakdowns": {
+        "districts": {
+          "Chennai": 190.0,
+          "Coimbatore": 130.0,
+          "Madurai": 220.0,
+          "Tiruchirappalli": 160.0,
+          "Salem": 100.0,
+          "Tirunelveli": 190.0,
+          "Erode": 130.0,
+          "Vellore": 220.0,
+          "Thanjavur": 160.0,
+          "Dindigul": 100.0
+        },
+        "gender_share": {
+          "male": 0.51,
+          "female": 0.49
+        }
+      }
+    },
+    {
+      "experiment_id": "tn_exp_003_combined_uncertainty",
+      "display_name": "Option C: Youth Skilling Stipend (Combined Uncertainty)",
+      "district_disparity": 2.25,
+      "gender_disparity": 1.02,
+      "overall_fairness_score": 0.808,
+      "group_breakdowns": {
+        "districts": {
+          "Chennai": 225.0,
+          "Coimbatore": 200.0,
+          "Madurai": 175.0,
+          "Tiruchirappalli": 150.0,
+          "Salem": 125.0,
+          "Tirunelveli": 100.0,
+          "Erode": 225.0,
+          "Vellore": 200.0,
+          "Thanjavur": 175.0,
+          "Dindigul": 150.0
+        },
+        "gender_share": {
+          "male": 0.495,
+          "female": 0.505
+        }
+      }
+    }
+  ]
+}

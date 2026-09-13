@@ -1,0 +1,8 @@
+{
+  "input_data_sampling_error_pct": 5.0,
+  "synthetic_calibration_error_pct": 5.0,
+  "eligibility_proxy_error_pct": 15.0,
+  "takeup_gap_pct": 45.0,
+  "administrative_filter_pct": 35.0,
+  "primary_error_driver": "Enrolment Take-Up Gap & Administrative Documentation Filter"
+}

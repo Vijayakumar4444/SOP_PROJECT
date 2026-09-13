@@ -1,0 +1,92 @@
+version: "1.0"
+recommendation_id: "tn_rec_001_policy_comparison"
+title: "Tamil Nadu Policy Recommendation Engine Scenario Analysis"
+description: "Multi-criteria comparison, Pareto analysis, trade-off evaluation, and demographic fairness assessment across simulated Tamil Nadu welfare policy options."
+created_at: "2026-09-14T00:00:00Z"
+
+candidate_experiments:
+  - experiment_id: "tn_exp_001_pop_uncertainty"
+    path: "artifacts/experiments/tn_exp_001_pop_uncertainty"
+    display_name: "Option A: Elderly Pension Policy (Population Uncertainty)"
+    policy_type: "pension"
+  - experiment_id: "tn_exp_002_param_uncertainty"
+    path: "artifacts/experiments/tn_exp_002_param_uncertainty"
+    display_name: "Option B: Clean Cooking Subsidy (Parameter Uncertainty)"
+    policy_type: "cooking_subsidy"
+  - experiment_id: "tn_exp_003_combined_uncertainty"
+    path: "artifacts/experiments/tn_exp_003_combined_uncertainty"
+    display_name: "Option C: Youth Skilling Stipend (Combined Uncertainty)"
+    policy_type: "youth_skilling"
+
+feasibility_constraints:
+  max_budget: 60000000.0                # Max total budget limit in INR (60 Million)
+  max_risk_probability: 0.25            # Max acceptable budget exceedance probability (25%)
+  min_coverage: 1500                    # Min headcount of eligible/beneficiary households/individuals
+  max_relative_mc_error: 0.05           # Max acceptable Monte Carlo standard error relative to mean (5%)
+
+normalization:
+  method: "min_max"                     # Options: "min_max", "z_score"
+
+metrics:
+  - name: "mean_total_cost"
+    direction: "minimize"               # Lower total cost is preferred
+    weight: 0.35
+    display_name: "Mean Total Fiscal Cost (INR)"
+  - name: "mean_beneficiaries"
+    direction: "maximize"               # Higher beneficiary count is preferred
+    weight: 0.30
+    display_name: "Mean Beneficiary Count"
+  - name: "p95_total_cost"
+    direction: "minimize"               # Lower P95 cost (tail risk) is preferred
+    weight: 0.15
+    display_name: "P95 Tail Fiscal Cost (INR)"
+  - name: "budget_exceedance_risk"
+    direction: "minimize"               # Lower budget exceedance risk is preferred
+    weight: 0.20
+    display_name: "Budget Exceedance Probability"
+
+stakeholder_profiles:
+  - name: "Fiscal Conservative"
+    description: "Prioritizes low fiscal expenditure and tail risk reduction."
+    weights:
+      mean_total_cost: 0.50
+      mean_beneficiaries: 0.15
+      p95_total_cost: 0.20
+      budget_exceedance_risk: 0.15
+  - name: "Equity & Coverage Focus"
+    description: "Prioritizes maximizing beneficiary coverage and public impact."
+    weights:
+      mean_total_cost: 0.20
+      mean_beneficiaries: 0.55
+      p95_total_cost: 0.10
+      budget_exceedance_risk: 0.15
+  - name: "Risk Averse Governance"
+    description: "Prioritizes minimizing tail risk and budget overrun probability."
+    weights:
+      mean_total_cost: 0.20
+      mean_beneficiaries: 0.20
+      p95_total_cost: 0.30
+      budget_exceedance_risk: 0.30
+  - name: "Balanced Governance"
+    description: "Default balanced weighting across fiscal, coverage, and risk dimensions."
+    weights:
+      mean_total_cost: 0.35
+      mean_beneficiaries: 0.30
+      p95_total_cost: 0.15
+      budget_exceedance_risk: 0.20
+
+ranking:
+  method: "weighted_sum"                # Options: "weighted_sum", "topsis"
+  enable_pareto: true
+  enable_fairness_analysis: true
+  enable_tradeoff_analysis: true
+  enable_weight_sensitivity: true
+
+output:
+  artifact_dir: "artifacts/recommendation"
+  summary_json: "recommendation_summary.json"
+  ranking_csv: "ranking_results.csv"
+  tradeoff_json: "tradeoff_report.json"
+  fairness_json: "fairness_report.json"
+  report_md: "recommendation_report.md"
+  handoff_manifest: "data/synthetic/phase8_recommendation_handoff.json"

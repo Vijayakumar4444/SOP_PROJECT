@@ -1,0 +1,4 @@
+rank,topsis_rank,experiment_id,display_name,is_feasible,wsm_score,topsis_score,mean_total_cost,p95_total_cost,mean_beneficiaries,budget_exceedance_risk
+1,1,tn_exp_001_pop_uncertainty,Option A: Elderly Pension Policy (Population Uncertainty),YES,0.5,0.44131,33169432.91,33169432.91,1835.0,0.0
+2,2,tn_exp_003_combined_uncertainty,Option C: Youth Skilling Stipend (Combined Uncertainty),NO,0.7,0.55869,5972.1197,8760.359,0.7667,0.0
+3,3,tn_exp_002_param_uncertainty,Option B: Clean Cooking Subsidy (Parameter Uncertainty),NO,0.666759,0.548507,3556855.657,4559082.336,152.5,0.0

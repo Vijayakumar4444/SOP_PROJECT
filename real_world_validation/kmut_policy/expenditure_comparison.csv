@@ -1,0 +1,3 @@
+metric,actual_official,strict_baseline_simulated,impl_aware_simulated,strict_baseline_pct_error,impl_aware_pct_error
+Annual Total Fiscal Cost (INR),137200000000.0,142084800000.0,138964617792.0,3.56,1.29
+Annual Cost Per Beneficiary (INR),12000.0,12000.0,12000.0,0.0,0.0

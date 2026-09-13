@@ -1,0 +1,33 @@
+version: "1.0"
+policy_id: "tn_kmut_implementation_aware"
+policy_name: "Kalaignar Magalir Urimai Thogai (KMUT) - Implementation Aware"
+description: "Experiment B: Includes real-world enrolment take-up, documentation filtering, and administrative approval probability."
+
+target_unit: "household"
+benefit_calculation:
+  type: "flat"
+  monthly_amount: 1000.0
+  annual_amount: 12000.0
+
+eligibility_rules:
+  - rule_id: "gender_rule"
+    variable: "gender"
+    operator: "=="
+    value: "Female"
+  - rule_id: "age_rule"
+    variable: "age"
+    operator: ">="
+    value: 21
+  - rule_id: "relationship_rule"
+    variable: "relationship_to_head"
+    operator: "in"
+    value: ["Head", "Spouse"]
+  - rule_id: "income_proxy_rule"
+    variable: "consumption_expenditure"
+    operator: "<="
+    value: 250000.0
+
+implementation_parameters:
+  takeup_rate: 0.88                       # Real-world application take-up (~88% of eligible households apply)
+  approval_probability: 0.85              # Administrative verification pass rate (~85% approved)
+  documentation_pass_rate: 0.95

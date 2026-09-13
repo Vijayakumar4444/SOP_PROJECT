@@ -1,0 +1,66 @@
+{
+  "converged": true,
+  "status": "CONVERGED",
+  "current_valid_iterations": 30,
+  "consecutive_stable_checks": 2,
+  "required_stable_checks": 2,
+  "error_threshold": 0.02,
+  "checkpoint_history": [
+    {
+      "iteration": 20,
+      "consecutive_stable_checks": 1,
+      "all_metrics_stable": true,
+      "metric_diagnostics": {
+        "total_policy_cost": {
+          "running_mean": 33169432.91,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        },
+        "weighted_beneficiary_population": {
+          "running_mean": 1842.75,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        },
+        "coverage_rate": {
+          "running_mean": 1.0,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        }
+      }
+    },
+    {
+      "iteration": 30,
+      "consecutive_stable_checks": 2,
+      "all_metrics_stable": true,
+      "metric_diagnostics": {
+        "total_policy_cost": {
+          "running_mean": 33169432.91,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        },
+        "weighted_beneficiary_population": {
+          "running_mean": 1842.75,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        },
+        "coverage_rate": {
+          "running_mean": 1.0,
+          "running_std": 0.0,
+          "mc_standard_error": 0.0,
+          "relative_mc_error": 0.0,
+          "stable": true
+        }
+      }
+    }
+  ]
+}

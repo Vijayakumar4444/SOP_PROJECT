@@ -1,0 +1,29 @@
+{
+  "n_valid": 5,
+  "risk_metrics": {
+    "probability_cost_exceeds_35m": {
+      "metric": "total_policy_cost",
+      "operator": "greater_than",
+      "threshold": 35000000.0,
+      "match_count": 0,
+      "applicable_iterations": 5,
+      "estimated_probability": 0.0,
+      "confidence_interval_95": {
+        "lower": 0.0,
+        "upper": 0.4345
+      }
+    },
+    "probability_coverage_below_95pct": {
+      "metric": "coverage_rate",
+      "operator": "less_than",
+      "threshold": 0.95,
+      "match_count": 0,
+      "applicable_iterations": 5,
+      "estimated_probability": 0.0,
+      "confidence_interval_95": {
+        "lower": 0.0,
+        "upper": 0.4345
+      }
+    }
+  }
+}

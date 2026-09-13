@@ -1,0 +1,16 @@
+policy_id,reporting_period,geographic_level,geographic_code,geographic_name,metric_name,metric_value,metric_unit,source_id
+tn_kmut_2023,FY 2023-24,Statewide,33,Tamil Nadu,applicants,16300000,Persons,SRC_003
+tn_kmut_2023,FY 2023-24,Statewide,33,Tamil Nadu,approved_beneficiaries,11600000,Households,SRC_002
+tn_kmut_2023,FY 2023-24,Statewide,33,Tamil Nadu,payment_recipients,11500000,Households,SRC_002
+tn_kmut_2023,FY 2023-24,Statewide,33,Tamil Nadu,total_expenditure,137200000000,INR,SRC_002
+tn_kmut_2023,FY 2023-24,Statewide,33,Tamil Nadu,benefit_amount,12000,INR/Year,SRC_001
+tn_kmut_2023,FY 2023-24,District,3301,Chennai,approved_beneficiaries,620000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3302,Coimbatore,approved_beneficiaries,480000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3303,Madurai,approved_beneficiaries,450000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3304,Tiruchirappalli,approved_beneficiaries,410000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3305,Salem,approved_beneficiaries,520000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3306,Tirunelveli,approved_beneficiaries,380000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3307,Erode,approved_beneficiaries,390000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3308,Vellore,approved_beneficiaries,340000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3309,Thanjavur,approved_beneficiaries,360000,Households,SRC_004
+tn_kmut_2023,FY 2023-24,District,3310,Dindigul,approved_beneficiaries,350000,Households,SRC_004

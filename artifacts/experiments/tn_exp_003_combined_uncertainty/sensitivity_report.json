@@ -1,0 +1,66 @@
+{
+  "n_valid": 30,
+  "status": "COMPLETED",
+  "sensitivity_matrix": {
+    "benefit_amount": {
+      "total_policy_cost": {
+        "sample_size": 30,
+        "pearson_correlation": 0.2695,
+        "spearman_rank_correlation": 0.6343,
+        "impact_direction": "POSITIVE",
+        "strength": "MODERATE"
+      },
+      "weighted_beneficiary_population": {
+        "sample_size": 30,
+        "pearson_correlation": 0.1343,
+        "spearman_rank_correlation": 0.0345,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      },
+      "coverage_rate": {
+        "sample_size": 30,
+        "pearson_correlation": 0.1343,
+        "spearman_rank_correlation": 0.0345,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      },
+      "budget_utilization": {
+        "sample_size": 30,
+        "pearson_correlation": 0.1343,
+        "spearman_rank_correlation": 0.0345,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      }
+    },
+    "total_budget": {
+      "total_policy_cost": {
+        "sample_size": 30,
+        "pearson_correlation": -0.0749,
+        "spearman_rank_correlation": 0.014,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      },
+      "weighted_beneficiary_population": {
+        "sample_size": 30,
+        "pearson_correlation": -0.091,
+        "spearman_rank_correlation": 0.0661,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      },
+      "coverage_rate": {
+        "sample_size": 30,
+        "pearson_correlation": -0.091,
+        "spearman_rank_correlation": 0.0661,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      },
+      "budget_utilization": {
+        "sample_size": 30,
+        "pearson_correlation": -0.091,
+        "spearman_rank_correlation": 0.0661,
+        "impact_direction": "NEUTRAL",
+        "strength": "NEGLIGIBLE"
+      }
+    }
+  }
+}

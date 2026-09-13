@@ -12,6 +12,10 @@
     "phase4:validate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase4_validation_python.ps1",
     "phase5:calibrate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase5_calibration_python.ps1",
     "phase5:test": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
+    "phase6:execute": "powershell -ExecutionPolicy Bypass -File scripts/run_phase6_policy_engine_python.ps1",
+    "phase7:simulate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase7_monte_carlo_python.ps1",
+    "phase8:recommend": "powershell -ExecutionPolicy Bypass -File scripts/run_phase8_recommendation_python.ps1",
+    "real_world:validate": "powershell -ExecutionPolicy Bypass -File scripts/run_real_world_validation_python.ps1",
     "test:python": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
     "test": "node tests/phase1.test.js && node tests/phase2.test.js && powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1"
   },

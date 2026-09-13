@@ -1,0 +1,11 @@
+{
+  "phase": 6,
+  "status": "PASS",
+  "timestamp": "\"tn_elderly_pension_001\"",
+  "demonstration_runs": [
+    "POLICY-RUN-1250DE5448",
+    "POLICY-RUN-CA7277A804",
+    "POLICY-RUN-749465CFCF"
+  ],
+  "interface_method": "Phase6PolicyService.evaluate_simulation(policy_path, population_df, weight_column, seed, parameter_overrides)"
+}

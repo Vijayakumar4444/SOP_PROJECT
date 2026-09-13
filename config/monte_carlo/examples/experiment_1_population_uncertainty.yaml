@@ -1,0 +1,80 @@
+experiment:
+  experiment_id: tn_exp_001_pop_uncertainty
+  name: Tamil Nadu Policy Population Uncertainty Analysis
+  description: Monte Carlo evaluation of elderly pension outcome variability across resampled synthetic populations.
+  base_seed: 20260913
+  number_of_iterations: 50
+  execution_mode: local
+  parallel_workers: 1
+  fail_fast: false
+  resume_enabled: true
+  checkpoint_interval: 10
+
+population:
+  mode: resampling # resampling, regeneration, fixed
+  sampling_strategy: household_bootstrap # household_bootstrap, bootstrap, stratified
+  population_size: 12000
+  preserve_households: true
+
+calibration:
+  enabled: true
+  method: raking
+  weight_column: calibration_weight
+  failure_behavior: reject_iteration
+
+policy:
+  policy_path: config/policy_engine/examples/tn_elderly_pension.yaml
+  parameter_overrides: {}
+
+uncertainty:
+  population_uncertainty:
+    enabled: true
+  policy_parameter_uncertainty:
+    enabled: false
+  calibration_uncertainty:
+    enabled: false
+
+take_up:
+  enabled: false
+
+convergence:
+  enabled: true
+  minimum_iterations: 20
+  check_interval: 10
+  metrics:
+    - total_policy_cost
+    - weighted_beneficiary_population
+    - coverage_rate
+  relative_mc_error_threshold: 0.02
+  stable_checks_required: 2
+  early_stopping: false
+
+risk_metrics:
+  - metric: total_policy_cost
+    operator: greater_than
+    threshold: 35000000
+    output_name: probability_cost_exceeds_35m
+  - metric: coverage_rate
+    operator: less_than
+    threshold: 0.95
+    output_name: probability_coverage_below_95pct
+
+outputs:
+  confidence_level: 0.95
+  percentiles:
+    - 0.025
+    - 0.05
+    - 0.25
+    - 0.50
+    - 0.75
+    - 0.95
+    - 0.975
+  store_record_level_results: false
+  store_iteration_populations: false
+  store_failed_iterations: true
+
+failure_handling:
+  fail_fast: false
+  maximum_failed_iterations: 10
+  maximum_failure_rate: 0.20
+  include_failed_iterations_in_statistics: false

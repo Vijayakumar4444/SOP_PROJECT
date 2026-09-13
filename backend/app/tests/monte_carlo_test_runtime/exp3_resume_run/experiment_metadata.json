@@ -1,0 +1,15 @@
+{
+  "experiment_id": "tn_exp_003_combined_uncertainty",
+  "name": "Tamil Nadu Cooking Gas Subsidy Combined Uncertainty Simulation",
+  "description": "Combined population resampling, policy parameter, and group-specific take-up uncertainty.",
+  "start_time": "2026-09-13T19:01:43.582283+00:00",
+  "end_time": "2026-09-13T19:01:44.422742+00:00",
+  "execution_duration_seconds": 0.8405,
+  "base_seed": 20260915,
+  "total_requested_iterations": 5,
+  "completed_valid_iterations": 5,
+  "failed_iterations": 0,
+  "converged": false,
+  "population_mode": "resampling",
+  "sampling_strategy": "household_bootstrap"
+}

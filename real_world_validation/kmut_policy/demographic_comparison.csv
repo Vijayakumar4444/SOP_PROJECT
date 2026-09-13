@@ -1,0 +1,6 @@
+group_category,subgroup,actual_share_pct,simulated_share_pct,abs_diff_pct_points
+Rural / Urban,Rural,58.5,57.8,0.7
+Rural / Urban,Urban,41.5,42.2,0.7
+Age Bracket,21 - 35 Years,34.0,35.2,1.2
+Age Bracket,36 - 55 Years,48.0,47.1,0.9
+Age Bracket,56+ Years,18.0,17.7,0.3

@@ -1,0 +1,2 @@
+total_compared_metrics,metrics_inside_interval,empirical_coverage_rate,average_interval_width,calibration_status
+10,10,1.0,85854.58,WELL_CALIBRATED

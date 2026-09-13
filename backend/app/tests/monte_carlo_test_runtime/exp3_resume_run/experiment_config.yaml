@@ -1,0 +1,106 @@
+{
+  "experiment": {
+    "experiment_id": "tn_exp_003_combined_uncertainty",
+    "name": "Tamil Nadu Cooking Gas Subsidy Combined Uncertainty Simulation",
+    "description": "Combined population resampling, policy parameter, and group-specific take-up uncertainty.",
+    "base_seed": 20260915,
+    "number_of_iterations": 50,
+    "execution_mode": "local",
+    "parallel_workers": 1,
+    "fail_fast": false,
+    "resume_enabled": true,
+    "checkpoint_interval": 10
+  },
+  "population": {
+    "mode": "resampling",
+    "sampling_strategy": "household_bootstrap",
+    "population_size": 12000,
+    "preserve_households": true
+  },
+  "calibration": {
+    "enabled": true,
+    "method": "raking",
+    "weight_column": "calibration_weight",
+    "failure_behavior": "reject_iteration"
+  },
+  "policy": {
+    "policy_path": "config/policy_engine/examples/tn_clean_cooking_subsidy.yaml",
+    "parameter_overrides": {}
+  },
+  "uncertainty": {
+    "population_uncertainty": {
+      "enabled": true
+    },
+    "policy_parameter_uncertainty": {
+      "enabled": true,
+      "parameters": {
+        "benefit_amount": {
+          "distribution": "uniform",
+          "minimum": 500,
+          "maximum": 700
+        },
+        "total_budget": {
+          "distribution": "uniform",
+          "minimum": 35000000,
+          "maximum": 50000000
+        }
+      }
+    }
+  },
+  "take_up": {
+    "enabled": true,
+    "mode": "group_specific",
+    "default_probability": 0.8,
+    "groups": [
+      {
+        "field": "urban_rural",
+        "value": "Rural",
+        "probability": 0.85
+      },
+      {
+        "field": "urban_rural",
+        "value": "Urban",
+        "probability": 0.75
+      }
+    ]
+  },
+  "convergence": {
+    "enabled": true,
+    "minimum_iterations": 20,
+    "check_interval": 10,
+    "metrics": [
+      "total_policy_cost",
+      "weighted_beneficiary_population"
+    ],
+    "relative_mc_error_threshold": 0.02
+  },
+  "risk_metrics": [
+    {
+      "metric": "total_policy_cost",
+      "operator": "greater_than",
+      "threshold": 45000000,
+      "output_name": "probability_cost_exceeds_45m"
+    }
+  ],
+  "outputs": {
+    "confidence_level": 0.95,
+    "percentiles": [
+      0.025,
+      0.05,
+      0.25,
+      0.5,
+      0.75,
+      0.95,
+      0.975
+    ],
+    "store_record_level_results": false,
+    "store_iteration_populations": false,
+    "store_failed_iterations": true
+  },
+  "failure_handling": {
+    "fail_fast": false,
+    "maximum_failed_iterations": 10,
+    "maximum_failure_rate": 0.2,
+    "include_failed_iterations_in_statistics": false
+  }
+}

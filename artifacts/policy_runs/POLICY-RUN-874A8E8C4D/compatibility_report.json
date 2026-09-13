@@ -1,0 +1,15 @@
+{
+  "compatible": true,
+  "policy_id": "tn_clean_cooking_subsidy_002",
+  "total_referenced_variables": 4,
+  "available_variables": [
+    "consumption_expenditure",
+    "individual_income",
+    "synthetic_person_id",
+    "urban_rural"
+  ],
+  "missing_variables": [],
+  "high_missingness_variables": [],
+  "population_record_count": 12000,
+  "population_columns_count": 22
+}

@@ -1,0 +1,33 @@
+version: "1.0"
+policy_id: "tn_kmut_2023"
+policy_name: "Kalaignar Magalir Urimai Thogai (KMUT)"
+issuing_authority: "Special Programme Implementation Department, Govt of Tamil Nadu"
+official_order: "G.O. Ms. No. 34 dated 10.07.2023"
+target_unit: "household"
+benefit_amount_monthly: 1000.0
+benefit_amount_annual: 12000.0
+
+eligibility_criteria:
+  gender: "Female"
+  min_age: 21
+  max_household_annual_income: 250000.0  # Proxy: annual consumption_expenditure <= 250,000 INR
+  relationship_to_head:
+    - "Head"
+    - "Spouse"
+
+exclusions:
+  income_tax_payers: true
+  government_employees: true
+  pensioners_above_limit: true
+  four_wheeler_owners: true
+  land_holding_above_5_acres: true
+
+proxy_mappings:
+  - concept: "household_annual_income"
+    project_variable: "consumption_expenditure"
+    transformation: "annualized_consumption"
+    reliability: "HIGH"
+  - concept: "woman_head_designation"
+    project_variable: "relationship_to_head"
+    transformation: "head_or_spouse_filter"
+    reliability: "HIGH"

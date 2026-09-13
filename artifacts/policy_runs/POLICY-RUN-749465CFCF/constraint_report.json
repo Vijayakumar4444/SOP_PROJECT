@@ -1,0 +1,36 @@
+{
+  "run_id": "POLICY-RUN-749465CFCF",
+  "constraints_passed": true,
+  "constraints": [
+    {
+      "constraint_id": "C_BUDGET_LIMIT",
+      "description": "Total estimated program cost must not exceed policy budget.",
+      "status": "PASS",
+      "observed_value": 4535736.37,
+      "allowed_value": 15000000.0,
+      "severity": "INFO",
+      "affected_record_count": 189,
+      "explanation": "Cost within budget."
+    },
+    {
+      "constraint_id": "C_MAX_BENEFICIARIES",
+      "description": "Selected beneficiary count must not exceed maximum beneficiaries cap.",
+      "status": "PASS",
+      "observed_value": 189,
+      "allowed_value": 1000,
+      "severity": "INFO",
+      "affected_record_count": 189,
+      "explanation": "Beneficiaries within capacity."
+    },
+    {
+      "constraint_id": "C_NON_NEGATIVE_BENEFITS",
+      "description": "All benefit amounts must be non-negative.",
+      "status": "PASS",
+      "observed_value": 0,
+      "allowed_value": 0,
+      "severity": "INFO",
+      "affected_record_count": 0,
+      "explanation": "All benefits are non-negative."
+    }
+  ]
+}
