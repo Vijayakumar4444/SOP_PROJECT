@@ -3,13 +3,16 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 from datetime import datetime, timezone
+import ast
 import hashlib
 import json
 
 from backend.app.modules.data_foundation.io_utils import write_csv, write_json, write_md
 from backend.app.modules.synthetic_population.assessment import ROOT, read_csv, read_json
 from backend.app.modules.synthetic_population.generators.bootstrap import BootstrapBaselineGenerator
+from backend.app.modules.synthetic_population.generators.base import SyntheticModelTrainingError
 from backend.app.modules.synthetic_population.generators.gaussian_copula import GaussianCopulaGenerator
+from backend.app.modules.synthetic_population.generators.neural import CTGANGenerator, TVAEGenerator
 from backend.app.modules.synthetic_population.generators.registry import GENERATOR_REGISTRY
 from backend.app.modules.synthetic_population.training_preparation import prepare_training_data
 
@@ -17,14 +20,20 @@ from backend.app.modules.synthetic_population.training_preparation import prepar
 GENERATOR_CLASSES = {
     "bootstrap": BootstrapBaselineGenerator,
     "gaussian_copula": GaussianCopulaGenerator,
+    "ctgan": CTGANGenerator,
+    "tvae": TVAEGenerator,
 }
 GENERATOR_VERSIONS = {
     "bootstrap": "bootstrap_baseline_v1",
     "gaussian_copula": "gaussian_copula_pure_python_v1",
+    "ctgan": "ctgan_sdv_v1",
+    "tvae": "tvae_sdv_v1",
 }
 GENERATOR_LABELS = {
     "bootstrap": "RESAMPLED_BASELINE",
     "gaussian_copula": "SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE",
+    "ctgan": "SYNTHETIC_CTGAN_CANDIDATE",
+    "tvae": "SYNTHETIC_TVAE_CANDIDATE",
 }
 
 
@@ -48,6 +57,30 @@ def read_model_config(root: Path, generator: str) -> dict[str, Any]:
             "jitter": 0.000001,
             "label": "SYNTHETIC_GAUSSIAN_COPULA_CANDIDATE",
         },
+        "ctgan": {
+            "profile": "development",
+            "generator": "ctgan",
+            "version": "ctgan_sdv_v1",
+            "seed": 42,
+            "epochs": 5,
+            "batch_size": 500,
+            "enable_gpu": False,
+            "enforce_min_max_values": True,
+            "enforce_rounding": True,
+            "label": "SYNTHETIC_CTGAN_CANDIDATE",
+        },
+        "tvae": {
+            "profile": "development",
+            "generator": "tvae",
+            "version": "tvae_sdv_v1",
+            "seed": 42,
+            "epochs": 5,
+            "batch_size": 500,
+            "enable_gpu": False,
+            "enforce_min_max_values": True,
+            "enforce_rounding": True,
+            "label": "SYNTHETIC_TVAE_CANDIDATE",
+        },
     }
     config = dict(defaults[generator])
     path = root / f"config/synthetic_population/models/{generator}.yaml"
@@ -59,13 +92,29 @@ def read_model_config(root: Path, generator: str) -> dict[str, Any]:
             key, value = line.split(":", 1)
             key = key.strip()
             value = value.strip()
-            if key == "seed":
-                config[key] = int(value)
-            elif key == "jitter":
-                config[key] = float(value)
-            elif key == "weight_column":
-                config[key] = value
+            config[key] = _parse_config_value(value)
     return config
+
+
+def _parse_config_value(value: str) -> Any:
+    if value == "":
+        return ""
+    lowered = value.lower()
+    if lowered in {"true", "false"}:
+        return lowered == "true"
+    if value.startswith("[") and value.endswith("]"):
+        try:
+            return ast.literal_eval(value)
+        except (SyntaxError, ValueError):
+            return [item.strip() for item in value.strip("[]").split(",") if item.strip()]
+    try:
+        return int(value)
+    except ValueError:
+        pass
+    try:
+        return float(value)
+    except ValueError:
+        return value.strip("\"'")
 
 
 def fingerprint(payload: dict[str, Any]) -> str:
@@ -82,6 +131,15 @@ def load_model_registry(path: Path) -> dict[str, Any]:
 def upsert_registry(path: Path, entry: dict[str, Any]) -> None:
     registry = load_model_registry(path)
     models = [item for item in registry.get("models", []) if item.get("model_id") != entry["model_id"]]
+    if entry.get("status") == "TRAINED":
+        models = [
+            item for item in models
+            if not (
+                item.get("generator_type") == entry.get("generator_type")
+                and item.get("status") in {"BLOCKED", "FAILED", "TRAINING"}
+                and not item.get("artifact_path")
+            )
+        ]
     models.append(entry)
     registry["models"] = sorted(models, key=lambda item: item["model_id"])
     write_json(path, registry)
@@ -111,14 +169,29 @@ def train_candidate_model(root: Path, generator: str) -> dict[str, Any]:
         "variable_types": variable_types,
         "created_at": datetime.now(timezone.utc).isoformat(),
         "training_rows": len(rows),
-        "status": "TRAINED",
+        "status": "TRAINING",
         "artifact_path": str(artifact_dir.relative_to(root)).replace("\\", "/"),
         "config": config,
     }
     model = GENERATOR_CLASSES[generator]()
-    model.fit(rows, metadata, config)
-    model.save(artifact_dir)
     registry_path = root / "artifacts/synthetic_models/model_registry.json"
+    upsert_registry(registry_path, metadata)
+    try:
+        model.fit(rows, metadata, config)
+        metadata["status"] = "TRAINED"
+        metadata["artifact_path"] = str(artifact_dir.relative_to(root)).replace("\\", "/")
+        metadata["blocking_reason"] = ""
+        metadata["missing_dependencies"] = []
+        model.save(artifact_dir)
+    except Exception as exc:
+        missing = model.missing_dependencies() if hasattr(model, "missing_dependencies") else []
+        metadata["status"] = "BLOCKED" if missing else "FAILED"
+        metadata["artifact_path"] = ""
+        metadata["blocking_reason"] = str(exc)
+        if missing:
+            metadata["missing_dependencies"] = missing
+        upsert_registry(registry_path, metadata)
+        raise
     upsert_registry(registry_path, metadata)
     preview = model.sample(size=25, seed=config["seed"])
     preview_path = root / f"data/synthetic/{generator}_preview_25.csv"
@@ -162,7 +235,7 @@ def write_generator_interface_report(root: Path, results: dict[str, dict[str, An
     latest_status = {item.get("generator_type"): item.get("status") for item in existing_registry.get("models", [])}
     for name in GENERATOR_REGISTRY:
         status = latest_status.get(name) or ("IMPLEMENTED" if name in GENERATOR_CLASSES else "DEPENDENCY_GATED")
-        reason = "Available and trained through the shared interface." if name in GENERATOR_CLASSES else "Dependency-gated neural generator; blocked status is recorded when optional dependencies are missing."
+        reason = "Available and trained through the shared interface." if name in GENERATOR_CLASSES else "No shared interface implementation is available."
         lines.append(f"- {name}: {status}. {reason}")
     lines.extend(["", "## Trained Candidate Models", ""])
     for name, result in sorted(results.items()):

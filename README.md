@@ -12,6 +12,11 @@ npm run phase1:build
 npm test
 ```
 
+## Python Environment
+
+Phase 3 neural generators require the Python dependencies in `requirements.txt`.
+See `docs/python_environment.md` for the virtual environment setup and Phase 3 training commands.
+
 The primary artifact is:
 
 ```text

@@ -1,0 +1,9 @@
+target_id,variable,category,synthetic_categories,synthetic_count,synthetic_proportion,official_count,official_proportion,absolute_proportion_difference,relative_difference,status
+gender_official_marginal,gender,Male,Male,6010.738437,0.500895,36137975.0,0.500893,2e-06,4e-06,USABLE
+gender_official_marginal,gender,Female,Female,5986.537153,0.498878,36009055.0,0.499107,0.000229,0.000459,USABLE
+gender_official_marginal,gender,UNMAPPED_SYNTHETIC,categories not covered by target,2.72441,0.000227,,0.0,0.000227,,WARNING
+urban_rural_official_marginal,urban_rural,Urban,Urban,5812.183222,0.484349,34917440.0,0.483976,0.000373,0.00077,USABLE
+urban_rural_official_marginal,urban_rural,Rural,Rural,6187.816778,0.515651,37229590.0,0.516024,0.000373,0.000722,USABLE
+social_group_official_marginal_grouped,social_group,Scheduled Caste,Scheduled Caste,2401.542061,0.200129,14438445.0,0.200125,4e-06,1.8e-05,USABLE
+social_group_official_marginal_grouped,social_group,Scheduled Tribe,Scheduled Tribe,132.177571,0.011015,794697.0,0.011015,0.0,1.8e-05,USABLE
+social_group_official_marginal_grouped,social_group,Non-SC/ST,Other Backward Class|Others,9466.280368,0.788857,56913888.0,0.78886,3e-06,4e-06,USABLE

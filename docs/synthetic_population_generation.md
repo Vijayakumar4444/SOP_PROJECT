@@ -18,7 +18,7 @@ Included variables are: district, district_code, urban_rural, age, gender, marit
 
 ## Generators
 
-Weighted Bootstrap and Gaussian Copula are trained candidates. CTGAN and TVAE have interface/registry entries but are dependency-gated in this environment.
+Weighted Bootstrap, Gaussian Copula, CTGAN, and TVAE are Phase 3 candidate generators. CTGAN and TVAE use SDV's single-table neural synthesizers and require the Python dependency stack documented in `docs/python_environment.md`.
 
 ## Missing Data And Weights
 
@@ -42,4 +42,4 @@ Multiple synthetic-data generators are implemented because no single model is gu
 
 ## Known Limitations
 
-CTGAN/TVAE are blocked by optional dependencies; Parquet export is skipped without a local writer; full validation, calibration, policy execution, fairness analysis, and recommendations belong to later phases.
+Neural training is stochastic even with recorded seeds; Parquet export is skipped without a local writer; full validation, calibration, policy execution, fairness analysis, and recommendations belong to later phases.

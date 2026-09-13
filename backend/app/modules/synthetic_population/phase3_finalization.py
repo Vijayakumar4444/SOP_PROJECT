@@ -18,7 +18,7 @@ from backend.app.modules.synthetic_population.sampling_service import DynamicSam
 
 
 ACCEPTANCE_SIZE = 12000
-ACCEPTANCE_SEEDS = {"bootstrap": 142, "gaussian_copula": 144}
+ACCEPTANCE_SEEDS = {"bootstrap": 142, "gaussian_copula": 144, "ctgan": 146, "tvae": 148}
 NO_BEST_MODEL_WARNING = (
     "Phase 3 does not select a best model. Candidate populations must be evaluated in Phase 4 population validation before policy simulation use."
 )
@@ -77,12 +77,17 @@ class Phase3FinalizationService:
                 continue
             generator = model_entry["generator_type"]
             seed = ACCEPTANCE_SEEDS.get(generator, 140)
+            population_id = f"SYNPOP-{generator.upper()}-REPRESENTATIVE-{ACCEPTANCE_SIZE}-{seed}-ACCEPTANCE"
+            reused = self._reuse_existing_acceptance_population(model_entry, population_id)
+            if reused:
+                generated.append(reused["generated"])
+                persisted.append(reused["persisted"])
+                continue
             model = sampler._load_model(model_entry)
             started = time.perf_counter()
             rows = model.sample(ACCEPTANCE_SIZE, seed=seed)
             duration = max(time.perf_counter() - started, 0.000001)
             constraint_summary = ConstraintEngine().validate_rows(rows)
-            population_id = f"SYNPOP-{generator.upper()}-REPRESENTATIVE-{ACCEPTANCE_SIZE}-{seed}-ACCEPTANCE"
             output_path = self.root / "data/synthetic/acceptance" / f"{population_id}.csv"
             metadata = {
                 "population_id": population_id,
@@ -133,6 +138,48 @@ class Phase3FinalizationService:
         write_json(self.root / "data/synthetic/phase3_acceptance_manifest.json", manifest)
         write_md(self.root / "reports/phase3_acceptance_demonstration.md", self._acceptance_report(manifest))
         return manifest
+
+    def _reuse_existing_acceptance_population(self, model_entry: dict[str, Any], population_id: str) -> dict[str, Any] | None:
+        population_dir = self.root / "artifacts/synthetic_populations" / population_id
+        metadata_path = population_dir / "metadata.json"
+        population_path = population_dir / "population.csv"
+        report_path = population_dir / "generation_report.json"
+        report_md_path = self.root / "reports/synthetic_populations" / f"{population_id}.md"
+        if not (metadata_path.exists() and population_path.exists() and report_path.exists()):
+            return None
+        metadata = read_json(metadata_path)
+        if metadata.get("model_id") != model_entry.get("model_id"):
+            return None
+        if metadata.get("size") != ACCEPTANCE_SIZE or metadata.get("mode") != "REPRESENTATIVE":
+            return None
+        constraint = metadata.get("quality", {}).get("constraint_summary", {})
+        persisted_item = {
+            "population_id": population_id,
+            "experiment_id": metadata.get("generation_experiment_id"),
+            "rows": metadata.get("size", 0),
+            "artifact_dir": str(population_dir.relative_to(self.root)).replace("\\", "/"),
+            "population_csv_path": str(population_path.relative_to(self.root)).replace("\\", "/"),
+            "metadata_path": str(metadata_path.relative_to(self.root)).replace("\\", "/"),
+            "generation_report_json_path": str(report_path.relative_to(self.root)).replace("\\", "/"),
+            "generation_report_md_path": str(report_md_path.relative_to(self.root)).replace("\\", "/"),
+            "warnings": metadata.get("warnings", []),
+            "exact_reference_duplicate_rate": metadata.get("quality", {}).get("exact_reference_duplicate_diagnostic", {}).get("exact_reference_duplicate_rate", 0),
+            "reused_existing_artifact": True,
+        }
+        generated_item = {
+            "generator_type": model_entry.get("generator_type"),
+            "model_id": model_entry.get("model_id"),
+            "status": "TRAINED",
+            "population_id": population_id,
+            "rows": metadata.get("size", 0),
+            "generation_duration_seconds": "reused",
+            "hard_constraint_violations": constraint.get("hard_violation_count", 0),
+            "soft_anomalies": constraint.get("soft_anomaly_count", 0),
+            "source_output_path": metadata.get("artifact_paths", {}).get("population_csv"),
+            "persisted_artifact_dir": persisted_item["artifact_dir"],
+            "reused_existing_artifact": True,
+        }
+        return {"generated": generated_item, "persisted": persisted_item}
 
     def _write_holdout_reference(self) -> str:
         training_path = self.root / self.training["training_dataset_path"]
@@ -207,8 +254,8 @@ class Phase3FinalizationService:
         model_docs = {
             "bootstrap": self._model_doc("Weighted Bootstrap", "Resamples supported reference rows with configured weights and strata.", "Simple benchmark; preserves observed combinations.", "Duplicates reference feature rows and is not privacy-preserving."),
             "gaussian_copula": self._model_doc("Gaussian Copula", "Uses empirical marginal distributions with a Gaussian correlation structure.", "Lightweight statistical candidate for mixed tabular data.", "Pure-Python fallback; may weaken complex categorical dependencies."),
-            "ctgan": self._model_doc("CTGAN", "Conditional tabular GAN intended for complex mixed tabular distributions.", "Useful future candidate for nonlinear tabular relationships.", "Blocked until optional SDV/pandas training dependencies are available."),
-            "tvae": self._model_doc("TVAE", "Variational autoencoder for tabular synthetic data.", "Alternative neural generator with different inductive bias from CTGAN.", "Blocked until optional SDV/pandas training dependencies are available."),
+            "ctgan": self._model_doc("CTGAN", "Uses SDV CTGANSynthesizer on the Phase 3 selected person-level variables.", "Neural candidate for nonlinear mixed tabular relationships.", "Stochastic training; quality and policy suitability remain Phase 4 responsibilities."),
+            "tvae": self._model_doc("TVAE", "Uses SDV TVAESynthesizer on the Phase 3 selected person-level variables.", "Variational neural candidate with a different inductive bias from CTGAN.", "Stochastic training; quality and policy suitability remain Phase 4 responsibilities."),
         }
         for name, text in model_docs.items():
             write_md(self.root / f"docs/synthetic_models/{name}.md", text)
@@ -230,7 +277,7 @@ class Phase3FinalizationService:
             f"4. Excluded variables: {', '.join(excluded)}. Identifiers, metadata, fully missing fields, aggregate-only fields, and unsupported variables were excluded or deferred.",
             f"5. Missing values: categorical/ordinal blanks use `{self.training.get('missing_token', 'Unknown')}`; numeric blanks are preserved; fully missing variables are excluded.",
             f"6. Survey weights: {', '.join(self.training.get('weight_columns', []))}; preserved for weighted sampling and excluded from model features.",
-            "7. Implemented generators: bootstrap, gaussian_copula, ctgan, tvae interface entries.",
+            "7. Implemented generators: bootstrap, gaussian_copula, ctgan, tvae.",
             f"8. Trained successfully: {', '.join(item['model_id'] for item in trained)}. Blocked/skipped: {', '.join(item['model_id'] for item in blocked)}.",
             f"9. Synthetic populations generated in acceptance demo: {len(acceptance.get('persisted_populations', []))}.",
             f"10. Population sizes generated: {sorted({item.get('rows') for item in acceptance.get('persisted_populations', [])})}.",
@@ -238,7 +285,7 @@ class Phase3FinalizationService:
             "12. Dynamic sampling: explicit REPRESENTATIVE, CONDITIONAL, and SUBPOPULATION modes with supported size checks and batching metadata.",
             "13. Conditional sampling: supported conditions are validated against trained model variables; impossible conditions fail before persistence.",
             "14. Artifacts created: model registry, model artifacts, sampled CSVs, persisted population CSVs, metadata, generation reports, diagnostics, test manifests, comparison manifest, Phase 4 manifest, and documentation.",
-            "15. Limitations: CTGAN/TVAE dependency-gated; Parquet export skipped without a local writer; bootstrap duplicates reference feature rows; full fidelity, privacy, calibration, and policy suitability remain unvalidated.",
+            "15. Limitations: neural generators require the Python SDV stack; Parquet export skipped without a local writer; bootstrap duplicates reference feature rows; full fidelity, privacy, calibration, and policy suitability remain unvalidated.",
             f"16. Phase 4 should validate: {', '.join(phase4['phase4_expected_validation'])}.",
             "",
             "## Acceptance Demonstration",
@@ -272,8 +319,8 @@ class Phase3FinalizationService:
             "Generator abstraction implemented",
             "Bootstrap baseline implemented",
             "Gaussian Copula implemented",
-            "CTGAN documented as blocked",
-            "TVAE documented as blocked",
+            "CTGAN implemented with SDV",
+            "TVAE implemented with SDV",
             "Model registry and persistence implemented",
             "Reproducible configurations implemented",
             "Synthetic IDs implemented",
@@ -344,7 +391,7 @@ class Phase3FinalizationService:
             "",
             "## Generators",
             "",
-            "Weighted Bootstrap and Gaussian Copula are trained candidates. CTGAN and TVAE have interface/registry entries but are dependency-gated in this environment.",
+            "Weighted Bootstrap, Gaussian Copula, CTGAN, and TVAE are Phase 3 candidate generators. CTGAN and TVAE use SDV's single-table neural synthesizers and require the Python dependency stack documented in `docs/python_environment.md`.",
             "",
             "## Missing Data And Weights",
             "",
@@ -368,7 +415,7 @@ class Phase3FinalizationService:
             "",
             "## Known Limitations",
             "",
-            "CTGAN/TVAE are blocked by optional dependencies; Parquet export is skipped without a local writer; full validation, calibration, policy execution, fairness analysis, and recommendations belong to later phases.",
+            "Neural training is stochastic even with recorded seeds; Parquet export is skipped without a local writer; full validation, calibration, policy execution, fairness analysis, and recommendations belong to later phases.",
         ])
 
     def _model_doc(self, title: str, what: str, strength: str, weakness: str) -> str:

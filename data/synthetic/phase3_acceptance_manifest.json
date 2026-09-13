@@ -1,7 +1,7 @@
 {
   "module": "phase3_acceptance_demonstration",
-  "created_at": "2026-09-11T16:33:43.358707+00:00",
-  "reference_template_rows": 12000,
+  "created_at": "2026-09-12T15:20:21.177560+00:00",
+  "reference_template_rows": 22584,
   "selected_variable_count": 16,
   "target_population_size_per_successful_model": 12000,
   "generated_populations": [
@@ -11,17 +11,25 @@
       "status": "TRAINED",
       "population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
       "rows": 12000,
-      "generation_duration_seconds": 0.0976,
+      "generation_duration_seconds": "reused",
       "hard_constraint_violations": 0,
       "soft_anomalies": 0,
-      "source_output_path": "data/synthetic/acceptance/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE.csv",
-      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE"
+      "source_output_path": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE/population.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+      "reused_existing_artifact": true
     },
     {
       "generator_type": "ctgan",
-      "model_id": "TN_CTGAN_BLOCKED_DEPENDENCIES",
-      "status": "BLOCKED",
-      "blocking_reason": "ctgan training is blocked because optional dependencies are missing: sdv, pandas."
+      "model_id": "TN_CTGAN_A70E94D8A1",
+      "status": "TRAINED",
+      "population_id": "SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+      "rows": 12000,
+      "generation_duration_seconds": "reused",
+      "hard_constraint_violations": 0,
+      "soft_anomalies": 937,
+      "source_output_path": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+      "reused_existing_artifact": true
     },
     {
       "generator_type": "gaussian_copula",
@@ -29,17 +37,25 @@
       "status": "TRAINED",
       "population_id": "SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
       "rows": 12000,
-      "generation_duration_seconds": 0.8295,
+      "generation_duration_seconds": "reused",
       "hard_constraint_violations": 0,
       "soft_anomalies": 813,
-      "source_output_path": "data/synthetic/acceptance/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE.csv",
-      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE"
+      "source_output_path": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE/population.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
+      "reused_existing_artifact": true
     },
     {
       "generator_type": "tvae",
-      "model_id": "TN_TVAE_BLOCKED_DEPENDENCIES",
-      "status": "BLOCKED",
-      "blocking_reason": "tvae training is blocked because optional dependencies are missing: sdv, pandas."
+      "model_id": "TN_TVAE_7A020BB473",
+      "status": "TRAINED",
+      "population_id": "SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+      "rows": 12000,
+      "generation_duration_seconds": "reused",
+      "hard_constraint_violations": 0,
+      "soft_anomalies": 20,
+      "source_output_path": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv",
+      "persisted_artifact_dir": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+      "reused_existing_artifact": true
     }
   ],
   "persisted_populations": [
@@ -58,7 +74,24 @@
         "Bootstrap output is a resampled baseline and may have high exact reference duplicate rates.",
         "Exact reference duplicate diagnostic found 100.0% feature-level matches."
       ],
-      "exact_reference_duplicate_rate": 100.0
+      "exact_reference_duplicate_rate": 100.0,
+      "reused_existing_artifact": true
+    },
+    {
+      "population_id": "SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+      "experiment_id": "SYNEXP-ECAB3976F1",
+      "rows": 12000,
+      "artifact_dir": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE",
+      "population_csv_path": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv",
+      "metadata_path": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/metadata.json",
+      "generation_report_json_path": "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/generation_report.json",
+      "generation_report_md_path": "reports/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE.md",
+      "warnings": [
+        "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
+        "Synthetic population has not yet passed Phase 4 population validation."
+      ],
+      "exact_reference_duplicate_rate": 0.0,
+      "reused_existing_artifact": true
     },
     {
       "population_id": "SYNPOP-GAUSSIAN_COPULA-REPRESENTATIVE-12000-144-ACCEPTANCE",
@@ -73,7 +106,24 @@
         "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
         "Synthetic population has not yet passed Phase 4 population validation."
       ],
-      "exact_reference_duplicate_rate": 0.0
+      "exact_reference_duplicate_rate": 0.0,
+      "reused_existing_artifact": true
+    },
+    {
+      "population_id": "SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+      "experiment_id": "SYNEXP-19EB5942B1",
+      "rows": 12000,
+      "artifact_dir": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE",
+      "population_csv_path": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv",
+      "metadata_path": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/metadata.json",
+      "generation_report_json_path": "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/generation_report.json",
+      "generation_report_md_path": "reports/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE.md",
+      "warnings": [
+        "Parquet export skipped because no parquet writer dependency is available in the local runtime.",
+        "Synthetic population has not yet passed Phase 4 population validation."
+      ],
+      "exact_reference_duplicate_rate": 0.0,
+      "reused_existing_artifact": true
     }
   ],
   "warning": "Phase 3 does not select a best model. Candidate populations must be evaluated in Phase 4 population validation before policy simulation use."

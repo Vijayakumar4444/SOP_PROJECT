@@ -1,9 +1,9 @@
 {
   "generators": [
     {
-      "model_id": "TN_CTGAN_BLOCKED_DEPENDENCIES",
+      "model_id": "TN_CTGAN_A70E94D8A1",
       "generator_type": "ctgan",
-      "model_version": "ctgan_sdv_optional_v1",
+      "model_version": "ctgan_sdv_v1",
       "training_dataset_version": "phase3_training_v1",
       "training_dataset_path": "data/synthetic/training/reference_training_v1.csv",
       "variables": [
@@ -24,31 +24,60 @@
         "consumption_expenditure",
         "social_group"
       ],
-      "variable_types": {},
-      "created_at": "2026-08-30T11:22:00.777831+00:00",
+      "variable_types": {
+        "district": "categorical",
+        "district_code": "categorical",
+        "urban_rural": "categorical",
+        "age": "integer",
+        "gender": "categorical",
+        "marital_status": "categorical",
+        "relationship_to_head": "categorical",
+        "household_size": "integer",
+        "household_type": "categorical",
+        "literacy_status": "categorical",
+        "education_level": "ordinal",
+        "labour_force_status": "categorical",
+        "employment_status": "categorical",
+        "individual_income": "continuous",
+        "consumption_expenditure": "continuous",
+        "social_group": "categorical"
+      },
+      "created_at": "2026-09-12T15:15:25.563187+00:00",
       "training_rows": 12000,
-      "status": "BLOCKED",
-      "artifact_path": "",
+      "status": "TRAINED",
+      "artifact_path": "artifacts/synthetic_models/ctgan/TN_CTGAN_A70E94D8A1",
       "config": {
         "profile": "development",
         "generator": "ctgan",
-        "version": "ctgan_sdv_optional_v1",
-        "seed": "42",
-        "epochs": "5",
-        "batch_size": "500",
-        "required_optional_dependencies": "[sdv, pandas]",
-        "status": "dependency_gated"
+        "version": "ctgan_sdv_v1",
+        "seed": 42,
+        "epochs": 5,
+        "batch_size": 500,
+        "enable_gpu": false,
+        "enforce_min_max_values": true,
+        "enforce_rounding": true,
+        "label": "SYNTHETIC_CTGAN_CANDIDATE",
+        "embedding_dim": 128,
+        "generator_dim": [
+          128,
+          128
+        ],
+        "discriminator_dim": [
+          128,
+          128
+        ],
+        "required_dependencies": [
+          "sdv",
+          "pandas"
+        ]
       },
-      "blocking_reason": "ctgan training is blocked because optional dependencies are missing: sdv, pandas.",
-      "missing_dependencies": [
-        "sdv",
-        "pandas"
-      ]
+      "blocking_reason": "",
+      "missing_dependencies": []
     },
     {
-      "model_id": "TN_TVAE_BLOCKED_DEPENDENCIES",
+      "model_id": "TN_TVAE_7A020BB473",
       "generator_type": "tvae",
-      "model_version": "tvae_sdv_optional_v1",
+      "model_version": "tvae_sdv_v1",
       "training_dataset_version": "phase3_training_v1",
       "training_dataset_path": "data/synthetic/training/reference_training_v1.csv",
       "variables": [
@@ -69,26 +98,57 @@
         "consumption_expenditure",
         "social_group"
       ],
-      "variable_types": {},
-      "created_at": "2026-08-30T11:22:00.783831+00:00",
+      "variable_types": {
+        "district": "categorical",
+        "district_code": "categorical",
+        "urban_rural": "categorical",
+        "age": "integer",
+        "gender": "categorical",
+        "marital_status": "categorical",
+        "relationship_to_head": "categorical",
+        "household_size": "integer",
+        "household_type": "categorical",
+        "literacy_status": "categorical",
+        "education_level": "ordinal",
+        "labour_force_status": "categorical",
+        "employment_status": "categorical",
+        "individual_income": "continuous",
+        "consumption_expenditure": "continuous",
+        "social_group": "categorical"
+      },
+      "created_at": "2026-09-12T15:16:15.607308+00:00",
       "training_rows": 12000,
-      "status": "BLOCKED",
-      "artifact_path": "",
+      "status": "TRAINED",
+      "artifact_path": "artifacts/synthetic_models/tvae/TN_TVAE_7A020BB473",
       "config": {
         "profile": "development",
         "generator": "tvae",
-        "version": "tvae_sdv_optional_v1",
-        "seed": "42",
-        "epochs": "5",
-        "batch_size": "500",
-        "required_optional_dependencies": "[sdv, pandas]",
-        "status": "dependency_gated"
+        "version": "tvae_sdv_v1",
+        "seed": 42,
+        "epochs": 5,
+        "batch_size": 500,
+        "enable_gpu": false,
+        "enforce_min_max_values": true,
+        "enforce_rounding": true,
+        "label": "SYNTHETIC_TVAE_CANDIDATE",
+        "embedding_dim": 128,
+        "compress_dims": [
+          128,
+          128
+        ],
+        "decompress_dims": [
+          128,
+          128
+        ],
+        "l2scale": 1e-05,
+        "loss_factor": 2,
+        "required_dependencies": [
+          "sdv",
+          "pandas"
+        ]
       },
-      "blocking_reason": "tvae training is blocked because optional dependencies are missing: sdv, pandas.",
-      "missing_dependencies": [
-        "sdv",
-        "pandas"
-      ]
+      "blocking_reason": "",
+      "missing_dependencies": []
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "module": "phase3_test_suite",
-  "created_at": "2026-09-11T16:28:47.843428+00:00",
+  "created_at": "2026-09-13T05:30:47.269383+00:00",
   "fixture": "tests/synthetic_population/demo_reference_fixture.csv",
   "status": "PASSED",
   "results": [
@@ -32,7 +32,7 @@
     {
       "name": "model_serialization",
       "status": "PASSED",
-      "detail": "2 trained models reload and sample with expected schema."
+      "detail": "4 trained models reload and sample with expected schema."
     },
     {
       "name": "phase3_integration_path",

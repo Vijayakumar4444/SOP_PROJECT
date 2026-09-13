@@ -1,0 +1,22 @@
+version: phase4_population_validation_v1
+quality_weights:
+  distribution_fidelity: 0.30
+  correlation_preservation: 0.30
+  data_validity: 0.20
+  statistical_similarity: 0.20
+validity:
+  soft_anomaly_penalty_weight: 0.10
+gates:
+  pass_quality_score: 0.85
+  warning_quality_score: 0.70
+  minimum_critical_variable_fidelity: 0.80
+  minimum_any_variable_fidelity: 0.65
+  minimum_correlation_preservation: 0.65
+  maximum_hard_violation_rate: 0.0
+critical_relationships:
+  - [age, employment_status]
+  - [education_level, employment_status]
+  - [education_level, individual_income]
+  - [employment_status, individual_income]
+  - [gender, employment_status]
+  - [district, urban_rural]

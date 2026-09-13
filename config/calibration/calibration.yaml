@@ -1,0 +1,30 @@
+method: raking
+max_iterations: 50
+tolerance: 0.0005
+
+calibration_variables:
+  - gender
+  - urban_rural
+  - social_group
+
+weight_bounds:
+  min: 0.2
+  max: 8.0
+
+trimming:
+  enabled: true
+  method: absolute
+
+normalization:
+  mode: sample_size
+
+quality_gates:
+  max_marginal_error: 0.02
+  min_ess_ratio: 0.80
+  max_weight: 8.0
+  min_weight: 0.2
+  require_convergence: true
+  max_unresolved_targets: 0
+
+target_sum_tolerance: 0.005
+minimum_cell_count: 1

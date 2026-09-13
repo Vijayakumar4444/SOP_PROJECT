@@ -1,0 +1,196 @@
+{
+  "phase": 5,
+  "status": "PASS_WITH_WARNINGS",
+  "calibration_id": "CAL-RAKING-75B3B80E36",
+  "source_population_id": "SYNPOP-BOOTSTRAP-REPRESENTATIVE-12000-142-ACCEPTANCE",
+  "source_model_id": "TN_BOOTSTRAP_1D08E0184C",
+  "source_generator_type": "bootstrap",
+  "phase4_quality_score": 0.982663,
+  "calibrated_population_path": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/population_calibrated.csv",
+  "policy_weight_column": "calibration_weight",
+  "expansion_weight_column": "population_weight",
+  "method": "raking",
+  "calibration_status": "CONVERGED",
+  "variables": [
+    "gender",
+    "urban_rural",
+    "social_group"
+  ],
+  "official_target_metadata": [
+    {
+      "target_id": "gender_official_marginal",
+      "variable": "gender",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/gender_marginals.csv",
+      "warnings": [
+        "Synthetic categories not directly targeted: Other."
+      ],
+      "categories": [
+        {
+          "category": "Male",
+          "synthetic_categories": [
+            "Male"
+          ],
+          "target_proportion": 0.500893,
+          "official_count": 36137975.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Female",
+          "synthetic_categories": [
+            "Female"
+          ],
+          "target_proportion": 0.499107,
+          "official_count": 36009055.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic gender category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "urban_rural_official_marginal",
+      "variable": "urban_rural",
+      "status": "USABLE",
+      "source_file": "data/calibration/urban_rural_marginals.csv",
+      "warnings": [],
+      "categories": [
+        {
+          "category": "Urban",
+          "synthetic_categories": [
+            "Urban"
+          ],
+          "target_proportion": 0.483976,
+          "official_count": 34917440.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Rural",
+          "synthetic_categories": [
+            "Rural"
+          ],
+          "target_proportion": 0.516024,
+          "official_count": 37229590.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact synthetic urban_rural category match.",
+          "status": "USABLE",
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "target_id": "social_group_official_marginal_grouped",
+      "variable": "social_group",
+      "status": "USABLE_WITH_WARNINGS",
+      "source_file": "data/calibration/social_group_marginals.csv",
+      "warnings": [
+        "Non-SC/ST target is an official residual grouping, not an official OBC/Others split."
+      ],
+      "categories": [
+        {
+          "category": "Scheduled Caste",
+          "synthetic_categories": [
+            "Scheduled Caste"
+          ],
+          "target_proportion": 0.200125,
+          "official_count": 14438445.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Scheduled Tribe",
+          "synthetic_categories": [
+            "Scheduled Tribe"
+          ],
+          "target_proportion": 0.011015,
+          "official_count": 794697.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Exact social_group match.",
+          "status": "USABLE",
+          "warnings": []
+        },
+        {
+          "category": "Non-SC/ST",
+          "synthetic_categories": [
+            "Other Backward Class",
+            "Others"
+          ],
+          "target_proportion": 0.78886,
+          "official_count": 56913888.0,
+          "geography": "Tamil Nadu",
+          "reference_year": "2011",
+          "source": "SRC_TN_DES_GLANCE_2023_24;SRC_CENSUS_PCA_SD_2011",
+          "source_quality": "B",
+          "denominator": 72147030.0,
+          "category_mapping": "Derived residual non-SC/ST target from official population total minus official SC and ST counts; mapped to synthetic Other Backward Class + Others.",
+          "status": "USABLE",
+          "warnings": [
+            "Official data does not split non-SC/ST into OBC and Others, so those synthetic categories are calibrated as one grouped residual."
+          ]
+        }
+      ]
+    }
+  ],
+  "effective_sample_size": 11937.36654,
+  "ess_ratio": 0.994781,
+  "diagnostics_summary": {
+    "weight_column": "calibration_weight",
+    "nominal_sample_size": 12000,
+    "weight_sum": 12000.0,
+    "min_weight": 0.851541,
+    "max_weight": 1.200141,
+    "mean_weight": 1.0,
+    "median_weight": 1.02189,
+    "std_weight": 0.072438,
+    "coefficient_of_variation": 0.072438,
+    "effective_sample_size": 11937.36654,
+    "ess_ratio": 0.994781,
+    "invalid_weight_count": 0,
+    "negative_weight_count": 0
+  },
+  "warnings": [
+    "Official marginal comparison weak for social_group score=0.611208",
+    "gender: Synthetic categories not directly targeted: Other.",
+    "social_group: Non-SC/ST target is an official residual grouping, not an official OBC/Others split."
+  ],
+  "created_at": "2026-09-13T13:18:52.958817+00:00",
+  "reproducibility": {
+    "config_path": "config/calibration/calibration.yaml",
+    "config_digest": "A3D4394FC2",
+    "metadata_path": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/calibration_metadata.json",
+    "weight_diagnostics_path": "artifacts/calibrated_populations/CAL-RAKING-75B3B80E36/weight_diagnostics.json"
+  }
+}

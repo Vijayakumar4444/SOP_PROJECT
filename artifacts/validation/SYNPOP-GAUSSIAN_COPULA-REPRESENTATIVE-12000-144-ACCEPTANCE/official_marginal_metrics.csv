@@ -1,0 +1,4 @@
+variable,reference_type,jensen_shannon_divergence,total_variation_distance,score,official_categories,synthetic_categories
+gender,official_marginal,4.2e-05,0.007643,0.996157,"[""Female"", ""Male""]","[""Female"", ""Male""]"
+urban_rural,official_marginal,0.001057,0.038274,0.980335,"[""Rural"", ""Urban""]","[""Rural"", ""Urban""]"
+social_group,official_marginal,0.387941,0.398778,0.60664,"[""Scheduled Caste"", ""Scheduled Tribe""]","[""Other Backward Class"", ""Others"", ""Scheduled Caste"", ""Scheduled Tribe""]"

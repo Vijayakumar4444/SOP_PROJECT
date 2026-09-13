@@ -1,6 +1,6 @@
 {
   "module": "phase3_model_comparison_manifest",
-  "created_at": "2026-09-11T16:33:43.616679+00:00",
+  "created_at": "2026-09-13T05:30:47.279393+00:00",
   "reference_version": "0.3.0-modular",
   "training_dataset_version": "phase3_training_v1",
   "population_size": 12000,
@@ -25,12 +25,16 @@
     },
     {
       "generator": "ctgan",
-      "model_id": "TN_CTGAN_BLOCKED_DEPENDENCIES",
-      "model_version": "ctgan_sdv_optional_v1",
-      "status": "BLOCKED",
-      "population_ids": [],
-      "population_artifacts": [],
-      "blocking_reason": "ctgan training is blocked because optional dependencies are missing: sdv, pandas.",
+      "model_id": "TN_CTGAN_A70E94D8A1",
+      "model_version": "ctgan_sdv_v1",
+      "status": "TRAINED",
+      "population_ids": [
+        "SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE"
+      ],
+      "population_artifacts": [
+        "artifacts/synthetic_populations/SYNPOP-CTGAN-REPRESENTATIVE-12000-146-ACCEPTANCE/population.csv"
+      ],
+      "blocking_reason": "",
       "validation_phase_note": "Candidate only; Phase 4 must compare fidelity and choose suitability."
     },
     {
@@ -51,12 +55,16 @@
     },
     {
       "generator": "tvae",
-      "model_id": "TN_TVAE_BLOCKED_DEPENDENCIES",
-      "model_version": "tvae_sdv_optional_v1",
-      "status": "BLOCKED",
-      "population_ids": [],
-      "population_artifacts": [],
-      "blocking_reason": "tvae training is blocked because optional dependencies are missing: sdv, pandas.",
+      "model_id": "TN_TVAE_7A020BB473",
+      "model_version": "tvae_sdv_v1",
+      "status": "TRAINED",
+      "population_ids": [
+        "SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE"
+      ],
+      "population_artifacts": [
+        "artifacts/synthetic_populations/SYNPOP-TVAE-REPRESENTATIVE-12000-148-ACCEPTANCE/population.csv"
+      ],
+      "blocking_reason": "",
       "validation_phase_note": "Candidate only; Phase 4 must compare fidelity and choose suitability."
     }
   ],

@@ -11,7 +11,7 @@
   "phase2_requirement_version": "synthetic_population_requirements_current",
   "training_dataset_version": "phase3_training_v1",
   "generated_at": "2026-09-11T16:28:04.202475+00:00",
-  "persisted_at": "2026-09-11T16:28:46.747815+00:00",
+  "persisted_at": "2026-09-13T05:30:34.911427+00:00",
   "size": 1000,
   "seed": 42,
   "mode": "REPRESENTATIVE",

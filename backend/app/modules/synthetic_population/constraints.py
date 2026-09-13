@@ -75,6 +75,8 @@ class ConstraintEngine:
             "total_records": len(rows),
             "hard_violation_count": len(hard),
             "soft_anomaly_count": len(soft),
+            "hard_violation_row_count": len({issue["row_number"] for issue in hard}),
+            "soft_anomaly_row_count": len({issue["row_number"] for issue in soft}),
             "records_repaired": 0,
             "records_rejected": 0,
             "hard_violation_rate": round(len(hard) / len(rows) * 100, 4) if rows else 0,

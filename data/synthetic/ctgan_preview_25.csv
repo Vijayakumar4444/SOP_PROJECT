@@ -1,0 +1,26 @@
+district,district_code,urban_rural,age,gender,marital_status,relationship_to_head,household_size,household_type,literacy_status,education_level,labour_force_status,employment_status,individual_income,consumption_expenditure,social_group,synthetic_data_label
+Kallakurichi,21,Urban,32,Male,2,1,2,Regular wage/salary earning,Literate,Higher Secondary,Employed,Not in labour force,70.0,14315.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Erode,24,Urban,13,Female,2,1,6,Regular wage/salary earning,Literate,Diploma/Certificate,Employed,Not in labour force,0.0,22534.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Kancheepuram,05,Urban,25,Male,4,1,4,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Employed,0.0,26704.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Kanniyakumari,35,Urban,61,Female,1,7,3,Self-employed in agriculture,Literate,Middle,Employed,Not in labour force,19.0,15572.0,Scheduled Tribe,SYNTHETIC_CTGAN_CANDIDATE
+Chennai,06,Urban,19,Female,1,5,3,Self-employed in agriculture,Literate,Primary,Employed,Not in labour force,0.0,28043.0,Others,SYNTHETIC_CTGAN_CANDIDATE
+Salem,24,Rural,25,Male,2,2,5,Casual labour in non-agriculture,Literate,Secondary,Not in labour force,Employed,84.0,1282.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Viluppuram,09,Rural,63,Female,1,7,2,Casual labour in agriculture,Illiterate,Primary,Not in labour force,Unemployed,0.0,3783.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Erode,35,Rural,41,Male,3,2,5,Self-employed in non-agriculture,Literate,Middle,Not in labour force,Employed,0.0,7425.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Virudhunagar,18,Urban,20,Male,2,1,4,Self-employed in agriculture,Illiterate,Secondary,Employed,Not in labour force,187.0,15508.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Tiruppur,13,Rural,20,Male,2,2,13,Self-employed in non-agriculture,Literate,Below Primary,Not in labour force,Employed,0.0,3471.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Tenkasi,19,Urban,1,Male,3,5,5,Self-employed in non-agriculture,Literate,Higher Secondary,Employed,Not in labour force,0.0,14643.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Tenkasi,36,Rural,1,Female,2,2,5,Self-employed in non-agriculture,Literate,Primary,Not in labour force,Not in labour force,0.0,7981.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Coimbatore,22,Rural,55,Female,1,2,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Unemployed,0.0,13628.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Kallakurichi,13,Urban,33,Female,2,5,3,Regular wage/salary earning,Literate,Below Primary,Employed,Not in labour force,0.0,11669.0,Others,SYNTHETIC_CTGAN_CANDIDATE
+Cuddalore,01,Urban,27,Female,2,4,3,Self-employed in non-agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,15146.0,14359.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Madurai,19,Rural,8,Female,1,1,5,Regular wage/salary earning,Literate,Middle,Employed,Employed,41.0,19561.0,Scheduled Tribe,SYNTHETIC_CTGAN_CANDIDATE
+Krishnagiri,04,Urban,62,Male,2,1,5,Self-employed in non-agriculture,Literate,Below Primary,Employed,Not in labour force,196.0,11039.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Cuddalore,11,Urban,26,Male,2,8,5,Others,Literate,Diploma/Certificate,Employed,Not in labour force,52.0,9903.0,Others,SYNTHETIC_CTGAN_CANDIDATE
+The Nilgiris,32,Urban,25,Male,2,1,10,Self-employed in agriculture,Literate,Middle,Not in labour force,Not in labour force,0.0,10213.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Tenkasi,02,Urban,15,Male,2,1,2,Self-employed in agriculture,Literate,Diploma/Certificate,Not in labour force,Employed,0.0,11735.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Kancheepuram,02,Urban,32,Female,1,5,1,Regular wage/salary earning,Literate,Diploma/Certificate,Not in labour force,Not in labour force,109.0,11740.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Tirupathur,36,Urban,7,Male,2,3,5,Self-employed in agriculture,Literate,Secondary,Employed,Employed,0.0,9928.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Mayiladuthurai,04,Urban,54,Female,2,5,4,Others,Literate,Primary,Employed,Not in labour force,136.0,13051.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
+Chennai,11,Urban,48,Female,1,2,4,Regular wage/salary earning,Literate,Higher Secondary,Not in labour force,Not in labour force,218.0,13797.0,Scheduled Caste,SYNTHETIC_CTGAN_CANDIDATE
+Tenkasi,35,Rural,39,Male,3,5,5,Self-employed in agriculture,Illiterate,Higher Secondary,Employed,Employed,81.0,17595.0,Other Backward Class,SYNTHETIC_CTGAN_CANDIDATE
