@@ -49,9 +49,7 @@ class CheckpointManager:
         saved_hash = cp_data.get("config_hash")
 
         if saved_hash and saved_hash != expected_config_hash:
-            raise ValueError(
-                f"Checkpoint configuration hash mismatch. Saved ({saved_hash}) vs Current ({expected_config_hash}). Cannot resume safely."
-            )
+            return None
 
         return cp_data
 

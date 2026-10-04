@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Database, Download, SlidersHorizontal } from "lucide-react";
 import { motion } from "framer-motion";
 import type { EChartsOption } from "echarts";
@@ -17,10 +17,19 @@ import { exportSimulationPdf } from "../../utils/exportPdf";
 
 export default function SimulationResults() {
   const { simulationId = "SIM-TN-2026-1042" } = useParams();
+  const navigate = useNavigate();
   const { data, isLoading, error } = useQuery({ queryKey: ["simulation-result", simulationId], queryFn: () => getSimulationResult(simulationId) });
   const [selectedDistrict, setSelectedDistrict] = useState<DistrictResult | undefined>();
   const [districtMode, setDistrictMode] = useState<"percent" | "count">("percent");
   const [exportingPdf, setExportingPdf] = useState(false);
+  const resultError = error as (Error & { status?: number; detail?: unknown }) | null;
+  const resultNotReady = resultError?.status === 409;
+
+  useEffect(() => {
+    if (!resultNotReady) return undefined;
+    const timer = window.setTimeout(() => navigate(`/loading/${simulationId}`), 1200);
+    return () => window.clearTimeout(timer);
+  }, [navigate, resultNotReady, simulationId]);
 
   function handleExportPdf() {
     if (!data) return;
@@ -147,8 +156,17 @@ export default function SimulationResults() {
         </div>
       </div>
 
-      <AnalyticsPanel title="Policy Outcome" loading={isLoading} error={error instanceof Error ? error.message : null}>
-        {data ? (
+      <AnalyticsPanel title="Policy Outcome" loading={isLoading} error={!resultNotReady && error instanceof Error ? error.message : null}>
+        {resultNotReady ? (
+          <div className="border-2 border-ink bg-gov-50 p-5">
+            <div className="text-sm font-bold uppercase tracking-wide text-muted">Backend pipeline still running</div>
+            <div className="mt-2 text-lg font-bold text-ink">Final results are shown only after all 8 backend phases finish.</div>
+            <div className="mt-2 text-sm font-semibold text-muted">Returning to the live progress page for this simulation.</div>
+            <Button className="mt-4" onClick={() => navigate(`/loading/${simulationId}`)}>
+              View Live Progress
+            </Button>
+          </div>
+        ) : data ? (
           <div>
             <motion.div
               className={`mb-5 border-2 border-ink px-5 py-6 ${outcomeClass(data.interpretation.classification)}`}

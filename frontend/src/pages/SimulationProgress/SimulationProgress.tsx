@@ -35,7 +35,7 @@ export default function SimulationProgress() {
   const realProgress = progress?.progress ?? Math.min(99, Math.max(4, Math.floor((elapsedMs / totalDuration) * 100)));
   const stageIndex = Math.min(stages.length - 1, Math.floor((realProgress / 100) * stages.length));
   const activeStage = stages[stageIndex];
-  const pipelineComplete = progress?.pipelineStatus === "completed" || realProgress >= 100;
+  const pipelineComplete = progress?.pipelineStatus === "completed";
   const pipelineFailed = progress?.pipelineStatus === "failed" || progress?.stages.some((stage) => stage.status === "failed");
 
   useEffect(() => {

@@ -101,7 +101,15 @@ class PolicyMemoryStore:
             with conn.cursor() as cur:
                 cur.execute(
                     """
-                    select run_id, policy_hash, policy_payload, configuration_payload
+                    select
+                        run_id,
+                        policy_hash,
+                        policy_payload,
+                        configuration_payload,
+                        status,
+                        cached_from_run_id,
+                        result_payload,
+                        created_at
                     from policy_simulation_runs
                     where run_id = %s
                     """,
@@ -337,6 +345,19 @@ class PolicyMemoryStore:
                         message,
                         json.dumps(metadata or {}, sort_keys=True),
                     ),
+                )
+
+    def clear_phase_logs(self, run_id: str) -> None:
+        if not self.configured:
+            return
+        with psycopg.connect(self.conninfo) as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    """
+                    delete from phase_run_logs
+                    where run_id = %s
+                    """,
+                    (run_id,),
                 )
 
     def get_run_status(self, run_id: str) -> dict[str, Any] | None:

@@ -271,6 +271,7 @@ export function mockProgress(id: string): SimulationProgress {
   return {
     simulationId: id,
     policyName: simulationInputs.get(id)?.policy.name ?? "Women Household Assistance Scheme",
+    pipelineStatus: progress >= 100 ? "completed" : "running",
     progress,
     currentStage: progress >= 100 ? "Recommendation Engine" : "Backend Architecture Flow",
     completedIterations,

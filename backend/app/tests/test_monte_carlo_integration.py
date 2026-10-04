@@ -4,12 +4,14 @@ import unittest
 from pathlib import Path
 import sys
 import json
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from backend.app.modules.monte_carlo.service import Phase7MonteCarloService
+from backend.app.modules.monte_carlo.checkpoint_manager import CheckpointManager
 
 
 class MonteCarloIntegrationTests(unittest.TestCase):
@@ -84,6 +86,19 @@ class MonteCarloIntegrationTests(unittest.TestCase):
             resume=True,
         )
         self.assertEqual(res2["completed_iterations"], 5)
+
+    def test_stale_checkpoint_is_ignored_for_new_config(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            cp_mgr = CheckpointManager(Path(temp_dir))
+            cp_mgr.save_checkpoint(
+                experiment_id="exp",
+                completed_iterations=[],
+                current_iteration_number=0,
+                total_requested=5,
+                config_hash="OLDHASH",
+            )
+
+            self.assertIsNone(cp_mgr.load_latest_checkpoint("NEWHASH"))
 
 
 if __name__ == "__main__":

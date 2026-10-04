@@ -31,6 +31,7 @@ class PipelineOrchestratorTests(unittest.TestCase):
 
         self.assertEqual(result["status"], "failed")
         self.assertEqual(result["failed_phase"], "phase_a")
+        memory.clear_phase_logs.assert_called_once_with("SIM-1")
         memory.update_run_status.assert_any_call("SIM-1", "running")
         self.assertTrue(any(call.args[2] == "failed" for call in memory.log_phase.call_args_list))
 

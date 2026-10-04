@@ -62,6 +62,7 @@ class FullPipelineOrchestrator:
     def run(self, run_id: str) -> dict[str, Any]:
         self.memory.ensure_schema()
         self._write_policy_memory_priors(run_id)
+        self.memory.clear_phase_logs(run_id)
         self.memory.update_run_status(run_id, "running")
         completed: list[str] = []
         started_at = time.time()

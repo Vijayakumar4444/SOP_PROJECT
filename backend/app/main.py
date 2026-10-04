@@ -428,8 +428,41 @@ def list_simulations() -> list[dict[str, Any]]:
 
 def _get_simulation(simulation_id: str) -> StoredSimulation:
     if simulation_id not in SIMULATIONS:
-        raise HTTPException(status_code=404, detail=f"Simulation not found: {simulation_id}")
+        stored = _load_simulation_from_db(simulation_id)
+        if not stored:
+            raise HTTPException(status_code=404, detail=f"Simulation not found: {simulation_id}")
+        SIMULATIONS[simulation_id] = stored
     return SIMULATIONS[simulation_id]
+
+
+def _load_simulation_from_db(simulation_id: str) -> StoredSimulation | None:
+    try:
+        run = PolicyMemoryStore().get_run_inputs(simulation_id)
+    except Exception:
+        return None
+    if not run:
+        return None
+    try:
+        policy = Policy.model_validate(run["policy_payload"])
+        configuration = SimulationConfiguration.model_validate(run["configuration_payload"])
+    except Exception:
+        return None
+    created_at = time.time()
+    if run.get("created_at"):
+        try:
+            created_at = run["created_at"].timestamp()
+        except Exception:
+            created_at = time.time()
+    result_payload = run.get("result_payload")
+    return StoredSimulation(
+        policy=policy,
+        configuration=configuration,
+        created_at=created_at,
+        policy_hash=str(run.get("policy_hash") or policy_fingerprint(policy, configuration)),
+        cached_result=result_payload if _is_pipeline_artifact_result(result_payload) else None,
+        cached_from_run_id=run.get("cached_from_run_id"),
+        similar_policies=[],
+    )
 
 
 def _pending_simulation_summary(simulation_id: str, stored: StoredSimulation) -> dict[str, Any]:
