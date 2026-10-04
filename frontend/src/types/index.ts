@@ -66,6 +66,7 @@ export interface SimulationProgress {
   totalIterations: number;
   elapsedSeconds: number;
   stages: Array<{ label: string; status: "complete" | "active" | "pending" | "failed"; progress?: number }>;
+  pipelineStatus?: string;
 }
 
 export interface BeneficiarySummary {

@@ -3,7 +3,7 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Database, Play, Plus, Trash2 } from "lucide-react";
-import { createSimulation } from "../../api/simulations.api";
+import { createSimulation, startSimulationPipeline } from "../../api/simulations.api";
 import { departments, ruleAttributes } from "../../constants";
 import { useAppStore } from "../../stores/useAppStore";
 import type { Policy, PolicyRule, RuleOperator } from "../../types";
@@ -31,7 +31,11 @@ export default function NewSimulation() {
   const policy = { ...form.watch(), rules };
 
   const createMutation = useMutation({
-    mutationFn: createSimulation,
+    mutationFn: async (payload: { policy: Policy; configuration: typeof configuration }) => {
+      const created = await createSimulation(payload);
+      await startSimulationPipeline(created.simulationId);
+      return created;
+    },
     onSuccess: ({ simulationId }) => navigate(`/loading/${simulationId}`)
   });
 

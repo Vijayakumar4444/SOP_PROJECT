@@ -34,6 +34,15 @@ export async function createSimulation(payload: {
   return data;
 }
 
+export async function startSimulationPipeline(id: string): Promise<{ simulationId: string; status: string }> {
+  if (useMockApi) {
+    await wait();
+    return { simulationId: id, status: "queued" };
+  }
+  const { data } = await apiClient.post<{ simulationId: string; status: string }>(`/simulations/${id}/pipeline`);
+  return data;
+}
+
 export async function getSimulationProgress(id: string): Promise<SimulationProgress> {
   if (useMockApi) {
     await wait();

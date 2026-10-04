@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { createPortal } from "react-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { getSimulationResult } from "../../api/simulations.api";
+import { getSimulationProgress } from "../../api/simulations.api";
 import dataCompatibilityIcon from "../../assets/loading/data-compatibility.png";
 import syntheticPopulationIcon from "../../assets/loading/synthetic-population.png";
 import populationValidationIcon from "../../assets/loading/population-validation.png";
@@ -24,17 +24,19 @@ export default function SimulationProgress() {
   const { simulationId = "SIM-TN-2026-1042" } = useParams();
   const navigate = useNavigate();
   const [elapsedMs, setElapsedMs] = useState(0);
-  const { isSuccess } = useQuery({
-    queryKey: ["simulation-result-ready", simulationId],
-    queryFn: () => getSimulationResult(simulationId),
+  const { data: progress, isError, error } = useQuery({
+    queryKey: ["simulation-progress", simulationId],
+    queryFn: () => getSimulationProgress(simulationId),
     refetchInterval: 1500,
     retry: true
   });
 
   const totalDuration = stages.length * STAGE_DURATION_MS;
-  const stageIndex = Math.min(stages.length - 1, Math.floor(elapsedMs / STAGE_DURATION_MS));
+  const realProgress = progress?.progress ?? Math.min(99, Math.max(4, Math.floor((elapsedMs / totalDuration) * 100)));
+  const stageIndex = Math.min(stages.length - 1, Math.floor((realProgress / 100) * stages.length));
   const activeStage = stages[stageIndex];
-  const sequenceComplete = elapsedMs >= totalDuration;
+  const pipelineComplete = progress?.pipelineStatus === "completed" || realProgress >= 100;
+  const pipelineFailed = progress?.pipelineStatus === "failed" || progress?.stages.some((stage) => stage.status === "failed");
 
   useEffect(() => {
     const startedAt = Date.now();
@@ -57,12 +59,12 @@ export default function SimulationProgress() {
   }, []);
 
   useEffect(() => {
-    if (sequenceComplete && isSuccess) {
+    if (pipelineComplete && !pipelineFailed) {
       const timer = window.setTimeout(() => navigate(`/results/${simulationId}`), 250);
       return () => window.clearTimeout(timer);
     }
     return undefined;
-  }, [isSuccess, navigate, sequenceComplete, simulationId]);
+  }, [navigate, pipelineComplete, pipelineFailed, simulationId]);
 
   const stageKey = useMemo(() => `${stageIndex}-${activeStage.title}`, [activeStage.title, stageIndex]);
 
@@ -105,8 +107,19 @@ export default function SimulationProgress() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4, delay: 0.08, ease: "easeOut" }}
             >
-              {activeStage.title}
+              {pipelineFailed ? "PIPELINE FAILED" : progress?.currentStage ?? activeStage.title}
             </motion.h1>
+            <div className="w-full max-w-xl border-2 border-black bg-white p-3">
+              <div className="h-3 bg-gov-50">
+                <div className="h-3 bg-gov-700" style={{ width: `${Math.min(100, realProgress)}%` }} />
+              </div>
+              <div className="mt-3 flex items-center justify-between gap-4 font-mono text-sm font-bold uppercase">
+                <span>{Math.round(realProgress)}%</span>
+                <span>{progress ? `${progress.completedIterations}/${progress.totalIterations} phases` : "Starting backend"}</span>
+              </div>
+              {isError ? <div className="mt-2 text-sm font-bold text-red-700">{error instanceof Error ? error.message : "Unable to read backend progress"}</div> : null}
+              {pipelineFailed ? <div className="mt-2 text-sm font-bold text-red-700">The backend pipeline stopped before Phase 8. Check backend logs for the failed phase.</div> : null}
+            </div>
           </div>
         </motion.section>
       </AnimatePresence>
