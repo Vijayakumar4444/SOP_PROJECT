@@ -16,6 +16,9 @@
     "phase7:simulate": "powershell -ExecutionPolicy Bypass -File scripts/run_phase7_monte_carlo_python.ps1",
     "phase8:recommend": "powershell -ExecutionPolicy Bypass -File scripts/run_phase8_recommendation_python.ps1",
     "real_world:validate": "powershell -ExecutionPolicy Bypass -File scripts/run_real_world_validation_python.ps1",
+    "api:dev": "powershell -ExecutionPolicy Bypass -File scripts/run_api_dev.ps1",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
     "test:python": "powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1",
     "test": "node tests/phase1.test.js && node tests/phase2.test.js && powershell -ExecutionPolicy Bypass -File scripts/run_python_tests.ps1"
   },

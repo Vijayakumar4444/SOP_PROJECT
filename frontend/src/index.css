@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111111;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-gov-600 focus-visible:ring-offset-2;
+}
+
+.panel {
+  @apply rounded-md border-2 border-ink bg-white shadow-none;
+}
+
+.mono-value {
+  @apply font-mono tracking-normal;
+}
+
+.field {
+  @apply focus-ring w-full rounded-md border-2 border-ink bg-white px-3 py-3 text-sm font-medium text-ink;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.leaflet-container {
+  font-family: "Poppins", system-ui, sans-serif;
+}
