@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
-import { Download, SlidersHorizontal } from "lucide-react";
+import { Database, Download, SlidersHorizontal } from "lucide-react";
 import { motion } from "framer-motion";
 import type { EChartsOption } from "echarts";
 import { getSimulationResult } from "../../api/simulations.api";
@@ -11,7 +11,7 @@ import { EChartsPanel } from "../../components/charts/EChartsPanel";
 import { ConfidenceIntervalChart } from "../../components/charts/ConfidenceIntervalChart";
 import { RiskGauge } from "../../components/charts/RiskGauge";
 import { TamilNaduMap } from "../../components/maps/TamilNaduMap";
-import type { DistrictResult } from "../../types";
+import type { DistrictResult, PolicyMemoryContext, PolicyMemoryMetricRange, SimilarPolicyMemory } from "../../types";
 import { formatCompactNumber, formatCurrency, formatPercent } from "../../utils/format";
 import { exportSimulationPdf } from "../../utils/exportPdf";
 
@@ -175,6 +175,8 @@ export default function SimulationResults() {
 
       {data ? (
         <>
+          <SimilarPoliciesPanel memory={data.memory} />
+
           <section className="grid gap-4">
             <AnalyticsPanel title="Beneficiary Coverage">
               <div className="grid gap-5 xl:grid-cols-[260px_1fr]">
@@ -307,6 +309,102 @@ export default function SimulationResults() {
   );
 }
 
+function SimilarPoliciesPanel({ memory }: { memory?: PolicyMemoryContext }) {
+  const similarPolicies = memory?.similarPolicies ?? [];
+  if (!similarPolicies.length) return null;
+  const priors = memory?.priors ?? {};
+  return (
+    <AnalyticsPanel
+      title="Similar Policies Used"
+      description="Historical completed pipeline results used as calibration memory for this simulation."
+      action={
+        <div className="inline-flex items-center gap-2 border-2 border-ink bg-gov-50 px-3 py-2 text-xs font-bold uppercase text-ink">
+          <Database className="h-4 w-4" />
+          {memory?.similarPolicyCount ?? similarPolicies.length} Match{(memory?.similarPolicyCount ?? similarPolicies.length) === 1 ? "" : "es"}
+        </div>
+      }
+    >
+      <div className="grid gap-4 xl:grid-cols-[1fr_300px]">
+        <div className="grid gap-3 lg:grid-cols-2">
+          {similarPolicies.slice(0, 4).map((policy) => (
+            <SimilarPolicyCard key={policy.runId} policy={policy} />
+          ))}
+        </div>
+        <div className="border-2 border-ink bg-white p-4">
+          <div className="text-xs font-bold uppercase tracking-wide text-muted">DB Prior Summary</div>
+          <div className="mt-3 grid gap-3">
+            <PriorSummary label="Coverage prior" value={formatPriorRange(priors.coverage, "percent")} />
+            <PriorSummary label="Risk prior" value={formatPriorRange(priors.riskScore, "score")} />
+            <PriorSummary label="Equity prior" value={formatPriorRange(priors.equityScore, "score")} />
+            <PriorSummary label="Benefit prior" value={formatPriorRange(priors.benefitAmount, "currency")} />
+          </div>
+          {priors.outcomes ? (
+            <div className="mt-4">
+              <div className="text-xs font-bold uppercase tracking-wide text-muted">Past Outcomes</div>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {Object.entries(priors.outcomes).map(([outcome, count]) => (
+                  <span key={outcome} className="border-2 border-ink bg-gov-50 px-2 py-1 text-xs font-bold text-ink">
+                    {outcome}: {count}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </AnalyticsPanel>
+  );
+}
+
+function SimilarPolicyCard({ policy }: { policy: SimilarPolicyMemory }) {
+  return (
+    <div className="min-w-0 border-2 border-ink bg-white p-4">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <div className="break-words text-base font-bold text-ink">{policy.policyName ?? policy.runId}</div>
+          <div className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted">{policy.department ?? "Previous simulation"}</div>
+        </div>
+        <div className="shrink-0 border-2 border-ink bg-gov-600 px-2 py-1 font-mono text-sm font-bold text-black">
+          {Math.round(policy.similarityScore * 100)}%
+        </div>
+      </div>
+      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+        <MiniMetric label="Coverage" value={formatOptionalPercent(policy.metrics.coverage)} />
+        <MiniMetric label="Target Fit" value={formatOptionalScore(policy.metrics.targetFit)} />
+        <MiniMetric label="Fiscal Pressure" value={formatOptionalPercent(policy.metrics.fiscalPressure)} />
+        <MiniMetric label="Outcome" value={policy.metrics.finalOutcome ?? "N/A"} />
+      </div>
+      {policy.reasons.length ? (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {policy.reasons.map((reason) => (
+            <span key={reason} className="border border-ink px-2 py-1 text-xs font-semibold text-ink">
+              {reason}
+            </span>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function MiniMetric({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="min-w-0 bg-gov-50 p-2">
+      <div className="text-[11px] font-bold uppercase tracking-wide text-muted">{label}</div>
+      <div className="mt-1 break-words text-sm font-bold text-ink">{value}</div>
+    </div>
+  );
+}
+
+function PriorSummary({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="border border-border bg-gov-50 p-3">
+      <div className="text-[11px] font-bold uppercase tracking-wide text-muted">{label}</div>
+      <div className="mt-1 break-words text-sm font-bold text-ink">{value}</div>
+    </div>
+  );
+}
+
 function Summary({ label, value, note }: { label: string; value: string; note?: string }) {
   const longValue = value.length > 18;
   return (
@@ -327,5 +425,20 @@ function outcomeClass(classification: string): string {
   if (label === "Failure") return "bg-red-500";
   if (label === "Moderate") return "bg-amber-300";
   return "bg-gov-600";
+}
+
+function formatOptionalPercent(value?: number | null): string {
+  return typeof value === "number" ? formatPercent(value) : "N/A";
+}
+
+function formatOptionalScore(value?: number | null): string {
+  return typeof value === "number" ? `${Math.round(value)} / 100` : "N/A";
+}
+
+function formatPriorRange(range: PolicyMemoryMetricRange | undefined, mode: "percent" | "score" | "currency"): string {
+  if (!range || typeof range.mean !== "number") return "No prior";
+  if (mode === "percent") return `${formatPercent(range.mean)} (${formatPercent(range.min ?? range.mean)}-${formatPercent(range.max ?? range.mean)})`;
+  if (mode === "currency") return `${formatCurrency(range.mean)} (${formatCurrency(range.min ?? range.mean)}-${formatCurrency(range.max ?? range.mean)})`;
+  return `${Math.round(range.mean)} (${Math.round(range.min ?? range.mean)}-${Math.round(range.max ?? range.mean)})`;
 }
 

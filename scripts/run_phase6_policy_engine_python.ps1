@@ -2,13 +2,15 @@ $ErrorActionPreference = "Stop"
 
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $env:PYTHONPATH = $projectRoot
+$env:PYTHONIOENCODING = "utf-8"
 Set-Location $projectRoot
 
 $candidates = @(
   ".\.venv\Scripts\python.exe",
+  "C:\Program Files\PostgreSQL\17\pgAdmin 4\python\python.exe",
+  "C:\Users\User\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe",
   "python",
-  "py",
-  "C:\Program Files\PostgreSQL\17\pgAdmin 4\python\python.exe"
+  "py"
 )
 
 foreach ($candidate in $candidates) {

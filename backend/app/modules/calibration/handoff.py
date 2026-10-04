@@ -20,6 +20,7 @@ def write_phase6_handoff(
     final_status: str,
     warnings: list[str],
 ) -> dict[str, Any]:
+    priors_path = root / "data/synthetic/policy_memory_priors.json"
     payload = {
         "phase": 5,
         "status": final_status,
@@ -40,6 +41,7 @@ def write_phase6_handoff(
         "diagnostics_summary": diagnostics,
         "warnings": warnings,
         "created_at": datetime.now(timezone.utc).isoformat(),
+        "policy_memory_priors_path": relative_path(root, priors_path) if priors_path.exists() else None,
         "reproducibility": {
             "config_path": relative_path(root, config_path),
             "config_digest": config_digest,

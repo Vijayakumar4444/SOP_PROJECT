@@ -5,6 +5,7 @@ Phase-by-phase end-to-end verification suite covering Phase 1 through Phase 8.
 import os
 import sys
 import json
+from typing import Any, Dict
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "..")))
 

@@ -157,6 +157,48 @@ export interface PolicyInterpretation {
   concerns: string[];
 }
 
+export interface PolicyMemoryMetricRange {
+  mean?: number;
+  min?: number;
+  max?: number;
+}
+
+export interface SimilarPolicyMemory {
+  runId: string;
+  policyName?: string;
+  department?: string;
+  similarityScore: number;
+  reasons: string[];
+  createdAt?: string | null;
+  metrics: {
+    targetGroup?: string | null;
+    coverage?: number | null;
+    targetFit?: number | null;
+    fiscalPressure?: number | null;
+    riskScore?: number | null;
+    equityScore?: number | null;
+    finalOutcome?: string | null;
+    benefitAmount?: number | null;
+  };
+}
+
+export interface PolicyMemoryContext {
+  policyHash?: string | null;
+  cacheStatus?: "hit" | "miss" | string;
+  similarPolicyCount: number;
+  similarPolicies: SimilarPolicyMemory[];
+  priors?: {
+    sampleSize?: number;
+    coverage?: PolicyMemoryMetricRange;
+    targetFit?: PolicyMemoryMetricRange;
+    fiscalPressure?: PolicyMemoryMetricRange;
+    riskScore?: PolicyMemoryMetricRange;
+    equityScore?: PolicyMemoryMetricRange;
+    benefitAmount?: PolicyMemoryMetricRange;
+    outcomes?: Record<string, number>;
+  };
+}
+
 export interface SimulationResult {
   simulation: Simulation;
   timestamp: string;
@@ -169,6 +211,7 @@ export interface SimulationResult {
   equity: EquityMetrics;
   interpretation: PolicyInterpretation;
   sensitivity: Array<{ variable: string; beneficiaryImpact: number; costImpact: number; equityImpact: number }>;
+  memory?: PolicyMemoryContext;
 }
 
 export interface SimulationComparison {

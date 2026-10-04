@@ -5,6 +5,7 @@ from typing import Any
 import json
 import yaml
 
+from backend.app.policy_priors import apply_policy_memory_priors_to_config, load_policy_memory_priors
 from backend.app.modules.monte_carlo.simulation_model import (
     CalibrationConfig,
     ConvergenceConfig,
@@ -45,8 +46,16 @@ def load_simulation_config(path: Path | str) -> tuple[SimulationConfig, dict[str
     if not isinstance(raw_dict, dict):
         raise ValueError(f"Invalid simulation config format in {path_obj}")
 
+    raw_dict = apply_policy_memory_priors_to_config(raw_dict, load_policy_memory_priors(_project_root_for_config(path_obj)))
     config_obj = parse_simulation_dict(raw_dict)
     return config_obj, raw_dict
+
+
+def _project_root_for_config(path_obj: Path) -> Path:
+    for parent in [path_obj.parent, *path_obj.parents]:
+        if (parent / "data" / "synthetic").exists():
+            return parent
+    return path_obj.parents[3]
 
 
 def parse_simulation_dict(raw: dict[str, Any]) -> SimulationConfig:

@@ -9,9 +9,20 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any, Literal
 
+from fastapi import BackgroundTasks
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+from backend.app.database import check_database_health
+from backend.app.policy_memory import (
+    PolicyMemoryStore,
+    build_policy_memory_context,
+    extract_policy_parameters,
+    policy_fingerprint,
+)
+from backend.app.pipeline_orchestrator import FullPipelineOrchestrator
+from backend.app.pipeline_results import load_pipeline_result
 
 
 Department = Literal[
@@ -70,6 +81,10 @@ class StoredSimulation:
     policy: Policy
     configuration: SimulationConfiguration
     created_at: float
+    policy_hash: str
+    cached_result: dict[str, Any] | None = None
+    cached_from_run_id: str | None = None
+    similar_policies: list[dict[str, Any]] | None = None
 
 
 app = FastAPI(title="PolicySim TN API", version="0.1.0")
@@ -112,6 +127,14 @@ def health() -> dict[str, str]:
     return {"status": "ok", "service": "PolicySim TN API"}
 
 
+@app.get("/api/db/health")
+def database_health() -> dict[str, Any]:
+    result = check_database_health()
+    if not result["connected"]:
+        raise HTTPException(status_code=503, detail=result)
+    return result
+
+
 @app.post("/api/policies/validate")
 def validate_policy(policy: Policy) -> dict[str, Any]:
     checks = [
@@ -146,13 +169,76 @@ def parse_policy(payload: dict[str, str]) -> list[dict[str, str]]:
 @app.post("/api/simulations")
 def create_simulation(payload: CreateSimulationRequest) -> dict[str, str]:
     simulation_id = f"SIM-TN-{int(time.time() * 1000) % 1_000_000:06d}"
-    SIMULATIONS[simulation_id] = StoredSimulation(payload.policy, payload.configuration, time.time())
+    fingerprint = policy_fingerprint(payload.policy, payload.configuration)
+    cached_result: dict[str, Any] | None = None
+    cached_from_run_id: str | None = None
+    try:
+        memory = PolicyMemoryStore()
+        memory.ensure_schema()
+        cached = memory.find_exact_completed(fingerprint)
+        if cached:
+            candidate_result = cached.get("result_payload")
+            if _is_pipeline_artifact_result(candidate_result):
+                cached_result = candidate_result
+                cached_from_run_id = cached.get("run_id")
+        similar_policies = [] if cached_result else memory.find_similar_completed(payload.policy, fingerprint)
+        memory.create_run(
+            simulation_id,
+            fingerprint,
+            payload.policy,
+            payload.configuration,
+            status="completed" if cached_result else "queued",
+            cached_from_run_id=cached_from_run_id,
+            result_payload=cached_result,
+        )
+    except Exception:
+        cached_result = None
+        cached_from_run_id = None
+        similar_policies = []
+    SIMULATIONS[simulation_id] = StoredSimulation(
+        payload.policy,
+        payload.configuration,
+        time.time(),
+        fingerprint,
+        cached_result=cached_result,
+        cached_from_run_id=cached_from_run_id,
+        similar_policies=similar_policies,
+    )
     return {"simulationId": simulation_id}
+
+
+@app.post("/api/simulations/{simulation_id}/pipeline")
+def start_full_pipeline(simulation_id: str, background_tasks: BackgroundTasks) -> dict[str, Any]:
+    stored = _get_simulation(simulation_id)
+    try:
+        memory = PolicyMemoryStore()
+        memory.ensure_schema()
+        memory.create_run(
+            simulation_id,
+            stored.policy_hash,
+            stored.policy,
+            stored.configuration,
+            status="queued",
+            cached_from_run_id=stored.cached_from_run_id,
+            result_payload=stored.cached_result,
+        )
+        orchestrator = FullPipelineOrchestrator(memory_store=memory)
+        background_tasks.add_task(orchestrator.run, simulation_id)
+        return {
+            "simulationId": simulation_id,
+            "status": "queued",
+            "phasePlan": orchestrator.phase_plan(),
+        }
+    except Exception as exc:
+        raise HTTPException(status_code=503, detail={"status": "error", "detail": str(exc), "errorType": exc.__class__.__name__}) from exc
 
 
 @app.get("/api/simulations/{simulation_id}/progress")
 def simulation_progress(simulation_id: str) -> dict[str, Any]:
     stored = _get_simulation(simulation_id)
+    real_progress = _pipeline_progress(simulation_id, stored)
+    if real_progress:
+        return real_progress
     elapsed = int(time.time() - stored.created_at)
     progress = min(100, max(4, int((elapsed / 18) * 100)))
     completed_iterations = min(stored.configuration.monteCarloRuns, int((progress / 100) * stored.configuration.monteCarloRuns))
@@ -185,20 +271,188 @@ def simulation_progress(simulation_id: str) -> dict[str, Any]:
     }
 
 
+def _pipeline_progress(simulation_id: str, stored: StoredSimulation) -> dict[str, Any] | None:
+    try:
+        memory = PolicyMemoryStore()
+        run = memory.get_run_status(simulation_id)
+        logs = memory.get_phase_logs(simulation_id)
+    except Exception:
+        return None
+    if not run or not logs:
+        return None
+
+    plan = FullPipelineOrchestrator().phase_plan()
+    latest_by_phase: dict[str, dict[str, Any]] = {}
+    for log in logs:
+        latest_by_phase[log["phase_name"]] = log
+
+    stages = []
+    completed_count = 0
+    failed_count = 0
+    active_stage = None
+    for item in plan:
+        phase = item["phase"]
+        log = latest_by_phase.get(phase)
+        status = "pending"
+        if log:
+            if log["status"] == "completed":
+                status = "complete"
+                completed_count += 1
+            elif log["status"] == "failed":
+                status = "failed"
+                failed_count += 1
+            elif log["status"] == "running":
+                status = "active"
+                active_stage = _phase_label(phase)
+        stages.append({
+            "label": _phase_label(phase),
+            "status": status,
+            "artifactPath": item.get("primaryArtifact"),
+        })
+
+    total = len(plan)
+    run_status = str(run.get("status") or "")
+    if failed_count:
+        progress = int((completed_count / max(total, 1)) * 100)
+        current_stage = "Pipeline failed"
+    elif completed_count == total or run_status == "completed":
+        progress = 100
+        current_stage = "Recommendation Engine"
+    else:
+        progress = max(1, int((completed_count / max(total, 1)) * 100))
+        current_stage = active_stage or _next_pending_stage(stages) or "Backend Pipeline"
+
+    created_at = run.get("created_at")
+    elapsed = 0
+    if created_at:
+        elapsed = max(0, int((datetime.now(timezone.utc) - created_at).total_seconds()))
+
+    return {
+        "simulationId": simulation_id,
+        "policyName": stored.policy.name,
+        "progress": progress,
+        "currentStage": current_stage,
+        "completedIterations": completed_count,
+        "totalIterations": total,
+        "elapsedSeconds": elapsed,
+        "stages": stages,
+        "pipelineStatus": run_status,
+    }
+
+
+def _phase_label(phase_name: str) -> str:
+    labels = {
+        "phase1_data_foundation": "DATA FOUNDATION",
+        "phase2_compatibility": "POLICY-DATA COMPATIBILITY ENGINE",
+        "phase3_synthetic_population": "SYNTHETIC POPULATION GENERATION",
+        "phase4_population_validation": "POPULATION VALIDATION",
+        "phase5_calibration": "CALIBRATION & REWEIGHTING",
+        "phase6_policy_engine": "POLICY ENGINE",
+        "phase7_monte_carlo": "MONTE CARLO & UNCERTAINTY ENGINE",
+        "phase8_recommendation": "RECOMMENDATION ENGINE",
+    }
+    return labels.get(phase_name, phase_name.replace("_", " ").upper())
+
+
+def _next_pending_stage(stages: list[dict[str, Any]]) -> str | None:
+    for stage in stages:
+        if stage["status"] == "pending":
+            return str(stage["label"])
+    return None
+
+
 @app.get("/api/simulations/{simulation_id}/results")
 def simulation_results(simulation_id: str) -> dict[str, Any]:
-    return _build_result(simulation_id, _get_simulation(simulation_id))
+    stored = _get_simulation(simulation_id)
+    if _is_pipeline_artifact_result(stored.cached_result):
+        return _with_current_simulation_id(stored.cached_result, simulation_id, stored.policy_hash)
+    base_result = _build_result(simulation_id, stored)
+    memory_context = build_policy_memory_context(stored.similar_policies or [], stored.policy_hash)
+    result = _completed_pipeline_result(simulation_id, base_result)
+    if not result:
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "status": "not_ready",
+                "message": "Final results are available only after the full backend pipeline completes phase 8.",
+                "requiredPhase": "phase8_recommendation",
+            },
+        )
+    result["memory"] = memory_context
+    try:
+        memory = PolicyMemoryStore()
+        memory.complete_run(simulation_id, result, extract_policy_parameters(stored.policy, result))
+    except Exception:
+        pass
+    return result
+
+
+def _completed_pipeline_result(simulation_id: str, base_result: dict[str, Any]) -> dict[str, Any] | None:
+    try:
+        memory = PolicyMemoryStore()
+        run = memory.get_run_status(simulation_id)
+        logs = memory.get_phase_logs(simulation_id)
+    except Exception:
+        return None
+    if not run or str(run.get("status")) != "completed":
+        return None
+    latest_by_phase = {log["phase_name"]: log for log in logs}
+    phase8 = latest_by_phase.get("phase8_recommendation")
+    if not phase8 or phase8.get("status") != "completed":
+        return None
+    try:
+        return load_pipeline_result(base_result)
+    except Exception:
+        return None
+
+
+def _is_pipeline_artifact_result(result: Any) -> bool:
+    return isinstance(result, dict) and (result.get("backendOutput") or {}).get("source") == "pipeline_artifacts"
 
 
 @app.get("/api/simulations")
 def list_simulations() -> list[dict[str, Any]]:
-    return [_build_result(simulation_id, stored)["simulation"] for simulation_id, stored in SIMULATIONS.items()]
+    summaries = []
+    for simulation_id, stored in SIMULATIONS.items():
+        if _is_pipeline_artifact_result(stored.cached_result):
+            cached = _with_current_simulation_id(stored.cached_result, simulation_id, stored.policy_hash)
+            summaries.append(cached["simulation"])
+            continue
+        pipeline_result = _completed_pipeline_result(simulation_id, _build_result(simulation_id, stored))
+        if pipeline_result:
+            summaries.append(pipeline_result["simulation"])
+        else:
+            summaries.append(_pending_simulation_summary(simulation_id, stored))
+    return summaries
 
 
 def _get_simulation(simulation_id: str) -> StoredSimulation:
     if simulation_id not in SIMULATIONS:
         raise HTTPException(status_code=404, detail=f"Simulation not found: {simulation_id}")
     return SIMULATIONS[simulation_id]
+
+
+def _pending_simulation_summary(simulation_id: str, stored: StoredSimulation) -> dict[str, Any]:
+    status = "queued"
+    try:
+        run = PolicyMemoryStore().get_run_status(simulation_id)
+        if run and run.get("status"):
+            status = str(run["status"])
+    except Exception:
+        pass
+    return {
+        "id": simulation_id,
+        "policyName": stored.policy.name,
+        "department": stored.policy.department,
+        "date": datetime.fromtimestamp(stored.created_at, tz=timezone.utc).isoformat(),
+        "monteCarloRuns": stored.configuration.monteCarloRuns,
+        "confidenceLevel": stored.configuration.confidenceLevel,
+        "beneficiaryCoverage": 0,
+        "estimatedCost": 0,
+        "equityScore": 0,
+        "budgetRisk": "Low",
+        "status": status if status in {"draft", "queued", "running", "completed", "failed"} else "queued",
+    }
 
 
 def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any]:
@@ -294,6 +548,16 @@ def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any
             {"variable": "Rural Eligibility", "beneficiaryImpact": 5.3, "costImpact": 4.8, "equityImpact": 9.7},
         ],
     }
+
+
+def _with_current_simulation_id(result: dict[str, Any], simulation_id: str, policy_hash: str) -> dict[str, Any]:
+    next_result = dict(result)
+    simulation = dict(next_result.get("simulation", {}))
+    simulation["id"] = simulation_id
+    next_result["simulation"] = simulation
+    next_result["cache"] = {"status": "hit"}
+    next_result["memory"] = build_policy_memory_context([], policy_hash, cache_status="hit")
+    return next_result
 
 
 def _estimate_coverage(text: str, attributes: list[str], rule_count: int) -> float:
