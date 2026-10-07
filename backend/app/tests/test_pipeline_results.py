@@ -26,6 +26,7 @@ class PipelineResultsTests(unittest.TestCase):
                 "date": "2026-10-04T00:00:00+00:00",
                 "monteCarloRuns": 1000,
                 "confidenceLevel": 95,
+                "populationSampleSize": 1000,
                 "beneficiaryCoverage": 0.4,
                 "estimatedCost": 100,
                 "equityScore": 70,
@@ -136,6 +137,8 @@ class PipelineResultsTests(unittest.TestCase):
                     "percentiles": {"p5": 2500, "p25": 2800, "p50": 2950, "p75": 3200, "p95": 3500},
                 },
                 "budget_utilization": {"mean": 0.6},
+                "eligibility_rate": {"mean": 0.2},
+                "average_benefit": {"mean": 15},
             }
         }
         fairness = {
@@ -161,6 +164,43 @@ class PipelineResultsTests(unittest.TestCase):
         self.assertEqual(result["equity"]["overall"], 86)
         self.assertEqual(result["interpretation"]["classification"], "Success")
         self.assertEqual(result["backendOutput"]["source"], "pipeline_artifacts")
+        self.assertEqual(result["prediction"]["sample"]["population"], 1000)
+        self.assertEqual(result["prediction"]["sample"]["beneficiaries"], 200)
+        self.assertEqual(result["prediction"]["statewideEstimate"]["beneficiaries"], 200)
+        self.assertEqual(result["prediction"]["submittedPolicyBenefit"]["annualAmount"], 10)
+        self.assertEqual(result["prediction"]["pipelineArtifactBenefit"]["annualAmount"], 15)
+
+    def test_reference_old_age_policy_includes_official_prediction_error(self):
+        base = self._base_result()
+        base["simulation"]["policyName"] = "Reference - Tamil Nadu Indira Gandhi National Old Age Pension Scheme"
+        base["simulation"]["populationSampleSize"] = 12_000
+        base["beneficiary"]["basePopulation"] = 12_048_463
+        base["budget"]["costPerBeneficiary"] = 12_000
+        recommendation = {
+            "recommendation_id": "rec-1",
+            "top_recommended_candidate": "exp-1",
+            "rankings": [{"experiment_id": "exp-1", "display_name": "Old Age", "is_feasible": True, "raw_metrics": {}}],
+            "feasibility_checks": [{"experiment_id": "exp-1", "evaluated_constraints": {"max_budget": {"threshold": 60_000_000}}}],
+        }
+        uncertainty = {
+            "metrics_summary": {
+                "beneficiary_count": {"mean": 1835},
+                "weighted_eligible_population": {"mean": 1843},
+                "eligibility_rate": {"mean": 0.1536},
+                "coverage_rate": {"mean": 1},
+                "total_policy_cost": {"mean": 33_169_432.91, "median": 33_169_432.91, "percentiles": {"p5": 33_169_432.91, "p95": 33_169_432.91}},
+                "average_benefit": {"mean": 18_000},
+                "budget_utilization": {"mean": 0.66},
+            }
+        }
+
+        result = build_pipeline_result(base, recommendation, uncertainty, top_experiment="exp-1")
+
+        self.assertEqual(result["prediction"]["officialBenchmark"]["beneficiaries"], 1_436_569)
+        self.assertEqual(result["prediction"]["submittedPolicyBenefit"]["annualAmount"], 12_000)
+        self.assertEqual(result["prediction"]["pipelineArtifactBenefit"]["annualAmount"], 18_000)
+        self.assertGreater(result["prediction"]["statewideEstimate"]["beneficiaries"], 1_800_000)
+        self.assertAlmostEqual(result["prediction"]["actualPredictionError"]["absolutePercentError"], 0.2826, places=2)
 
     def test_completed_pipeline_result_requires_phase8_completed(self):
         memory = Mock()

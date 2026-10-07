@@ -62,9 +62,12 @@ def build_pipeline_result(
     eligible = _metric(metrics, "weighted_eligible_population") or _metric(metrics, "eligible_count")
     coverage_rate = _metric(metrics, "coverage_rate")
     budget_utilization = _metric(metrics, "budget_utilization")
+    eligibility_rate = _metric(metrics, "eligibility_rate")
+    average_benefit = _metric(metrics, "average_benefit")
     overrun_probability = _budget_exceedance_probability(recommendation, top_ranking, risk)
     fairness_score = _fairness_score(top_fairness, result)
 
+    sample_population = _sample_population(result, metrics)
     mean_cost = _number(cost.get("mean"), result["budget"]["meanCost"])
     median_cost = _number(cost.get("median"), mean_cost)
     p5_cost = _percentile(cost, "p5", mean_cost)
@@ -78,6 +81,8 @@ def build_pipeline_result(
     risk_score = _risk_score(utilization, overrun_probability, top_ranking)
     risk_level = _risk_level(risk_score)
     classification = "Success" if bool(top_ranking.get("is_feasible")) else "Moderate"
+    submitted_annual_benefit = _number(result["budget"].get("costPerBeneficiary"), 0)
+    pipeline_annual_benefit = _number(average_benefit.get("mean"), submitted_annual_benefit or 0)
 
     result["simulation"].update(
         {
@@ -141,6 +146,16 @@ def build_pipeline_result(
         "feasibleCandidates": recommendation.get("feasible_candidates_count"),
         "generatedAt": recommendation.get("generated_at"),
     }
+    result["prediction"] = _prediction_block(
+        result=result,
+        sample_population=sample_population,
+        sample_beneficiaries=beneficiary_count,
+        sample_eligible=eligible_population,
+        sample_cost=mean_cost,
+        eligibility_rate=_number(eligibility_rate.get("mean"), beneficiary_count / max(sample_population, 1)),
+        submitted_annual_benefit=submitted_annual_benefit,
+        pipeline_annual_benefit=pipeline_annual_benefit,
+    )
     return result
 
 
@@ -164,11 +179,101 @@ def _metric(metrics: dict[str, Any], name: str) -> dict[str, Any]:
     return value if isinstance(value, dict) else {}
 
 
+def _sample_population(result: dict[str, Any], metrics: dict[str, Any]) -> int:
+    configured = result.get("simulation", {}).get("populationSampleSize")
+    if configured:
+        return round(_number(configured, 0))
+    eligibility = _number(_metric(metrics, "eligibility_rate").get("mean"), 0)
+    eligible = _number(_metric(metrics, "eligible_count").get("mean"), 0)
+    if eligibility > 0 and eligible > 0:
+        return round(eligible / eligibility)
+    return 12_000
+
+
 def _number(value: Any, default: float) -> float:
     try:
         return float(value)
     except (TypeError, ValueError):
         return float(default)
+
+
+def _prediction_block(
+    result: dict[str, Any],
+    sample_population: int,
+    sample_beneficiaries: int,
+    sample_eligible: int,
+    sample_cost: float,
+    eligibility_rate: float,
+    submitted_annual_benefit: float,
+    pipeline_annual_benefit: float,
+) -> dict[str, Any]:
+    statewide_population = round(_number(result["beneficiary"].get("basePopulation"), sample_population))
+    scale_factor = statewide_population / max(sample_population, 1)
+    statewide_beneficiaries = round(sample_beneficiaries * scale_factor)
+    statewide_eligible = round(sample_eligible * scale_factor)
+    submitted_statewide_cost = statewide_beneficiaries * submitted_annual_benefit
+    pipeline_statewide_cost = sample_cost * scale_factor
+    benchmark = _official_benchmark(result)
+    error = _prediction_error(statewide_beneficiaries, benchmark)
+    return {
+        "dataVersion": "statewide_scaled_v1",
+        "sample": {
+            "population": sample_population,
+            "eligible": sample_eligible,
+            "beneficiaries": sample_beneficiaries,
+            "beneficiaryRate": sample_beneficiaries / max(sample_population, 1),
+            "eligibilityRate": eligibility_rate,
+            "cost": sample_cost,
+        },
+        "statewideEstimate": {
+            "basePopulation": statewide_population,
+            "scaleFactor": scale_factor,
+            "eligible": statewide_eligible,
+            "beneficiaries": statewide_beneficiaries,
+            "annualCostUsingSubmittedBenefit": submitted_statewide_cost,
+            "annualCostUsingPipelineBenefit": pipeline_statewide_cost,
+        },
+        "submittedPolicyBenefit": {
+            "annualAmount": submitted_annual_benefit,
+            "monthlyEquivalent": submitted_annual_benefit / 12 if submitted_annual_benefit else 0,
+        },
+        "pipelineArtifactBenefit": {
+            "annualAmount": pipeline_annual_benefit,
+            "monthlyEquivalent": pipeline_annual_benefit / 12 if pipeline_annual_benefit else 0,
+        },
+        "officialBenchmark": benchmark,
+        "actualPredictionError": error,
+    }
+
+
+def _official_benchmark(result: dict[str, Any]) -> dict[str, Any] | None:
+    policy_name = str(result.get("simulation", {}).get("policyName", "")).lower()
+    target = str(result.get("beneficiary", {}).get("targetUniverse", "")).lower()
+    if "old age pension" not in policy_name and "indira gandhi" not in policy_name and "elderly" not in policy_name and "elderly" not in target:
+        return None
+    return {
+        "scheme": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS), Tamil Nadu",
+        "beneficiaries": 1_436_569,
+        "asOf": "2023-03-31",
+        "source": "Tamil Nadu Statistical Handbook 2022-23, Social Welfare table 27.4",
+    }
+
+
+def _prediction_error(predicted_beneficiaries: int, benchmark: dict[str, Any] | None) -> dict[str, Any] | None:
+    if not benchmark:
+        return None
+    actual = _number(benchmark.get("beneficiaries"), 0)
+    if actual <= 0:
+        return None
+    absolute = predicted_beneficiaries - actual
+    percent = absolute / actual
+    return {
+        "predictedBeneficiaries": predicted_beneficiaries,
+        "actualBeneficiaries": round(actual),
+        "absoluteError": round(absolute),
+        "percentError": percent,
+        "absolutePercentError": abs(percent),
+    }
 
 
 def _percentile(metric: dict[str, Any], percentile: str, default: float) -> float:

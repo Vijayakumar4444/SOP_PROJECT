@@ -158,6 +158,51 @@ export interface PolicyInterpretation {
   concerns: string[];
 }
 
+export interface PredictionBenchmark {
+  scheme: string;
+  beneficiaries: number;
+  asOf: string;
+  source: string;
+}
+
+export interface PredictionError {
+  predictedBeneficiaries: number;
+  actualBeneficiaries: number;
+  absoluteError: number;
+  percentError: number;
+  absolutePercentError: number;
+}
+
+export interface BackendPrediction {
+  dataVersion: string;
+  sample: {
+    population: number;
+    eligible: number;
+    beneficiaries: number;
+    beneficiaryRate: number;
+    eligibilityRate: number;
+    cost: number;
+  };
+  statewideEstimate: {
+    basePopulation: number;
+    scaleFactor: number;
+    eligible: number;
+    beneficiaries: number;
+    annualCostUsingSubmittedBenefit: number;
+    annualCostUsingPipelineBenefit: number;
+  };
+  submittedPolicyBenefit: {
+    annualAmount: number;
+    monthlyEquivalent: number;
+  };
+  pipelineArtifactBenefit: {
+    annualAmount: number;
+    monthlyEquivalent: number;
+  };
+  officialBenchmark?: PredictionBenchmark | null;
+  actualPredictionError?: PredictionError | null;
+}
+
 export interface PolicyMemoryMetricRange {
   mean?: number;
   min?: number;
@@ -212,6 +257,7 @@ export interface SimulationResult {
   equity: EquityMetrics;
   interpretation: PolicyInterpretation;
   sensitivity: Array<{ variable: string; beneficiaryImpact: number; costImpact: number; equityImpact: number }>;
+  prediction?: BackendPrediction;
   memory?: PolicyMemoryContext;
 }
 

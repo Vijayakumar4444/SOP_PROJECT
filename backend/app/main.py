@@ -364,7 +364,7 @@ def _next_pending_stage(stages: list[dict[str, Any]]) -> str | None:
 @app.get("/api/simulations/{simulation_id}/results")
 def simulation_results(simulation_id: str) -> dict[str, Any]:
     stored = _get_simulation(simulation_id)
-    if _is_pipeline_artifact_result(stored.cached_result):
+    if _is_pipeline_artifact_result(stored.cached_result) and stored.cached_result.get("prediction"):
         return _with_current_simulation_id(stored.cached_result, simulation_id, stored.policy_hash)
     base_result = _build_result(simulation_id, stored)
     memory_context = build_policy_memory_context(stored.similar_policies or [], stored.policy_hash)
@@ -521,6 +521,7 @@ def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any
             "date": created_timestamp,
             "monteCarloRuns": configuration.monteCarloRuns,
             "confidenceLevel": configuration.confidenceLevel,
+            "populationSampleSize": configuration.populationSampleSize,
             "beneficiaryCoverage": coverage,
             "estimatedCost": mean_cost,
             "equityScore": equity["overall"],
