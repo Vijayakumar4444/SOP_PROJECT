@@ -203,6 +203,15 @@ export interface BackendPrediction {
   actualPredictionError?: PredictionError | null;
 }
 
+export interface BackendOutputMetadata {
+  source: string;
+  recommendationId?: string | null;
+  topRecommendedCandidate?: string | null;
+  totalCandidates?: number | null;
+  feasibleCandidates?: number | null;
+  generatedAt?: string | null;
+}
+
 export interface PolicyMemoryMetricRange {
   mean?: number;
   min?: number;
@@ -258,6 +267,7 @@ export interface SimulationResult {
   interpretation: PolicyInterpretation;
   sensitivity: Array<{ variable: string; beneficiaryImpact: number; costImpact: number; equityImpact: number }>;
   prediction?: BackendPrediction;
+  backendOutput?: BackendOutputMetadata;
   memory?: PolicyMemoryContext;
 }
 

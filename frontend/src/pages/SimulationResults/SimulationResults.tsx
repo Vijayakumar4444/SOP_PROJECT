@@ -1,29 +1,21 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate, useParams } from "react-router-dom";
-import { Database, Download, SlidersHorizontal } from "lucide-react";
-import { motion } from "framer-motion";
-import type { EChartsOption } from "echarts";
+import { Database } from "lucide-react";
 import { getSimulationResult } from "../../api/simulations.api";
 import { AnalyticsPanel } from "../../components/ui/AnalyticsPanel";
 import { Button } from "../../components/ui/Button";
-import { EChartsPanel } from "../../components/charts/EChartsPanel";
-import { ConfidenceIntervalChart } from "../../components/charts/ConfidenceIntervalChart";
-import { RiskGauge } from "../../components/charts/RiskGauge";
-import { TamilNaduMap } from "../../components/maps/TamilNaduMap";
-import type { DistrictResult, PolicyMemoryContext, PolicyMemoryMetricRange, SimilarPolicyMemory } from "../../types";
+import type { PolicyMemoryContext, PolicyMemoryMetricRange, SimilarPolicyMemory } from "../../types";
 import { formatCompactNumber, formatCurrency, formatPercent } from "../../utils/format";
-import { exportSimulationPdf } from "../../utils/exportPdf";
 
 export default function SimulationResults() {
   const { simulationId = "SIM-TN-2026-1042" } = useParams();
   const navigate = useNavigate();
   const { data, isLoading, error } = useQuery({ queryKey: ["simulation-result", simulationId], queryFn: () => getSimulationResult(simulationId) });
-  const [selectedDistrict, setSelectedDistrict] = useState<DistrictResult | undefined>();
-  const [districtMode, setDistrictMode] = useState<"percent" | "count">("percent");
-  const [exportingPdf, setExportingPdf] = useState(false);
   const resultError = error as (Error & { status?: number; detail?: unknown }) | null;
   const resultNotReady = resultError?.status === 409;
+  const prediction = data?.prediction;
+  const backendOutput = data?.backendOutput;
 
   useEffect(() => {
     if (!resultNotReady) return undefined;
@@ -31,128 +23,15 @@ export default function SimulationResults() {
     return () => window.clearTimeout(timer);
   }, [navigate, resultNotReady, simulationId]);
 
-  function handleExportPdf() {
-    if (!data) return;
-    setExportingPdf(true);
-    try {
-      exportSimulationPdf(data);
-    } finally {
-      window.setTimeout(() => setExportingPdf(false), 250);
-    }
-  }
-
-  const districtOption: EChartsOption | undefined = useMemo(() => {
-    if (!data) return undefined;
-    const sorted = [...data.districts].sort((a, b) => (districtMode === "percent" ? b.coverage - a.coverage : b.beneficiaries - a.beneficiaries));
-    return {
-      yAxis: { type: "category", data: sorted.map((district) => district.district), inverse: true },
-      xAxis: { type: "value" },
-      series: [
-        {
-          type: "bar",
-          data: sorted.map((district) => (districtMode === "percent" ? Math.round(district.coverage * 1000) / 10 : district.beneficiaries)),
-          barWidth: 14,
-          markLine: districtMode === "percent" ? { data: [{ xAxis: Math.round(data.beneficiary.coverage * 1000) / 10, name: "Average" }] } : undefined
-        }
-      ]
-    };
-  }, [data, districtMode]);
-
-  const demographicOptions = useMemo<Record<string, EChartsOption>>(() => {
-    if (!data) return {} as Record<string, EChartsOption>;
-    return {
-      gender: {
-        tooltip: { trigger: "item" },
-        series: [{ type: "pie", radius: ["52%", "76%"], data: data.demographics.gender.map((item) => ({ name: item.category, value: item.value })) }]
-      },
-      age: {
-        xAxis: { type: "category", data: data.demographics.ageGroup.map((item) => item.category) },
-        yAxis: { type: "value" },
-        series: [{ type: "bar", data: data.demographics.ageGroup.map((item) => item.value), barWidth: 28 }]
-      },
-      ruralUrban: {
-        legend: { bottom: 0 },
-        xAxis: { type: "category", data: data.demographics.ruralUrban.map((item) => item.category) },
-        yAxis: { type: "value" },
-        series: [
-          { name: "Beneficiaries", type: "bar", stack: "total", data: data.demographics.ruralUrban.map((item) => item.beneficiaries) },
-          { name: "Non-beneficiaries", type: "bar", stack: "total", data: data.demographics.ruralUrban.map((item) => item.nonBeneficiaries) }
-        ]
-      }
-    } satisfies Record<string, EChartsOption>;
-  }, [data]);
-
-  const monteCarloOption: EChartsOption | undefined = data
-    ? {
-        xAxis: { type: "category", data: data.monteCarlo.buckets.map((bucket) => `${formatCurrency(bucket.lower)}-${formatCurrency(bucket.upper)}`), axisLabel: { rotate: 35 } },
-        yAxis: { type: "value" },
-        series: [{ type: "bar", data: data.monteCarlo.buckets.map((bucket) => bucket.frequency), barWidth: 18 }],
-        markLine: { data: [{ xAxis: data.monteCarlo.buckets.length - 1, name: "Envelope" }] }
-      }
-    : undefined;
-
-  const performanceOption: EChartsOption | undefined = data
-    ? {
-        radar: {
-          indicator: [
-            { name: "Coverage", max: 100 },
-            { name: "Target Fit", max: 100 },
-            { name: "Equity", max: 100 },
-            { name: "Fiscal", max: 100 },
-            { name: "Benefit", max: 100 },
-            { name: "Risk Control", max: 100 }
-          ]
-        },
-        series: [
-          {
-            type: "radar",
-            areaStyle: { opacity: 0.18 },
-            data: [
-              {
-                name: "Policy Performance",
-                value: [
-                  data.beneficiary.coverage * 100,
-                  data.beneficiary.targetFit,
-                  data.equity.overall,
-                  data.budget.utilization * 100,
-                  82,
-                  100 - data.budget.riskScore
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    : undefined;
-
-  const riskBenefitOption: EChartsOption | undefined = data
-    ? {
-        xAxis: { type: "value", name: "Cost" },
-        yAxis: { type: "value", name: "Coverage" },
-        series: [
-          {
-            type: "scatter",
-            symbolSize: 18,
-            data: data.districts.map((district) => [district.estimatedCost / 1_000_000, district.coverage * 100, district.district])
-          }
-        ]
-      }
-    : undefined;
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col justify-between gap-4 border-b-2 border-ink pb-6 xl:flex-row xl:items-start">
         <div>
-          <div className="mb-3 inline-flex border-2 border-ink bg-gov-50 px-3 py-1 font-mono text-xs font-bold">RESULT PAGE</div>
+          <div className="mb-3 inline-flex border-2 border-ink bg-gov-50 px-3 py-1 font-mono text-xs font-bold">STRICT BACKEND RESULT</div>
           <h1 className="text-4xl font-bold uppercase text-ink">{data?.simulation.policyName ?? "Simulation Results"}</h1>
           <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted">
             <span className="mono-value">{simulationId}</span>
           </div>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Button icon={<Download className="h-4 w-4" />} onClick={handleExportPdf} disabled={!data || exportingPdf}>
-            {exportingPdf ? "Preparing PDF" : "Export PDF"}
-          </Button>
         </div>
       </div>
 
@@ -166,163 +45,104 @@ export default function SimulationResults() {
               View Live Progress
             </Button>
           </div>
-        ) : data ? (
+        ) : data && !prediction ? (
+          <div className="border-2 border-ink bg-amber-50 p-5">
+            <div className="text-sm font-bold uppercase tracking-wide text-muted">Strict prediction unavailable</div>
+            <div className="mt-2 text-lg font-bold text-ink">This result was generated before the backend prediction contract existed.</div>
+            <div className="mt-2 text-sm font-semibold text-muted">Rerun the full 8-phase backend pipeline to produce sample, statewide, benefit, and benchmark fields.</div>
+          </div>
+        ) : data && prediction ? (
           <div>
-            <motion.div
-              className={`mb-5 border-2 border-ink px-5 py-6 ${outcomeClass(data.interpretation.classification)}`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.25 }}
-            >
+            <div className={`mb-5 border-2 border-ink px-5 py-6 ${outcomeClass(data.interpretation.classification)}`}>
               <div className="text-sm font-bold uppercase tracking-wide text-black">Policy Outcome</div>
-              <div className="mt-2 text-5xl font-bold uppercase text-black">{outcomeLabel(data.interpretation.classification)}</div>
-            </motion.div>
-            <div className="grid gap-3 md:grid-cols-4 xl:grid-cols-8">
-            <Summary label="Beneficiary Coverage" value={formatPercent(data.beneficiary.coverage)} note={data.beneficiary.targetUniverse} />
-            <Summary label="Target Fit" value={`${data.beneficiary.targetFit} / 100`} note="Real-world alignment" />
-            <Summary label="Target Population" value={formatCompactNumber(data.beneficiary.targetPopulation)} note="Tested group" />
-            <Summary label="Total Beneficiaries" value={formatCompactNumber(data.beneficiary.beneficiaries)} />
-            <Summary label="Estimated Cost" value={formatCurrency(data.budget.meanCost)} note="Mean scenario" />
-            <Summary label="Fiscal Pressure" value={formatPercent(data.budget.utilization)} note="Backend estimate" />
-            <Summary label="Equity Score" value={`${data.equity.overall} / 100`} note="Composite score" />
-            <Summary label="Risk Score" value={`${data.budget.riskScore} / 100`} note={data.budget.riskLevel} />
+              <div className="mt-2 text-5xl font-bold uppercase text-black">{data.interpretation.classification}</div>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+              <Summary label="Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.beneficiaries)} note="Scaled from backend sample" />
+              <Summary label="Sample Beneficiaries" value={formatCompactNumber(prediction.sample.beneficiaries)} note={`${formatCompactNumber(prediction.sample.population)} tested records`} />
+              <Summary label="Submitted Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.monthlyEquivalent)} note="Monthly amount parsed from policy" />
+              <Summary label="Prediction Error" value={prediction.actualPredictionError ? formatPercent(prediction.actualPredictionError.percentError) : "No benchmark"} note={prediction.officialBenchmark?.scheme} />
             </div>
           </div>
         ) : null}
       </AnalyticsPanel>
 
-      {data ? (
+      {data && prediction ? (
         <>
-          <SimilarPoliciesPanel memory={data.memory} />
-
-          <section className="grid gap-4">
-            <AnalyticsPanel title="Beneficiary Coverage">
-              <div className="grid gap-5 xl:grid-cols-[260px_1fr]">
-                <div className="rounded-md border-2 border-ink bg-gov-50 p-5">
-                  <div className="text-xs font-bold uppercase tracking-wide text-muted">Coverage Against Target Group</div>
-                  <div className="mono-value mt-3 text-5xl font-semibold text-gov-900">{formatPercent(data.beneficiary.coverage)}</div>
-                  <div className="mt-4 h-4 rounded-full bg-white">
-                    <div className="h-4 rounded-full bg-gov-700" style={{ width: `${Math.min(100, data.beneficiary.coverage * 100)}%` }} />
-                  </div>
-                  <div className="mt-3 text-sm font-semibold leading-5 text-ink">{data.beneficiary.targetUniverse}</div>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                  <Summary label="Base population" value={formatCompactNumber(data.beneficiary.basePopulation)} note="Synthetic population" />
-                  <Summary label="Target group tested" value={data.beneficiary.targetUniverse} note={`${formatPercent(data.beneficiary.targetShare)} of base`} />
-                  <Summary label="Target population" value={formatCompactNumber(data.beneficiary.targetPopulation)} note="Coverage denominator" />
-                  <Summary label="Beneficiaries" value={formatCompactNumber(data.beneficiary.beneficiaries)} />
-                  <Summary label="Not reached in target" value={formatCompactNumber(data.beneficiary.nonEligiblePopulation)} />
-                </div>
-              </div>
-            </AnalyticsPanel>
-            <AnalyticsPanel title="Fiscal Analysis">
+          <section className="grid gap-4 xl:grid-cols-2">
+            <AnalyticsPanel title="Sample vs Statewide Estimate">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Summary label="Planning Envelope" value={formatCurrency(data.budget.allocatedBudget)} />
-                <Summary label="Estimated Mean Cost" value={formatCurrency(data.budget.meanCost)} />
-                <Summary label="Cost per Beneficiary" value={formatCurrency(data.budget.costPerBeneficiary)} />
-                <Summary label="Worst Case Cost" value={formatCurrency(data.budget.worstCaseCost)} />
+                <Summary label="Sample Population" value={formatCompactNumber(prediction.sample.population)} />
+                <Summary label="Sample Eligible" value={formatCompactNumber(prediction.sample.eligible)} />
+                <Summary label="Sample Beneficiaries" value={formatCompactNumber(prediction.sample.beneficiaries)} />
+                <Summary label="Sample Beneficiary Rate" value={formatPercent(prediction.sample.beneficiaryRate)} />
+                <Summary label="Statewide Base Population" value={formatCompactNumber(prediction.statewideEstimate.basePopulation)} />
+                <Summary label="Scale Factor" value={prediction.statewideEstimate.scaleFactor.toFixed(2)} />
+                <Summary label="Statewide Eligible" value={formatCompactNumber(prediction.statewideEstimate.eligible)} />
+                <Summary label="Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.beneficiaries)} />
+              </div>
+            </AnalyticsPanel>
+
+            <AnalyticsPanel title="Benefit Amount Check">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <Summary label="Submitted Monthly Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.monthlyEquivalent)} />
+                <Summary label="Submitted Annual Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.annualAmount)} />
+                <Summary label="Pipeline Monthly Benefit" value={formatCurrency(prediction.pipelineArtifactBenefit.monthlyEquivalent)} />
+                <Summary label="Pipeline Annual Benefit" value={formatCurrency(prediction.pipelineArtifactBenefit.annualAmount)} />
+                <Summary label="Statewide Cost, Submitted Benefit" value={formatCurrency(prediction.statewideEstimate.annualCostUsingSubmittedBenefit)} />
+                <Summary label="Statewide Cost, Pipeline Benefit" value={formatCurrency(prediction.statewideEstimate.annualCostUsingPipelineBenefit)} />
               </div>
             </AnalyticsPanel>
           </section>
 
-          <AnalyticsPanel
-            title="District-Wise Beneficiary Chart"
-            action={<Button icon={<SlidersHorizontal className="h-4 w-4" />} onClick={() => setDistrictMode(districtMode === "percent" ? "count" : "percent")}>{districtMode === "percent" ? "Percentage" : "Count"}</Button>}
-          >
-            {districtOption ? <EChartsPanel option={districtOption} height={520} ariaLabel="District-wise beneficiary coverage chart" /> : null}
-          </AnalyticsPanel>
-
-          <AnalyticsPanel title="Tamil Nadu District Map" description="Choropleth district analysis with drill-down metrics.">
-            <TamilNaduMap districts={data.districts} selectedDistrict={selectedDistrict} onSelectDistrict={setSelectedDistrict} />
-          </AnalyticsPanel>
-
-          <section className="grid gap-4 xl:grid-cols-3">
-            <AnalyticsPanel title="Gender Breakdown">
-              {"gender" in demographicOptions ? <EChartsPanel option={demographicOptions.gender} height={260} ariaLabel="Gender beneficiary donut chart" /> : null}
-            </AnalyticsPanel>
-            <AnalyticsPanel title="Age Group">
-              {"age" in demographicOptions ? <EChartsPanel option={demographicOptions.age} height={260} ariaLabel="Age group beneficiary histogram" /> : null}
-            </AnalyticsPanel>
-            <AnalyticsPanel title="Rural / Urban">
-              {"ruralUrban" in demographicOptions ? <EChartsPanel option={demographicOptions.ruralUrban} height={260} ariaLabel="Rural urban stacked beneficiary chart" /> : null}
-            </AnalyticsPanel>
-          </section>
-
-          <AnalyticsPanel title="Monte Carlo Expenditure Distribution">
-            {monteCarloOption ? <EChartsPanel option={monteCarloOption} height={360} ariaLabel="Monte Carlo expenditure distribution histogram" /> : null}
-            <div className="mt-4 grid gap-3 sm:grid-cols-5">
-              <Summary label="Mean Cost" value={formatCurrency(data.monteCarlo.mean)} />
-              <Summary label="Median" value={formatCurrency(data.monteCarlo.median)} />
-              <Summary label="95% CI" value={`${formatCurrency(data.monteCarlo.p5)} - ${formatCurrency(data.monteCarlo.p95)}`} />
-              <Summary label="Planning Envelope" value={formatCurrency(data.monteCarlo.budget)} />
-              <Summary label="P(Cost > Envelope)" value={formatPercent(data.monteCarlo.overrunProbability)} />
-            </div>
-          </AnalyticsPanel>
-
-          <section className="grid gap-4 xl:grid-cols-2">
-            <AnalyticsPanel title="Policy Performance">
-              {performanceOption ? <EChartsPanel option={performanceOption} height={360} ariaLabel="Radar chart of policy performance" /> : null}
-            </AnalyticsPanel>
-            <AnalyticsPanel title="Risk vs Benefit">
-              {riskBenefitOption ? <EChartsPanel option={riskBenefitOption} height={360} ariaLabel="Scatter chart of district cost and coverage" /> : null}
-            </AnalyticsPanel>
-          </section>
-
-          <section className="grid gap-4 xl:grid-cols-2">
-            <AnalyticsPanel title="Confidence Intervals">
-              <ConfidenceIntervalChart intervals={data.confidenceIntervals} />
-            </AnalyticsPanel>
-            <AnalyticsPanel title="Fiscal Risk">
-              <RiskGauge score={data.budget.riskScore} overrun={data.budget.probabilityOverrun} />
-            </AnalyticsPanel>
-          </section>
-
-          <AnalyticsPanel title="Fairness / Equity Score" description={data.equity.explanation}>
-            <div className="grid gap-6 lg:grid-cols-[220px_1fr]">
-              <div className="rounded-lg border border-border bg-surface p-5 text-center">
-                <div className="text-xs uppercase tracking-wide text-muted">Overall Equity</div>
-                <div className="mono-value mt-3 text-5xl font-semibold text-gov-900">{data.equity.overall}</div>
-                <div className="mt-1 text-sm text-muted">/ 100</div>
+          {prediction.officialBenchmark && prediction.actualPredictionError ? (
+            <AnalyticsPanel title="Official Benchmark Comparison" description={prediction.officialBenchmark.source}>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                <Summary label="Official Actual Beneficiaries" value={formatCompactNumber(prediction.officialBenchmark.beneficiaries)} note={prediction.officialBenchmark.asOf} />
+                <Summary label="Predicted Beneficiaries" value={formatCompactNumber(prediction.actualPredictionError.predictedBeneficiaries)} />
+                <Summary label="Absolute Error" value={formatCompactNumber(prediction.actualPredictionError.absoluteError)} />
+                <Summary label="Percent Error" value={formatPercent(prediction.actualPredictionError.percentError)} />
               </div>
-              <div className="space-y-3">
-                {[
-                  ["Gender Equity", data.equity.gender],
-                  ["Social Group", data.equity.socialGroup],
-                  ["Rural-Urban", data.equity.ruralUrban],
-                  ["District Equity", data.equity.district],
-                  ["Income Equity", data.equity.income]
-                ].map(([label, value]) => (
-                  <div key={label as string}>
-                    <div className="flex justify-between text-sm"><span className="font-medium text-ink">{label}</span><span className="mono-value">{value}</span></div>
-                    <div className="mt-1 h-2 rounded-full bg-gov-100"><div className="h-2 rounded-full bg-gov-700" style={{ width: `${value}%` }} /></div>
-                  </div>
-                ))}
+            </AnalyticsPanel>
+          ) : null}
+
+          <AnalyticsPanel title="Backend Recommendation">
+            <div className="space-y-4">
+              <div className="border-2 border-ink bg-gov-50 p-4">
+                <div className="text-xs font-bold uppercase tracking-wide text-muted">Summary</div>
+                <div className="mt-2 text-sm font-semibold leading-6 text-ink">{data.interpretation.summary}</div>
+              </div>
+              <div className="grid gap-4 xl:grid-cols-2">
+                <TextList title="Strengths" items={data.interpretation.strengths} />
+                <TextList title="Concerns" items={data.interpretation.concerns} />
               </div>
             </div>
           </AnalyticsPanel>
 
-          <AnalyticsPanel title="Policy Improvements">
-            <div className="grid gap-3 lg:grid-cols-3">
-              {[
-                ["Income eligibility threshold", "Adjust threshold by district cost pressure", "Higher coverage efficiency"],
-                ["Low-performing districts", "Target outreach in bottom 5 districts", "Improved district equity"],
-                ["Benefit amount", "Optimize transfer value against p95 cost", "Lower budget risk"],
-                ["Rural inclusion", "Increase rural implementation weight", "Stronger rural coverage"],
-                ["Social group equity", "Review under-served group access", "Improved inclusion score"],
-                ["Fiscal pressure", "Add fiscal guardrail trigger", "Reduced overrun probability"]
-              ].map(([current, suggested, impact]) => (
-                <div key={current} className="border-2 border-ink p-4">
-                  <div className="text-xs font-bold uppercase text-muted">Current Policy</div>
-                  <div className="mt-1 font-bold text-ink">{current}</div>
-                  <div className="mt-4 text-xs font-bold uppercase text-muted">Suggested Change</div>
-                  <div className="mt-1 text-sm font-semibold text-ink">{suggested}</div>
-                  <div className="mt-4 bg-gov-50 p-2 font-mono text-xs font-bold text-gov-900">{impact}</div>
-                </div>
-              ))}
+          <AnalyticsPanel title="Backend Metadata">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+              <Summary label="Result Source" value={backendOutput?.source ?? "N/A"} />
+              <Summary label="Recommendation ID" value={backendOutput?.recommendationId ?? "N/A"} />
+              <Summary label="Top Candidate" value={backendOutput?.topRecommendedCandidate ?? "N/A"} />
+              <Summary label="Total Candidates" value={String(backendOutput?.totalCandidates ?? "N/A")} />
+              <Summary label="Feasible Candidates" value={String(backendOutput?.feasibleCandidates ?? "N/A")} />
             </div>
           </AnalyticsPanel>
+
+          <SimilarPoliciesPanel memory={data.memory} />
         </>
       ) : null}
+    </div>
+  );
+}
+
+function TextList({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="border-2 border-ink p-4">
+      <div className="text-xs font-bold uppercase tracking-wide text-muted">{title}</div>
+      <div className="mt-3 space-y-2">
+        {items.length ? items.map((item) => <div key={item} className="text-sm font-semibold leading-6 text-ink">{item}</div>) : <div className="text-sm font-semibold text-muted">No backend item returned.</div>}
+      </div>
     </div>
   );
 }
@@ -434,14 +254,9 @@ function Summary({ label, value, note }: { label: string; value: string; note?: 
   );
 }
 
-function outcomeLabel(classification: string): string {
-  return classification;
-}
-
 function outcomeClass(classification: string): string {
-  const label = outcomeLabel(classification);
-  if (label === "Failure") return "bg-red-500";
-  if (label === "Moderate") return "bg-amber-300";
+  if (classification === "Failure") return "bg-red-500";
+  if (classification === "Moderate") return "bg-amber-300";
   return "bg-gov-600";
 }
 
@@ -459,4 +274,3 @@ function formatPriorRange(range: PolicyMemoryMetricRange | undefined, mode: "per
   if (mode === "currency") return `${formatCurrency(range.mean)} (${formatCurrency(range.min ?? range.mean)}-${formatCurrency(range.max ?? range.mean)})`;
   return `${Math.round(range.mean)} (${Math.round(range.min ?? range.mean)}-${Math.round(range.max ?? range.mean)})`;
 }
-
