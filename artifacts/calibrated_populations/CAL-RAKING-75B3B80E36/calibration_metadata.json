@@ -1,6 +1,6 @@
 {
   "phase5_version": "phase5_calibration_reweighting_v1",
-  "created_at": "2026-09-13T13:18:52.844558+00:00",
+  "created_at": "2026-10-08T12:21:41.751579+00:00",
   "calibration_id": "CAL-RAKING-75B3B80E36",
   "status": "PASS_WITH_WARNINGS",
   "source_handoff": {
@@ -531,10 +531,10 @@
   "input_hashes": {
     "source_population_sha256": "878efcc3747d0c8a9c5f67eaa1c8989bd59fb6b6157ebaa7da9d563d02887be5",
     "source_metadata_sha256": "090fcd310a88be986377d8ed73c500a44ade08797e2be917d772c70dd200d7d2",
-    "config_sha256": "afcbccf3a7e8c1e9520482b42bc340618915d718e0da5fc534604b905c34e294"
+    "config_sha256": "2a48815431f71ffc0a754005e9b9328d862ca53373d6712281aa3f106f0428cd"
   },
   "software": {
-    "python": "3.14.0",
+    "python": "3.13.12",
     "platform": "Windows-11-10.0.26200-SP0"
   },
   "outputs": {

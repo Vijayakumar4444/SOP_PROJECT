@@ -1,0 +1,17 @@
+{
+  "run_id": "POLICY-RUN-8441E958DE",
+  "policy_id": "tn_youth_skilling_stipend_003",
+  "policy_version": "1.0",
+  "execution_timestamp": "2026-10-08T11:46:20.941597+00:00",
+  "execution_duration_seconds": 0.73,
+  "input_population_path": "C:\\Users\\User\\Desktop\\SOP-project\\SOP_PROJECT\\artifacts\\calibrated_populations\\CAL-RAKING-75B3B80E36\\population_calibrated.csv",
+  "input_population_checksum": "C77F78E08514",
+  "policy_file_checksum": "FC24267416F1",
+  "weight_column": "calibration_weight",
+  "target_unit": "person",
+  "allocation_strategy": "lowest_income_first",
+  "lottery_seed": null,
+  "total_input_records": 12000,
+  "constraints_passed": true,
+  "final_status": "SUCCESS"
+}

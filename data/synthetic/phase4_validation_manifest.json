@@ -1,6 +1,6 @@
 {
   "module": "phase4_validation_contract",
-  "created_at": "2026-09-12T15:20:21.331388+00:00",
+  "created_at": "2026-10-08T12:20:38.511498+00:00",
   "reference_population_artifact": "data/processed/reference_template.csv",
   "prepared_reference_artifact": "data/synthetic/training/reference_training_v1.csv",
   "holdout_reference_artifact": "data/synthetic/training/reference_holdout_v1.csv",

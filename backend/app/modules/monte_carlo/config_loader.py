@@ -6,6 +6,7 @@ import json
 import yaml
 
 from backend.app.policy_priors import apply_policy_memory_priors_to_config, load_policy_memory_priors
+from backend.app.submitted_policy_context import apply_submitted_context_to_monte_carlo_config
 from backend.app.modules.monte_carlo.simulation_model import (
     CalibrationConfig,
     ConvergenceConfig,
@@ -46,7 +47,9 @@ def load_simulation_config(path: Path | str) -> tuple[SimulationConfig, dict[str
     if not isinstance(raw_dict, dict):
         raise ValueError(f"Invalid simulation config format in {path_obj}")
 
-    raw_dict = apply_policy_memory_priors_to_config(raw_dict, load_policy_memory_priors(_project_root_for_config(path_obj)))
+    project_root = _project_root_for_config(path_obj)
+    raw_dict = apply_policy_memory_priors_to_config(raw_dict, load_policy_memory_priors(project_root))
+    raw_dict = apply_submitted_context_to_monte_carlo_config(raw_dict, project_root)
     config_obj = parse_simulation_dict(raw_dict)
     return config_obj, raw_dict
 

@@ -1,0 +1,58 @@
+dimension,category,unweighted_evaluated,unweighted_eligible,unweighted_beneficiaries,weighted_total_population,weighted_eligible_population,weighted_beneficiary_population,weighted_eligibility_rate,weighted_coverage_rate,estimated_cost_inr
+district,Dindigul,346,8,8,336.0,7.5,7.5,0.0223,1.0,180078.32
+district,Chennai,761,20,20,761.1,20.4,20.4,0.0268,1.0,489528.74
+district,Tirunelveli,233,1,1,240.41,1.05,1.05,0.0044,1.0,25280.85
+district,Sivaganga,315,1,1,320.24,1.02,1.02,0.0032,1.0,24525.37
+district,Ariyalur,147,0,0,146.79,0,0,0.0,0.0,0
+district,Tenkasi,545,10,10,529.76,9.2,9.2,0.0174,1.0,220683.98
+district,Salem,651,4,4,654.28,4.01,4.01,0.0061,1.0,96312.72
+district,Pudukkottai,300,2,2,302.9,2.11,2.11,0.007,1.0,50561.7
+district,Kancheepuram,470,10,10,449.53,9.22,9.22,0.0205,1.0,221307.45
+district,Madurai,442,3,3,445.38,3.13,3.13,0.007,1.0,75087.07
+district,Kallakurichi,242,4,4,248.73,3.52,3.52,0.0141,1.0,84453.24
+district,Coimbatore,589,9,9,587.62,9.26,9.26,0.0158,1.0,222242.89
+district,Krishnagiri,498,2,2,504.97,2.11,2.11,0.0042,1.0,50561.7
+district,Tiruchirappalli,367,2,2,373.38,2.04,2.04,0.0055,1.0,48942.0
+district,Cuddalore,493,20,20,491.94,20.11,20.11,0.0409,1.0,482646.13
+district,Thoothukudi,368,8,8,364.06,8.16,8.16,0.0224,1.0,195805.36
+district,Theni,227,1,1,221.86,1.02,1.02,0.0046,1.0,24471.0
+district,Dharmapuri,363,10,10,370.54,10.56,10.56,0.0285,1.0,253370.2
+district,Tirupathur,140,0,0,135.98,0,0,0.0,0.0,0
+district,Ranipet,257,1,1,254.23,1.02,1.02,0.004,1.0,24471.0
+district,Kanniyakumari,249,3,3,252.17,3.07,3.07,0.0122,1.0,73576.11
+district,Thiruvallur,604,8,8,600.81,7.56,7.56,0.0126,1.0,181419.21
+district,Thanjavur,393,12,12,396.23,11.96,11.96,0.0302,1.0,287013.43
+district,Virudhunagar,187,3,3,191.86,3.07,3.07,0.016,1.0,73576.11
+district,Namakkal,283,12,12,282.95,12.46,12.46,0.044,1.0,299031.86
+district,Thiruvarur,269,5,5,265.51,5.1,5.1,0.0192,1.0,122461.39
+district,Tiruvannamalai,354,4,4,351.12,4.21,4.21,0.012,1.0,101123.4
+district,Viluppuram,200,2,2,192.38,2.04,2.04,0.0106,1.0,48996.37
+district,Vellore,220,9,9,226.92,9.32,9.32,0.0411,1.0,223631.7
+district,Perambalur,123,2,2,128.19,2.04,2.04,0.0159,1.0,48942.0
+district,Erode,397,0,0,398.39,0,0,0.0,0.0,0
+district,Ramanathapuram,228,2,2,235.73,2.08,2.08,0.0088,1.0,49808.02
+district,Unknown,113,3,3,113.68,2.81,2.81,0.0247,1.0,67507.47
+district,Karur,100,2,2,101.93,1.76,1.76,0.0173,1.0,42320.44
+district,Mayiladuthurai,163,4,4,159.38,4.04,4.04,0.0254,1.0,97002.77
+district,Tiruppur,231,1,1,226.94,1.02,1.02,0.0045,1.0,24471.0
+district,The Nilgiris,95,1,1,100.02,1.02,1.02,0.0102,1.0,24525.37
+district,Nagapattinam,37,0,0,36.09,0,0,0.0,0.0,0
+urban_rural,Rural,6189,115,115,6187.82,114.3,114.3,0.0185,1.0,2743294.14
+urban_rural,Urban,5811,74,74,5812.18,74.69,74.69,0.0128,1.0,1792442.23
+gender,Male,6011,105,105,6010.74,105.23,105.23,0.0175,1.0,2525565.5
+gender,Female,5986,84,84,5986.54,83.76,83.76,0.014,1.0,2010170.87
+gender,Other,3,0,0,2.72,0,0,0.0,0.0,0
+social_group,Other Backward Class,8766,137,137,9086.58,142.36,142.36,0.0157,1.0,3416532.98
+social_group,Scheduled Caste,2751,45,45,2401.54,39.49,39.49,0.0164,1.0,947743.28
+social_group,Others,371,7,7,379.7,7.14,7.14,0.0188,1.0,171460.11
+social_group,Scheduled Tribe,112,0,0,132.18,0,0,0.0,0.0,0
+education_level,Primary,1756,0,0,1758.94,0,0,0.0,0.0,0
+education_level,Diploma/Certificate,2298,162,162,2311.31,161.78,161.78,0.07,1.0,3882734.56
+education_level,Middle,1934,5,5,1928.27,4.99,4.99,0.0026,1.0,119861.53
+education_level,Below Primary,1308,1,1,1305.81,1.02,1.02,0.0008,1.0,24525.37
+education_level,Secondary,1315,4,4,1320.89,4.15,4.15,0.0031,1.0,99503.7
+education_level,Not literate,2217,0,0,2201.6,0,0,0.0,0.0,0
+education_level,Higher Secondary,1172,17,17,1173.19,17.05,17.05,0.0145,1.0,409111.21
+employment_status,Employed,5260,0,0,5251.54,0,0,0.0,0.0,0
+employment_status,Not in labour force,6504,0,0,6513.35,0,0,0.0,0.0,0
+employment_status,Unemployed,236,189,189,235.1,188.99,188.99,0.8039,1.0,4535736.37

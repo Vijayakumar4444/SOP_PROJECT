@@ -22,13 +22,17 @@ export const useAppStore = create<AppState>((set) => ({
     description:
       "Provide monthly financial assistance of Rs 1,000 to eligible women aged 21-60 belonging to households with annual income below Rs 2.5 lakh.",
     objectives: "Improve household financial resilience and inclusion among low-income women.",
+    benefitAmount: 1000,
+    benefitFrequency: "Monthly",
+    administrativeCostPercent: 0,
     geographicScope: "Tamil Nadu",
     selectedDistricts: [],
     rules: defaultRules
   },
   configuration: {
-    monteCarloRuns: 50_000,
+    monteCarloRuns: 1_000,
     confidenceLevel: 95,
+    randomSeed: 42,
     populationSampleSize: 12_000,
     budgetConstraint: true,
     sensitivityAnalysis: true

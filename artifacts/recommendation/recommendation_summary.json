@@ -1,32 +1,32 @@
 {
   "recommendation_id": "tn_rec_001_policy_comparison",
-  "generated_at": "2026-09-13T19:31:30.777244+00:00",
-  "top_recommended_candidate": "tn_exp_001_pop_uncertainty",
+  "generated_at": "2026-10-08T12:24:12.147069+00:00",
+  "top_recommended_candidate": "tn_exp_002_param_uncertainty",
   "total_candidates": 3,
-  "feasible_candidates_count": 1,
+  "feasible_candidates_count": 0,
   "rankings": [
     {
-      "experiment_id": "tn_exp_001_pop_uncertainty",
-      "display_name": "Option A: Elderly Pension Policy (Population Uncertainty)",
+      "experiment_id": "tn_exp_002_param_uncertainty",
+      "display_name": "Option B: Clean Cooking Subsidy (Parameter Uncertainty)",
       "rank": 1,
       "topsis_rank": 1,
-      "is_feasible": true,
-      "wsm_score": 0.5,
-      "topsis_score": 0.44131,
+      "is_feasible": false,
+      "wsm_score": 0.710305,
+      "topsis_score": 0.574776,
       "raw_metrics": {
-        "mean_total_cost": 33169432.91,
-        "p95_total_cost": 33169432.91,
-        "p5_total_cost": 33169432.91,
-        "std_total_cost": 0.0,
-        "mean_beneficiaries": 1835.0,
-        "std_beneficiaries": 0.0,
+        "mean_total_cost": 3556855.657,
+        "p95_total_cost": 4559082.336,
+        "p5_total_cost": 2778276.2795,
+        "std_total_cost": 595474.9846,
+        "mean_beneficiaries": 152.5,
+        "std_beneficiaries": 13.4055,
         "budget_exceedance_risk": 0.0,
-        "relative_mc_error": 0.0
+        "relative_mc_error": 0.0306
       },
       "normalized_metrics": {
-        "mean_total_cost": 0.0,
-        "mean_beneficiaries": 1.0,
-        "p95_total_cost": 0.0,
+        "mean_total_cost": 0.9732,
+        "mean_beneficiaries": 0.0827,
+        "p95_total_cost": 0.9657,
         "budget_exceedance_risk": 1.0
       }
     },
@@ -37,7 +37,7 @@
       "topsis_rank": 2,
       "is_feasible": false,
       "wsm_score": 0.7,
-      "topsis_score": 0.55869,
+      "topsis_score": 0.560176,
       "raw_metrics": {
         "mean_total_cost": 5972.1197,
         "p95_total_cost": 8760.359,
@@ -56,27 +56,27 @@
       }
     },
     {
-      "experiment_id": "tn_exp_002_param_uncertainty",
-      "display_name": "Option B: Clean Cooking Subsidy (Parameter Uncertainty)",
+      "experiment_id": "tn_exp_001_pop_uncertainty",
+      "display_name": "Option A: Elderly Pension Policy (Population Uncertainty)",
       "rank": 3,
       "topsis_rank": 3,
       "is_feasible": false,
-      "wsm_score": 0.666759,
-      "topsis_score": 0.548507,
+      "wsm_score": 0.5,
+      "topsis_score": 0.439824,
       "raw_metrics": {
-        "mean_total_cost": 3556855.657,
-        "p95_total_cost": 4559082.336,
-        "p5_total_cost": 2778276.2795,
-        "std_total_cost": 595474.9846,
-        "mean_beneficiaries": 152.5,
-        "std_beneficiaries": 13.4055,
+        "mean_total_cost": 132677735.57,
+        "p95_total_cost": 132677735.57,
+        "p5_total_cost": 132677735.57,
+        "std_total_cost": 0.0,
+        "mean_beneficiaries": 1835.0,
+        "std_beneficiaries": 0.0,
         "budget_exceedance_risk": 0.0,
-        "relative_mc_error": 0.0306
+        "relative_mc_error": 0.0
       },
       "normalized_metrics": {
-        "mean_total_cost": 0.8929,
-        "mean_beneficiaries": 0.0827,
-        "p95_total_cost": 0.8628,
+        "mean_total_cost": 0.0,
+        "mean_beneficiaries": 1.0,
+        "p95_total_cost": 0.0,
         "budget_exceedance_risk": 1.0
       }
     }
@@ -85,13 +85,15 @@
     {
       "experiment_id": "tn_exp_001_pop_uncertainty",
       "display_name": "Option A: Elderly Pension Policy (Population Uncertainty)",
-      "is_feasible": true,
-      "violations": [],
+      "is_feasible": false,
+      "violations": [
+        "Mean total cost (₹132,677,735.57) exceeds budget cap (₹60,000,000.00)."
+      ],
       "evaluated_constraints": {
         "max_budget": {
           "threshold": 60000000.0,
-          "actual": 33169432.91,
-          "passed": true
+          "actual": 132677735.57,
+          "passed": false
         },
         "max_risk_probability": {
           "threshold": 0.25,
@@ -196,13 +198,14 @@
     }
   ],
   "explanations": [
-    "RECOMMENDATION JUSTIFICATION: Policy Option 'Option A: Elderly Pension Policy (Population Uncertainty)' (tn_exp_001_pop_uncertainty) is ranked #1 with an overall Multi-Criteria Weighted Sum Score of 0.5000 (TOPSIS Relative Closeness Score of 0.4413). It satisfies all policy feasibility constraints (Budget Cap, Exceedance Risk, Coverage Minimums, MC Standard Error).",
-    "KEY METRICS SUMMARY FOR RANK #1: Expected Fiscal Cost = ₹33,169,432.91, Expected Beneficiary Coverage = 1,835 households/individuals, Budget Exceedance Risk Probability = 0.0%.",
+    "RECOMMENDATION WARNING: Top-scoring Policy Option 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (tn_exp_002_param_uncertainty) violates one or more feasibility constraints. Review lower-ranked feasible options.",
+    "KEY METRICS SUMMARY FOR RANK #1: Expected Fiscal Cost = ₹3,556,855.66, Expected Beneficiary Coverage = 152 households/individuals, Budget Exceedance Risk Probability = 0.0%.",
+    "FEASIBILITY EXCLUSION: 'Option A: Elderly Pension Policy (Population Uncertainty)' (tn_exp_001_pop_uncertainty) marked INFEASIBLE due to constraint violations: Mean total cost (₹132,677,735.57) exceeds budget cap (₹60,000,000.00).",
     "FEASIBILITY EXCLUSION: 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (tn_exp_002_param_uncertainty) marked INFEASIBLE due to constraint violations: Beneficiary count (152) is below minimum target coverage (1,500).",
     "FEASIBILITY EXCLUSION: 'Option C: Youth Skilling Stipend (Combined Uncertainty)' (tn_exp_003_combined_uncertainty) marked INFEASIBLE due to constraint violations: Beneficiary count (1) is below minimum target coverage (1,500).; Monte Carlo standard error (10.40%) exceeds convergence threshold (5.00%).",
     "PARETO FRONTIER STATUS: The non-dominated Pareto frontier candidates are: Option A: Elderly Pension Policy (Population Uncertainty), Option B: Clean Cooking Subsidy (Parameter Uncertainty), Option C: Youth Skilling Stipend (Combined Uncertainty). These options represent optimal trade-offs where no single metric can be improved without sacrificing another.",
-    "TRADE-OFF INSIGHT: 'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+29,612,577.25 cost difference for +1,682 beneficiary headcount difference compared to 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (Marginal ratio: ₹17,600.34 per additional beneficiary).",
-    "STAKEHOLDER SENSITIVITY: Policy Option 'Option A: Elderly Pension Policy (Population Uncertainty)' maintains Rank #1 consistently across all evaluated stakeholder weight profiles (Fiscal Conservative, Equity Focus, Risk Averse, Balanced Governance).",
-    "DEMOGRAPHIC FAIRNESS ASSESSMENT: Rank #1 Option 'Option A: Elderly Pension Policy (Population Uncertainty)' achieved an overall fairness score of 0.871 (District Disparity Ratio: 1.75, Gender Disparity Ratio: 1.08)."
+    "TRADE-OFF INSIGHT: 'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+129,120,879.91 cost difference for +1,682 beneficiary headcount difference compared to 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (Marginal ratio: ₹76,743.47 per additional beneficiary).",
+    "STAKEHOLDER SENSITIVITY WARNING: Top policy ranking shifts across different stakeholder weight profiles. Decision-makers should review stakeholder preference weightings.",
+    "DEMOGRAPHIC FAIRNESS ASSESSMENT: Rank #1 Option 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' achieved an overall fairness score of 0.812 (District Disparity Ratio: 2.20, Gender Disparity Ratio: 1.04)."
   ]
 }

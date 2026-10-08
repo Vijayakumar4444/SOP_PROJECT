@@ -1,0 +1,755 @@
+{
+  "simulation": {
+    "id": "SIM-TN-201364",
+    "policyName": "Reference - Tamil Nadu Indira Gandhi National Old Age Pension Scheme",
+    "department": "Social Welfare",
+    "date": "2026-10-07T21:36:54.23431+05:30",
+    "monteCarloRuns": 1000,
+    "confidenceLevel": 95,
+    "beneficiaryCoverage": 1.0,
+    "estimatedCost": 33169432.91,
+    "equityScore": 87,
+    "budgetRisk": "Moderate",
+    "status": "completed"
+  },
+  "timestamp": "2026-10-07T21:43:23.818293+05:30",
+  "beneficiary": {
+    "coverage": 1.0,
+    "beneficiaries": 1835,
+    "targetFit": 100,
+    "basePopulation": 12048463,
+    "targetShare": 0.18,
+    "targetUniverse": "Employment-Status Target Group synthetic population",
+    "eligiblePopulation": 1843,
+    "nonEligiblePopulation": 2166888,
+    "targetPopulation": 2168723
+  },
+  "budget": {
+    "allocatedBudget": 60000000.0,
+    "meanCost": 33169432.91,
+    "unusedBudget": 26830567.09,
+    "costPerBeneficiary": 18076,
+    "probabilityOverrun": 0.0,
+    "worstCaseCost": 33169432.91,
+    "utilization": 0.66,
+    "riskScore": 30,
+    "riskLevel": "Moderate"
+  },
+  "monteCarlo": {
+    "mean": 33169432.91,
+    "median": 33169432.91,
+    "p5": 33169432.91,
+    "p95": 33169432.91,
+    "budget": 60000000.0,
+    "overrunProbability": 0.0,
+    "buckets": [
+      {
+        "lower": 33169433,
+        "upper": 33169434,
+        "frequency": 8
+      },
+      {
+        "lower": 33169433,
+        "upper": 33169434,
+        "frequency": 24
+      },
+      {
+        "lower": 33169433,
+        "upper": 33169434,
+        "frequency": 24
+      },
+      {
+        "lower": 33169433,
+        "upper": 33169434,
+        "frequency": 8
+      }
+    ]
+  },
+  "confidenceIntervals": [
+    {
+      "metric": "Beneficiaries",
+      "lower": 1835.0,
+      "estimate": 1835.0,
+      "upper": 1835.0,
+      "formatter": "number"
+    },
+    {
+      "metric": "Policy Cost",
+      "lower": 33169432.91,
+      "estimate": 33169432.91,
+      "upper": 33169432.91,
+      "formatter": "currency"
+    },
+    {
+      "metric": "Coverage",
+      "lower": 1.0,
+      "estimate": 1.0,
+      "upper": 1.0,
+      "formatter": "percent"
+    },
+    {
+      "metric": "District Coverage",
+      "lower": 0.9,
+      "estimate": 0.98,
+      "upper": 0.98,
+      "formatter": "percent"
+    }
+  ],
+  "demographics": {
+    "gender": [
+      {
+        "category": "Female",
+        "value": 0.52
+      },
+      {
+        "category": "Male",
+        "value": 0.48
+      }
+    ],
+    "socialGroup": [
+      {
+        "category": "SC",
+        "beneficiaries": 467577,
+        "coverage": 1
+      },
+      {
+        "category": "ST",
+        "beneficiaries": 106267,
+        "coverage": 0.95
+      },
+      {
+        "category": "OBC",
+        "beneficiaries": 1020168,
+        "coverage": 0.98
+      },
+      {
+        "category": "General",
+        "beneficiaries": 531337,
+        "coverage": 0.9199999999999999
+      }
+    ],
+    "ruralUrban": [
+      {
+        "category": "Rural",
+        "beneficiaries": 1211449,
+        "nonBeneficiaries": 510084
+      },
+      {
+        "category": "Urban",
+        "beneficiaries": 913900,
+        "nonBeneficiaries": 403816
+      }
+    ],
+    "ageGroup": [
+      {
+        "category": "18-25",
+        "value": 276295
+      },
+      {
+        "category": "26-35",
+        "value": 573844
+      },
+      {
+        "category": "36-45",
+        "value": 595098
+      },
+      {
+        "category": "46-60",
+        "value": 510084
+      },
+      {
+        "category": "60+",
+        "value": 170028
+      }
+    ],
+    "incomeGroup": [
+      {
+        "category": "< Rs 1L",
+        "value": 680112
+      },
+      {
+        "category": "Rs 1L-Rs 1.5L",
+        "value": 637605
+      },
+      {
+        "category": "Rs 1.5L-Rs 2L",
+        "value": 467577
+      },
+      {
+        "category": "Rs 2L-Rs 2.5L",
+        "value": 340056
+      }
+    ]
+  },
+  "districts": [
+    {
+      "id": "chennai",
+      "district": "Chennai",
+      "population": 980000,
+      "eligiblePopulation": 607600,
+      "beneficiaries": 234,
+      "coverage": 0.0003851217906517446,
+      "estimatedCost": 2808000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 61,
+      "budgetPressure": 0.6,
+      "ruralCoverage": 0.9400000000000001,
+      "urbanCoverage": 0.87,
+      "coordinates": [
+        78.0,
+        8.4
+      ]
+    },
+    {
+      "id": "coimbatore",
+      "district": "Coimbatore",
+      "population": 1034000,
+      "eligiblePopulation": 641080,
+      "beneficiaries": 133,
+      "coverage": 0.00020746240718787047,
+      "estimatedCost": 1596000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 68,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 1,
+      "coordinates": [
+        78.85,
+        8.4
+      ]
+    },
+    {
+      "id": "madurai",
+      "district": "Madurai",
+      "population": 1088000,
+      "eligiblePopulation": 674560,
+      "beneficiaries": 234,
+      "coverage": 0.00034689278937381405,
+      "estimatedCost": 2808000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 75,
+      "budgetPressure": 0.6333333333333333,
+      "ruralCoverage": 0.99,
+      "urbanCoverage": 0.9199999999999999,
+      "coordinates": [
+        79.7,
+        8.4
+      ]
+    },
+    {
+      "id": "tiruchirappalli",
+      "district": "Tiruchirappalli",
+      "population": 1142000,
+      "eligiblePopulation": 708040,
+      "beneficiaries": 133,
+      "coverage": 0.00018784249477430654,
+      "estimatedCost": 1596000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 63,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 1,
+      "coordinates": [
+        80.55,
+        8.4
+      ]
+    },
+    {
+      "id": "salem",
+      "district": "Salem",
+      "population": 1196000,
+      "eligiblePopulation": 741520,
+      "beneficiaries": 234,
+      "coverage": 0.0003155680224403927,
+      "estimatedCost": 2808000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 70,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        81.4,
+        8.4
+      ]
+    },
+    {
+      "id": "tirunelveli",
+      "district": "Tirunelveli",
+      "population": 1250000,
+      "eligiblePopulation": 775000,
+      "beneficiaries": 133,
+      "coverage": 0.00017161290322580645,
+      "estimatedCost": 1596000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 77,
+      "budgetPressure": 0.6266666666666667,
+      "ruralCoverage": 0.9099999999999999,
+      "urbanCoverage": 0.97,
+      "coordinates": [
+        78.0,
+        9.700000000000001
+      ]
+    },
+    {
+      "id": "thanjavur",
+      "district": "Thanjavur",
+      "population": 1304000,
+      "eligiblePopulation": 808480,
+      "beneficiaries": 234,
+      "coverage": 0.0002894320205818326,
+      "estimatedCost": 2808000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 65,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        78.85,
+        9.700000000000001
+      ]
+    },
+    {
+      "id": "erode",
+      "district": "Erode",
+      "population": 1358000,
+      "eligiblePopulation": 841960,
+      "beneficiaries": 234,
+      "coverage": 0.00027792294170744455,
+      "estimatedCost": 2808000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 72,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 1,
+      "coordinates": [
+        79.7,
+        9.700000000000001
+      ]
+    },
+    {
+      "id": "vellore",
+      "district": "Vellore",
+      "population": 1412000,
+      "eligiblePopulation": 875440,
+      "beneficiaries": 133,
+      "coverage": 0.00015192360413049437,
+      "estimatedCost": 1596000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 79,
+      "budgetPressure": 0.62,
+      "ruralCoverage": 0.97,
+      "urbanCoverage": 0.8999999999999999,
+      "coordinates": [
+        80.55,
+        9.700000000000001
+      ]
+    },
+    {
+      "id": "thoothukudi",
+      "district": "Thoothukudi",
+      "population": 1466000,
+      "eligiblePopulation": 908920,
+      "beneficiaries": 890742,
+      "coverage": 0.98,
+      "estimatedCost": 10688904000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 67,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 1,
+      "coordinates": [
+        81.4,
+        9.700000000000001
+      ]
+    },
+    {
+      "id": "dindigul",
+      "district": "Dindigul",
+      "population": 1520000,
+      "eligiblePopulation": 942400,
+      "beneficiaries": 133,
+      "coverage": 0.00014112903225806453,
+      "estimatedCost": 1596000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 74,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        78.0,
+        11.0
+      ]
+    },
+    {
+      "id": "cuddalore",
+      "district": "Cuddalore",
+      "population": 1574000,
+      "eligiblePopulation": 975880,
+      "beneficiaries": 897810,
+      "coverage": 0.9199999999999999,
+      "estimatedCost": 10773720000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 62,
+      "budgetPressure": 0.6133333333333333,
+      "ruralCoverage": 0.8899999999999999,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        78.85,
+        11.0
+      ]
+    },
+    {
+      "id": "kancheepuram",
+      "district": "Kancheepuram",
+      "population": 1628000,
+      "eligiblePopulation": 1009360,
+      "beneficiaries": 989173,
+      "coverage": 0.98,
+      "estimatedCost": 11870076000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 69,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        79.7,
+        11.0
+      ]
+    },
+    {
+      "id": "tiruvallur",
+      "district": "Tiruvallur",
+      "population": 1682000,
+      "eligiblePopulation": 1042840,
+      "beneficiaries": 1011555,
+      "coverage": 0.97,
+      "estimatedCost": 12138660000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 76,
+      "budgetPressure": 0.6466666666666666,
+      "ruralCoverage": 0.94,
+      "urbanCoverage": 1,
+      "coordinates": [
+        80.55,
+        11.0
+      ]
+    },
+    {
+      "id": "virudhunagar",
+      "district": "Virudhunagar",
+      "population": 1736000,
+      "eligiblePopulation": 1076320,
+      "beneficiaries": 979451,
+      "coverage": 0.9099999999999999,
+      "estimatedCost": 11753412000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 64,
+      "budgetPressure": 0.6066666666666666,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 0.8799999999999999,
+      "coordinates": [
+        81.4,
+        11.0
+      ]
+    },
+    {
+      "id": "namakkal",
+      "district": "Namakkal",
+      "population": 1790000,
+      "eligiblePopulation": 1109800,
+      "beneficiaries": 1087604,
+      "coverage": 0.98,
+      "estimatedCost": 13051248000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 71,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 0.95,
+      "urbanCoverage": 1,
+      "coordinates": [
+        78.0,
+        12.3
+      ]
+    },
+    {
+      "id": "karur",
+      "district": "Karur",
+      "population": 1844000,
+      "eligiblePopulation": 1143280,
+      "beneficiaries": 1097549,
+      "coverage": 0.96,
+      "estimatedCost": 13170588000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 78,
+      "budgetPressure": 0.64,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.9299999999999999,
+      "coordinates": [
+        78.85,
+        12.3
+      ]
+    },
+    {
+      "id": "sivaganga",
+      "district": "Sivaganga",
+      "population": 1898000,
+      "eligiblePopulation": 1176760,
+      "beneficiaries": 1059084,
+      "coverage": 0.9,
+      "estimatedCost": 12709008000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 66,
+      "budgetPressure": 0.6,
+      "ruralCoverage": 0.87,
+      "urbanCoverage": 0.93,
+      "coordinates": [
+        79.7,
+        12.3
+      ]
+    },
+    {
+      "id": "ramanathapuram",
+      "district": "Ramanathapuram",
+      "population": 1952000,
+      "eligiblePopulation": 1210240,
+      "beneficiaries": 1186035,
+      "coverage": 0.98,
+      "estimatedCost": 14232420000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 73,
+      "budgetPressure": 0.6533333333333333,
+      "ruralCoverage": 1,
+      "urbanCoverage": 0.95,
+      "coordinates": [
+        80.55,
+        12.3
+      ]
+    },
+    {
+      "id": "nilgiris",
+      "district": "Nilgiris",
+      "population": 2006000,
+      "eligiblePopulation": 1243720,
+      "beneficiaries": 1181534,
+      "coverage": 0.95,
+      "estimatedCost": 14178408000,
+      "costPerBeneficiary": 12000,
+      "equityScore": 61,
+      "budgetPressure": 0.6333333333333333,
+      "ruralCoverage": 0.9199999999999999,
+      "urbanCoverage": 0.98,
+      "coordinates": [
+        81.4,
+        12.3
+      ]
+    }
+  ],
+  "equity": {
+    "overall": 87,
+    "gender": 97,
+    "socialGroup": 76,
+    "ruralUrban": 84,
+    "district": 74,
+    "income": 88,
+    "explanation": "Scores include completed backend recommendation and fairness artifacts."
+  },
+  "interpretation": {
+    "classification": "Success",
+    "summary": "RECOMMENDATION JUSTIFICATION: Policy Option 'Option A: Elderly Pension Policy (Population Uncertainty)' (tn_exp_001_pop_uncertainty) is ranked #1 with an overall Multi-Criteria Weighted Sum Score of 0.5000 (TOPSIS Relative Closeness Score of 0.4413). It satisfies all policy feasibility constraints (Budget Cap, Exceedance Risk, Coverage Minimums, MC Standard Error).",
+    "strengths": [
+      "Recommendation engine ranked Option A: Elderly Pension Policy (Population Uncertainty) as the top candidate.",
+      "Expected beneficiary coverage is 1,835.",
+      "All evaluated feasibility constraints passed."
+    ],
+    "concerns": [
+      "FEASIBILITY EXCLUSION: 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (tn_exp_002_param_uncertainty) marked INFEASIBLE due to constraint violations: Beneficiary count (152) is below minimum target coverage (1,500).",
+      "FEASIBILITY EXCLUSION: 'Option C: Youth Skilling Stipend (Combined Uncertainty)' (tn_exp_003_combined_uncertainty) marked INFEASIBLE due to constraint violations: Beneficiary count (1) is below minimum target coverage (1,500).; Monte Carlo standard error (10.40%) exceeds convergence threshold (5.00%)."
+    ]
+  },
+  "sensitivity": [
+    {
+      "variable": "Income Threshold",
+      "beneficiaryImpact": 17.6,
+      "costImpact": 4.2,
+      "equityImpact": 6.2
+    },
+    {
+      "variable": "Benefit Amount",
+      "beneficiaryImpact": 2.1,
+      "costImpact": 6.9,
+      "equityImpact": 1.1
+    },
+    {
+      "variable": "District Scope",
+      "beneficiaryImpact": 7.8,
+      "costImpact": 8.4,
+      "equityImpact": 7.5
+    },
+    {
+      "variable": "Rural Eligibility",
+      "beneficiaryImpact": 5.3,
+      "costImpact": 4.8,
+      "equityImpact": 9.7
+    }
+  ],
+  "backendOutput": {
+    "source": "pipeline_artifacts",
+    "recommendationId": "tn_rec_001_policy_comparison",
+    "topRecommendedCandidate": "tn_exp_001_pop_uncertainty",
+    "totalCandidates": 3,
+    "feasibleCandidates": 1,
+    "generatedAt": "2026-10-07T21:41:58.870536+05:30"
+  },
+  "memory": {
+    "policyHash": "3790716abfbe97c8ab859e6c5606e9d4bc69c84e66b6c8c538688615162f198a",
+    "cacheStatus": "miss",
+    "similarPolicyCount": 5,
+    "similarPolicies": [
+      {
+        "runId": "SIM-TN-199098",
+        "policyName": "Women Household Assistance Audit",
+        "department": "Social Welfare",
+        "similarityScore": 0.53,
+        "reasons": [
+          "shares 2 eligibility rule attribute(s)",
+          "same department",
+          "similar benefit amount"
+        ],
+        "createdAt": "2026-10-05T07:06:57.350327+05:30",
+        "metrics": {
+          "targetGroup": "Women synthetic population",
+          "coverage": 0.271809,
+          "targetFit": 41.0,
+          "fiscalPressure": 0.054354,
+          "riskScore": 3.0,
+          "equityScore": 75.0,
+          "finalOutcome": "Moderate",
+          "benefitAmount": 12000.0
+        }
+      },
+      {
+        "runId": "SIM-TN-460236",
+        "policyName": "Senior Citizen Assistance Audit",
+        "department": "Social Welfare",
+        "similarityScore": 0.525,
+        "reasons": [
+          "shares 2 eligibility rule attribute(s)",
+          "same department"
+        ],
+        "createdAt": "2026-10-05T07:11:18.676725+05:30",
+        "metrics": {
+          "targetGroup": "Total synthetic population",
+          "coverage": 0.144484,
+          "targetFit": 38.0,
+          "fiscalPressure": 0.520061,
+          "riskScore": 24.0,
+          "equityScore": 100.0,
+          "finalOutcome": "Moderate",
+          "benefitAmount": 18000.0
+        }
+      },
+      {
+        "runId": "SIM-TN-118531",
+        "policyName": "Kalaingar Magalir Urimai Thogai Scheme",
+        "department": "Social Welfare",
+        "similarityScore": 0.5188,
+        "reasons": [
+          "shares 3 eligibility rule attribute(s)",
+          "same department",
+          "similar benefit amount"
+        ],
+        "createdAt": "2026-10-04T22:45:36.818938+05:30",
+        "metrics": {
+          "targetGroup": "Women + Employment-Status Target Group synthetic population",
+          "coverage": 1.0,
+          "targetFit": 100.0,
+          "fiscalPressure": 0.66,
+          "riskScore": 30.0,
+          "equityScore": 87.0,
+          "finalOutcome": "Success",
+          "benefitAmount": 12000.0
+        }
+      },
+      {
+        "runId": "SIM-TN-844680",
+        "policyName": "Kalaignar Magalir Urimai Thogai",
+        "department": "Social Welfare",
+        "similarityScore": 0.5,
+        "reasons": [
+          "shares 2 eligibility rule attribute(s)",
+          "same department",
+          "similar benefit amount"
+        ],
+        "createdAt": "2026-10-07T21:31:02.403993+05:30",
+        "metrics": {
+          "targetGroup": "Women synthetic population",
+          "coverage": 0.938547,
+          "targetFit": 93.0,
+          "fiscalPressure": 0.651263,
+          "riskScore": 30.0,
+          "equityScore": 75.0,
+          "finalOutcome": "Success",
+          "benefitAmount": 12000.0
+        }
+      },
+      {
+        "runId": "SIM-TN-427140",
+        "policyName": "Kalaignar Magalir Urimai Thogai",
+        "department": "Social Welfare",
+        "similarityScore": 0.5,
+        "reasons": [
+          "shares 2 eligibility rule attribute(s)",
+          "same department",
+          "similar benefit amount"
+        ],
+        "createdAt": "2026-10-07T20:34:05.362499+05:30",
+        "metrics": {
+          "targetGroup": "Women synthetic population",
+          "coverage": 0.270705,
+          "targetFit": 40.0,
+          "fiscalPressure": 0.65077,
+          "riskScore": 30.0,
+          "equityScore": 75.0,
+          "finalOutcome": "Moderate",
+          "benefitAmount": 12000.0
+        }
+      }
+    ],
+    "priors": {
+      "sampleSize": 5,
+      "coverage": {
+        "mean": 0.525109,
+        "min": 0.144484,
+        "max": 1.0
+      },
+      "targetFit": {
+        "mean": 62.4,
+        "min": 38.0,
+        "max": 100.0
+      },
+      "fiscalPressure": {
+        "mean": 0.50729,
+        "min": 0.054354,
+        "max": 0.66
+      },
+      "riskScore": {
+        "mean": 23.4,
+        "min": 3.0,
+        "max": 30.0
+      },
+      "equityScore": {
+        "mean": 82.4,
+        "min": 75.0,
+        "max": 100.0
+      },
+      "benefitAmount": {
+        "mean": 13200.0,
+        "min": 12000.0,
+        "max": 18000.0
+      },
+      "outcomes": {
+        "Moderate": 3,
+        "Success": 2
+      }
+    }
+  }
+}

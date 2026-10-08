@@ -10,6 +10,7 @@ if str(ROOT) not in sys.path:
 
 from backend.app.modules.data_foundation.io_utils import write_json, write_md
 from backend.app.modules.policy_engine.service import Phase6PolicyService
+from backend.app.submitted_policy_context import submitted_parameter_overrides
 
 
 def main() -> None:
@@ -27,11 +28,15 @@ def main() -> None:
     ]
 
     all_results = []
+    submitted_overrides = submitted_parameter_overrides(ROOT)
 
     for policy_filename, desc in example_policies:
         policy_path = example_dir / policy_filename
         print(f"\n---> Executing Policy: {desc} ({policy_filename})")
-        res = service.execute_policy(policy_path=policy_path)
+        parameter_overrides = submitted_overrides if policy_filename == "tn_elderly_pension.yaml" else None
+        if parameter_overrides:
+            print(f"     Applying submitted policy overrides: {parameter_overrides}")
+        res = service.execute_policy(policy_path=policy_path, parameter_overrides=parameter_overrides)
         all_results.append(res)
         
         if res["success"]:

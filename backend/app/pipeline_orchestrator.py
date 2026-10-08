@@ -11,6 +11,7 @@ from typing import Any
 
 from backend.app.policy_memory import PolicyMemoryStore
 from backend.app.policy_priors import write_policy_memory_priors
+from backend.app.submitted_policy_context import write_submitted_policy_context
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -155,6 +156,7 @@ class FullPipelineOrchestrator:
         )
 
     def _write_policy_memory_priors(self, run_id: str) -> None:
+        self._write_submitted_policy_context(run_id)
         output_path = self.root / "data" / "synthetic" / "policy_memory_priors.json"
         try:
             write_policy_memory_priors(run_id, self.memory, output_path)
@@ -179,3 +181,14 @@ class FullPipelineOrchestrator:
                 + "\n",
                 encoding="utf-8",
             )
+
+    def _write_submitted_policy_context(self, run_id: str) -> None:
+        run_inputs = self.memory.get_run_inputs(run_id)
+        if not run_inputs:
+            return
+        write_submitted_policy_context(
+            self.root,
+            run_id,
+            run_inputs.get("policy_payload") or {},
+            run_inputs.get("configuration_payload") or {},
+        )

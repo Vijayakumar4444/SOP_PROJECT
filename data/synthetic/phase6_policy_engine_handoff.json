@@ -186,7 +186,8 @@
     "gender: Synthetic categories not directly targeted: Other.",
     "social_group: Non-SC/ST target is an official residual grouping, not an official OBC/Others split."
   ],
-  "created_at": "2026-09-13T13:18:52.958817+00:00",
+  "created_at": "2026-10-08T12:21:42.218735+00:00",
+  "policy_memory_priors_path": "data/synthetic/policy_memory_priors.json",
   "reproducibility": {
     "config_path": "config/calibration/calibration.yaml",
     "config_digest": "A3D4394FC2",

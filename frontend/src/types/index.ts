@@ -11,6 +11,7 @@ export type Department =
 export type GeographicScope = "Tamil Nadu" | "Selected Districts" | "Rural Only" | "Urban Only";
 export type RuleOperator = "=" | "!=" | ">" | "<" | ">=" | "<=" | "IN" | "NOT IN" | "BETWEEN";
 export type RuleJoiner = "AND" | "OR";
+export type BenefitFrequency = "Monthly" | "Annual" | "One-time";
 export type SimulationStatus = "draft" | "queued" | "running" | "completed" | "failed";
 export type BudgetRisk = "Low" | "Moderate" | "High" | "Critical";
 
@@ -29,6 +30,13 @@ export interface Policy {
   description: string;
   objectives?: string;
   budgetAllocation?: number;
+  benefitAmount?: number;
+  benefitFrequency?: BenefitFrequency;
+  administrativeCostPercent?: number;
+  benchmarkActualBeneficiaries?: number;
+  benchmarkActualAnnualCost?: number;
+  benchmarkDate?: string;
+  benchmarkSource?: string;
   geographicScope: GeographicScope;
   selectedDistricts: string[];
   rules: PolicyRule[];
@@ -187,20 +195,64 @@ export interface BackendPrediction {
     basePopulation: number;
     scaleFactor: number;
     eligible: number;
+    rawBeneficiariesBeforeImplementationAdjustment?: number;
+    beneficiariesAfterImplementationAdjustment?: number;
     beneficiaries: number;
+    plannedStatewideBudget?: number | null;
     annualCostUsingSubmittedBenefit: number;
     annualCostUsingPipelineBenefit: number;
+    fiscalPressureUsingSubmittedBenefit?: number | null;
+    budgetSurplusUsingSubmittedBenefit?: number | null;
   };
   submittedPolicyBenefit: {
     annualAmount: number;
     monthlyEquivalent: number;
+    frequency?: string;
+    displayAmount?: number;
+    displayLabel?: string;
   };
   pipelineArtifactBenefit: {
     annualAmount: number;
     monthlyEquivalent: number;
+    frequency?: string;
+    displayAmount?: number;
+    displayLabel?: string;
+  };
+  implementationAdjustment?: {
+    factor: number;
+    method: string;
+    ruleBasedFactor?: number | null;
+    memoryPriorFactor?: number | null;
+    reasons: string[];
+  };
+  benchmarkDeliveryCalibration?: {
+    factor: number;
+    method: string;
+    applied: boolean;
+    observedDeliveryFactor?: number | null;
+    reasons: string[];
+  };
+  targetPopulationModel?: {
+    method: string;
+    estimatedTargetShare: number;
+    estimatedTargetPopulation: number;
+    constraints: string[];
+    capApplied: boolean;
   };
   officialBenchmark?: PredictionBenchmark | null;
+  uncalibratedPredictionError?: PredictionError | null;
   actualPredictionError?: PredictionError | null;
+  validationStatus?: {
+    status: string;
+    severity: "success" | "warning" | "critical" | "info" | string;
+    message: string;
+    absolutePercentError?: number | null;
+    thresholds?: {
+      strong: number;
+      good: number;
+      review: number;
+    };
+  };
 }
 
 export interface BackendOutputMetadata {
@@ -209,6 +261,12 @@ export interface BackendOutputMetadata {
   topRecommendedCandidate?: string | null;
   totalCandidates?: number | null;
   feasibleCandidates?: number | null;
+  artifactSource?: string | null;
+  evaluatedPolicy?: string | null;
+  decisionBasis?: string | null;
+  validationStatus?: string | null;
+  dataVersion?: string | null;
+  benchmarkCalibrationApplied?: boolean | null;
   generatedAt?: string | null;
 }
 
@@ -234,6 +292,10 @@ export interface SimilarPolicyMemory {
     equityScore?: number | null;
     finalOutcome?: string | null;
     benefitAmount?: number | null;
+    implementationAdjustmentFactor?: number | null;
+    observedDeliveryFactor?: number | null;
+    predictionAbsolutePercentError?: number | null;
+    predictionPercentError?: number | null;
   };
 }
 
@@ -250,6 +312,10 @@ export interface PolicyMemoryContext {
     riskScore?: PolicyMemoryMetricRange;
     equityScore?: PolicyMemoryMetricRange;
     benefitAmount?: PolicyMemoryMetricRange;
+    implementationAdjustmentFactor?: PolicyMemoryMetricRange;
+    observedDeliveryFactor?: PolicyMemoryMetricRange;
+    predictionAbsolutePercentError?: PolicyMemoryMetricRange;
+    predictionPercentError?: PolicyMemoryMetricRange;
     outcomes?: Record<string, number>;
   };
 }

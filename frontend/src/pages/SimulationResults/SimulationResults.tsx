@@ -58,10 +58,15 @@ export default function SimulationResults() {
               <div className="mt-2 text-5xl font-bold uppercase text-black">{data.interpretation.classification}</div>
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-              <Summary label="Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.beneficiaries)} note="Scaled from backend sample" />
+              <Summary label="Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.beneficiaries)} note="After implementation adjustment" />
               <Summary label="Sample Beneficiaries" value={formatCompactNumber(prediction.sample.beneficiaries)} note={`${formatCompactNumber(prediction.sample.population)} tested records`} />
-              <Summary label="Submitted Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.monthlyEquivalent)} note="Monthly amount parsed from policy" />
+              <Summary
+                label="Submitted Benefit"
+                value={formatCurrency(prediction.submittedPolicyBenefit.displayAmount ?? prediction.submittedPolicyBenefit.monthlyEquivalent)}
+                note={prediction.submittedPolicyBenefit.displayLabel ?? "Submitted benefit parsed from policy"}
+              />
               <Summary label="Prediction Error" value={prediction.actualPredictionError ? formatPercent(prediction.actualPredictionError.percentError) : "No benchmark"} note={prediction.officialBenchmark?.scheme} />
+              <Summary label="Validation Status" value={prediction.validationStatus?.status ?? "Unbenchmarked"} note={prediction.validationStatus?.message} />
             </div>
           </div>
         ) : null}
@@ -79,21 +84,62 @@ export default function SimulationResults() {
                 <Summary label="Statewide Base Population" value={formatCompactNumber(prediction.statewideEstimate.basePopulation)} />
                 <Summary label="Scale Factor" value={prediction.statewideEstimate.scaleFactor.toFixed(2)} />
                 <Summary label="Statewide Eligible" value={formatCompactNumber(prediction.statewideEstimate.eligible)} />
+                <Summary label="Raw Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.rawBeneficiariesBeforeImplementationAdjustment ?? prediction.statewideEstimate.beneficiaries)} />
+                <Summary label="After Implementation Adj." value={formatCompactNumber(prediction.statewideEstimate.beneficiariesAfterImplementationAdjustment ?? prediction.statewideEstimate.beneficiaries)} />
                 <Summary label="Statewide Beneficiaries" value={formatCompactNumber(prediction.statewideEstimate.beneficiaries)} />
               </div>
             </AnalyticsPanel>
 
             <AnalyticsPanel title="Benefit Amount Check">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Summary label="Submitted Monthly Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.monthlyEquivalent)} />
+                <Summary label={prediction.submittedPolicyBenefit.displayLabel ?? "Submitted Benefit"} value={formatCurrency(prediction.submittedPolicyBenefit.displayAmount ?? prediction.submittedPolicyBenefit.monthlyEquivalent)} />
                 <Summary label="Submitted Annual Benefit" value={formatCurrency(prediction.submittedPolicyBenefit.annualAmount)} />
-                <Summary label="Pipeline Monthly Benefit" value={formatCurrency(prediction.pipelineArtifactBenefit.monthlyEquivalent)} />
+                <Summary label={prediction.pipelineArtifactBenefit.displayLabel ?? "Pipeline Annual Benefit"} value={formatCurrency(prediction.pipelineArtifactBenefit.displayAmount ?? prediction.pipelineArtifactBenefit.annualAmount)} />
                 <Summary label="Pipeline Annual Benefit" value={formatCurrency(prediction.pipelineArtifactBenefit.annualAmount)} />
+                <Summary label="Planned Statewide Budget" value={prediction.statewideEstimate.plannedStatewideBudget ? formatCurrency(prediction.statewideEstimate.plannedStatewideBudget) : "Not submitted"} />
                 <Summary label="Statewide Cost, Submitted Benefit" value={formatCurrency(prediction.statewideEstimate.annualCostUsingSubmittedBenefit)} />
-                <Summary label="Statewide Cost, Pipeline Benefit" value={formatCurrency(prediction.statewideEstimate.annualCostUsingPipelineBenefit)} />
+                <Summary label="Statewide Fiscal Pressure" value={typeof prediction.statewideEstimate.fiscalPressureUsingSubmittedBenefit === "number" ? formatPercent(prediction.statewideEstimate.fiscalPressureUsingSubmittedBenefit) : "No budget"} />
+                <Summary label="Statewide Budget Surplus" value={typeof prediction.statewideEstimate.budgetSurplusUsingSubmittedBenefit === "number" ? formatCurrency(prediction.statewideEstimate.budgetSurplusUsingSubmittedBenefit) : "No budget"} />
               </div>
             </AnalyticsPanel>
           </section>
+
+          {prediction.implementationAdjustment ? (
+            <AnalyticsPanel title="Implementation Adjustment" description={prediction.implementationAdjustment.method}>
+              <div className="grid gap-4 xl:grid-cols-[220px_1fr]">
+                <Summary label="Adjustment Factor" value={formatPercent(prediction.implementationAdjustment.factor)} />
+                <Summary label="Rule-Based Factor" value={typeof prediction.implementationAdjustment.ruleBasedFactor === "number" ? formatPercent(prediction.implementationAdjustment.ruleBasedFactor) : "N/A"} />
+                <Summary label="Memory Prior Factor" value={typeof prediction.implementationAdjustment.memoryPriorFactor === "number" ? formatPercent(prediction.implementationAdjustment.memoryPriorFactor) : "No prior"} />
+                <TextList title="Adjustment Reasons" items={prediction.implementationAdjustment.reasons} />
+              </div>
+            </AnalyticsPanel>
+          ) : null}
+
+          {prediction.benchmarkDeliveryCalibration?.applied ? (
+            <AnalyticsPanel title="Benchmark Delivery Calibration" description={prediction.benchmarkDeliveryCalibration.method}>
+              <div className="grid gap-4 xl:grid-cols-[220px_1fr]">
+                <Summary label="Observed Delivery Factor" value={formatPercent(prediction.benchmarkDeliveryCalibration.observedDeliveryFactor ?? prediction.benchmarkDeliveryCalibration.factor)} />
+                <Summary label="Applied Factor" value={formatPercent(prediction.benchmarkDeliveryCalibration.factor)} />
+                {prediction.uncalibratedPredictionError ? (
+                  <Summary label="Pre-Calibration Error" value={formatPercent(prediction.uncalibratedPredictionError.percentError)} />
+                ) : null}
+                <TextList title="Calibration Reasons" items={prediction.benchmarkDeliveryCalibration.reasons} />
+              </div>
+            </AnalyticsPanel>
+          ) : null}
+
+          {prediction.targetPopulationModel ? (
+            <AnalyticsPanel title="Target Population Model" description={prediction.targetPopulationModel.method}>
+              <div className="grid gap-4 xl:grid-cols-[1fr_1fr]">
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <Summary label="Estimated Target Share" value={formatPercent(prediction.targetPopulationModel.estimatedTargetShare)} />
+                  <Summary label="Estimated Target Population" value={formatCompactNumber(prediction.targetPopulationModel.estimatedTargetPopulation)} />
+                  <Summary label="Target Cap Applied" value={prediction.targetPopulationModel.capApplied ? "Yes" : "No"} />
+                </div>
+                <TextList title="Target Constraints" items={prediction.targetPopulationModel.constraints} />
+              </div>
+            </AnalyticsPanel>
+          ) : null}
 
           {prediction.officialBenchmark && prediction.actualPredictionError ? (
             <AnalyticsPanel title="Official Benchmark Comparison" description={prediction.officialBenchmark.source}>
@@ -120,12 +166,15 @@ export default function SimulationResults() {
           </AnalyticsPanel>
 
           <AnalyticsPanel title="Backend Metadata">
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
               <Summary label="Result Source" value={backendOutput?.source ?? "N/A"} />
-              <Summary label="Recommendation ID" value={backendOutput?.recommendationId ?? "N/A"} />
-              <Summary label="Top Candidate" value={backendOutput?.topRecommendedCandidate ?? "N/A"} />
-              <Summary label="Total Candidates" value={String(backendOutput?.totalCandidates ?? "N/A")} />
-              <Summary label="Feasible Candidates" value={String(backendOutput?.feasibleCandidates ?? "N/A")} />
+              <Summary label="Artifact Source" value={backendOutput?.artifactSource ?? "N/A"} />
+              <Summary label="Evaluated Policy" value={backendOutput?.evaluatedPolicy ?? "N/A"} />
+              <Summary label="Decision Basis" value={backendOutput?.decisionBasis ?? "N/A"} />
+              <Summary label="Validation Status" value={backendOutput?.validationStatus ?? "N/A"} />
+              <Summary label="Data Version" value={backendOutput?.dataVersion ?? "N/A"} />
+              <Summary label="Benchmark Calibration" value={backendOutput?.benchmarkCalibrationApplied ? "Applied" : "Not applied"} />
+              <Summary label="Result ID" value={backendOutput?.recommendationId ?? "N/A"} />
             </div>
           </AnalyticsPanel>
 
@@ -175,6 +224,9 @@ function SimilarPoliciesPanel({ memory }: { memory?: PolicyMemoryContext }) {
             <PriorSummary label="Risk prior" value={formatPriorRange(priors.riskScore, "score")} />
             <PriorSummary label="Equity prior" value={formatPriorRange(priors.equityScore, "score")} />
             <PriorSummary label="Benefit prior" value={formatPriorRange(priors.benefitAmount, "currency")} />
+            <PriorSummary label="Implementation prior" value={formatPriorRange(priors.implementationAdjustmentFactor, "percent")} />
+            <PriorSummary label="Delivery prior" value={formatPriorRange(priors.observedDeliveryFactor, "percent")} />
+            <PriorSummary label="Error prior" value={formatPriorRange(priors.predictionAbsolutePercentError, "percent")} />
           </div>
           {priors.outcomes ? (
             <div className="mt-4">
@@ -210,6 +262,7 @@ function SimilarPolicyCard({ policy }: { policy: SimilarPolicyMemory }) {
         <MiniMetric label="Coverage" value={formatOptionalPercent(policy.metrics.coverage)} />
         <MiniMetric label="Target Fit" value={formatOptionalScore(policy.metrics.targetFit)} />
         <MiniMetric label="Fiscal Pressure" value={formatOptionalPercent(policy.metrics.fiscalPressure)} />
+        <MiniMetric label="Impl. Factor" value={formatOptionalPercent(policy.metrics.implementationAdjustmentFactor)} />
         <MiniMetric label="Outcome" value={policy.metrics.finalOutcome ?? "N/A"} />
       </div>
       {policy.reasons.length ? (

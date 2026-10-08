@@ -36,6 +36,7 @@ class Phase6PolicyService:
         weight_column: str | None = None,
         run_id: str | None = None,
         seed_override: int | None = None,
+        parameter_overrides: dict[str, Any] | None = None,
         summary_only: bool = False,
     ) -> dict[str, Any]:
         start_time = datetime.now(timezone.utc)
@@ -47,6 +48,13 @@ class Phase6PolicyService:
 
         if seed_override is not None:
             policy_def.constraints.lottery_seed = seed_override
+        if parameter_overrides:
+            if "total_budget" in parameter_overrides:
+                policy_def.constraints.total_budget = float(parameter_overrides["total_budget"])
+            if "maximum_beneficiaries" in parameter_overrides:
+                policy_def.constraints.maximum_beneficiaries = int(parameter_overrides["maximum_beneficiaries"])
+            if "benefit_amount" in parameter_overrides:
+                policy_def.benefit.amount = float(parameter_overrides["benefit_amount"])
 
         # 2. Validate Policy Schema
         val_result = validate_policy_schema(policy_def)

@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-04T14:10:48.403074+00:00", "run_id": "POLICY-RUN-615BF7D2E7", "policy_id": "tn_clean_cooking_subsidy_002", "status": "COMPLETED", "evaluated_records": 12000, "eligible_records": 6058, "selected_beneficiaries": 6058, "weighted_beneficiaries": 6070.56, "total_cost_inr": 43708027.34}

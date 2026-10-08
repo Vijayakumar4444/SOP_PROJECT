@@ -56,6 +56,7 @@ def derive_monte_carlo_calibration(priors: dict[str, Any]) -> dict[str, Any]:
         ("riskScore", (0.0, 100.0)),
         ("equityScore", (0.0, 100.0)),
         ("benefitAmount", (0.0, float("inf"))),
+        ("observedDeliveryFactor", (0.0, 1.0)),
     ]:
         stats = priors.get(metric)
         if not isinstance(stats, dict) or stats.get("mean") is None:

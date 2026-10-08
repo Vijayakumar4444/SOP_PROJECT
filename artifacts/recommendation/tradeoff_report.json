@@ -5,20 +5,20 @@
       "candidate_b": "tn_exp_002_param_uncertainty",
       "metric_a": "mean_total_cost",
       "metric_b": "mean_beneficiaries",
-      "value_a_diff": 29612577.25,
+      "value_a_diff": 129120879.91,
       "value_b_diff": 1682.5,
-      "marginal_tradeoff_ratio": 17600.34,
-      "description": "'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+29,612,577.25 cost difference for +1,682 beneficiary headcount difference compared to 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (Marginal ratio: ₹17,600.34 per additional beneficiary)."
+      "marginal_tradeoff_ratio": 76743.47,
+      "description": "'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+129,120,879.91 cost difference for +1,682 beneficiary headcount difference compared to 'Option B: Clean Cooking Subsidy (Parameter Uncertainty)' (Marginal ratio: ₹76,743.47 per additional beneficiary)."
     },
     {
       "candidate_a": "tn_exp_001_pop_uncertainty",
       "candidate_b": "tn_exp_003_combined_uncertainty",
       "metric_a": "mean_total_cost",
       "metric_b": "mean_beneficiaries",
-      "value_a_diff": 33163460.79,
+      "value_a_diff": 132671763.45,
       "value_b_diff": 1834.23,
-      "marginal_tradeoff_ratio": 18080.28,
-      "description": "'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+33,163,460.79 cost difference for +1,834 beneficiary headcount difference compared to 'Option C: Youth Skilling Stipend (Combined Uncertainty)' (Marginal ratio: ₹18,080.28 per additional beneficiary)."
+      "marginal_tradeoff_ratio": 72330.91,
+      "description": "'Option A: Elderly Pension Policy (Population Uncertainty)' incurs ₹+132,671,763.45 cost difference for +1,834 beneficiary headcount difference compared to 'Option C: Youth Skilling Stipend (Combined Uncertainty)' (Marginal ratio: ₹72,330.91 per additional beneficiary)."
     },
     {
       "candidate_a": "tn_exp_002_param_uncertainty",
@@ -39,9 +39,9 @@
       "wins_b": 2,
       "ties": 1,
       "detailed_deltas": {
-        "mean_total_cost": 29612577.253,
+        "mean_total_cost": 129120879.913,
         "mean_beneficiaries": 1682.5,
-        "p95_total_cost": 28610350.574,
+        "p95_total_cost": 128118653.234,
         "budget_exceedance_risk": 0.0
       }
     },
@@ -52,9 +52,9 @@
       "wins_b": 2,
       "ties": 1,
       "detailed_deltas": {
-        "mean_total_cost": 33163460.7903,
+        "mean_total_cost": 132671763.4503,
         "mean_beneficiaries": 1834.2333,
-        "p95_total_cost": 33160672.551,
+        "p95_total_cost": 132668975.211,
         "budget_exceedance_risk": 0.0
       }
     },

@@ -12,7 +12,7 @@
       "all_metrics_stable": true,
       "metric_diagnostics": {
         "total_policy_cost": {
-          "running_mean": 33169432.91,
+          "running_mean": 132677735.57,
           "running_std": 0.0,
           "mc_standard_error": 0.0,
           "relative_mc_error": 0.0,
@@ -40,7 +40,7 @@
       "all_metrics_stable": true,
       "metric_diagnostics": {
         "total_policy_cost": {
-          "running_mean": 33169432.91,
+          "running_mean": 132677735.57,
           "running_std": 0.0,
           "mc_standard_error": 0.0,
           "relative_mc_error": 0.0,

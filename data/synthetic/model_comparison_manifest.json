@@ -1,6 +1,6 @@
 {
   "module": "phase3_model_comparison_manifest",
-  "created_at": "2026-09-13T05:30:47.279393+00:00",
+  "created_at": "2026-10-08T12:20:38.539326+00:00",
   "reference_version": "0.3.0-modular",
   "training_dataset_version": "phase3_training_v1",
   "population_size": 12000,

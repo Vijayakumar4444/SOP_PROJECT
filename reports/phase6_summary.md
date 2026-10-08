@@ -9,7 +9,7 @@ and produces weighted population estimates using the Phase 5 calibrated syntheti
 
 | Policy ID | Name | Target Unit | Evaluated | Eligible (Weighted) | Beneficiaries (Weighted) | Total Program Cost (INR) | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tn_elderly_pension_001` | Tamil Nadu Social Security Elderly Assistance Scheme | person | 12,000 | 1,835 (1,842.75) | 1,835 (1,842.75) | ₹33,169,417.45 | PASS |
+| `tn_elderly_pension_001` | Tamil Nadu Social Security Elderly Assistance Scheme | person | 12,000 | 1,835 (1,842.75) | 1,835 (1,842.75) | ₹132,677,670.72 | PASS |
 | `tn_clean_cooking_subsidy_002` | Tamil Nadu Rural Household Clean Cooking Fuel Support Scheme | household | 12,000 | 6,058 (6,070.56) | 6,058 (6,070.56) | ₹43,708,027.34 | PASS |
 | `tn_youth_skilling_stipend_003` | Tamil Nadu Youth Skill Enhancement Stipend | person | 12,000 | 189 (188.99) | 189 (188.99) | ₹4,535,736.37 | PASS |
 

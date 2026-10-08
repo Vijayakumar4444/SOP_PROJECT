@@ -14,6 +14,13 @@ export const policySchema = z.object({
   description: z.string().min(20, "Describe the policy in enough detail for review."),
   objectives: z.string().optional(),
   budgetAllocation: z.number().positive().optional(),
+  benefitAmount: z.number().positive().optional(),
+  benefitFrequency: z.enum(["Monthly", "Annual", "One-time"]).optional(),
+  administrativeCostPercent: z.number().min(0).max(100).optional(),
+  benchmarkActualBeneficiaries: z.number().positive().optional(),
+  benchmarkActualAnnualCost: z.number().positive().optional(),
+  benchmarkDate: z.string().optional(),
+  benchmarkSource: z.string().optional(),
   geographicScope: z.string(),
   selectedDistricts: z.array(z.string()),
   rules: z.array(policyRuleSchema).min(1, "Add at least one eligibility rule.")

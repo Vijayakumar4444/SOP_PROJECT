@@ -2,7 +2,7 @@
   "phase": 8,
   "status": "PASS",
   "recommendation_id": "tn_rec_001_policy_comparison",
-  "top_recommended_candidate": "tn_exp_001_pop_uncertainty",
+  "top_recommended_candidate": "tn_exp_002_param_uncertainty",
   "artifact_directory": ".\\artifacts/recommendation",
   "summary_json_path": ".\\artifacts/recommendation\\recommendation_summary.json",
   "ranking_csv_path": ".\\artifacts/recommendation\\ranking_results.csv",

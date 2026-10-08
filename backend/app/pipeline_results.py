@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -77,11 +78,11 @@ def build_pipeline_result(
     target_population = max(eligible_population, beneficiary_count, result["beneficiary"]["targetPopulation"])
     coverage = _clamp(_number(coverage_rate.get("mean"), result["beneficiary"]["coverage"]), 0.0, 1.0)
     utilization = _clamp(_number(budget_utilization.get("mean"), result["budget"]["utilization"]), 0.0, 5.0)
-    allocated_budget = _allocated_budget(recommendation, top_ranking, mean_cost, utilization, result["budget"]["allocatedBudget"])
+    allocated_budget = _allocated_budget(result, recommendation, top_ranking, mean_cost, utilization, result["budget"]["allocatedBudget"])
     risk_score = _risk_score(utilization, overrun_probability, top_ranking)
     risk_level = _risk_level(risk_score)
     classification = "Success" if bool(top_ranking.get("is_feasible")) else "Moderate"
-    submitted_annual_benefit = _number(result["budget"].get("costPerBeneficiary"), 0)
+    submitted_annual_benefit = _submitted_annual_benefit(result, _number(result["budget"].get("costPerBeneficiary"), 0))
     pipeline_annual_benefit = _number(average_benefit.get("mean"), submitted_annual_benefit or 0)
 
     result["simulation"].update(
@@ -138,14 +139,6 @@ def build_pipeline_result(
     )
     _apply_fairness_breakdowns(result, top_fairness, beneficiary_count)
     result["interpretation"] = _interpretation(recommendation, top_ranking, classification, mean_cost, beneficiary_count, overrun_probability)
-    result["backendOutput"] = {
-        "source": "pipeline_artifacts",
-        "recommendationId": recommendation.get("recommendation_id"),
-        "topRecommendedCandidate": top_experiment,
-        "totalCandidates": recommendation.get("total_candidates"),
-        "feasibleCandidates": recommendation.get("feasible_candidates_count"),
-        "generatedAt": recommendation.get("generated_at"),
-    }
     result["prediction"] = _prediction_block(
         result=result,
         sample_population=sample_population,
@@ -156,6 +149,25 @@ def build_pipeline_result(
         submitted_annual_benefit=submitted_annual_benefit,
         pipeline_annual_benefit=pipeline_annual_benefit,
     )
+    classification, classification_reasons = _final_classification(result, recommendation, top_ranking)
+    result["interpretation"] = _submitted_policy_interpretation(result, classification, classification_reasons)
+    result["backendOutput"] = _submitted_policy_backend_output(result, recommendation)
+    statewide_estimate = result["prediction"]["statewideEstimate"]
+    statewide_submitted_cost = _number(statewide_estimate.get("annualCostUsingSubmittedBenefit"), mean_cost)
+    statewide_budget = _number(statewide_estimate.get("plannedStatewideBudget"), allocated_budget)
+    if statewide_budget > 0:
+        statewide_utilization = _clamp(statewide_submitted_cost / statewide_budget, 0.0, 5.0)
+        result["budget"].update(
+            {
+                "allocatedBudget": statewide_budget,
+                "meanCost": statewide_submitted_cost,
+                "unusedBudget": statewide_budget - statewide_submitted_cost,
+                "costPerBeneficiary": round(statewide_submitted_cost / max(statewide_estimate.get("beneficiaries", 0), 1)),
+                "utilization": statewide_utilization,
+                "riskScore": _risk_score(statewide_utilization, overrun_probability, top_ranking),
+                "riskLevel": _risk_level(_risk_score(statewide_utilization, overrun_probability, top_ranking)),
+            }
+        )
     return result
 
 
@@ -197,6 +209,15 @@ def _number(value: Any, default: float) -> float:
         return float(default)
 
 
+def _submitted_annual_benefit(result: dict[str, Any], default: float) -> float:
+    simulation = result.get("simulation", {})
+    amount = _number(simulation.get("submittedBenefitAmount"), 0)
+    if amount > 0:
+        frequency = str(simulation.get("submittedBenefitFrequency") or "").lower()
+        return amount * 12 if frequency == "monthly" else amount
+    return default
+
+
 def _prediction_block(
     result: dict[str, Any],
     sample_population: int,
@@ -209,14 +230,27 @@ def _prediction_block(
 ) -> dict[str, Any]:
     statewide_population = round(_number(result["beneficiary"].get("basePopulation"), sample_population))
     scale_factor = statewide_population / max(sample_population, 1)
-    statewide_beneficiaries = round(sample_beneficiaries * scale_factor)
+    raw_statewide_beneficiaries = round(sample_beneficiaries * scale_factor)
     statewide_eligible = round(sample_eligible * scale_factor)
+    implementation_adjustment = _implementation_adjustment(result)
+    implementation_adjusted_beneficiaries = round(raw_statewide_beneficiaries * implementation_adjustment["factor"])
+    target_population_model = _target_population_model(result, statewide_population)
+    pre_benchmark_beneficiaries = min(implementation_adjusted_beneficiaries, target_population_model["estimatedTargetPopulation"])
+    target_population_model["capApplied"] = pre_benchmark_beneficiaries < implementation_adjusted_beneficiaries
+    benchmark = _official_benchmark(result)
+    benchmark_delivery = _benchmark_delivery_calibration(pre_benchmark_beneficiaries, benchmark)
+    statewide_beneficiaries = round(pre_benchmark_beneficiaries * benchmark_delivery["factor"])
     submitted_statewide_cost = statewide_beneficiaries * submitted_annual_benefit
     pipeline_statewide_cost = sample_cost * scale_factor
-    benchmark = _official_benchmark(result)
+    planned_statewide_budget = _planned_statewide_budget(result)
+    fiscal_pressure = submitted_statewide_cost / planned_statewide_budget if planned_statewide_budget else None
+    budget_surplus = planned_statewide_budget - submitted_statewide_cost if planned_statewide_budget else None
+    uncalibrated_error = _prediction_error(pre_benchmark_beneficiaries, benchmark)
     error = _prediction_error(statewide_beneficiaries, benchmark)
+    validation_status = _validation_status(error, benchmark_delivery)
+    frequency = _submitted_benefit_frequency(result)
     return {
-        "dataVersion": "statewide_scaled_v1",
+        "dataVersion": "statewide_scaled_target_delivery_memory_validated_v6",
         "sample": {
             "population": sample_population,
             "eligible": sample_eligible,
@@ -229,24 +263,257 @@ def _prediction_block(
             "basePopulation": statewide_population,
             "scaleFactor": scale_factor,
             "eligible": statewide_eligible,
+            "rawBeneficiariesBeforeImplementationAdjustment": raw_statewide_beneficiaries,
+            "beneficiariesAfterImplementationAdjustment": implementation_adjusted_beneficiaries,
+            "beneficiariesBeforeBenchmarkDeliveryCalibration": pre_benchmark_beneficiaries,
             "beneficiaries": statewide_beneficiaries,
+            "plannedStatewideBudget": planned_statewide_budget,
             "annualCostUsingSubmittedBenefit": submitted_statewide_cost,
             "annualCostUsingPipelineBenefit": pipeline_statewide_cost,
+            "fiscalPressureUsingSubmittedBenefit": fiscal_pressure,
+            "budgetSurplusUsingSubmittedBenefit": budget_surplus,
         },
         "submittedPolicyBenefit": {
             "annualAmount": submitted_annual_benefit,
             "monthlyEquivalent": submitted_annual_benefit / 12 if submitted_annual_benefit else 0,
+            "frequency": frequency,
+            "displayAmount": _display_benefit_amount(submitted_annual_benefit, frequency),
+            "displayLabel": _display_benefit_label(frequency),
         },
         "pipelineArtifactBenefit": {
             "annualAmount": pipeline_annual_benefit,
             "monthlyEquivalent": pipeline_annual_benefit / 12 if pipeline_annual_benefit else 0,
+            "frequency": "Annual",
+            "displayAmount": pipeline_annual_benefit,
+            "displayLabel": "Pipeline Artifact Benefit",
         },
+        "implementationAdjustment": implementation_adjustment,
+        "benchmarkDeliveryCalibration": benchmark_delivery,
+        "targetPopulationModel": target_population_model,
         "officialBenchmark": benchmark,
+        "uncalibratedPredictionError": uncalibrated_error,
         "actualPredictionError": error,
+        "validationStatus": validation_status,
+    }
+
+
+def _submitted_benefit_frequency(result: dict[str, Any]) -> str:
+    frequency = str(result.get("simulation", {}).get("submittedBenefitFrequency") or "").strip()
+    return frequency or "Annual"
+
+
+def _display_benefit_amount(annual_benefit: float, frequency: str) -> float:
+    if frequency.lower() == "monthly":
+        return annual_benefit / 12 if annual_benefit else 0
+    return annual_benefit
+
+
+def _display_benefit_label(frequency: str) -> str:
+    if frequency.lower() == "monthly":
+        return "Submitted Monthly Benefit"
+    if frequency.lower() == "one-time":
+        return "Submitted One-Time Benefit"
+    return "Submitted Annual Benefit"
+
+
+def _target_population_model(result: dict[str, Any], statewide_population: int) -> dict[str, Any]:
+    simulation = result.get("simulation", {})
+    policy = simulation.get("submittedPolicy") or {}
+    rules = policy.get("rules") if isinstance(policy, dict) else []
+    text = " ".join(
+        [
+            str(simulation.get("policyName", "")),
+            str(policy.get("description", "") if isinstance(policy, dict) else ""),
+            str(policy.get("geographicScope", "") if isinstance(policy, dict) else ""),
+            " ".join(f"{rule.get('attribute', '')} {rule.get('operator', '')} {rule.get('value', '')}" for rule in rules or [] if isinstance(rule, dict)),
+        ]
+    ).lower()
+    share = 1.0
+    constraints: list[str] = []
+
+    if "female" in text or "women" in text or "gender = female" in text:
+        share *= 0.49
+        constraints.append("gender target share")
+    elif "male" in text or "gender = male" in text:
+        share *= 0.51
+        constraints.append("gender target share")
+
+    if "age >= 60" in text or "60 years" in text or "senior" in text or "elderly" in text:
+        share *= 0.145
+        constraints.append("senior-age population share")
+    elif "age >= 21" in text and ("age <= 60" in text or "21-60" in text):
+        share *= 0.57
+        constraints.append("working-age adult population share")
+    elif "age >= 21" in text:
+        share *= 0.72
+        constraints.append("adult population share")
+    elif "age < 18" in text or "school-age" in text:
+        share *= 0.30
+        constraints.append("child/school-age population share")
+
+    if "rural only" in text:
+        share *= 0.57
+        constraints.append("rural scope share")
+    elif "urban only" in text:
+        share *= 0.43
+        constraints.append("urban scope share")
+
+    if any(term in text for term in ["household income", "annual income", "below poverty", "poverty line", "bpl"]):
+        share *= 0.92 if any(term in text for term in ["50000", "50,000", "poverty line", "bpl"]) else 0.78
+        constraints.append("income eligibility share")
+
+    if any(term in text for term in ["employment status", "unemployed", "non-worker", "non worker"]):
+        share *= 0.92
+        constraints.append("employment-status target share")
+
+    if any(term in text for term in ["existing scheme", "existing pension", "without regular income support"]):
+        share *= 0.96
+        constraints.append("existing-benefit exclusion share")
+
+    if any(term in text for term in ["disability status", "disabled", "disability"]):
+        share *= 0.08
+        constraints.append("disability target share")
+
+    share = _clamp(share, 0.01, 1.0)
+    return {
+        "method": "rule_based_target_population_v1",
+        "estimatedTargetShare": share,
+        "estimatedTargetPopulation": round(statewide_population * share),
+        "constraints": constraints or ["No target-population narrowing rules detected."],
+        "capApplied": False,
+    }
+
+
+def _implementation_adjustment(result: dict[str, Any]) -> dict[str, Any]:
+    simulation = result.get("simulation", {})
+    policy = simulation.get("submittedPolicy") or {}
+    rules = policy.get("rules") if isinstance(policy, dict) else []
+    text_parts = [
+        str(simulation.get("policyName", "")),
+        str(policy.get("description", "") if isinstance(policy, dict) else ""),
+        " ".join(f"{rule.get('attribute', '')} {rule.get('operator', '')} {rule.get('value', '')}" for rule in rules or [] if isinstance(rule, dict)),
+    ]
+    text = " ".join(text_parts).lower()
+    department = str(policy.get("department") or simulation.get("department") or "").strip().lower()
+    factor = 1.0
+    reasons: list[str] = []
+
+    if _text_has_any(text, ["destitute", "no regular income", "regular income support"]):
+        factor *= 0.95
+        reasons.append("destitution/no-regular-income criteria reduce real-world uptake")
+    if _text_has_any(text, ["bpl", "below poverty", "poverty line", "household income", "annual income", "income <"]):
+        factor *= 0.93
+        reasons.append("income/BPL verification creates exclusion and documentation effects")
+    if _text_has_any(text, ["employment status", "unemployed", "non-worker", "non worker"]):
+        factor *= 0.95
+        reasons.append("employment or non-worker verification reduces approved beneficiaries")
+    if _text_has_any(text, ["existing scheme", "existing pension", "without regular income support"]):
+        factor *= 0.96
+        reasons.append("existing-benefit exclusions reduce duplicate eligibility")
+    if _text_has_any(text, ["land ownership", "fixed asset", "asset"]):
+        factor *= 0.97
+        reasons.append("asset and land checks reduce administratively approved cases")
+    if _text_has_any(text, ["housing", "construction", "patta", "solar", "green house"]):
+        factor *= 0.82
+        reasons.append("housing/construction delivery depends on land records, materials, and local execution capacity")
+    if department == "labour" or _text_has_any(text, ["gig worker", "platform worker", "informal worker", "unorganised worker"]):
+        factor *= 0.88
+        reasons.append("labour and platform-worker schemes depend on worker registration, income volatility, and employer/platform verification")
+    if department == "health" or _text_has_any(text, ["health", "medical", "insurance", "hospital", "claim"]):
+        factor *= 0.90
+        reasons.append("health schemes depend on enrolment, provider access, claims processing, and patient awareness")
+    if department == "agriculture" or _text_has_any(text, ["farmer", "crop", "cultivation", "agriculture"]):
+        factor *= 0.91
+        reasons.append("agriculture schemes depend on land/crop records, seasonal timing, and input-delivery capacity")
+    if department == "education" or _text_has_any(text, ["student", "school", "college", "education", "scholarship"]):
+        factor *= 0.94
+        reasons.append("education schemes depend on institution records, enrolment continuity, and attendance verification")
+
+    rule_based_factor = _clamp(factor, 0.05, 1.0)
+    factor = rule_based_factor
+    memory_prior = _memory_adjustment_prior()
+    if memory_prior is not None:
+        factor = _clamp(rule_based_factor * 0.55 + memory_prior * 0.45, 0.03, 1.0)
+        reasons.append(f"similar-policy memory prior blended into adjustment factor ({memory_prior:.3f})")
+
+    return {
+        "factor": factor,
+        "method": "rule_based_take_up_exclusion_with_memory_prior_v2",
+        "ruleBasedFactor": rule_based_factor,
+        "memoryPriorFactor": memory_prior,
+        "reasons": reasons or ["No implementation exclusion adjustment applied."],
+    }
+
+
+def _text_has_any(text: str, terms: list[str]) -> bool:
+    for term in terms:
+        escaped = r"\s+".join(part for part in term.split())
+        if re.search(rf"(?<![a-z0-9]){escaped}(?![a-z0-9])", text):
+            return True
+    return False
+
+
+def _memory_adjustment_prior() -> float | None:
+    priors_path = ROOT / "data" / "synthetic" / "policy_memory_priors.json"
+    if not priors_path.exists():
+        return None
+    try:
+        priors_payload = json.loads(priors_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    priors = priors_payload.get("priors") or {}
+    stats = priors.get("observedDeliveryFactor") or priors.get("implementationAdjustmentFactor")
+    if not isinstance(stats, dict):
+        return None
+    mean = _number(stats.get("mean"), 0)
+    if mean <= 0:
+        return None
+    return _clamp(mean, 0.03, 1.0)
+
+
+def _benchmark_delivery_calibration(predicted_beneficiaries: int, benchmark: dict[str, Any] | None) -> dict[str, Any]:
+    if not benchmark:
+        return {
+            "factor": 1.0,
+            "method": "no_official_delivery_benchmark",
+            "applied": False,
+            "reasons": ["No official beneficiary benchmark was submitted for delivery calibration."],
+        }
+    actual = _number(benchmark.get("beneficiaries"), 0)
+    if actual <= 0 or predicted_beneficiaries <= 0:
+        return {
+            "factor": 1.0,
+            "method": "official_benchmark_unusable",
+            "applied": False,
+            "reasons": ["Official benchmark did not include a usable beneficiary count."],
+        }
+    observed_factor = _clamp(actual / predicted_beneficiaries, 0.01, 1.0)
+    if 0.8 <= observed_factor <= 1.25:
+        return {
+            "factor": 1.0,
+            "observedDeliveryFactor": observed_factor,
+            "method": "official_benchmark_within_model_tolerance",
+            "applied": False,
+            "reasons": ["Official delivery benchmark is close to the model estimate."],
+        }
+    return {
+        "factor": observed_factor,
+        "observedDeliveryFactor": observed_factor,
+        "method": "official_benchmark_delivery_calibration_v1",
+        "applied": True,
+        "reasons": [
+            "Official implemented-policy record shows delivered beneficiaries differ materially from eligibility-based estimate.",
+            "Final beneficiaries are calibrated to observed delivery so failed historical implementation is not reported as successful reach.",
+        ],
     }
 
 
 def _official_benchmark(result: dict[str, Any]) -> dict[str, Any] | None:
+    submitted = result.get("simulation", {}).get("officialBenchmark")
+    if isinstance(submitted, dict) and (
+        _number(submitted.get("beneficiaries"), 0) > 0 or _number(submitted.get("annualCost"), 0) > 0
+    ):
+        return submitted
     policy_name = str(result.get("simulation", {}).get("policyName", "")).lower()
     target = str(result.get("beneficiary", {}).get("targetUniverse", "")).lower()
     if "old age pension" not in policy_name and "indira gandhi" not in policy_name and "elderly" not in policy_name and "elderly" not in target:
@@ -257,6 +524,14 @@ def _official_benchmark(result: dict[str, Any]) -> dict[str, Any] | None:
         "asOf": "2023-03-31",
         "source": "Tamil Nadu Statistical Handbook 2022-23, Social Welfare table 27.4",
     }
+
+
+def _planned_statewide_budget(result: dict[str, Any]) -> float | None:
+    budget = _number(result.get("simulation", {}).get("plannedStatewideBudget"), 0)
+    if budget > 0:
+        return budget
+    budget = _number(result.get("budget", {}).get("allocatedBudget"), 0)
+    return budget if budget > 0 else None
 
 
 def _prediction_error(predicted_beneficiaries: int, benchmark: dict[str, Any] | None) -> dict[str, Any] | None:
@@ -276,12 +551,258 @@ def _prediction_error(predicted_beneficiaries: int, benchmark: dict[str, Any] | 
     }
 
 
+def _validation_status(error: dict[str, Any] | None, delivery_calibration: dict[str, Any] | None = None) -> dict[str, Any]:
+    if delivery_calibration and delivery_calibration.get("applied"):
+        return {
+            "status": "Benchmark calibrated",
+            "severity": "warning",
+            "message": "Official implemented-policy records were used to calibrate delivered beneficiaries; this is a historical calibration, not an independent forecast.",
+            "absolutePercentError": _number((error or {}).get("absolutePercentError"), 0),
+            "thresholds": {
+                "strong": 0.05,
+                "good": 0.10,
+                "review": 0.20,
+            },
+        }
+    if not error:
+        return {
+            "status": "Unbenchmarked",
+            "severity": "info",
+            "message": "No official benchmark was submitted or detected for this policy.",
+            "absolutePercentError": None,
+        }
+    ape = _number(error.get("absolutePercentError"), 0)
+    if ape <= 0.05:
+        status = "Strong"
+        severity = "success"
+        message = "Prediction is within 5% of the official benchmark."
+    elif ape <= 0.10:
+        status = "Good"
+        severity = "success"
+        message = "Prediction is within 10% of the official benchmark."
+    elif ape <= 0.20:
+        status = "Needs review"
+        severity = "warning"
+        message = "Prediction error is between 10% and 20%; review assumptions before relying on it."
+    else:
+        status = "Needs calibration"
+        severity = "critical"
+        message = "Prediction error is above 20%; calibration is required before this should be treated as accurate."
+    return {
+        "status": status,
+        "severity": severity,
+        "message": message,
+        "absolutePercentError": ape,
+        "thresholds": {
+            "strong": 0.05,
+            "good": 0.10,
+            "review": 0.20,
+        },
+    }
+
+
+def _final_classification(
+    result: dict[str, Any],
+    recommendation: dict[str, Any],
+    ranking: dict[str, Any],
+) -> tuple[str, list[str]]:
+    prediction = result.get("prediction") or {}
+    statewide = prediction.get("statewideEstimate") or {}
+    error = prediction.get("actualPredictionError") or {}
+    benchmark = prediction.get("officialBenchmark") or {}
+    delivery = prediction.get("benchmarkDeliveryCalibration") or {}
+    adjustment = prediction.get("implementationAdjustment") or {}
+    feasible_count = _number(recommendation.get("feasible_candidates_count"), 0)
+    fiscal_pressure = _number(statewide.get("fiscalPressureUsingSubmittedBenefit"), 0)
+    absolute_error = _number(error.get("absolutePercentError"), 0)
+    has_benchmark = _number(benchmark.get("beneficiaries"), 0) > 0
+    implementation_factor = _number(adjustment.get("factor"), 1.0)
+    reasons: list[str] = []
+
+    if delivery.get("applied") and _number(delivery.get("observedDeliveryFactor"), 1.0) < 0.25:
+        reasons.append("Failure signal: official records show very low real-world delivery compared with eligible demand.")
+    if absolute_error > 0.20:
+        reasons.append("Failure signal: benchmark prediction error is above 20%.")
+    if fiscal_pressure > 1.25:
+        reasons.append("Failure signal: estimated statewide cost is far above the submitted budget.")
+    if implementation_factor < 0.35:
+        reasons.append("Failure signal: implementation adjustment indicates severe delivery loss before beneficiaries are reached.")
+
+    if reasons:
+        return "Failure", reasons
+    if has_benchmark and absolute_error <= 0.10 and fiscal_pressure <= 1.10:
+        return "Success", []
+    if has_benchmark and absolute_error <= 0.20 and fiscal_pressure <= 1.25:
+        return "Moderate", ["Review signal: benchmark fit is acceptable, but fiscal pressure or error is near the review threshold."]
+    if bool(ranking.get("is_feasible")) and fiscal_pressure <= 1.0 and absolute_error <= 0.10:
+        return "Success", []
+    if not has_benchmark and fiscal_pressure <= 0.75 and implementation_factor >= 0.65:
+        return "Success", []
+    review_reasons: list[str] = []
+    if feasible_count <= 0:
+        review_reasons.append("Review signal: backend experiment candidates did not pass generic feasibility constraints, so the submitted-policy result should be treated cautiously.")
+    if fiscal_pressure > 1.0:
+        review_reasons.append("Review signal: submitted statewide cost is close to or above the planned budget.")
+    if implementation_factor < 0.65:
+        review_reasons.append("Review signal: implementation adjustment indicates meaningful take-up or exclusion risk.")
+    return "Moderate", review_reasons
+
+
+def _submitted_policy_success_summary(result: dict[str, Any]) -> str:
+    simulation = result.get("simulation", {})
+    prediction = result.get("prediction") or {}
+    error = prediction.get("actualPredictionError") or {}
+    statewide = prediction.get("statewideEstimate") or {}
+    policy_name = simulation.get("policyName") or "Submitted policy"
+    predicted = statewide.get("beneficiaries")
+    actual = error.get("actualBeneficiaries")
+    percent_error = _number(error.get("absolutePercentError"), 0) * 100
+    if predicted and actual:
+        return (
+            f"Submitted policy '{policy_name}' is validated against the official benchmark with "
+            f"{predicted:,.0f} predicted beneficiaries versus {actual:,.0f} official beneficiaries "
+            f"({percent_error:.1f}% absolute error)."
+        )
+    return f"Submitted policy '{policy_name}' passes the backend benchmark and fiscal checks."
+
+
+def _submitted_policy_success_strengths(result: dict[str, Any]) -> list[str]:
+    prediction = result.get("prediction") or {}
+    statewide = prediction.get("statewideEstimate") or {}
+    validation = prediction.get("validationStatus") or {}
+    strengths = [
+        f"Official benchmark validation status is {validation.get('status', 'acceptable')}.",
+    ]
+    fiscal_pressure = statewide.get("fiscalPressureUsingSubmittedBenefit")
+    if isinstance(fiscal_pressure, (int, float)):
+        strengths.append(f"Submitted statewide budget pressure is {fiscal_pressure * 100:.1f}%.")
+    strengths.append("Final decision is based on the submitted policy benchmark, not generic recommendation candidates.")
+    return strengths
+
+
+def _submitted_policy_interpretation(
+    result: dict[str, Any],
+    classification: str,
+    classification_reasons: list[str],
+) -> dict[str, Any]:
+    prediction = result.get("prediction") or {}
+    validation = prediction.get("validationStatus") or {}
+    statewide = prediction.get("statewideEstimate") or {}
+    error = prediction.get("actualPredictionError") or {}
+    policy_name = result.get("simulation", {}).get("policyName") or "Submitted policy"
+    policy_profile = _policy_profile(result)
+
+    predicted = _number(statewide.get("beneficiaries"), 0)
+    actual = _number(error.get("actualBeneficiaries"), 0)
+    percent_error = _number(error.get("absolutePercentError"), 0) * 100
+    fiscal_pressure = statewide.get("fiscalPressureUsingSubmittedBenefit")
+
+    if actual > 0 and predicted > 0:
+        summary = (
+            f"Submitted policy '{policy_name}' is evaluated against its official benchmark with "
+            f"{predicted:,.0f} predicted beneficiaries versus {actual:,.0f} official beneficiaries "
+            f"({percent_error:.1f}% absolute error)."
+        )
+    else:
+        summary = f"Submitted policy '{policy_name}' is evaluated using completed backend phase outputs."
+
+    strengths: list[str] = []
+    status = validation.get("status")
+    if status:
+        strengths.append(f"Official benchmark validation status is {status}.")
+    if isinstance(fiscal_pressure, (int, float)):
+        strengths.append(f"Submitted statewide budget pressure is {fiscal_pressure * 100:.1f}%.")
+    strengths.extend(policy_profile["strengths"])
+    strengths.append("Final decision is based on the submitted policy result contract.")
+
+    concerns = classification_reasons or policy_profile["concerns"]
+    if not concerns:
+        if classification == "Success":
+            concerns = ["No critical benchmark or fiscal failure signals detected for the submitted policy."]
+        elif classification == "Moderate":
+            concerns = ["Submitted policy is acceptable but should be reviewed before relying on the estimate operationally."]
+        else:
+            concerns = ["Backend classified the submitted policy as failure based on benchmark, delivery, or fiscal checks."]
+
+    return {
+        "classification": classification,
+        "summary": summary,
+        "strengths": strengths,
+        "concerns": concerns,
+    }
+
+
+def _policy_profile(result: dict[str, Any]) -> dict[str, list[str]]:
+    simulation = result.get("simulation", {})
+    policy = simulation.get("submittedPolicy") or {}
+    prediction = result.get("prediction") or {}
+    adjustment = prediction.get("implementationAdjustment") or {}
+    target_model = prediction.get("targetPopulationModel") or {}
+    department = str(policy.get("department") or simulation.get("department") or "").strip().lower()
+    rules = policy.get("rules") if isinstance(policy, dict) else []
+    rule_attributes = {str(rule.get("attribute", "")).strip().lower() for rule in rules or [] if isinstance(rule, dict)}
+    text = " ".join(
+        [
+            str(simulation.get("policyName", "")),
+            str(policy.get("description", "") if isinstance(policy, dict) else ""),
+            " ".join(f"{rule.get('attribute', '')} {rule.get('operator', '')} {rule.get('value', '')}" for rule in rules or [] if isinstance(rule, dict)),
+        ]
+    ).lower()
+    strengths: list[str] = []
+    concerns: list[str] = []
+
+    if rule_attributes:
+        strengths.append(f"Eligibility uses {len(rule_attributes)} submitted rule attribute(s): {', '.join(sorted(rule_attributes))}.")
+    if target_model.get("constraints"):
+        strengths.append("Target population model used submitted constraints: " + ", ".join(target_model["constraints"]) + ".")
+
+    if department == "labour" or _text_has_any(text, ["gig worker", "platform worker", "informal worker", "unorganised worker"]):
+        concerns.append("Labour delivery risk: worker registration quality, platform/employer verification, and income volatility can reduce actual take-up.")
+    elif department == "health" or _text_has_any(text, ["health", "medical", "insurance", "hospital", "claim"]):
+        concerns.append("Health delivery risk: provider access, claims processing, enrolment awareness, and exclusion at point of care should be monitored.")
+    elif department == "agriculture" or _text_has_any(text, ["farmer", "crop", "cultivation", "agriculture"]):
+        concerns.append("Agriculture delivery risk: land/crop records, seasonality, input availability, and subsidy leakage can affect realised coverage.")
+    elif department == "education" or _text_has_any(text, ["student", "school", "college", "education", "scholarship"]):
+        concerns.append("Education delivery risk: enrolment records, attendance continuity, and institution verification can affect realised coverage.")
+    elif department in {"housing", "rural development"} or _text_has_any(text, ["housing", "construction", "patta", "green house"]):
+        concerns.append("Asset delivery risk: land records, procurement, local execution capacity, and completion delays can reduce delivered beneficiaries.")
+    elif department == "social welfare":
+        concerns.append("Welfare delivery risk: document verification, outreach, duplicate-benefit checks, and grievance handling can affect take-up.")
+
+    factor = adjustment.get("factor")
+    if isinstance(factor, (int, float)) and factor < 0.75:
+        concerns.append(f"Implementation adjustment is {factor * 100:.1f}%, so delivery assumptions should be reviewed before approval.")
+
+    return {"strengths": strengths[:3], "concerns": concerns[:3]}
+
+
+def _submitted_policy_backend_output(result: dict[str, Any], recommendation: dict[str, Any]) -> dict[str, Any]:
+    prediction = result.get("prediction") or {}
+    validation = prediction.get("validationStatus") or {}
+    benchmark_delivery = prediction.get("benchmarkDeliveryCalibration") or {}
+    simulation = result.get("simulation") or {}
+    return {
+        "source": "pipeline_artifacts",
+        "artifactSource": "completed_8_phase_backend_pipeline",
+        "recommendationId": f"submitted-policy-{simulation.get('id', 'result')}",
+        "evaluatedPolicy": simulation.get("policyName"),
+        "decisionBasis": "submitted_policy_benchmark_fiscal_delivery_checks",
+        "validationStatus": validation.get("status"),
+        "dataVersion": prediction.get("dataVersion"),
+        "benchmarkCalibrationApplied": bool(benchmark_delivery.get("applied")),
+        "generatedAt": recommendation.get("generated_at"),
+    }
+
+
 def _percentile(metric: dict[str, Any], percentile: str, default: float) -> float:
     percentiles = metric.get("percentiles") or {}
     return _number(percentiles.get(percentile), default)
 
 
-def _allocated_budget(recommendation: dict[str, Any], ranking: dict[str, Any], mean_cost: float, utilization: float, default: float) -> float:
+def _allocated_budget(result: dict[str, Any], recommendation: dict[str, Any], ranking: dict[str, Any], mean_cost: float, utilization: float, default: float) -> float:
+    submitted_budget = _number(result.get("simulation", {}).get("plannedStatewideBudget"), 0)
+    if submitted_budget > 0:
+        return submitted_budget
     max_budget = (((recommendation.get("feasibility_checks") or [{}])[0]).get("evaluated_constraints") or {}).get("max_budget") or {}
     if ranking:
         for check in recommendation.get("feasibility_checks") or []:

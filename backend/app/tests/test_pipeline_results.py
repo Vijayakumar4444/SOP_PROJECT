@@ -159,7 +159,7 @@ class PipelineResultsTests(unittest.TestCase):
         self.assertEqual(result["beneficiary"]["beneficiaries"], 200)
         self.assertEqual(result["beneficiary"]["eligiblePopulation"], 240)
         self.assertEqual(result["budget"]["allocatedBudget"], 5000)
-        self.assertEqual(result["budget"]["riskLevel"], "Moderate")
+        self.assertEqual(result["budget"]["riskLevel"], "Low")
         self.assertEqual(result["monteCarlo"]["p95"], 3500)
         self.assertEqual(result["equity"]["overall"], 86)
         self.assertEqual(result["interpretation"]["classification"], "Success")
@@ -199,8 +199,64 @@ class PipelineResultsTests(unittest.TestCase):
         self.assertEqual(result["prediction"]["officialBenchmark"]["beneficiaries"], 1_436_569)
         self.assertEqual(result["prediction"]["submittedPolicyBenefit"]["annualAmount"], 12_000)
         self.assertEqual(result["prediction"]["pipelineArtifactBenefit"]["annualAmount"], 18_000)
-        self.assertGreater(result["prediction"]["statewideEstimate"]["beneficiaries"], 1_800_000)
-        self.assertAlmostEqual(result["prediction"]["actualPredictionError"]["absolutePercentError"], 0.2826, places=2)
+        self.assertEqual(result["prediction"]["statewideEstimate"]["beneficiaries"], 1_436_569)
+        self.assertEqual(result["prediction"]["validationStatus"]["status"], "Benchmark calibrated")
+        self.assertAlmostEqual(result["prediction"]["uncalibratedPredictionError"]["absolutePercentError"], 0.2826, places=2)
+
+    def test_unbenchmarked_submitted_policy_uses_policy_specific_reasoning(self):
+        base = self._base_result()
+        base["simulation"].update(
+            {
+                "id": "SIM-GIG",
+                "policyName": "Tamil Nadu Urban Gig Worker Health Security Allowance",
+                "department": "Labour",
+                "populationSampleSize": 12_000,
+                "plannedStatewideBudget": 3_000_000_000,
+                "submittedBenefitAmount": 6_000,
+                "submittedBenefitFrequency": "Annual",
+                "submittedPolicy": {
+                    "name": "Tamil Nadu Urban Gig Worker Health Security Allowance",
+                    "department": "Labour",
+                    "description": "Annual health security allowance for urban gig workers from households with annual income below Rs 300000.",
+                    "geographicScope": "Urban Only",
+                    "rules": [
+                        {"attribute": "Occupation", "operator": "=", "value": "Gig Worker"},
+                        {"attribute": "Urban/Rural", "operator": "=", "value": "Urban"},
+                        {"attribute": "Age", "operator": ">=", "value": "18"},
+                        {"attribute": "Age", "operator": "<=", "value": "60"},
+                        {"attribute": "Annual Income", "operator": "<", "value": "300000"},
+                    ],
+                },
+            }
+        )
+        base["beneficiary"]["basePopulation"] = 12_048_463
+        recommendation = {
+            "recommendation_id": "rec-1",
+            "top_recommended_candidate": "exp-1",
+            "feasible_candidates_count": 0,
+            "rankings": [{"experiment_id": "exp-1", "display_name": "Generic Candidate", "is_feasible": False, "raw_metrics": {}}],
+        }
+        uncertainty = {
+            "metrics_summary": {
+                "beneficiary_count": {"mean": 152},
+                "weighted_eligible_population": {"mean": 189},
+                "eligibility_rate": {"mean": 0.01575},
+                "coverage_rate": {"mean": 0.8067},
+                "total_policy_cost": {"mean": 3_556_855, "median": 3_556_855, "percentiles": {"p5": 2_778_276, "p95": 4_559_082}},
+                "average_benefit": {"mean": 23_500},
+                "budget_utilization": {"mean": 0.1},
+            }
+        }
+
+        result = build_pipeline_result(base, recommendation, uncertainty, top_experiment="exp-1")
+        reasons = result["prediction"]["implementationAdjustment"]["reasons"]
+        concerns = result["interpretation"]["concerns"]
+
+        self.assertEqual(result["interpretation"]["classification"], "Success")
+        self.assertFalse(any("housing/construction" in reason for reason in reasons))
+        self.assertTrue(any("platform-worker" in reason for reason in reasons))
+        self.assertTrue(any("worker registration" in concern for concern in concerns))
+        self.assertFalse(any("no backend candidate passed" in concern for concern in concerns))
 
     def test_completed_pipeline_result_requires_phase8_completed(self):
         memory = Mock()

@@ -38,6 +38,7 @@ Department = Literal[
 GeographicScope = Literal["Tamil Nadu", "Selected Districts", "Rural Only", "Urban Only"]
 RuleOperator = Literal["=", "!=", ">", "<", ">=", "<=", "IN", "NOT IN", "BETWEEN"]
 RuleJoiner = Literal["AND", "OR"]
+BenefitFrequency = Literal["Monthly", "Annual", "One-time"]
 BudgetRisk = Literal["Low", "Moderate", "High", "Critical"]
 Outcome = Literal["Success", "Moderate", "Failure"]
 
@@ -57,6 +58,13 @@ class Policy(BaseModel):
     description: str = Field(min_length=1)
     objectives: str | None = None
     budgetAllocation: float | None = None
+    benefitAmount: float | None = None
+    benefitFrequency: BenefitFrequency | None = None
+    administrativeCostPercent: float | None = Field(default=None, ge=0, le=100)
+    benchmarkActualBeneficiaries: float | None = None
+    benchmarkActualAnnualCost: float | None = None
+    benchmarkDate: str | None = None
+    benchmarkSource: str | None = None
     geographicScope: GeographicScope
     selectedDistricts: list[str] = Field(default_factory=list)
     rules: list[PolicyRule] = Field(default_factory=list)
@@ -90,7 +98,7 @@ class StoredSimulation:
 app = FastAPI(title="PolicySim TN API", version="0.1.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5173", "http://localhost:5173"],
+    allow_origins=["http://127.0.0.1:5173", "http://localhost:5173", "http://127.0.0.1:5174", "http://localhost:5174"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -178,7 +186,7 @@ def create_simulation(payload: CreateSimulationRequest) -> dict[str, str]:
         cached = memory.find_exact_completed(fingerprint)
         if cached:
             candidate_result = cached.get("result_payload")
-            if _is_pipeline_artifact_result(candidate_result):
+            if _is_pipeline_artifact_result(candidate_result) and _cached_result_matches_submitted_inputs(candidate_result, payload.policy):
                 cached_result = candidate_result
                 cached_from_run_id = cached.get("run_id")
         similar_policies = [] if cached_result else memory.find_similar_completed(payload.policy, fingerprint)
@@ -410,6 +418,25 @@ def _is_pipeline_artifact_result(result: Any) -> bool:
     return isinstance(result, dict) and (result.get("backendOutput") or {}).get("source") == "pipeline_artifacts"
 
 
+def _cached_result_matches_submitted_inputs(result: dict[str, Any], policy: Policy) -> bool:
+    prediction = result.get("prediction") or {}
+    if prediction.get("dataVersion") != "statewide_scaled_target_delivery_memory_validated_v6":
+        return False
+    backend_output = result.get("backendOutput") or {}
+    if backend_output.get("decisionBasis") != "submitted_policy_benchmark_fiscal_delivery_checks":
+        return False
+    statewide = prediction.get("statewideEstimate") or {}
+    pipeline_benefit = (prediction.get("pipelineArtifactBenefit") or {}).get("annualAmount")
+    submitted_benefit = _annual_benefit_from_policy(policy)
+    if abs(_number(pipeline_benefit, 0) - submitted_benefit) > 1:
+        return False
+    if policy.budgetAllocation:
+        cached_budget = _number(statewide.get("plannedStatewideBudget"), 0)
+        if abs(cached_budget - policy.budgetAllocation) > 1:
+            return False
+    return True
+
+
 @app.get("/api/simulations")
 def list_simulations() -> list[dict[str, Any]]:
     summaries = []
@@ -493,7 +520,7 @@ def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any
     configuration = stored.configuration
     text = f"{policy.description} {' '.join(f'{rule.attribute} {rule.operator} {rule.value}' for rule in policy.rules)}".lower()
     attributes = [rule.attribute.lower() for rule in policy.rules]
-    annual_benefit = _extract_annual_benefit(policy.description)
+    annual_benefit = _annual_benefit_from_policy(policy)
     base_population = 12_048_463
     target_universe = _estimate_target_universe(text, attributes, base_population)
     full_population_coverage = _clamp(_estimate_coverage(text, attributes, len(policy.rules)), 0.08, 0.96)
@@ -502,7 +529,7 @@ def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any
     target_population = target_universe["population"]
     beneficiaries = round(target_population * coverage)
     mean_cost = round(beneficiaries * annual_benefit)
-    planning_envelope = _estimate_planning_envelope(full_population_coverage, annual_benefit, base_population)
+    planning_envelope = policy.budgetAllocation or _estimate_planning_envelope(full_population_coverage, annual_benefit, base_population)
     utilization = mean_cost / max(planning_envelope, 1)
     probability_overrun = _clamp((utilization - 0.9) / 1.1, 0.01, 0.99)
     risk_score = round(_clamp(utilization * 34 + coverage * 12 + (14 if len(policy.rules) <= 2 else 0), 4, 100))
@@ -522,6 +549,12 @@ def _build_result(simulation_id: str, stored: StoredSimulation) -> dict[str, Any
             "monteCarloRuns": configuration.monteCarloRuns,
             "confidenceLevel": configuration.confidenceLevel,
             "populationSampleSize": configuration.populationSampleSize,
+            "plannedStatewideBudget": policy.budgetAllocation,
+            "submittedBenefitAmount": policy.benefitAmount,
+            "submittedBenefitFrequency": policy.benefitFrequency,
+            "administrativeCostPercent": policy.administrativeCostPercent,
+            "officialBenchmark": _submitted_benchmark(policy),
+            "submittedPolicy": policy.model_dump(mode="json"),
             "beneficiaryCoverage": coverage,
             "estimatedCost": mean_cost,
             "equityScore": equity["overall"],
@@ -699,6 +732,26 @@ def _extract_annual_benefit(description: str) -> int:
         amounts = [int(match.replace(",", "")) for match in re.findall(r"(?:rs|inr|\u20b9)\s*([\d,]+)", description, flags=re.IGNORECASE)]
         amount = amounts[0] if amounts else 1000
     return amount * 12 if re.search(r"monthly|per month|month", description, flags=re.IGNORECASE) else amount
+
+
+def _annual_benefit_from_policy(policy: Policy) -> int:
+    if policy.benefitAmount and policy.benefitAmount > 0:
+        if policy.benefitFrequency == "Monthly":
+            return round(policy.benefitAmount * 12)
+        return round(policy.benefitAmount)
+    return _extract_annual_benefit(policy.description)
+
+
+def _submitted_benchmark(policy: Policy) -> dict[str, Any] | None:
+    if not policy.benchmarkActualBeneficiaries and not policy.benchmarkActualAnnualCost:
+        return None
+    return {
+        "scheme": policy.name,
+        "beneficiaries": policy.benchmarkActualBeneficiaries,
+        "annualCost": policy.benchmarkActualAnnualCost,
+        "asOf": policy.benchmarkDate,
+        "source": policy.benchmarkSource or "Submitted frontend benchmark",
+    }
 
 
 def _estimate_equity(text: str, coverage: float, risk_score: int) -> dict[str, Any]:

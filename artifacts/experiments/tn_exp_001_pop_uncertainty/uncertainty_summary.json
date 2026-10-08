@@ -166,83 +166,83 @@
     },
     "total_policy_cost": {
       "n_samples": 30,
-      "mean": 33169432.91,
-      "median": 33169432.91,
+      "mean": 132677735.57,
+      "median": 132677735.57,
       "std_dev": 0.0,
       "variance": 0.0,
-      "min": 33169432.91,
-      "max": 33169432.91,
+      "min": 132677735.57,
+      "max": 132677735.57,
       "iqr": 0.0,
       "coefficient_of_variation": 0.0,
       "mc_standard_error": 0.0,
       "relative_mc_error": 0.0,
       "mean_confidence_interval": {
         "confidence_level": 0.95,
-        "lower": 33169432.91,
-        "upper": 33169432.91
+        "lower": 132677735.57,
+        "upper": 132677735.57
       },
       "percentiles": {
-        "p2_5": 33169432.91,
-        "p5": 33169432.91,
-        "p25": 33169432.91,
-        "p50": 33169432.91,
-        "p75": 33169432.91,
-        "p95": 33169432.91,
-        "p97_5": 33169432.91
+        "p2_5": 132677735.57,
+        "p5": 132677735.57,
+        "p25": 132677735.57,
+        "p50": 132677735.57,
+        "p75": 132677735.57,
+        "p95": 132677735.57,
+        "p97_5": 132677735.57
       }
     },
     "average_benefit": {
       "n_samples": 30,
-      "mean": 18000.0,
-      "median": 18000.0,
+      "mean": 72000.0,
+      "median": 72000.0,
       "std_dev": 0.0,
       "variance": 0.0,
-      "min": 18000.0,
-      "max": 18000.0,
+      "min": 72000.0,
+      "max": 72000.0,
       "iqr": 0.0,
       "coefficient_of_variation": 0.0,
       "mc_standard_error": 0.0,
       "relative_mc_error": 0.0,
       "mean_confidence_interval": {
         "confidence_level": 0.95,
-        "lower": 18000.0,
-        "upper": 18000.0
+        "lower": 72000.0,
+        "upper": 72000.0
       },
       "percentiles": {
-        "p2_5": 18000.0,
-        "p5": 18000.0,
-        "p25": 18000.0,
-        "p50": 18000.0,
-        "p75": 18000.0,
-        "p95": 18000.0,
-        "p97_5": 18000.0
+        "p2_5": 72000.0,
+        "p5": 72000.0,
+        "p25": 72000.0,
+        "p50": 72000.0,
+        "p75": 72000.0,
+        "p95": 72000.0,
+        "p97_5": 72000.0
       }
     },
     "budget_utilization": {
       "n_samples": 30,
-      "mean": 0.66,
-      "median": 0.66,
+      "mean": 4.42,
+      "median": 4.42,
       "std_dev": 0.0,
       "variance": 0.0,
-      "min": 0.66,
-      "max": 0.66,
+      "min": 4.42,
+      "max": 4.42,
       "iqr": 0.0,
       "coefficient_of_variation": 0.0,
       "mc_standard_error": 0.0,
       "relative_mc_error": 0.0,
       "mean_confidence_interval": {
         "confidence_level": 0.95,
-        "lower": 0.66,
-        "upper": 0.66
+        "lower": 4.42,
+        "upper": 4.42
       },
       "percentiles": {
-        "p2_5": 0.66,
-        "p5": 0.66,
-        "p25": 0.66,
-        "p50": 0.66,
-        "p75": 0.66,
-        "p95": 0.66,
-        "p97_5": 0.66
+        "p2_5": 4.42,
+        "p5": 4.42,
+        "p25": 4.42,
+        "p50": 4.42,
+        "p75": 4.42,
+        "p95": 4.42,
+        "p97_5": 4.42
       }
     }
   }

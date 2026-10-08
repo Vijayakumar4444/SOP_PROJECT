@@ -1,0 +1,80 @@
+{
+  "benefit": {
+    "amount": 6000.0,
+    "annualAmount": 6000.0,
+    "frequency": "Annual",
+    "monthlyAmount": null
+  },
+  "budget": {
+    "plannedStatewideBudget": 3000000000.0
+  },
+  "configuration": {
+    "budgetConstraint": true,
+    "confidenceLevel": 95,
+    "monteCarloRuns": 1000,
+    "populationSampleSize": 12000,
+    "randomSeed": 42,
+    "sensitivityAnalysis": true
+  },
+  "department": "Labour",
+  "parameterOverrides": {
+    "benefit_amount": 6000.0,
+    "total_budget": 3000000000.0
+  },
+  "policy": {
+    "administrativeCostPercent": 0.0,
+    "benchmarkActualAnnualCost": null,
+    "benchmarkActualBeneficiaries": null,
+    "benchmarkDate": null,
+    "benchmarkSource": null,
+    "benefitAmount": 6000.0,
+    "benefitFrequency": "Annual",
+    "budgetAllocation": 3000000000.0,
+    "department": "Labour",
+    "description": "Provide an annual health security allowance of Rs 6000 to registered urban gig and platform workers aged 18-60 from households with annual income below Rs 300000.",
+    "geographicScope": "Urban Only",
+    "id": null,
+    "name": "Tamil Nadu Urban Gig Worker Health Security Allowance",
+    "objectives": "Reduce out-of-pocket medical risk and improve social protection for informal platform workers.",
+    "rules": [
+      {
+        "attribute": "Occupation",
+        "id": "rule-1",
+        "joiner": "AND",
+        "operator": "=",
+        "value": "Gig Worker"
+      },
+      {
+        "attribute": "Urban/Rural",
+        "id": "rule-2",
+        "joiner": "AND",
+        "operator": "=",
+        "value": "Urban"
+      },
+      {
+        "attribute": "Age",
+        "id": "rule-3",
+        "joiner": "AND",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "Age",
+        "id": "rule-4",
+        "joiner": "AND",
+        "operator": "<=",
+        "value": "60"
+      },
+      {
+        "attribute": "Annual Income",
+        "id": "rule-5",
+        "joiner": "AND",
+        "operator": "<",
+        "value": "300000"
+      }
+    ],
+    "selectedDistricts": []
+  },
+  "policyName": "Tamil Nadu Urban Gig Worker Health Security Allowance",
+  "runId": "SIM-TN-931843"
+}

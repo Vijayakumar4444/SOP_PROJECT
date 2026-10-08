@@ -1,0 +1,16 @@
+{
+  "compatible": true,
+  "policy_id": "tn_youth_skilling_stipend_003",
+  "total_referenced_variables": 5,
+  "available_variables": [
+    "age",
+    "education_level",
+    "employment_status",
+    "individual_income",
+    "synthetic_person_id"
+  ],
+  "missing_variables": [],
+  "high_missingness_variables": [],
+  "population_record_count": 12000,
+  "population_columns_count": 22
+}

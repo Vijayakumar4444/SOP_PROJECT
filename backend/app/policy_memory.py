@@ -29,17 +29,28 @@ def extract_policy_parameters(policy: Any, result: dict[str, Any] | None = None)
     equity = result.get("equity", {})
     interpretation = result.get("interpretation", {})
     simulation = result.get("simulation", {})
+    prediction = result.get("prediction", {})
+    adjustment = prediction.get("implementationAdjustment") or {}
+    delivery = prediction.get("benchmarkDeliveryCalibration") or {}
+    prediction_error = prediction.get("actualPredictionError") or {}
     rules = plain_policy.get("rules", [])
     return {
         "target_group": beneficiary.get("targetUniverse") or _infer_target_group(plain_policy),
         "rule_attributes": [str(rule.get("attribute", "")).strip() for rule in rules if rule.get("attribute")],
-        "benefit_amount": _extract_annual_benefit(plain_policy.get("description", "")),
+        "benefit_amount": _annual_benefit_from_policy(plain_policy),
         "coverage": beneficiary.get("coverage") or simulation.get("beneficiaryCoverage"),
         "target_fit": beneficiary.get("targetFit"),
         "fiscal_pressure": budget.get("utilization"),
         "risk_score": budget.get("riskScore"),
         "equity_score": equity.get("overall") or simulation.get("equityScore"),
         "final_outcome": interpretation.get("classification"),
+        "implementation_adjustment_factor": adjustment.get("factor"),
+        "observed_delivery_factor": delivery.get("observedDeliveryFactor"),
+        "benchmark_delivery_calibration_applied": delivery.get("applied"),
+        "prediction_absolute_percent_error": prediction_error.get("absolutePercentError"),
+        "prediction_percent_error": prediction_error.get("percentError"),
+        "official_benchmark_beneficiaries": (prediction.get("officialBenchmark") or {}).get("beneficiaries"),
+        "validation_status": (prediction.get("validationStatus") or {}).get("status"),
     }
 
 
@@ -147,7 +158,8 @@ class PolicyMemoryStore:
                         p.fiscal_pressure,
                         p.risk_score,
                         p.equity_score,
-                        p.final_outcome
+                        p.final_outcome,
+                        p.metrics_payload
                     from policy_simulation_runs r
                     join policy_simulation_parameters p on p.run_id = r.run_id
                     where r.status = 'completed'
@@ -460,6 +472,13 @@ def _normalize_policy(policy: dict[str, Any]) -> dict[str, Any]:
         "description": _normalize_text(policy.get("description")),
         "objectives": _normalize_text(policy.get("objectives")),
         "budgetAllocation": policy.get("budgetAllocation"),
+        "benefitAmount": policy.get("benefitAmount"),
+        "benefitFrequency": _normalize_text(policy.get("benefitFrequency")),
+        "administrativeCostPercent": policy.get("administrativeCostPercent"),
+        "benchmarkActualBeneficiaries": policy.get("benchmarkActualBeneficiaries"),
+        "benchmarkActualAnnualCost": policy.get("benchmarkActualAnnualCost"),
+        "benchmarkDate": _normalize_text(policy.get("benchmarkDate")),
+        "benchmarkSource": _normalize_text(policy.get("benchmarkSource")),
         "geographicScope": _normalize_text(policy.get("geographicScope")),
         "selectedDistricts": sorted(_normalize_text(item) for item in policy.get("selectedDistricts", [])),
         "rules": [_normalize_rule(rule) for rule in policy.get("rules", [])],
@@ -511,6 +530,13 @@ def _extract_annual_benefit(description: str) -> float | None:
     if amount is None:
         return None
     return amount * 12 if re.search(r"monthly|per month|month", description or "", flags=re.IGNORECASE) else amount
+
+
+def _annual_benefit_from_policy(policy: dict[str, Any]) -> float | None:
+    amount = _float_or_none(policy.get("benefitAmount"))
+    if amount:
+        return amount * 12 if _normalize_text(policy.get("benefitFrequency")).lower() == "monthly" else amount
+    return _extract_annual_benefit(policy.get("description", ""))
 
 
 def _similarity_score(query_params: dict[str, Any], candidate: dict[str, Any], policy: dict[str, Any]) -> tuple[float, list[str]]:
@@ -570,6 +596,10 @@ def _similarity_summary(row: dict[str, Any], score: float, reasons: list[str]) -
             "equityScore": _float_or_none(row.get("equity_score")),
             "finalOutcome": row.get("final_outcome"),
             "benefitAmount": _float_or_none(row.get("benefit_amount")),
+            "implementationAdjustmentFactor": _float_or_none((row.get("metrics_payload") or {}).get("implementation_adjustment_factor")),
+            "observedDeliveryFactor": _float_or_none((row.get("metrics_payload") or {}).get("observed_delivery_factor")),
+            "predictionAbsolutePercentError": _float_or_none((row.get("metrics_payload") or {}).get("prediction_absolute_percent_error")),
+            "predictionPercentError": _float_or_none((row.get("metrics_payload") or {}).get("prediction_percent_error")),
         },
     }
 
@@ -577,7 +607,18 @@ def _similarity_summary(row: dict[str, Any], score: float, reasons: list[str]) -
 def _aggregate_priors(similar_policies: list[dict[str, Any]]) -> dict[str, Any]:
     if not similar_policies:
         return {}
-    metric_names = ["coverage", "targetFit", "fiscalPressure", "riskScore", "equityScore", "benefitAmount"]
+    metric_names = [
+        "coverage",
+        "targetFit",
+        "fiscalPressure",
+        "riskScore",
+        "equityScore",
+        "benefitAmount",
+        "implementationAdjustmentFactor",
+        "observedDeliveryFactor",
+        "predictionAbsolutePercentError",
+        "predictionPercentError",
+    ]
     priors: dict[str, Any] = {"sampleSize": len(similar_policies)}
     for metric_name in metric_names:
         values = [

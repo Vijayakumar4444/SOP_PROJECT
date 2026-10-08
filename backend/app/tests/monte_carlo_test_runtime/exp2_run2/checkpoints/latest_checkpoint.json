@@ -1,6 +1,6 @@
 {
   "experiment_id": "tn_exp_002_param_uncertainty",
-  "timestamp": "2026-09-13T19:31:28.742830+00:00",
+  "timestamp": "2026-10-04T15:23:50.302628+00:00",
   "config_hash": "CF1E87375092",
   "completed_iteration_count": 5,
   "failed_iteration_count": 0,
@@ -44,9 +44,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.2379,
-      "started_at": "2026-09-13T19:31:27.432256+00:00",
-      "completed_at": "2026-09-13T19:31:27.670219+00:00"
+      "execution_duration_seconds": 0.6823,
+      "started_at": "2026-10-04T15:23:47.081386+00:00",
+      "completed_at": "2026-10-04T15:23:47.763725+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -85,9 +85,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.2396,
-      "started_at": "2026-09-13T19:31:27.680351+00:00",
-      "completed_at": "2026-09-13T19:31:27.919996+00:00"
+      "execution_duration_seconds": 0.619,
+      "started_at": "2026-10-04T15:23:47.791189+00:00",
+      "completed_at": "2026-10-04T15:23:48.410204+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -126,9 +126,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.2861,
-      "started_at": "2026-09-13T19:31:27.932013+00:00",
-      "completed_at": "2026-09-13T19:31:28.218172+00:00"
+      "execution_duration_seconds": 0.6026,
+      "started_at": "2026-10-04T15:23:48.435100+00:00",
+      "completed_at": "2026-10-04T15:23:49.037711+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -167,9 +167,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.251,
-      "started_at": "2026-09-13T19:31:28.231488+00:00",
-      "completed_at": "2026-09-13T19:31:28.482502+00:00"
+      "execution_duration_seconds": 0.6016,
+      "started_at": "2026-10-04T15:23:49.062482+00:00",
+      "completed_at": "2026-10-04T15:23:49.664062+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -208,9 +208,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.2383,
-      "started_at": "2026-09-13T19:31:28.494360+00:00",
-      "completed_at": "2026-09-13T19:31:28.732711+00:00"
+      "execution_duration_seconds": 0.5904,
+      "started_at": "2026-10-04T15:23:49.687895+00:00",
+      "completed_at": "2026-10-04T15:23:50.278359+00:00"
     }
   ]
 }

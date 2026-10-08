@@ -1,7 +1,7 @@
 {
   "experiment_id": "tn_exp_002_param_uncertainty",
-  "timestamp": "2026-09-13T18:26:05.842434+00:00",
-  "config_hash": "CF1E87375092",
+  "timestamp": "2026-10-08T12:23:17.052105+00:00",
+  "config_hash": "1B0131A904C9",
   "completed_iteration_count": 30,
   "failed_iteration_count": 0,
   "last_iteration_number": 30,
@@ -44,9 +44,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6105,
-      "started_at": "2026-09-13T18:25:47.785163+00:00",
-      "completed_at": "2026-09-13T18:25:48.395653+00:00"
+      "execution_duration_seconds": 0.9677,
+      "started_at": "2026-10-08T12:22:46.479514+00:00",
+      "completed_at": "2026-10-08T12:22:47.447221+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -85,9 +85,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.486,
-      "started_at": "2026-09-13T18:25:48.412961+00:00",
-      "completed_at": "2026-09-13T18:25:48.898998+00:00"
+      "execution_duration_seconds": 0.9022,
+      "started_at": "2026-10-08T12:22:47.478018+00:00",
+      "completed_at": "2026-10-08T12:22:48.380242+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -126,9 +126,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5208,
-      "started_at": "2026-09-13T18:25:48.922508+00:00",
-      "completed_at": "2026-09-13T18:25:49.443345+00:00"
+      "execution_duration_seconds": 0.9191,
+      "started_at": "2026-10-08T12:22:48.410125+00:00",
+      "completed_at": "2026-10-08T12:22:49.329224+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -167,9 +167,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6183,
-      "started_at": "2026-09-13T18:25:49.463070+00:00",
-      "completed_at": "2026-09-13T18:25:50.081350+00:00"
+      "execution_duration_seconds": 0.9628,
+      "started_at": "2026-10-08T12:22:49.360248+00:00",
+      "completed_at": "2026-10-08T12:22:50.323107+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -208,9 +208,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5285,
-      "started_at": "2026-09-13T18:25:50.098771+00:00",
-      "completed_at": "2026-09-13T18:25:50.627292+00:00"
+      "execution_duration_seconds": 1.2125,
+      "started_at": "2026-10-08T12:22:50.354719+00:00",
+      "completed_at": "2026-10-08T12:22:51.567258+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -249,9 +249,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5932,
-      "started_at": "2026-09-13T18:25:50.650869+00:00",
-      "completed_at": "2026-09-13T18:25:51.244142+00:00"
+      "execution_duration_seconds": 1.3097,
+      "started_at": "2026-10-08T12:22:51.618095+00:00",
+      "completed_at": "2026-10-08T12:22:52.927858+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -290,9 +290,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.749,
-      "started_at": "2026-09-13T18:25:51.268177+00:00",
-      "completed_at": "2026-09-13T18:25:52.017218+00:00"
+      "execution_duration_seconds": 1.21,
+      "started_at": "2026-10-08T12:22:52.962466+00:00",
+      "completed_at": "2026-10-08T12:22:54.172551+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -331,9 +331,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.684,
-      "started_at": "2026-09-13T18:25:52.046478+00:00",
-      "completed_at": "2026-09-13T18:25:52.730488+00:00"
+      "execution_duration_seconds": 1.0355,
+      "started_at": "2026-10-08T12:22:54.216162+00:00",
+      "completed_at": "2026-10-08T12:22:55.251668+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -372,9 +372,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.7311,
-      "started_at": "2026-09-13T18:25:52.764588+00:00",
-      "completed_at": "2026-09-13T18:25:53.495692+00:00"
+      "execution_duration_seconds": 0.9703,
+      "started_at": "2026-10-08T12:22:55.275746+00:00",
+      "completed_at": "2026-10-08T12:22:56.246094+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -413,9 +413,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6741,
-      "started_at": "2026-09-13T18:25:53.516630+00:00",
-      "completed_at": "2026-09-13T18:25:54.190718+00:00"
+      "execution_duration_seconds": 0.9302,
+      "started_at": "2026-10-08T12:22:56.287230+00:00",
+      "completed_at": "2026-10-08T12:22:57.217497+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -454,9 +454,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5007,
-      "started_at": "2026-09-13T18:25:54.211636+00:00",
-      "completed_at": "2026-09-13T18:25:54.712364+00:00"
+      "execution_duration_seconds": 1.0016,
+      "started_at": "2026-10-08T12:22:57.253536+00:00",
+      "completed_at": "2026-10-08T12:22:58.255171+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -495,9 +495,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5047,
-      "started_at": "2026-09-13T18:25:54.737050+00:00",
-      "completed_at": "2026-09-13T18:25:55.241772+00:00"
+      "execution_duration_seconds": 0.9645,
+      "started_at": "2026-10-08T12:22:58.287020+00:00",
+      "completed_at": "2026-10-08T12:22:59.251539+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -536,9 +536,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.513,
-      "started_at": "2026-09-13T18:25:55.259786+00:00",
-      "completed_at": "2026-09-13T18:25:55.772820+00:00"
+      "execution_duration_seconds": 0.9078,
+      "started_at": "2026-10-08T12:22:59.278961+00:00",
+      "completed_at": "2026-10-08T12:23:00.186776+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -577,9 +577,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5707,
-      "started_at": "2026-09-13T18:25:55.794747+00:00",
-      "completed_at": "2026-09-13T18:25:56.365454+00:00"
+      "execution_duration_seconds": 0.8298,
+      "started_at": "2026-10-08T12:23:00.220387+00:00",
+      "completed_at": "2026-10-08T12:23:01.050219+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -618,9 +618,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6059,
-      "started_at": "2026-09-13T18:25:56.389417+00:00",
-      "completed_at": "2026-09-13T18:25:56.995365+00:00"
+      "execution_duration_seconds": 0.9387,
+      "started_at": "2026-10-08T12:23:01.078396+00:00",
+      "completed_at": "2026-10-08T12:23:02.017108+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -659,9 +659,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5977,
-      "started_at": "2026-09-13T18:25:57.021166+00:00",
-      "completed_at": "2026-09-13T18:25:57.618856+00:00"
+      "execution_duration_seconds": 0.9342,
+      "started_at": "2026-10-08T12:23:02.052187+00:00",
+      "completed_at": "2026-10-08T12:23:02.986373+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -700,9 +700,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5167,
-      "started_at": "2026-09-13T18:25:57.640163+00:00",
-      "completed_at": "2026-09-13T18:25:58.156885+00:00"
+      "execution_duration_seconds": 0.9374,
+      "started_at": "2026-10-08T12:23:03.015896+00:00",
+      "completed_at": "2026-10-08T12:23:03.953280+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -741,9 +741,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6584,
-      "started_at": "2026-09-13T18:25:58.178123+00:00",
-      "completed_at": "2026-09-13T18:25:58.836524+00:00"
+      "execution_duration_seconds": 0.9711,
+      "started_at": "2026-10-08T12:23:03.983373+00:00",
+      "completed_at": "2026-10-08T12:23:04.954512+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -782,9 +782,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.7256,
-      "started_at": "2026-09-13T18:25:58.860359+00:00",
-      "completed_at": "2026-09-13T18:25:59.585958+00:00"
+      "execution_duration_seconds": 1.1845,
+      "started_at": "2026-10-08T12:23:04.988143+00:00",
+      "completed_at": "2026-10-08T12:23:06.172631+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -823,9 +823,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.6208,
-      "started_at": "2026-09-13T18:25:59.612036+00:00",
-      "completed_at": "2026-09-13T18:26:00.232833+00:00"
+      "execution_duration_seconds": 1.0118,
+      "started_at": "2026-10-08T12:23:06.218910+00:00",
+      "completed_at": "2026-10-08T12:23:07.230787+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -864,9 +864,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.543,
-      "started_at": "2026-09-13T18:26:00.251952+00:00",
-      "completed_at": "2026-09-13T18:26:00.794977+00:00"
+      "execution_duration_seconds": 0.9432,
+      "started_at": "2026-10-08T12:23:07.277922+00:00",
+      "completed_at": "2026-10-08T12:23:08.221159+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -905,9 +905,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5556,
-      "started_at": "2026-09-13T18:26:00.812700+00:00",
-      "completed_at": "2026-09-13T18:26:01.368318+00:00"
+      "execution_duration_seconds": 0.9285,
+      "started_at": "2026-10-08T12:23:08.251039+00:00",
+      "completed_at": "2026-10-08T12:23:09.179541+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -946,9 +946,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5946,
-      "started_at": "2026-09-13T18:26:01.394344+00:00",
-      "completed_at": "2026-09-13T18:26:01.988946+00:00"
+      "execution_duration_seconds": 1.046,
+      "started_at": "2026-10-08T12:23:09.208552+00:00",
+      "completed_at": "2026-10-08T12:23:10.254567+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -987,9 +987,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5171,
-      "started_at": "2026-09-13T18:26:02.009570+00:00",
-      "completed_at": "2026-09-13T18:26:02.526670+00:00"
+      "execution_duration_seconds": 0.9389,
+      "started_at": "2026-10-08T12:23:10.284391+00:00",
+      "completed_at": "2026-10-08T12:23:11.223273+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1028,9 +1028,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.4699,
-      "started_at": "2026-09-13T18:26:02.544149+00:00",
-      "completed_at": "2026-09-13T18:26:03.014076+00:00"
+      "execution_duration_seconds": 0.9166,
+      "started_at": "2026-10-08T12:23:11.256989+00:00",
+      "completed_at": "2026-10-08T12:23:12.173600+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1069,9 +1069,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5909,
-      "started_at": "2026-09-13T18:26:03.032596+00:00",
-      "completed_at": "2026-09-13T18:26:03.623547+00:00"
+      "execution_duration_seconds": 0.9213,
+      "started_at": "2026-10-08T12:23:12.197980+00:00",
+      "completed_at": "2026-10-08T12:23:13.119283+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1110,9 +1110,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.4777,
-      "started_at": "2026-09-13T18:26:03.644203+00:00",
-      "completed_at": "2026-09-13T18:26:04.121878+00:00"
+      "execution_duration_seconds": 0.7301,
+      "started_at": "2026-10-08T12:23:13.146742+00:00",
+      "completed_at": "2026-10-08T12:23:13.876852+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1151,9 +1151,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5648,
-      "started_at": "2026-09-13T18:26:04.139688+00:00",
-      "completed_at": "2026-09-13T18:26:04.704556+00:00"
+      "execution_duration_seconds": 0.8926,
+      "started_at": "2026-10-08T12:23:13.902327+00:00",
+      "completed_at": "2026-10-08T12:23:14.794949+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1192,9 +1192,9 @@
       "budget_exceeded": false,
       "constraints_passed": false,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5244,
-      "started_at": "2026-09-13T18:26:04.739245+00:00",
-      "completed_at": "2026-09-13T18:26:05.263651+00:00"
+      "execution_duration_seconds": 0.9797,
+      "started_at": "2026-10-08T12:23:14.825182+00:00",
+      "completed_at": "2026-10-08T12:23:15.804868+00:00"
     },
     {
       "experiment_id": "tn_exp_002_param_uncertainty",
@@ -1233,9 +1233,9 @@
       "budget_exceeded": false,
       "constraints_passed": true,
       "policy_feasible": true,
-      "execution_duration_seconds": 0.5406,
-      "started_at": "2026-09-13T18:26:05.284610+00:00",
-      "completed_at": "2026-09-13T18:26:05.825237+00:00"
+      "execution_duration_seconds": 1.1891,
+      "started_at": "2026-10-08T12:23:15.835466+00:00",
+      "completed_at": "2026-10-08T12:23:17.024612+00:00"
     }
   ]
 }

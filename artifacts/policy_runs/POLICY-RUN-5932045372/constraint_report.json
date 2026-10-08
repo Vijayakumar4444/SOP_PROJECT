@@ -1,0 +1,26 @@
+{
+  "run_id": "POLICY-RUN-5932045372",
+  "constraints_passed": false,
+  "constraints": [
+    {
+      "constraint_id": "C_BUDGET_LIMIT",
+      "description": "Total estimated program cost must not exceed policy budget.",
+      "status": "FAIL",
+      "observed_value": 1851499677.3,
+      "allowed_value": 1841800000.0,
+      "severity": "WARNING",
+      "affected_record_count": 1154,
+      "explanation": "Weighted cost (1851499677.30) exceeded budget (1841800000.0)."
+    },
+    {
+      "constraint_id": "C_NON_NEGATIVE_BENEFITS",
+      "description": "All benefit amounts must be non-negative.",
+      "status": "PASS",
+      "observed_value": 0,
+      "allowed_value": 0,
+      "severity": "INFO",
+      "affected_record_count": 0,
+      "explanation": "All benefits are non-negative."
+    }
+  ]
+}

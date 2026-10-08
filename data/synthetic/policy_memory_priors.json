@@ -1,0 +1,101 @@
+{
+  "available": true,
+  "createdAt": "2026-10-08T12:19:16.951598+00:00",
+  "monteCarloCalibration": {
+    "benefitAmount": {
+      "lower": 4500.0,
+      "mean": 5000.0,
+      "upper": 5500.0
+    },
+    "coverage": {
+      "lower": 0.039065,
+      "mean": 0.089065,
+      "upper": 0.139065
+    },
+    "equityScore": {
+      "lower": 22.5,
+      "mean": 25.0,
+      "upper": 27.5
+    },
+    "fiscalPressure": {
+      "lower": 0.0,
+      "mean": 0.089051,
+      "upper": 1.089051
+    },
+    "riskScore": {
+      "lower": 4.0,
+      "mean": 5.0,
+      "upper": 6.0
+    },
+    "sampleSize": 1,
+    "source": "similar_policy_priors"
+  },
+  "policyHash": "f991948fd6b9cb4925284b98d25e2acab13ab12c1de502185ef6945212880eb9",
+  "priors": {
+    "benefitAmount": {
+      "max": 5000.0,
+      "mean": 5000.0,
+      "min": 5000.0
+    },
+    "coverage": {
+      "max": 0.089065,
+      "mean": 0.089065,
+      "min": 0.089065
+    },
+    "equityScore": {
+      "max": 25.0,
+      "mean": 25.0,
+      "min": 25.0
+    },
+    "fiscalPressure": {
+      "max": 0.089051,
+      "mean": 0.089051,
+      "min": 0.089051
+    },
+    "outcomes": {
+      "Failure": 1
+    },
+    "riskScore": {
+      "max": 5.0,
+      "mean": 5.0,
+      "min": 5.0
+    },
+    "sampleSize": 1,
+    "targetFit": {
+      "max": 13.0,
+      "mean": 13.0,
+      "min": 13.0
+    }
+  },
+  "runId": "SIM-TN-931843",
+  "similarPolicies": [
+    {
+      "createdAt": "2026-10-05T01:45:41.441238+00:00",
+      "department": "Labour",
+      "metrics": {
+        "benefitAmount": 5000.0,
+        "coverage": 0.089065,
+        "equityScore": 25.0,
+        "finalOutcome": "Failure",
+        "fiscalPressure": 0.089051,
+        "implementationAdjustmentFactor": null,
+        "observedDeliveryFactor": null,
+        "predictionAbsolutePercentError": null,
+        "predictionPercentError": null,
+        "riskScore": 5.0,
+        "targetFit": 13.0,
+        "targetGroup": "Total synthetic population"
+      },
+      "policyName": "Rural Youth Skill Support Audit",
+      "reasons": [
+        "shares 2 eligibility rule attribute(s)",
+        "same department",
+        "similar benefit amount"
+      ],
+      "runId": "SIM-TN-723132",
+      "similarityScore": 0.505
+    }
+  ],
+  "similarPolicyCount": 1,
+  "source": "policy_simulation_runs"
+}

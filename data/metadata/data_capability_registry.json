@@ -19,7 +19,7 @@
       "unit_of_observation": "Person and household survey records",
       "file_format": "CSV/ZIP",
       "license_or_usage_notes": "Respect MoSPI source terms; OpenCity provides a public mirror.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "age, gender, district, rural/urban, education, employment, occupation, industry, earnings, household size, social group, consumption, weights",
       "quality_notes": "Direct row-level source for the reference template."
@@ -39,7 +39,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, literacy, workers, SC/ST, vital statistics, economy",
       "quality_notes": "Used for aggregate calibration/validation targets."
@@ -59,7 +59,7 @@
       "unit_of_observation": "Aggregate geography",
       "file_format": "HTML/XLSX catalog",
       "license_or_usage_notes": "Official public Census table; cite ORGI.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, male/female population, rural/urban population, literacy, workers",
       "quality_notes": "Census website downloads can timeout; DES publication carries key Census 2011 values."
@@ -79,7 +79,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "education indicators",
       "quality_notes": "Raw PDF stored; detailed table extraction pending."
@@ -99,7 +99,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "population, area, density",
       "quality_notes": "Raw PDF stored; detailed extraction pending."
@@ -119,7 +119,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "employment indicators",
       "quality_notes": "Raw PDF stored; PLFS remains row-level source."
@@ -139,7 +139,7 @@
       "unit_of_observation": "Aggregate statistic",
       "file_format": "PDF",
       "license_or_usage_notes": "Official DES publication.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "housing indicators",
       "quality_notes": "Raw PDF stored; no row-level housing imputation."
@@ -159,7 +159,7 @@
       "unit_of_observation": "Aggregate statistic catalog",
       "file_format": "HTML/catalog",
       "license_or_usage_notes": "Government Open Data License metadata applies.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "DOWNLOADED",
       "variables_of_interest": "catalog provenance",
       "quality_notes": "Catalog saved; API detail extraction pending."
@@ -179,7 +179,7 @@
       "unit_of_observation": "Household/person survey records and aggregate estimates",
       "file_format": "PDF/registered microdata",
       "license_or_usage_notes": "Follow NFHS/IIPS/DHS data terms.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "MANUAL_DOWNLOAD_REQUIRED",
       "variables_of_interest": "amenities, wealth, health insurance",
       "quality_notes": "Not downloaded automatically because access terms may require registration."
@@ -379,7 +379,7 @@
       "unit_of_observation": "Household/person survey records",
       "file_format": "Registered/public-use microdata",
       "license_or_usage_notes": "MoSPI microdata portal rules apply.",
-      "download_date": "2026-08-30",
+      "download_date": "2026-10-08",
       "access_status": "MANUAL_DOWNLOAD_REQUIRED",
       "variables_of_interest": "consumption, health expenditure, education, household characteristics",
       "quality_notes": "Needs round-specific source selection and access verification."

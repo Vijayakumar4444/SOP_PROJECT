@@ -12,6 +12,18 @@
         "lower": 0.0,
         "upper": 0.1135
       }
+    },
+    "probability_coverage_below_memory_prior": {
+      "metric": "coverage_rate",
+      "operator": "less_than",
+      "threshold": 0.039065,
+      "match_count": 30,
+      "applicable_iterations": 30,
+      "estimated_probability": 1.0,
+      "confidence_interval_95": {
+        "lower": 0.8865,
+        "upper": 1.0
+      }
     }
   }
 }

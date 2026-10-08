@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-07T19:12:20.706870+00:00", "run_id": "POLICY-RUN-AE71F0780D", "policy_id": "tn_elderly_pension_001", "status": "COMPLETED", "evaluated_records": 12000, "eligible_records": 1835, "selected_beneficiaries": 907, "weighted_beneficiaries": 909.83, "total_cost_inr": 1965222414.95}
